@@ -1,0 +1,5354 @@
+{
+  "version": 1,
+  "title": "Lime Rick",
+  "metadata": {
+    "author": "Tommi Tuovinen",
+    "homepage": "http://www.kissmaj7.com/",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": null,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": null,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#000000": "#000000",
+    "#be2633": "#be2633",
+    "#1d57f7": "#1d57f7",
+    "#44891a": "#44891a",
+    "#eb8931": "#eb8931",
+    "#a3ce27": "#a3ce27",
+    "#f7e26b": "#f7e26b",
+    "#a46422": "#a46422"
+  },
+  "sounds": {
+    "sound-0": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 3295707,
+        "_sourceOffset": 1157
+      }
+    },
+    "sound-1": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 3538707,
+        "_sourceOffset": 1185
+      }
+    },
+    "sound-2": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 42451307,
+        "_sourceOffset": 1219
+      }
+    },
+    "sound-3": {
+      "When": {
+        "when": "ENDLEVEL",
+        "soundCode": 96434300,
+        "_sourceOffset": 1260
+      }
+    },
+    "sound-4": {
+      "When": {
+        "when": "STARTGAME",
+        "soundCode": 49875902,
+        "_sourceOffset": 1278
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 1697,
+      "_sourceOffset": 1349
+    },
+    {
+      "id": 1698,
+      "_sourceOffset": 1360
+    },
+    {
+      "id": 1699,
+      "_sourceOffset": 1372
+    },
+    {
+      "id": 1700,
+      "_sourceOffset": 1383
+    },
+    {
+      "id": 1701,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Sfx": {
+        "sound": "sound-1",
+        "_sourceOffset": 1678
+      }
+    },
+    "command-1": {
+      "Sfx": {
+        "sound": "sound-0",
+        "_sourceOffset": 1752
+      }
+    },
+    "command-2": {
+      "Sfx": {
+        "sound": "sound-0",
+        "_sourceOffset": 1826
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 1919
+      }
+    },
+    "command-4": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 1919
+      }
+    },
+    "command-5": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 1997
+      }
+    },
+    "command-6": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 1997
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 402,
+      "collision_layer": 1697
+    },
+    "sprite-1": {
+      "name": "Exit",
+      "pixels": [
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ]
+      ],
+      "_sourceOffset": 420,
+      "collision_layer": 1698
+    },
+    "sprite-2": {
+      "name": "Apple",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 461,
+      "collision_layer": 1698
+    },
+    "sprite-3": {
+      "name": "PlayerBodyH",
+      "pixels": [
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          null,
+          null,
+          null,
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ]
+      ],
+      "_sourceOffset": 504,
+      "collision_layer": 1699
+    },
+    "sprite-4": {
+      "name": "PlayerBodyV",
+      "pixels": [
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          null,
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          null,
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          null,
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ]
+      ],
+      "_sourceOffset": 553,
+      "collision_layer": 1699
+    },
+    "sprite-5": {
+      "name": "Crate",
+      "pixels": [
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ]
+      ],
+      "_sourceOffset": 603,
+      "collision_layer": 1700
+    },
+    "sprite-6": {
+      "name": "PlayerHead1",
+      "pixels": [
+        [
+          null,
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          null
+        ],
+        [
+          "#a3ce27",
+          null,
+          "#a3ce27",
+          null,
+          "#a3ce27"
+        ],
+        [
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27"
+        ],
+        [
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27"
+        ],
+        [
+          null,
+          "#a3ce27",
+          "#a3ce27",
+          "#a3ce27",
+          null
+        ]
+      ],
+      "_sourceOffset": 647,
+      "collision_layer": 1700
+    },
+    "sprite-7": {
+      "name": "PlayerHead2",
+      "pixels": [
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          "#f7e26b",
+          null,
+          "#f7e26b",
+          null,
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b"
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ]
+      ],
+      "_sourceOffset": 701,
+      "collision_layer": 1700
+    },
+    "sprite-8": {
+      "name": "PlayerHead3",
+      "pixels": [
+        [
+          null,
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          null
+        ],
+        [
+          "#eb8931",
+          null,
+          "#eb8931",
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          null,
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          null
+        ]
+      ],
+      "_sourceOffset": 752,
+      "collision_layer": 1700
+    },
+    "sprite-9": {
+      "name": "PlayerHead4",
+      "pixels": [
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ]
+      ],
+      "_sourceOffset": 803,
+      "collision_layer": 1700
+    },
+    "sprite-10": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ]
+      ],
+      "_sourceOffset": 852,
+      "collision_layer": 1700
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Sprite": {
+        "name": "PlayerHead4",
+        "sprite": "sprite-9",
+        "_sourceOffset": 803,
+        "collision_layer": 1700
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "PlayerHead3",
+        "sprite": "sprite-8",
+        "_sourceOffset": 752,
+        "collision_layer": 1700
+      }
+    },
+    "tile-2": {
+      "Or": {
+        "name": "Obstacle",
+        "sprites": [
+          "sprite-6",
+          "sprite-7",
+          "sprite-8",
+          "sprite-9",
+          "sprite-5",
+          "sprite-10",
+          "sprite-4",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          1700,
+          1699
+        ],
+        "_sourceOffset": 955
+      }
+    },
+    "tile-3": {
+      "Sprite": {
+        "name": "PlayerBodyV",
+        "sprite": "sprite-4",
+        "_sourceOffset": 553,
+        "collision_layer": 1699
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "PlayerHead2",
+        "sprite": "sprite-7",
+        "_sourceOffset": 701,
+        "collision_layer": 1700
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "PlayerHead1",
+        "sprite": "sprite-6",
+        "_sourceOffset": 647,
+        "collision_layer": 1700
+      }
+    },
+    "tile-6": {
+      "Or": {
+        "name": "Player",
+        "sprites": [
+          "sprite-9",
+          "sprite-8",
+          "sprite-7",
+          "sprite-6"
+        ],
+        "collisionLayers": [
+          1700
+        ],
+        "_sourceOffset": 889
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "Crate",
+        "sprite": "sprite-5",
+        "_sourceOffset": 603,
+        "collision_layer": 1700
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "PlayerBodyH",
+        "sprite": "sprite-3",
+        "_sourceOffset": 504,
+        "collision_layer": 1699
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "Apple",
+        "sprite": "sprite-2",
+        "_sourceOffset": 461,
+        "collision_layer": 1698
+      }
+    },
+    "tile-10": {
+      "Or": {
+        "name": "PlayerBody",
+        "sprites": [
+          "sprite-4",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          1699
+        ],
+        "_sourceOffset": 1020
+      }
+    },
+    "tile-11": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          1697
+        ],
+        "_sourceOffset": 1060
+      }
+    },
+    "tile-12": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          1700
+        ],
+        "_sourceOffset": 1075
+      }
+    },
+    "tile-13": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-10",
+        "collisionLayers": [
+          1700
+        ],
+        "_sourceOffset": 1091
+      }
+    },
+    "tile-14": {
+      "Simple": {
+        "name": "E",
+        "sprite": "sprite-1",
+        "collisionLayers": [
+          1698
+        ],
+        "_sourceOffset": 1100
+      }
+    },
+    "tile-15": {
+      "Simple": {
+        "name": "A",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          1698
+        ],
+        "_sourceOffset": 1109
+      }
+    },
+    "tile-16": {
+      "Simple": {
+        "name": "C",
+        "sprite": "sprite-5",
+        "collisionLayers": [
+          1700
+        ],
+        "_sourceOffset": 1119
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "Exit",
+        "sprite": "sprite-1",
+        "_sourceOffset": 420,
+        "collision_layer": 1698
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": "Up",
+      "tile": "tile-0",
+      "_sourceOffset": 1573,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 1595,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": "Up",
+      "tile": "tile-1",
+      "_sourceOffset": 1614,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 1631,
+      "random": false,
+      "negated": true
+    },
+    "twm-4": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 1650,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": "Up",
+      "tile": "tile-4",
+      "_sourceOffset": 1688,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 1738,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": "Up",
+      "tile": "tile-5",
+      "_sourceOffset": 1762,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 1812,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": "Left",
+      "tile": "tile-6",
+      "_sourceOffset": 1845,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 1856,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 1883,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 1897,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": "Right",
+      "tile": "tile-6",
+      "_sourceOffset": 1845,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 2005,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 2012,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 2022,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": "Up",
+      "tile": "tile-6",
+      "_sourceOffset": 2093,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": "Down",
+      "tile": "tile-6",
+      "_sourceOffset": 2093,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 1572,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 1594,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 1613,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 1630,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 1649,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 1687,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 1737,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 1761,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 1811,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 1844,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 1855,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 1882,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 1896,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 1844,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 2004,
+      "tile_with_modifiers": [
+        "twm-14",
+        "twm-15"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 2021,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 2056,
+      "tile_with_modifiers": []
+    },
+    "neighbor-17": {
+      "_sourceOffset": 2080,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 2092,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 2092,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 1571
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 1592
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1612
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 1647
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1686
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 1721
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1760
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-8"
+        ],
+        "_sourceOffset": 1795
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-10",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1843
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 1880
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-10",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1843
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 1880
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1936
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 1965
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1936
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 1965
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 2003
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 2020
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2054
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-17"
+        ],
+        "_sourceOffset": 2078
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-18"
+        ],
+        "_sourceOffset": 2091
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2091
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9"
+        ],
+        "_sourceOffset": 2091
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2091
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2124
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 2151
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2187
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 2213
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 1568,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 1568,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-3"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 1609,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2"
+        ],
+        "_sourceOffset": 1609,
+        "random": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-5"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 1683,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Group": {
+        "rules": [
+          "rule-4"
+        ],
+        "_sourceOffset": 1683,
+        "random": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 1757,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Group": {
+        "rules": [
+          "rule-6"
+        ],
+        "_sourceOffset": 1757,
+        "random": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 1832,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-10"
+        ],
+        "actions": [
+          "bracket-11"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 1832,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-10": {
+      "Group": {
+        "rules": [
+          "rule-8",
+          "rule-9"
+        ],
+        "_sourceOffset": 1832,
+        "random": false
+      }
+    },
+    "rule-11": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-13"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 1925,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-15"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 1925,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-11",
+          "rule-12"
+        ],
+        "_sourceOffset": 1925,
+        "random": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16",
+          "bracket-17"
+        ],
+        "actions": [
+          "bracket-16",
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 2003,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Group": {
+        "rules": [
+          "rule-14"
+        ],
+        "_sourceOffset": 2003,
+        "random": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2059,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Group": {
+        "rules": [
+          "rule-16"
+        ],
+        "_sourceOffset": 2059,
+        "random": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2091,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2091,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2091,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2091,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Group": {
+        "rules": [
+          "rule-18",
+          "rule-19",
+          "rule-20",
+          "rule-21"
+        ],
+        "_sourceOffset": 2091,
+        "random": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-25"
+        ],
+        "commands": [],
+        "_sourceOffset": 2119,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Group": {
+        "rules": [
+          "rule-23"
+        ],
+        "_sourceOffset": 2119,
+        "random": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-27"
+        ],
+        "commands": [],
+        "_sourceOffset": 2182,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Group": {
+        "rules": [
+          "rule-25"
+        ],
+        "_sourceOffset": 2182,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "On": {
+        "_sourceOffset": 2272,
+        "qualifier": "Some",
+        "tile": "tile-6",
+        "on_tile": "tile-17"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-3",
+    "rule-5",
+    "rule-7",
+    "rule-10",
+    "rule-13",
+    "rule-15",
+    "rule-17",
+    "rule-22",
+    "rule-24",
+    "rule-26"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "level 1 of 11",
+        "_sourceOffset": 2322
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 2345
+      }
+    },
+    {
+      "Message": {
+        "message": "level 2 of 11",
+        "_sourceOffset": 2646
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 2669
+      }
+    },
+    {
+      "Message": {
+        "message": "level 3 of 11",
+        "_sourceOffset": 3010
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 3033
+      }
+    },
+    {
+      "Message": {
+        "message": "level 4 of 11",
+        "_sourceOffset": 3334
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 3357
+      }
+    },
+    {
+      "Message": {
+        "message": "level 5 of 11",
+        "_sourceOffset": 3658
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 3681
+      }
+    },
+    {
+      "Message": {
+        "message": "level 6 of 11",
+        "_sourceOffset": 3962
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-12",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 3985
+      }
+    },
+    {
+      "Message": {
+        "message": "level 7 of 11",
+        "_sourceOffset": 4286
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 4309
+      }
+    },
+    {
+      "Message": {
+        "message": "level 8 of 11",
+        "_sourceOffset": 4610
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 4633
+      }
+    },
+    {
+      "Message": {
+        "message": "level 9 of 11",
+        "_sourceOffset": 4934
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-14",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-12",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-11",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 4957
+      }
+    },
+    {
+      "Message": {
+        "message": "level 10 of 11",
+        "_sourceOffset": 5258
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 5282
+      }
+    },
+    {
+      "Message": {
+        "message": "level 11 of 11",
+        "_sourceOffset": 5583
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-14",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-16",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-12",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-11",
+            "tile-13"
+          ],
+          [
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13",
+            "tile-13"
+          ]
+        ],
+        "_sourceOffset": 5607
+      }
+    },
+    {
+      "Message": {
+        "message": "congratulations!",
+        "_sourceOffset": 5908
+      }
+    }
+  ]
+}

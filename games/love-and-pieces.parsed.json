@@ -1,0 +1,2069 @@
+{
+  "version": 1,
+  "title": "Love and Pieces",
+  "metadata": {
+    "author": "lexaloffle",
+    "homepage": "www.lexaloffle.com",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": null,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": null,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#697175": "#697175",
+    "#9d9d9d": "#9d9d9d",
+    "#44891a": "#44891a",
+    "#FFFFFF": "#FFFFFF",
+    "#B2DCEF": "#B2DCEF",
+    "#cccccc": "#cccccc",
+    "#1B2632": "#1B2632",
+    "#000000": "#000000",
+    "#be2633": "#be2633",
+    "#f7e26b": "#f7e26b",
+    "#eb8931": "#eb8931",
+    "#eeb62f": "#eeb62f"
+  },
+  "sounds": {
+    "sound-0": {
+      "SpriteMove": {
+        "sprite": "tile-0",
+        "soundCode": 36772507,
+        "_sourceOffset": 554
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 1732,
+      "_sourceOffset": 630
+    },
+    {
+      "id": 1733,
+      "_sourceOffset": 641
+    },
+    {
+      "id": 1734,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Cancel": {
+        "_sourceOffset": 730
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "GrayBlock",
+      "pixels": [
+        [
+          "#697175",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175"
+        ],
+        [
+          "#9d9d9d",
+          "#697175",
+          "#44891a",
+          "#697175",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#697175",
+          "#44891a",
+          "#697175",
+          "#9d9d9d"
+        ],
+        [
+          "#697175",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175"
+        ]
+      ],
+      "_sourceOffset": 311,
+      "collision_layer": 1733
+    },
+    "sprite-1": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 96,
+      "collision_layer": 1732
+    },
+    "sprite-2": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#697175",
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          "#1B2632"
+        ],
+        [
+          "#697175",
+          "#697175",
+          "#cccccc",
+          "#1B2632",
+          "#1B2632"
+        ],
+        [
+          "#697175",
+          "#697175",
+          "#000000",
+          "#1B2632",
+          "#1B2632"
+        ],
+        [
+          "#697175",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#1B2632"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 156,
+      "collision_layer": 1733
+    },
+    "sprite-3": {
+      "name": "Player",
+      "pixels": [
+        [
+          "#be2633",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#be2633"
+        ],
+        [
+          "#f7e26b",
+          "#eb8931",
+          "#eb8931",
+          "#FFFFFF",
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          "#eeb62f",
+          "#eb8931",
+          "#eb8931",
+          "#f7e26b"
+        ],
+        [
+          "#be2633",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#be2633"
+        ]
+      ],
+      "_sourceOffset": 237,
+      "collision_layer": 1733
+    },
+    "sprite-4": {
+      "name": "LitBlock",
+      "pixels": [
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#697175",
+          "#697175",
+          "#697175",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#697175",
+          "#697175",
+          "#697175",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#697175",
+          "#697175",
+          "#697175",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ]
+      ],
+      "_sourceOffset": 372,
+      "collision_layer": 1733
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Sprite": {
+        "name": "GrayBlock",
+        "sprite": "sprite-0",
+        "_sourceOffset": 311,
+        "collision_layer": 1733
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "Player",
+        "sprite": "sprite-3",
+        "_sourceOffset": 237,
+        "collision_layer": 1733
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "Wall",
+        "sprite": "sprite-2",
+        "_sourceOffset": 156,
+        "collision_layer": 1733
+      }
+    },
+    "tile-3": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-1",
+        "collisionLayers": [
+          1732
+        ],
+        "_sourceOffset": 452
+      }
+    },
+    "tile-4": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          1733
+        ],
+        "_sourceOffset": 467
+      }
+    },
+    "tile-5": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          1733
+        ],
+        "_sourceOffset": 476
+      }
+    },
+    "tile-6": {
+      "Simple": {
+        "name": "o",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          1733
+        ],
+        "_sourceOffset": 487
+      }
+    },
+    "tile-7": {
+      "Or": {
+        "name": "Block",
+        "sprites": [
+          "sprite-3",
+          "sprite-0"
+        ],
+        "collisionLayers": [
+          1733
+        ],
+        "_sourceOffset": 501
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": "Up",
+      "tile": "tile-1",
+      "_sourceOffset": 709,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 720,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": "Down",
+      "tile": "tile-1",
+      "_sourceOffset": 709,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": "Left",
+      "tile": "tile-1",
+      "_sourceOffset": 709,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Right",
+      "tile": "tile-1",
+      "_sourceOffset": 709,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 744,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 753,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 708,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 719,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 708,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 708,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 708,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 743,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 752,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 707
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 707
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 707
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 707
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 742
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 767
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 742
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 767
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 742
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 767
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 742
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 767
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 707,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-1"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 707,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 707,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 707,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-4": {
+      "Group": {
+        "rules": [
+          "rule-0",
+          "rule-1",
+          "rule-2",
+          "rule-3"
+        ],
+        "_sourceOffset": 707,
+        "random": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-5"
+        ],
+        "commands": [],
+        "_sourceOffset": 737,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7"
+        ],
+        "commands": [],
+        "_sourceOffset": 737,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9"
+        ],
+        "commands": [],
+        "_sourceOffset": 737,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-10"
+        ],
+        "actions": [
+          "bracket-11"
+        ],
+        "commands": [],
+        "_sourceOffset": 737,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Group": {
+        "rules": [
+          "rule-5",
+          "rule-6",
+          "rule-7",
+          "rule-8"
+        ],
+        "_sourceOffset": 737,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "Simple": {
+        "_sourceOffset": 837,
+        "qualifier": "No",
+        "tile": "tile-0"
+      }
+    }
+  ],
+  "rules": [
+    "rule-4",
+    "rule-9"
+  ],
+  "levels": [
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 882
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1013
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1144
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-5",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1275
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1407
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-5",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1538
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1670
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-6",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1802
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-6"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-3",
+            "tile-5",
+            "tile-3",
+            "tile-3",
+            "tile-4"
+          ],
+          [
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4",
+            "tile-4"
+          ]
+        ],
+        "_sourceOffset": 1934
+      }
+    }
+  ]
+}

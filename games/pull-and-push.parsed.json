@@ -1,0 +1,6160 @@
+{
+  "version": 1,
+  "title": "pull and push",
+  "metadata": {
+    "author": "Rosden Shadow [Mark Signorelli]",
+    "homepage": "rosden.itch.io",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": "#261F1F",
+    "text_color": "#7EE58D",
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": 0.2,
+    "no_action": true,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#261F1F": "#261F1F",
+    "#7EE58D": "#7EE58D",
+    "#eb8931": "#eb8931",
+    "#DB7F55": "#DB7F55",
+    "#E5C17E": "#E5C17E",
+    "#B32D2D": "#B32D2D",
+    "#73342E": "#73342E",
+    "#847A5C": "#847A5C",
+    "#F2F2AA": "#F2F2AA",
+    "#5B5746": "#5B5746",
+    "#705C84": "#705C84",
+    "#E0AAF2": "#E0AAF2",
+    "#FFD9FC": "#FFD9FC",
+    "#52465B": "#52465B",
+    "#C3C3D9": "#C3C3D9",
+    "#5C8466": "#5C8466",
+    "#AFA2C1": "#AFA2C1",
+    "#4F5B46": "#4F5B46",
+    "#4D2E37": "#4D2E37",
+    "#FFEED9": "#FFEED9",
+    "#536673": "#536673",
+    "#D9FFDC": "#D9FFDC",
+    "#000000": "#000000"
+  },
+  "sounds": {
+    "sound-0": {
+      "SpriteMove": {
+        "sprite": "tile-0",
+        "soundCode": 36772507,
+        "_sourceOffset": 2842
+      }
+    },
+    "sound-1": {
+      "SpriteMove": {
+        "sprite": "tile-1",
+        "soundCode": 41543707,
+        "_sourceOffset": 2865
+      }
+    },
+    "sound-2": {
+      "When": {
+        "when": "ENDLEVEL",
+        "soundCode": 85936100,
+        "_sourceOffset": 2886
+      }
+    },
+    "sound-3": {
+      "SpriteMove": {
+        "sprite": "tile-2",
+        "soundCode": 68988304,
+        "_sourceOffset": 2916
+      }
+    },
+    "sound-4": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 52836103,
+        "_sourceOffset": 2937
+      }
+    },
+    "sound-5": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 45427502,
+        "_sourceOffset": 2951
+      }
+    },
+    "sound-6": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 29503700,
+        "_sourceOffset": 2966
+      }
+    },
+    "sound-7": {
+      "Sfx": {
+        "soundEffect": "SFX3",
+        "soundCode": 81951902,
+        "_sourceOffset": 2980
+      }
+    },
+    "sound-8": {
+      "Sfx": {
+        "soundEffect": "SFX4",
+        "soundCode": 66055300,
+        "_sourceOffset": 2995
+      }
+    },
+    "sound-9": {
+      "Sfx": {
+        "soundEffect": "SFX5",
+        "soundCode": 38290902,
+        "_sourceOffset": 3010
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 2328,
+      "_sourceOffset": 3075
+    },
+    {
+      "id": 2329,
+      "_sourceOffset": 3086
+    },
+    {
+      "id": 2330,
+      "_sourceOffset": 3102
+    },
+    {
+      "id": 2331,
+      "_sourceOffset": 3109
+    },
+    {
+      "id": 2332,
+      "_sourceOffset": 3114
+    },
+    {
+      "id": 2333,
+      "_sourceOffset": 3125
+    },
+    {
+      "id": 2334,
+      "_sourceOffset": 3196
+    },
+    {
+      "id": 2335,
+      "_sourceOffset": 3227
+    },
+    {
+      "id": 2336,
+      "_sourceOffset": 3234
+    },
+    {
+      "id": 2337,
+      "_sourceOffset": 3239
+    },
+    {
+      "id": 2338,
+      "_sourceOffset": 3249
+    },
+    {
+      "id": 2339,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3431
+      }
+    },
+    "command-1": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3431
+      }
+    },
+    "command-2": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3431
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3431
+      }
+    },
+    "command-4": {
+      "Sfx": {
+        "sound": "sound-9",
+        "_sourceOffset": 3472
+      }
+    },
+    "command-5": {
+      "Sfx": {
+        "sound": "sound-9",
+        "_sourceOffset": 3472
+      }
+    },
+    "command-6": {
+      "Sfx": {
+        "sound": "sound-9",
+        "_sourceOffset": 3472
+      }
+    },
+    "command-7": {
+      "Sfx": {
+        "sound": "sound-9",
+        "_sourceOffset": 3472
+      }
+    },
+    "command-8": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3536
+      }
+    },
+    "command-9": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3536
+      }
+    },
+    "command-10": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3536
+      }
+    },
+    "command-11": {
+      "Sfx": {
+        "sound": "sound-8",
+        "_sourceOffset": 3536
+      }
+    },
+    "command-12": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3800
+      }
+    },
+    "command-13": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3800
+      }
+    },
+    "command-14": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3800
+      }
+    },
+    "command-15": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3800
+      }
+    },
+    "command-16": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3842
+      }
+    },
+    "command-17": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3842
+      }
+    },
+    "command-18": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3842
+      }
+    },
+    "command-19": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3842
+      }
+    },
+    "command-20": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3955
+      }
+    },
+    "command-21": {
+      "Again": {
+        "_sourceOffset": 4337
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "switcrate",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1920,
+      "collision_layer": 2333
+    },
+    "sprite-1": {
+      "name": "swapcrate",
+      "pixels": [
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ]
+      ],
+      "_sourceOffset": 1579,
+      "collision_layer": 2333
+    },
+    "sprite-2": {
+      "name": "cloner",
+      "pixels": [
+        [
+          null,
+          "#DB7F55",
+          "#E5C17E",
+          "#E5C17E",
+          null
+        ],
+        [
+          null,
+          "#B32D2D",
+          "#DB7F55",
+          "#E5C17E",
+          null
+        ],
+        [
+          null,
+          "#B32D2D",
+          "#B32D2D",
+          "#DB7F55",
+          null
+        ],
+        [
+          null,
+          "#73342E",
+          "#73342E",
+          "#B32D2D",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1509,
+      "collision_layer": 2333
+    },
+    "sprite-3": {
+      "name": "Crate",
+      "pixels": [
+        [
+          "#847A5C",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA",
+          "#F2F2AA"
+        ],
+        [
+          "#847A5C",
+          "#E5C17E",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#847A5C",
+          "#847A5C",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#5B5746",
+          "#847A5C",
+          "#847A5C",
+          "#847A5C",
+          "#5B5746"
+        ],
+        [
+          null,
+          "#5B5746",
+          "#5B5746",
+          "#5B5746",
+          null
+        ]
+      ],
+      "_sourceOffset": 807,
+      "collision_layer": 2333
+    },
+    "sprite-4": {
+      "name": "Crate2",
+      "pixels": [
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          "#52465B",
+          "#705C84",
+          "#705C84",
+          "#705C84",
+          "#52465B"
+        ],
+        [
+          null,
+          "#52465B",
+          "#52465B",
+          "#52465B",
+          null
+        ]
+      ],
+      "_sourceOffset": 1150,
+      "collision_layer": 2333
+    },
+    "sprite-5": {
+      "name": "playerleft",
+      "pixels": [
+        [
+          null,
+          "#C3C3D9",
+          "#C3C3D9",
+          "#C3C3D9",
+          null
+        ],
+        [
+          "#5C8466",
+          "#C3C3D9",
+          "#5C8466",
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          "#4F5B46",
+          "#AFA2C1",
+          "#4F5B46",
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          "#C3C3D9",
+          "#AFA2C1",
+          "#AFA2C1",
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          null,
+          "#AFA2C1",
+          null,
+          "#AFA2C1",
+          null
+        ]
+      ],
+      "_sourceOffset": 733,
+      "collision_layer": 2333
+    },
+    "sprite-6": {
+      "name": "Playerright",
+      "pixels": [
+        [
+          null,
+          "#C3C3D9",
+          "#C3C3D9",
+          "#C3C3D9",
+          null
+        ],
+        [
+          "#AFA2C1",
+          "#AFA2C1",
+          "#5C8466",
+          "#C3C3D9",
+          "#5C8466"
+        ],
+        [
+          "#AFA2C1",
+          "#AFA2C1",
+          "#4F5B46",
+          "#AFA2C1",
+          "#4F5B46"
+        ],
+        [
+          "#AFA2C1",
+          "#AFA2C1",
+          "#AFA2C1",
+          "#AFA2C1",
+          "#C3C3D9"
+        ],
+        [
+          null,
+          "#AFA2C1",
+          null,
+          "#AFA2C1",
+          null
+        ]
+      ],
+      "_sourceOffset": 658,
+      "collision_layer": 2333
+    },
+    "sprite-7": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#4D2E37",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#4D2E37",
+          "#261F1F",
+          "#4D2E37",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#4D2E37",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ]
+      ],
+      "_sourceOffset": 211,
+      "collision_layer": 2328
+    },
+    "sprite-8": {
+      "name": "nomove",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#FFEED9",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#536673",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#FFEED9",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 354,
+      "collision_layer": 2330
+    },
+    "sprite-9": {
+      "name": "Target",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          null
+        ],
+        [
+          null,
+          "#D9FFDC",
+          null,
+          "#D9FFDC",
+          null
+        ],
+        [
+          null,
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 408,
+      "collision_layer": 2329
+    },
+    "sprite-10": {
+      "name": "Target2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#DB7F55",
+          "#DB7F55",
+          "#DB7F55",
+          null
+        ],
+        [
+          null,
+          "#DB7F55",
+          null,
+          "#DB7F55",
+          null
+        ],
+        [
+          null,
+          "#DB7F55",
+          "#DB7F55",
+          "#DB7F55",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 462,
+      "collision_layer": 2329
+    },
+    "sprite-11": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#5C8466",
+          "#7EE58D",
+          "#7EE58D",
+          "#7EE58D",
+          "#D9FFDC"
+        ],
+        [
+          "#7EE58D",
+          "#5C8466",
+          "#7EE58D",
+          "#7EE58D",
+          "#D9FFDC"
+        ],
+        [
+          "#5C8466",
+          "#7EE58D",
+          "#5C8466",
+          "#5C8466",
+          "#7EE58D"
+        ],
+        [
+          "#4F5B46",
+          "#5C8466",
+          "#4F5B46",
+          "#4F5B46",
+          "#5C8466"
+        ],
+        [
+          "#4F5B46",
+          "#4F5B46",
+          "#4F5B46",
+          "#5C8466",
+          "#4F5B46"
+        ]
+      ],
+      "_sourceOffset": 517,
+      "collision_layer": 2333
+    },
+    "sprite-12": {
+      "name": "overwall",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#7EE58D",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#7EE58D"
+        ],
+        [
+          "#5C8466",
+          "#7EE58D",
+          "#7EE58D",
+          "#D9FFDC",
+          "#D9FFDC"
+        ]
+      ],
+      "_sourceOffset": 585,
+      "collision_layer": 2338
+    },
+    "sprite-13": {
+      "name": "overcrate",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#F2F2AA",
+          "#F2F2AA",
+          "#F2F2AA",
+          null
+        ]
+      ],
+      "_sourceOffset": 876,
+      "collision_layer": 2338
+    },
+    "sprite-14": {
+      "name": "end",
+      "pixels": [
+        [
+          "#847A5C",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC",
+          "#F2F2AA"
+        ],
+        [
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC"
+        ],
+        [
+          "#847A5C",
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#F2F2AA"
+        ],
+        [
+          "#52465B",
+          "#847A5C",
+          "#705C84",
+          "#847A5C",
+          "#52465B"
+        ],
+        [
+          null,
+          "#52465B",
+          "#5B5746",
+          "#52465B",
+          null
+        ]
+      ],
+      "_sourceOffset": 949,
+      "collision_layer": 2337
+    },
+    "sprite-15": {
+      "name": "endx",
+      "pixels": [
+        [
+          "#847A5C",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC",
+          "#F2F2AA"
+        ],
+        [
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC"
+        ],
+        [
+          "#847A5C",
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#F2F2AA"
+        ],
+        [
+          "#52465B",
+          "#847A5C",
+          "#705C84",
+          "#847A5C",
+          "#52465B"
+        ],
+        [
+          null,
+          "#52465B",
+          "#5B5746",
+          "#52465B",
+          null
+        ]
+      ],
+      "_sourceOffset": 1048,
+      "collision_layer": 2337
+    },
+    "sprite-16": {
+      "name": "overcrate2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFD9FC",
+          "#FFD9FC",
+          "#FFD9FC",
+          null
+        ]
+      ],
+      "_sourceOffset": 1220,
+      "collision_layer": 2338
+    },
+    "sprite-17": {
+      "name": "cratecom",
+      "pixels": [
+        [
+          "#847A5C",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC",
+          "#F2F2AA"
+        ],
+        [
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#E5C17E",
+          "#FFD9FC"
+        ],
+        [
+          "#847A5C",
+          "#705C84",
+          "#E5C17E",
+          "#E0AAF2",
+          "#F2F2AA"
+        ],
+        [
+          "#52465B",
+          "#847A5C",
+          "#705C84",
+          "#847A5C",
+          "#52465B"
+        ],
+        [
+          null,
+          "#52465B",
+          "#5B5746",
+          "#52465B",
+          null
+        ]
+      ],
+      "_sourceOffset": 1295,
+      "collision_layer": 2333
+    },
+    "sprite-18": {
+      "name": "overcratecom",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFD9FC",
+          "#F2F2AA",
+          "#FFD9FC",
+          null
+        ]
+      ],
+      "_sourceOffset": 1400,
+      "collision_layer": 2338
+    },
+    "sprite-19": {
+      "name": "swapwall",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1634,
+      "collision_layer": 2333
+    },
+    "sprite-20": {
+      "name": "thefloor",
+      "pixels": [
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ]
+      ],
+      "_sourceOffset": 1680,
+      "collision_layer": 2333
+    },
+    "sprite-21": {
+      "name": "thefloorx",
+      "pixels": [
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ]
+      ],
+      "_sourceOffset": 1728,
+      "collision_layer": 2333
+    },
+    "sprite-22": {
+      "name": "eend",
+      "pixels": [
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ],
+        [
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F",
+          "#261F1F"
+        ]
+      ],
+      "_sourceOffset": 1777,
+      "collision_layer": 2336
+    },
+    "sprite-23": {
+      "name": "switcrate2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1967,
+      "collision_layer": 2332
+    },
+    "sprite-24": {
+      "name": "arrow",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2015,
+      "collision_layer": 2334
+    },
+    "sprite-25": {
+      "name": "arrow2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2058,
+      "collision_layer": 2334
+    },
+    "sprite-26": {
+      "name": "arrowx",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2102,
+      "collision_layer": 2334
+    },
+    "sprite-27": {
+      "name": "arrowx2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2146,
+      "collision_layer": 2334
+    },
+    "sprite-28": {
+      "name": "comx",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2191,
+      "collision_layer": 2331
+    },
+    "sprite-29": {
+      "name": "winend",
+      "pixels": [
+        [
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          null
+        ],
+        [
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC"
+        ],
+        [
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC"
+        ],
+        [
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC"
+        ],
+        [
+          null,
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC"
+        ]
+      ],
+      "_sourceOffset": 2233,
+      "collision_layer": 2335
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Or": {
+        "name": "pushable",
+        "sprites": [
+          "sprite-0",
+          "sprite-1",
+          "sprite-2",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2574
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "Crate2",
+        "sprite": "sprite-4",
+        "_sourceOffset": 1150,
+        "collision_layer": 2333
+      }
+    },
+    "tile-2": {
+      "Or": {
+        "name": "player",
+        "sprites": [
+          "sprite-5",
+          "sprite-6"
+        ],
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2661
+      }
+    },
+    "tile-3": {
+      "Or": {
+        "name": "feel",
+        "sprites": [
+          "sprite-18",
+          "sprite-16",
+          "sprite-13",
+          "sprite-12"
+        ],
+        "collisionLayers": [
+          2338
+        ],
+        "_sourceOffset": 2517
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "comx",
+        "sprite": "sprite-28",
+        "_sourceOffset": 2191,
+        "collision_layer": 2331
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "Crate",
+        "sprite": "sprite-3",
+        "_sourceOffset": 807,
+        "collision_layer": 2333
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "Target",
+        "sprite": "sprite-9",
+        "_sourceOffset": 408,
+        "collision_layer": 2329
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "cratecom",
+        "sprite": "sprite-17",
+        "_sourceOffset": 1295,
+        "collision_layer": 2333
+      }
+    },
+    "tile-8": {
+      "Or": {
+        "name": "blocker",
+        "sprites": [
+          "sprite-24",
+          "sprite-17",
+          "sprite-4",
+          "sprite-6",
+          "sprite-5",
+          "sprite-3",
+          "sprite-11",
+          "sprite-8"
+        ],
+        "collisionLayers": [
+          2334,
+          2333,
+          2330
+        ],
+        "_sourceOffset": 2695
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "switcrate2",
+        "sprite": "sprite-23",
+        "_sourceOffset": 1967,
+        "collision_layer": 2332
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "Playerright",
+        "sprite": "sprite-6",
+        "_sourceOffset": 658,
+        "collision_layer": 2333
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "playerleft",
+        "sprite": "sprite-5",
+        "_sourceOffset": 733,
+        "collision_layer": 2333
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "endx",
+        "sprite": "sprite-15",
+        "_sourceOffset": 1048,
+        "collision_layer": 2337
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "thefloor",
+        "sprite": "sprite-20",
+        "_sourceOffset": 1680,
+        "collision_layer": 2333
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "end",
+        "sprite": "sprite-14",
+        "_sourceOffset": 949,
+        "collision_layer": 2337
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "Wall",
+        "sprite": "sprite-11",
+        "_sourceOffset": 517,
+        "collision_layer": 2333
+      }
+    },
+    "tile-16": {
+      "Sprite": {
+        "name": "overwall",
+        "sprite": "sprite-12",
+        "_sourceOffset": 585,
+        "collision_layer": 2338
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "overcrate",
+        "sprite": "sprite-13",
+        "_sourceOffset": 876,
+        "collision_layer": 2338
+      }
+    },
+    "tile-18": {
+      "Sprite": {
+        "name": "overcrate2",
+        "sprite": "sprite-16",
+        "_sourceOffset": 1220,
+        "collision_layer": 2338
+      }
+    },
+    "tile-19": {
+      "Sprite": {
+        "name": "overcratecom",
+        "sprite": "sprite-18",
+        "_sourceOffset": 1400,
+        "collision_layer": 2338
+      }
+    },
+    "tile-20": {
+      "Sprite": {
+        "name": "eend",
+        "sprite": "sprite-22",
+        "_sourceOffset": 1777,
+        "collision_layer": 2336
+      }
+    },
+    "tile-21": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          2328
+        ],
+        "_sourceOffset": 2304
+      }
+    },
+    "tile-22": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-11",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2319
+      }
+    },
+    "tile-23": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2328
+      }
+    },
+    "tile-24": {
+      "Simple": {
+        "name": "*",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2344
+      }
+    },
+    "tile-25": {
+      "Simple": {
+        "name": "@",
+        "sprite": "sprite-4",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2354
+      }
+    },
+    "tile-26": {
+      "Simple": {
+        "name": "&",
+        "sprite": "sprite-17",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2365
+      }
+    },
+    "tile-27": {
+      "Simple": {
+        "name": "O",
+        "sprite": "sprite-9",
+        "collisionLayers": [
+          2329
+        ],
+        "_sourceOffset": 2378
+      }
+    },
+    "tile-28": {
+      "Simple": {
+        "name": "t",
+        "sprite": "sprite-10",
+        "collisionLayers": [
+          2329
+        ],
+        "_sourceOffset": 2389
+      }
+    },
+    "tile-29": {
+      "Simple": {
+        "name": "n",
+        "sprite": "sprite-8",
+        "collisionLayers": [
+          2330
+        ],
+        "_sourceOffset": 2401
+      }
+    },
+    "tile-30": {
+      "And": {
+        "name": "a",
+        "sprites": [
+          "sprite-25",
+          "sprite-11"
+        ],
+        "collisionLayers": [
+          2334,
+          2333
+        ],
+        "_sourceOffset": 2412
+      }
+    },
+    "tile-31": {
+      "Simple": {
+        "name": "e",
+        "sprite": "sprite-14",
+        "collisionLayers": [
+          2337
+        ],
+        "_sourceOffset": 2432
+      }
+    },
+    "tile-32": {
+      "And": {
+        "name": "j",
+        "sprites": [
+          "sprite-14",
+          "sprite-22",
+          "sprite-9"
+        ],
+        "collisionLayers": [
+          2337,
+          2336,
+          2329
+        ],
+        "_sourceOffset": 2438
+      }
+    },
+    "tile-33": {
+      "And": {
+        "name": "w",
+        "sprites": [
+          "sprite-14",
+          "sprite-29"
+        ],
+        "collisionLayers": [
+          2337,
+          2335
+        ],
+        "_sourceOffset": 2466
+      }
+    },
+    "tile-34": {
+      "Simple": {
+        "name": "c",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2484
+      }
+    },
+    "tile-35": {
+      "Simple": {
+        "name": "-",
+        "sprite": "sprite-20",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2493
+      }
+    },
+    "tile-36": {
+      "Simple": {
+        "name": "x",
+        "sprite": "sprite-21",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2504
+      }
+    },
+    "tile-37": {
+      "Or": {
+        "name": "win",
+        "sprites": [
+          "sprite-11",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2626
+      }
+    },
+    "tile-38": {
+      "Simple": {
+        "name": "theemx",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          2333
+        ],
+        "_sourceOffset": 2646
+      }
+    },
+    "tile-39": {
+      "Or": {
+        "name": "arrowk",
+        "sprites": [
+          "sprite-27",
+          "sprite-26",
+          "sprite-25",
+          "sprite-24"
+        ],
+        "collisionLayers": [
+          2334
+        ],
+        "_sourceOffset": 2772
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 3278,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 3289,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": "Up",
+      "tile": "tile-2",
+      "_sourceOffset": 3301,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 3310,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Up",
+      "tile": "tile-5",
+      "_sourceOffset": 3329,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": "Down",
+      "tile": "tile-2",
+      "_sourceOffset": 3301,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": "Down",
+      "tile": "tile-5",
+      "_sourceOffset": 3329,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": "Left",
+      "tile": "tile-2",
+      "_sourceOffset": 3301,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": "Left",
+      "tile": "tile-5",
+      "_sourceOffset": 3329,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": "Right",
+      "tile": "tile-2",
+      "_sourceOffset": 3301,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": "Right",
+      "tile": "tile-5",
+      "_sourceOffset": 3329,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 3349,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": "Down",
+      "tile": "tile-1",
+      "_sourceOffset": 3369,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": "Up",
+      "tile": "tile-1",
+      "_sourceOffset": 3369,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": "Right",
+      "tile": "tile-1",
+      "_sourceOffset": 3369,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": "Left",
+      "tile": "tile-1",
+      "_sourceOffset": 3369,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3397,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 3409,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 3511,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 3562,
+      "random": false,
+      "negated": true
+    },
+    "twm-20": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3656,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": "Left",
+      "tile": "tile-10",
+      "_sourceOffset": 3850,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": "Left",
+      "tile": "tile-11",
+      "_sourceOffset": 3873,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": "Right",
+      "tile": "tile-11",
+      "_sourceOffset": 3892,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": "Right",
+      "tile": "tile-10",
+      "_sourceOffset": 3915,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 3936,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 3945,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 3961,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4037,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 4053,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 4092,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4133,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4179,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": "Action",
+      "tile": "tile-2",
+      "_sourceOffset": 4272,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 4286,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 3278,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 3286,
+      "tile_with_modifiers": []
+    },
+    "neighbor-2": {
+      "_sourceOffset": 3289,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 3301,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 3310,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 3328,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 3301,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 3328,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 3301,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 3328,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 3301,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 3328,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 3349,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 3368,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 3368,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 3368,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 3368,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 3390,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 3409,
+      "tile_with_modifiers": [
+        "twm-17",
+        "twm-1",
+        "twm-16"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 3457,
+      "tile_with_modifiers": [
+        "twm-17",
+        "twm-1"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 3491,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 3511,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 3561,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 3646,
+      "tile_with_modifiers": [
+        "twm-5",
+        "twm-20"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 3646,
+      "tile_with_modifiers": [
+        "twm-2",
+        "twm-20"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 3646,
+      "tile_with_modifiers": [
+        "twm-9",
+        "twm-20"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 3646,
+      "tile_with_modifiers": [
+        "twm-7",
+        "twm-20"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 3774,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 3849,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 3872,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 3891,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 3914,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 3936,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 3945,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 3961,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 4005,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 4037,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 4053,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 4092,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 4133,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 4179,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 4272,
+      "tile_with_modifiers": [
+        "twm-33",
+        "twm-34"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 4315,
+      "tile_with_modifiers": [
+        "twm-3",
+        "twm-16"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 3277
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3285
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 3288
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3318
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3318
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3318
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3318
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3339
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3358
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3339
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3358
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3339
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3358
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3339
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3358
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3381
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3406
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3381
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3406
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3381
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3406
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3381
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3406
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3436
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3454
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3436
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3454
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3436
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3454
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3436
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3454
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-20",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3481
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3510
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-20",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3481
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3510
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-20",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3481
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3510
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-20",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3481
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3510
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-20",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3542
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3575
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-20",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3542
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3575
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-20",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3542
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3575
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-20",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3542
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3575
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-6",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3601
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-23",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3634
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-3",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3601
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-24",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3634
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-10",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3601
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-25",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3634
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-8",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3601
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-26",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3634
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-7",
+          "neighbor-6",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3675
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-7",
+          "neighbor-23",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3716
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-5",
+          "neighbor-3",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3675
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-5",
+          "neighbor-24",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3716
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-11",
+          "neighbor-10",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3675
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-11",
+          "neighbor-25",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3716
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-9",
+          "neighbor-8",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3675
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-9",
+          "neighbor-26",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3716
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3765
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3765
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3765
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3765
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3805
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3805
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3805
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3805
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3848
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3870
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3848
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3870
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3848
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3870
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3848
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3870
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3890
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-31"
+        ],
+        "_sourceOffset": 3912
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3890
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-31"
+        ],
+        "_sourceOffset": 3912
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3890
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-31"
+        ],
+        "_sourceOffset": 3912
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3890
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-31"
+        ],
+        "_sourceOffset": 3912
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32"
+        ],
+        "_sourceOffset": 3935
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3944
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3960
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3978
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3960
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3978
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3960
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3978
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3960
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 3978
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-35"
+        ],
+        "_sourceOffset": 4004
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4018
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4036
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 4046
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4071
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4083
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4112
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 4124
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4154
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-40"
+        ],
+        "_sourceOffset": 4168
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4202
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-40"
+        ],
+        "_sourceOffset": 4211
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4239
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-40"
+        ],
+        "_sourceOffset": 4249
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4271
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 4294
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4271
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 4294
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4271
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 4294
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4271
+      }
+    },
+    "bracket-122": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 4294
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 3277,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 3277,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 3288,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2"
+        ],
+        "_sourceOffset": 3288,
+        "random": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-5"
+        ],
+        "actions": [
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-7"
+        ],
+        "actions": [
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-9"
+        ],
+        "actions": [
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Group": {
+        "rules": [
+          "rule-4",
+          "rule-5",
+          "rule-6",
+          "rule-7"
+        ],
+        "_sourceOffset": 3300,
+        "random": false
+      }
+    },
+    "rule-9": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-11"
+        ],
+        "actions": [
+          "bracket-12"
+        ],
+        "commands": [],
+        "_sourceOffset": 3339,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-13"
+        ],
+        "actions": [
+          "bracket-14"
+        ],
+        "commands": [],
+        "_sourceOffset": 3339,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-15"
+        ],
+        "actions": [
+          "bracket-16"
+        ],
+        "commands": [],
+        "_sourceOffset": 3339,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-17"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 3339,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-9",
+          "rule-10",
+          "rule-11",
+          "rule-12"
+        ],
+        "_sourceOffset": 3339,
+        "random": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-19"
+        ],
+        "actions": [
+          "bracket-20"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3381,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-22"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3381,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-24"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 3381,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-25"
+        ],
+        "actions": [
+          "bracket-26"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 3381,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-18": {
+      "Group": {
+        "rules": [
+          "rule-14",
+          "rule-15",
+          "rule-16",
+          "rule-17"
+        ],
+        "_sourceOffset": 3381,
+        "random": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-27"
+        ],
+        "actions": [
+          "bracket-28"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 3436,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-29"
+        ],
+        "actions": [
+          "bracket-30"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 3436,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-31"
+        ],
+        "actions": [
+          "bracket-32"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 3436,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-33"
+        ],
+        "actions": [
+          "bracket-34"
+        ],
+        "commands": [
+          "command-7"
+        ],
+        "_sourceOffset": 3436,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-23": {
+      "Group": {
+        "rules": [
+          "rule-19",
+          "rule-20",
+          "rule-21",
+          "rule-22"
+        ],
+        "_sourceOffset": 3436,
+        "random": false
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-35"
+        ],
+        "actions": [
+          "bracket-36"
+        ],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 3481,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-37"
+        ],
+        "actions": [
+          "bracket-38"
+        ],
+        "commands": [
+          "command-9"
+        ],
+        "_sourceOffset": 3481,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-39"
+        ],
+        "actions": [
+          "bracket-40"
+        ],
+        "commands": [
+          "command-10"
+        ],
+        "_sourceOffset": 3481,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-42"
+        ],
+        "commands": [
+          "command-11"
+        ],
+        "_sourceOffset": 3481,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-28": {
+      "Group": {
+        "rules": [
+          "rule-24",
+          "rule-25",
+          "rule-26",
+          "rule-27"
+        ],
+        "_sourceOffset": 3481,
+        "random": false
+      }
+    },
+    "rule-29": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-43"
+        ],
+        "actions": [
+          "bracket-44"
+        ],
+        "commands": [],
+        "_sourceOffset": 3542,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-45"
+        ],
+        "actions": [
+          "bracket-46"
+        ],
+        "commands": [],
+        "_sourceOffset": 3542,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-47"
+        ],
+        "actions": [
+          "bracket-48"
+        ],
+        "commands": [],
+        "_sourceOffset": 3542,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-49"
+        ],
+        "actions": [
+          "bracket-50"
+        ],
+        "commands": [],
+        "_sourceOffset": 3542,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Group": {
+        "rules": [
+          "rule-29",
+          "rule-30",
+          "rule-31",
+          "rule-32"
+        ],
+        "_sourceOffset": 3542,
+        "random": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-51"
+        ],
+        "actions": [
+          "bracket-52"
+        ],
+        "commands": [],
+        "_sourceOffset": 3601,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-53"
+        ],
+        "actions": [
+          "bracket-54"
+        ],
+        "commands": [],
+        "_sourceOffset": 3601,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-55"
+        ],
+        "actions": [
+          "bracket-56"
+        ],
+        "commands": [],
+        "_sourceOffset": 3601,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-57"
+        ],
+        "actions": [
+          "bracket-58"
+        ],
+        "commands": [],
+        "_sourceOffset": 3601,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-38": {
+      "Group": {
+        "rules": [
+          "rule-34",
+          "rule-35",
+          "rule-36",
+          "rule-37"
+        ],
+        "_sourceOffset": 3601,
+        "random": false
+      }
+    },
+    "rule-39": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-59"
+        ],
+        "actions": [
+          "bracket-60"
+        ],
+        "commands": [],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-61"
+        ],
+        "actions": [
+          "bracket-62"
+        ],
+        "commands": [],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-63"
+        ],
+        "actions": [
+          "bracket-64"
+        ],
+        "commands": [],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-65"
+        ],
+        "actions": [
+          "bracket-66"
+        ],
+        "commands": [],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Group": {
+        "rules": [
+          "rule-39",
+          "rule-40",
+          "rule-41",
+          "rule-42"
+        ],
+        "_sourceOffset": 3675,
+        "random": false
+      }
+    },
+    "rule-44": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-67"
+        ],
+        "actions": [
+          "bracket-67"
+        ],
+        "commands": [
+          "command-12"
+        ],
+        "_sourceOffset": 3765,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-45": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-68"
+        ],
+        "actions": [
+          "bracket-68"
+        ],
+        "commands": [
+          "command-13"
+        ],
+        "_sourceOffset": 3765,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-69"
+        ],
+        "actions": [
+          "bracket-69"
+        ],
+        "commands": [
+          "command-14"
+        ],
+        "_sourceOffset": 3765,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-70"
+        ],
+        "actions": [
+          "bracket-70"
+        ],
+        "commands": [
+          "command-15"
+        ],
+        "_sourceOffset": 3765,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-48": {
+      "Group": {
+        "rules": [
+          "rule-44",
+          "rule-45",
+          "rule-46",
+          "rule-47"
+        ],
+        "_sourceOffset": 3765,
+        "random": false
+      }
+    },
+    "rule-49": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-71"
+        ],
+        "actions": [
+          "bracket-71"
+        ],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 3805,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-50": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-72"
+        ],
+        "actions": [
+          "bracket-72"
+        ],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 3805,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-51": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-73"
+        ],
+        "actions": [
+          "bracket-73"
+        ],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 3805,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-74"
+        ],
+        "actions": [
+          "bracket-74"
+        ],
+        "commands": [
+          "command-19"
+        ],
+        "_sourceOffset": 3805,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Group": {
+        "rules": [
+          "rule-49",
+          "rule-50",
+          "rule-51",
+          "rule-52"
+        ],
+        "_sourceOffset": 3805,
+        "random": false
+      }
+    },
+    "rule-54": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-75"
+        ],
+        "actions": [
+          "bracket-76"
+        ],
+        "commands": [],
+        "_sourceOffset": 3848,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-55": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-77"
+        ],
+        "actions": [
+          "bracket-78"
+        ],
+        "commands": [],
+        "_sourceOffset": 3848,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-56": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-79"
+        ],
+        "actions": [
+          "bracket-80"
+        ],
+        "commands": [],
+        "_sourceOffset": 3848,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-57": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-81"
+        ],
+        "actions": [
+          "bracket-82"
+        ],
+        "commands": [],
+        "_sourceOffset": 3848,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-58": {
+      "Group": {
+        "rules": [
+          "rule-54",
+          "rule-55",
+          "rule-56",
+          "rule-57"
+        ],
+        "_sourceOffset": 3848,
+        "random": false
+      }
+    },
+    "rule-59": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-83"
+        ],
+        "actions": [
+          "bracket-84"
+        ],
+        "commands": [],
+        "_sourceOffset": 3890,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-60": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-85"
+        ],
+        "actions": [
+          "bracket-86"
+        ],
+        "commands": [],
+        "_sourceOffset": 3890,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-61": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-87"
+        ],
+        "actions": [
+          "bracket-88"
+        ],
+        "commands": [],
+        "_sourceOffset": 3890,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-89"
+        ],
+        "actions": [
+          "bracket-90"
+        ],
+        "commands": [],
+        "_sourceOffset": 3890,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Group": {
+        "rules": [
+          "rule-59",
+          "rule-60",
+          "rule-61",
+          "rule-62"
+        ],
+        "_sourceOffset": 3890,
+        "random": false
+      }
+    },
+    "rule-64": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-91"
+        ],
+        "actions": [
+          "bracket-92"
+        ],
+        "commands": [
+          "command-20"
+        ],
+        "_sourceOffset": 3935,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-65": {
+      "Group": {
+        "rules": [
+          "rule-64"
+        ],
+        "_sourceOffset": 3935,
+        "random": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-93"
+        ],
+        "actions": [
+          "bracket-94"
+        ],
+        "commands": [],
+        "_sourceOffset": 3960,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-95"
+        ],
+        "actions": [
+          "bracket-96"
+        ],
+        "commands": [],
+        "_sourceOffset": 3960,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-97"
+        ],
+        "actions": [
+          "bracket-98"
+        ],
+        "commands": [],
+        "_sourceOffset": 3960,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-99"
+        ],
+        "actions": [
+          "bracket-100"
+        ],
+        "commands": [],
+        "_sourceOffset": 3960,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-70": {
+      "Group": {
+        "rules": [
+          "rule-66",
+          "rule-67",
+          "rule-68",
+          "rule-69"
+        ],
+        "_sourceOffset": 3960,
+        "random": false
+      }
+    },
+    "rule-71": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-101"
+        ],
+        "actions": [
+          "bracket-102"
+        ],
+        "commands": [],
+        "_sourceOffset": 3999,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-72": {
+      "Group": {
+        "rules": [
+          "rule-71"
+        ],
+        "_sourceOffset": 3999,
+        "random": false
+      }
+    },
+    "rule-73": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-103"
+        ],
+        "actions": [
+          "bracket-104"
+        ],
+        "commands": [],
+        "_sourceOffset": 4028,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-74": {
+      "Group": {
+        "rules": [
+          "rule-73"
+        ],
+        "_sourceOffset": 4028,
+        "random": false
+      }
+    },
+    "rule-75": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-105"
+        ],
+        "actions": [
+          "bracket-106"
+        ],
+        "commands": [],
+        "_sourceOffset": 4063,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-76": {
+      "Group": {
+        "rules": [
+          "rule-75"
+        ],
+        "_sourceOffset": 4063,
+        "random": false
+      }
+    },
+    "rule-77": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-107"
+        ],
+        "actions": [
+          "bracket-108"
+        ],
+        "commands": [],
+        "_sourceOffset": 4104,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-78": {
+      "Group": {
+        "rules": [
+          "rule-77"
+        ],
+        "_sourceOffset": 4104,
+        "random": false
+      }
+    },
+    "rule-79": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-109"
+        ],
+        "actions": [
+          "bracket-110"
+        ],
+        "commands": [],
+        "_sourceOffset": 4146,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-80": {
+      "Group": {
+        "rules": [
+          "rule-79"
+        ],
+        "_sourceOffset": 4146,
+        "random": false
+      }
+    },
+    "rule-81": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-111"
+        ],
+        "actions": [
+          "bracket-112"
+        ],
+        "commands": [],
+        "_sourceOffset": 4194,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-82": {
+      "Group": {
+        "rules": [
+          "rule-81"
+        ],
+        "_sourceOffset": 4194,
+        "random": false
+      }
+    },
+    "rule-83": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-113"
+        ],
+        "actions": [
+          "bracket-114"
+        ],
+        "commands": [],
+        "_sourceOffset": 4231,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-84": {
+      "Group": {
+        "rules": [
+          "rule-83"
+        ],
+        "_sourceOffset": 4231,
+        "random": false
+      }
+    },
+    "rule-85": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-115"
+        ],
+        "actions": [
+          "bracket-116"
+        ],
+        "commands": [],
+        "_sourceOffset": 4271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-117"
+        ],
+        "actions": [
+          "bracket-118"
+        ],
+        "commands": [],
+        "_sourceOffset": 4271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-119"
+        ],
+        "actions": [
+          "bracket-120"
+        ],
+        "commands": [],
+        "_sourceOffset": 4271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-121"
+        ],
+        "actions": [
+          "bracket-122"
+        ],
+        "commands": [],
+        "_sourceOffset": 4271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Group": {
+        "rules": [
+          "rule-85",
+          "rule-86",
+          "rule-87",
+          "rule-88"
+        ],
+        "_sourceOffset": 4271,
+        "random": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-1"
+        ],
+        "actions": [],
+        "commands": [
+          "command-21"
+        ],
+        "_sourceOffset": 4332,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Group": {
+        "rules": [
+          "rule-90"
+        ],
+        "_sourceOffset": 4332,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "On": {
+        "_sourceOffset": 4469,
+        "qualifier": "All",
+        "tile": "tile-6",
+        "on_tile": "tile-7"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-3",
+    "rule-8",
+    "rule-13",
+    "rule-18",
+    "rule-23",
+    "rule-28",
+    "rule-33",
+    "rule-38",
+    "rule-43",
+    "rule-48",
+    "rule-53",
+    "rule-58",
+    "rule-63",
+    "rule-65",
+    "rule-70",
+    "rule-72",
+    "rule-74",
+    "rule-76",
+    "rule-78",
+    "rule-80",
+    "rule-82",
+    "rule-84",
+    "rule-89",
+    "rule-91"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "Have a combined block on all targets",
+        "_sourceOffset": 4520
+      }
+    },
+    {
+      "Message": {
+        "message": "level 1 of 6",
+        "_sourceOffset": 4566
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-24",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ]
+        ],
+        "_sourceOffset": 4587
+      }
+    },
+    {
+      "Message": {
+        "message": "level 2 of 6",
+        "_sourceOffset": 4698
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ]
+        ],
+        "_sourceOffset": 4719
+      }
+    },
+    {
+      "Message": {
+        "message": "level 3 of 6",
+        "_sourceOffset": 4830
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-21",
+            "tile-25",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ]
+        ],
+        "_sourceOffset": 4851
+      }
+    },
+    {
+      "Message": {
+        "message": "level 4 of 6",
+        "_sourceOffset": 4962
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-23",
+            "tile-26",
+            "tile-21",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 4983
+      }
+    },
+    {
+      "Message": {
+        "message": "level 5 of 6",
+        "_sourceOffset": 5094
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-27",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-25",
+            "tile-24",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5115
+      }
+    },
+    {
+      "Message": {
+        "message": "level 6 of 6",
+        "_sourceOffset": 5226
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-23",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-35",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-35"
+          ]
+        ],
+        "_sourceOffset": 5247
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36",
+            "tile-36"
+          ],
+          [
+            "tile-35",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-35"
+          ],
+          [
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33"
+          ],
+          [
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-32",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-33"
+          ],
+          [
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-33"
+          ],
+          [
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-33"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-35",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-33",
+            "tile-33",
+            "tile-33",
+            "tile-33",
+            "tile-33",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-35"
+          ]
+        ],
+        "_sourceOffset": 5358
+      }
+    }
+  ]
+}

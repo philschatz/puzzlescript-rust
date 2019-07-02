@@ -1,0 +1,8958 @@
+{
+  "version": 1,
+  "title": "Baguettes",
+  "metadata": {
+    "author": "bregehr",
+    "homepage": "www.puzzlescript.net",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": null,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#a5944f": "#a5944f",
+    "#a89855": "#a89855",
+    "#776b39": "#776b39",
+    "#685e33": "#685e33",
+    "#564d1f": "#564d1f",
+    "#332d13": "#332d13",
+    "#000000": "#000000",
+    "#eb8931": "#eb8931",
+    "#FFFFFF": "#FFFFFF",
+    "#1d57f7": "#1d57f7",
+    "#bf9a00": "#bf9a00",
+    "#997e0d": "#997e0d",
+    "#C6A002": "#C6A002",
+    "#B08E02": "#B08E02",
+    "#b7ae5d": "#b7ae5d",
+    "#c1b860": "#c1b860",
+    "#ccc266": "#ccc266",
+    "#3d2922": "#3d2922",
+    "#6b331f": "#6b331f",
+    "#e89e00": "#e89e00"
+  },
+  "sounds": {},
+  "collision_layers": [
+    {
+      "id": 160,
+      "_sourceOffset": 1918
+    },
+    {
+      "id": 161,
+      "_sourceOffset": 1929
+    },
+    {
+      "id": 162,
+      "_sourceOffset": 1936
+    },
+    {
+      "id": 163,
+      "_sourceOffset": 1941
+    },
+    {
+      "id": 164,
+      "_sourceOffset": 1982
+    },
+    {
+      "id": 165,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Cancel": {
+        "_sourceOffset": 3146
+      }
+    },
+    "command-1": {
+      "Cancel": {
+        "_sourceOffset": 3177
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#a5944f",
+          "#a5944f",
+          "#a5944f",
+          "#a5944f",
+          "#a89855"
+        ],
+        [
+          "#a5944f",
+          "#a89855",
+          "#a89855",
+          "#a89855",
+          "#a89855"
+        ],
+        [
+          "#a5944f",
+          "#a89855",
+          "#a89855",
+          "#a89855",
+          "#a89855"
+        ],
+        [
+          "#a5944f",
+          "#a89855",
+          "#a89855",
+          "#a89855",
+          "#a89855"
+        ],
+        [
+          "#a89855",
+          "#a89855",
+          "#a89855",
+          "#a89855",
+          "#a89855"
+        ]
+      ],
+      "_sourceOffset": 114,
+      "collision_layer": 160
+    },
+    "sprite-1": {
+      "name": "Targetmid",
+      "pixels": [
+        [
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39"
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39"
+        ]
+      ],
+      "_sourceOffset": 181,
+      "collision_layer": 161
+    },
+    "sprite-2": {
+      "name": "Targetleft",
+      "pixels": [
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33"
+        ],
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39"
+        ]
+      ],
+      "_sourceOffset": 238,
+      "collision_layer": 161
+    },
+    "sprite-3": {
+      "name": "Targetright",
+      "pixels": [
+        [
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ]
+      ],
+      "_sourceOffset": 296,
+      "collision_layer": 161
+    },
+    "sprite-4": {
+      "name": "targetmidup",
+      "pixels": [
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ]
+      ],
+      "_sourceOffset": 355,
+      "collision_layer": 161
+    },
+    "sprite-5": {
+      "name": "targetup",
+      "pixels": [
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ]
+      ],
+      "_sourceOffset": 414,
+      "collision_layer": 161
+    },
+    "sprite-6": {
+      "name": "targetdown",
+      "pixels": [
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ]
+      ],
+      "_sourceOffset": 470,
+      "collision_layer": 161
+    },
+    "sprite-7": {
+      "name": "targetball",
+      "pixels": [
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          "#776b39",
+          "#685e33",
+          "#685e33",
+          "#685e33",
+          "#776b39"
+        ],
+        [
+          null,
+          "#776b39",
+          "#776b39",
+          "#776b39",
+          null
+        ]
+      ],
+      "_sourceOffset": 528,
+      "collision_layer": 161
+    },
+    "sprite-8": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f"
+        ],
+        [
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f"
+        ],
+        [
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f"
+        ],
+        [
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f"
+        ],
+        [
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f",
+          "#564d1f"
+        ]
+      ],
+      "_sourceOffset": 588,
+      "collision_layer": 163
+    },
+    "sprite-9": {
+      "name": "wallside",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#332d13",
+          "#332d13",
+          "#332d13",
+          "#332d13",
+          "#332d13"
+        ]
+      ],
+      "_sourceOffset": 603,
+      "collision_layer": 164
+    },
+    "sprite-10": {
+      "name": "Player",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          null
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 651,
+      "collision_layer": 163
+    },
+    "sprite-11": {
+      "name": "Bagmid",
+      "pixels": [
+        [
+          "#bf9a00",
+          "#bf9a00",
+          "#997e0d",
+          "#bf9a00",
+          "#bf9a00"
+        ],
+        [
+          "#C6A002",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#C6A002",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00"
+        ],
+        [
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02"
+        ]
+      ],
+      "_sourceOffset": 716,
+      "collision_layer": 163
+    },
+    "sprite-12": {
+      "name": "bagleft",
+      "pixels": [
+        [
+          null,
+          "#bf9a00",
+          "#997e0d",
+          "#bf9a00",
+          "#bf9a00"
+        ],
+        [
+          "#B08E02",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#B08E02",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00"
+        ],
+        [
+          null,
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02"
+        ]
+      ],
+      "_sourceOffset": 786,
+      "collision_layer": 163
+    },
+    "sprite-13": {
+      "name": "bagright",
+      "pixels": [
+        [
+          "#bf9a00",
+          "#bf9a00",
+          "#B08E02",
+          "#997e0d",
+          null
+        ],
+        [
+          "#C6A002",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#C6A002",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00",
+          "#bf9a00",
+          "#B08E02"
+        ],
+        [
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#997e0d",
+          null
+        ]
+      ],
+      "_sourceOffset": 857,
+      "collision_layer": 163
+    },
+    "sprite-14": {
+      "name": "Bagmidup",
+      "pixels": [
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#bf9a00",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#997e0d",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#bf9a00",
+          "#997e0d"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#bf9a00",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#997e0d"
+        ]
+      ],
+      "_sourceOffset": 929,
+      "collision_layer": 163
+    },
+    "sprite-15": {
+      "name": "Bagup",
+      "pixels": [
+        [
+          null,
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          null
+        ],
+        [
+          "#997e0d",
+          "#997e0d",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#bf9a00",
+          "#997e0d"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02",
+          "#997e0d"
+        ]
+      ],
+      "_sourceOffset": 1001,
+      "collision_layer": 163
+    },
+    "sprite-16": {
+      "name": "bagdown",
+      "pixels": [
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#997e0d",
+          "#B08E02",
+          "#B08E02",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#997e0d",
+          "#B08E02",
+          "#bf9a00",
+          "#bf9a00",
+          "#997e0d"
+        ],
+        [
+          null,
+          "#997e0d",
+          "#997e0d",
+          "#997e0d",
+          null
+        ]
+      ],
+      "_sourceOffset": 1070,
+      "collision_layer": 163
+    },
+    "sprite-17": {
+      "name": "doughball",
+      "pixels": [
+        [
+          null,
+          "#b7ae5d",
+          "#b7ae5d",
+          "#c1b860",
+          null
+        ],
+        [
+          "#b7ae5d",
+          "#c1b860",
+          "#c1b860",
+          "#ccc266",
+          "#ccc266"
+        ],
+        [
+          "#c1b860",
+          "#ccc266",
+          "#ccc266",
+          "#ccc266",
+          "#ccc266"
+        ],
+        [
+          "#c1b860",
+          "#ccc266",
+          "#ccc266",
+          "#c1b860",
+          "#c1b860"
+        ],
+        [
+          null,
+          "#c1b860",
+          "#c1b860",
+          "#b7ae5d",
+          null
+        ]
+      ],
+      "_sourceOffset": 1141,
+      "collision_layer": 163
+    },
+    "sprite-18": {
+      "name": "bagball",
+      "pixels": [
+        [
+          null,
+          "#B08E02",
+          "#B08E02",
+          "#bf9a00",
+          null
+        ],
+        [
+          "#B08E02",
+          "#C6A002",
+          "#C6A002",
+          "#C6A002",
+          "#bf9a00"
+        ],
+        [
+          "#C6A002",
+          "#bf9a00",
+          "#bf9a00",
+          "#C6A002",
+          "#B08E02"
+        ],
+        [
+          "#bf9a00",
+          "#C6A002",
+          "#B08E02",
+          "#B08E02",
+          "#997e0d"
+        ],
+        [
+          null,
+          "#B08E02",
+          "#997e0d",
+          "#997e0d",
+          null
+        ]
+      ],
+      "_sourceOffset": 1206,
+      "collision_layer": 163
+    },
+    "sprite-19": {
+      "name": "oven",
+      "pixels": [
+        [
+          "#3d2922",
+          "#3d2922",
+          "#3d2922",
+          "#3d2922",
+          "#3d2922"
+        ],
+        [
+          "#3d2922",
+          "#6b331f",
+          "#e89e00",
+          "#6b331f",
+          "#3d2922"
+        ],
+        [
+          "#3d2922",
+          "#e89e00",
+          "#6b331f",
+          "#e89e00",
+          "#3d2922"
+        ],
+        [
+          "#3d2922",
+          "#6b331f",
+          "#e89e00",
+          "#6b331f",
+          "#3d2922"
+        ],
+        [
+          "#3d2922",
+          "#3d2922",
+          "#3d2922",
+          "#3d2922",
+          "#3d2922"
+        ]
+      ],
+      "_sourceOffset": 1277,
+      "collision_layer": 162
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Sprite": {
+        "name": "Wall",
+        "sprite": "sprite-8",
+        "_sourceOffset": 588,
+        "collision_layer": 163
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "wallside",
+        "sprite": "sprite-9",
+        "_sourceOffset": 603,
+        "collision_layer": 164
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "Player",
+        "sprite": "sprite-10",
+        "_sourceOffset": 651,
+        "collision_layer": 163
+      }
+    },
+    "tile-3": {
+      "Or": {
+        "name": "Bagget",
+        "sprites": [
+          "sprite-18",
+          "sprite-16",
+          "sprite-15",
+          "sprite-14",
+          "sprite-13",
+          "sprite-12",
+          "sprite-11"
+        ],
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1598
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "doughball",
+        "sprite": "sprite-17",
+        "_sourceOffset": 1141,
+        "collision_layer": 163
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "Bagmid",
+        "sprite": "sprite-11",
+        "_sourceOffset": 716,
+        "collision_layer": 163
+      }
+    },
+    "tile-6": {
+      "Or": {
+        "name": "bagside",
+        "sprites": [
+          "sprite-13",
+          "sprite-12"
+        ],
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1680
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "bagleft",
+        "sprite": "sprite-12",
+        "_sourceOffset": 786,
+        "collision_layer": 163
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "bagright",
+        "sprite": "sprite-13",
+        "_sourceOffset": 857,
+        "collision_layer": 163
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "Bagmidup",
+        "sprite": "sprite-14",
+        "_sourceOffset": 929,
+        "collision_layer": 163
+      }
+    },
+    "tile-10": {
+      "Or": {
+        "name": "bagupside",
+        "sprites": [
+          "sprite-16",
+          "sprite-15"
+        ],
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1710
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "bagdown",
+        "sprite": "sprite-16",
+        "_sourceOffset": 1070,
+        "collision_layer": 163
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "Bagup",
+        "sprite": "sprite-15",
+        "_sourceOffset": 1001,
+        "collision_layer": 163
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "oven",
+        "sprite": "sprite-19",
+        "_sourceOffset": 1277,
+        "collision_layer": 162
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "bagball",
+        "sprite": "sprite-18",
+        "_sourceOffset": 1206,
+        "collision_layer": 163
+      }
+    },
+    "tile-15": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          160
+        ],
+        "_sourceOffset": 1365
+      }
+    },
+    "tile-16": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-8",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1380
+      }
+    },
+    "tile-17": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-10",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1389
+      }
+    },
+    "tile-18": {
+      "Simple": {
+        "name": "-",
+        "sprite": "sprite-11",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1400
+      }
+    },
+    "tile-19": {
+      "Simple": {
+        "name": "L",
+        "sprite": "sprite-12",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1411
+      }
+    },
+    "tile-20": {
+      "Simple": {
+        "name": "R",
+        "sprite": "sprite-13",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1423
+      }
+    },
+    "tile-21": {
+      "Simple": {
+        "name": "O",
+        "sprite": "sprite-1",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1436
+      }
+    },
+    "tile-22": {
+      "Simple": {
+        "name": "Y",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1450
+      }
+    },
+    "tile-23": {
+      "Simple": {
+        "name": "K",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1465
+      }
+    },
+    "tile-24": {
+      "Simple": {
+        "name": "T",
+        "sprite": "sprite-5",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1481
+      }
+    },
+    "tile-25": {
+      "Simple": {
+        "name": "I",
+        "sprite": "sprite-4",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1494
+      }
+    },
+    "tile-26": {
+      "Simple": {
+        "name": "N",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1510
+      }
+    },
+    "tile-27": {
+      "Simple": {
+        "name": "W",
+        "sprite": "sprite-14",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1525
+      }
+    },
+    "tile-28": {
+      "Simple": {
+        "name": "Q",
+        "sprite": "sprite-15",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1538
+      }
+    },
+    "tile-29": {
+      "Simple": {
+        "name": "X",
+        "sprite": "sprite-16",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1548
+      }
+    },
+    "tile-30": {
+      "Simple": {
+        "name": "E",
+        "sprite": "sprite-19",
+        "collisionLayers": [
+          162
+        ],
+        "_sourceOffset": 1560
+      }
+    },
+    "tile-31": {
+      "Simple": {
+        "name": "D",
+        "sprite": "sprite-17",
+        "collisionLayers": [
+          163
+        ],
+        "_sourceOffset": 1569
+      }
+    },
+    "tile-32": {
+      "Simple": {
+        "name": "Z",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1583
+      }
+    },
+    "tile-33": {
+      "Or": {
+        "name": "target",
+        "sprites": [
+          "sprite-7",
+          "sprite-6",
+          "sprite-5",
+          "sprite-4",
+          "sprite-3",
+          "sprite-2",
+          "sprite-1"
+        ],
+        "collisionLayers": [
+          161
+        ],
+        "_sourceOffset": 1739
+      }
+    },
+    "tile-34": {
+      "Sprite": {
+        "name": "Targetleft",
+        "sprite": "sprite-2",
+        "_sourceOffset": 238,
+        "collision_layer": 161
+      }
+    },
+    "tile-35": {
+      "Sprite": {
+        "name": "Targetright",
+        "sprite": "sprite-3",
+        "_sourceOffset": 296,
+        "collision_layer": 161
+      }
+    },
+    "tile-36": {
+      "Sprite": {
+        "name": "Targetmid",
+        "sprite": "sprite-1",
+        "_sourceOffset": 181,
+        "collision_layer": 161
+      }
+    },
+    "tile-37": {
+      "Sprite": {
+        "name": "targetmidup",
+        "sprite": "sprite-4",
+        "_sourceOffset": 355,
+        "collision_layer": 161
+      }
+    },
+    "tile-38": {
+      "Sprite": {
+        "name": "targetup",
+        "sprite": "sprite-5",
+        "_sourceOffset": 414,
+        "collision_layer": 161
+      }
+    },
+    "tile-39": {
+      "Sprite": {
+        "name": "targetdown",
+        "sprite": "sprite-6",
+        "_sourceOffset": 470,
+        "collision_layer": 161
+      }
+    },
+    "tile-40": {
+      "Sprite": {
+        "name": "targetball",
+        "sprite": "sprite-7",
+        "_sourceOffset": 528,
+        "collision_layer": 161
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 2031,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 2036,
+      "random": false,
+      "negated": true
+    },
+    "twm-2": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 2049,
+      "random": false,
+      "negated": true
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 2067,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Up",
+      "tile": "tile-2",
+      "_sourceOffset": 2089,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 2100,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": "Up",
+      "tile": "tile-3",
+      "_sourceOffset": 2123,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": "Down",
+      "tile": "tile-2",
+      "_sourceOffset": 2089,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": "Down",
+      "tile": "tile-3",
+      "_sourceOffset": 2123,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": "Left",
+      "tile": "tile-2",
+      "_sourceOffset": 2089,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": "Left",
+      "tile": "tile-3",
+      "_sourceOffset": 2123,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": "Right",
+      "tile": "tile-2",
+      "_sourceOffset": 2089,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": "Right",
+      "tile": "tile-3",
+      "_sourceOffset": 2123,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 2145,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": "Up",
+      "tile": "tile-4",
+      "_sourceOffset": 2171,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": "Down",
+      "tile": "tile-4",
+      "_sourceOffset": 2171,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": "Left",
+      "tile": "tile-4",
+      "_sourceOffset": 2171,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": "Right",
+      "tile": "tile-4",
+      "_sourceOffset": 2171,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": "Up",
+      "tile": "tile-5",
+      "_sourceOffset": 2208,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 2224,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": "Up",
+      "tile": "tile-6",
+      "_sourceOffset": 2253,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": "Down",
+      "tile": "tile-5",
+      "_sourceOffset": 2208,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": "Down",
+      "tile": "tile-6",
+      "_sourceOffset": 2253,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": "Left",
+      "tile": "tile-5",
+      "_sourceOffset": 2208,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": "Left",
+      "tile": "tile-6",
+      "_sourceOffset": 2253,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": "Right",
+      "tile": "tile-5",
+      "_sourceOffset": 2208,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": "Right",
+      "tile": "tile-6",
+      "_sourceOffset": 2253,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": "Action",
+      "tile": "tile-5",
+      "_sourceOffset": 2208,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": "Action",
+      "tile": "tile-6",
+      "_sourceOffset": 2253,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 2298,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": "Up",
+      "tile": "tile-7",
+      "_sourceOffset": 2420,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 2437,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": "Up",
+      "tile": "tile-8",
+      "_sourceOffset": 2468,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": "Down",
+      "tile": "tile-7",
+      "_sourceOffset": 2420,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": "Down",
+      "tile": "tile-8",
+      "_sourceOffset": 2468,
+      "random": false,
+      "negated": false
+    },
+    "twm-35": {
+      "direction": "Left",
+      "tile": "tile-7",
+      "_sourceOffset": 2420,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": "Left",
+      "tile": "tile-8",
+      "_sourceOffset": 2468,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": "Right",
+      "tile": "tile-7",
+      "_sourceOffset": 2420,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": "Right",
+      "tile": "tile-8",
+      "_sourceOffset": 2468,
+      "random": false,
+      "negated": false
+    },
+    "twm-39": {
+      "direction": "Action",
+      "tile": "tile-7",
+      "_sourceOffset": 2420,
+      "random": false,
+      "negated": false
+    },
+    "twm-40": {
+      "direction": "Action",
+      "tile": "tile-8",
+      "_sourceOffset": 2468,
+      "random": false,
+      "negated": false
+    },
+    "twm-41": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 2509,
+      "random": false,
+      "negated": false
+    },
+    "twm-42": {
+      "direction": "Up",
+      "tile": "tile-9",
+      "_sourceOffset": 2567,
+      "random": false,
+      "negated": false
+    },
+    "twm-43": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 2585,
+      "random": false,
+      "negated": false
+    },
+    "twm-44": {
+      "direction": "Up",
+      "tile": "tile-10",
+      "_sourceOffset": 2618,
+      "random": false,
+      "negated": false
+    },
+    "twm-45": {
+      "direction": "Down",
+      "tile": "tile-9",
+      "_sourceOffset": 2567,
+      "random": false,
+      "negated": false
+    },
+    "twm-46": {
+      "direction": "Down",
+      "tile": "tile-10",
+      "_sourceOffset": 2618,
+      "random": false,
+      "negated": false
+    },
+    "twm-47": {
+      "direction": "Left",
+      "tile": "tile-9",
+      "_sourceOffset": 2567,
+      "random": false,
+      "negated": false
+    },
+    "twm-48": {
+      "direction": "Left",
+      "tile": "tile-10",
+      "_sourceOffset": 2618,
+      "random": false,
+      "negated": false
+    },
+    "twm-49": {
+      "direction": "Right",
+      "tile": "tile-9",
+      "_sourceOffset": 2567,
+      "random": false,
+      "negated": false
+    },
+    "twm-50": {
+      "direction": "Right",
+      "tile": "tile-10",
+      "_sourceOffset": 2618,
+      "random": false,
+      "negated": false
+    },
+    "twm-51": {
+      "direction": "Action",
+      "tile": "tile-9",
+      "_sourceOffset": 2567,
+      "random": false,
+      "negated": false
+    },
+    "twm-52": {
+      "direction": "Action",
+      "tile": "tile-10",
+      "_sourceOffset": 2618,
+      "random": false,
+      "negated": false
+    },
+    "twm-53": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 2665,
+      "random": false,
+      "negated": false
+    },
+    "twm-54": {
+      "direction": "Up",
+      "tile": "tile-11",
+      "_sourceOffset": 2796,
+      "random": false,
+      "negated": false
+    },
+    "twm-55": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 2813,
+      "random": false,
+      "negated": false
+    },
+    "twm-56": {
+      "direction": "Up",
+      "tile": "tile-12",
+      "_sourceOffset": 2841,
+      "random": false,
+      "negated": false
+    },
+    "twm-57": {
+      "direction": "Down",
+      "tile": "tile-11",
+      "_sourceOffset": 2796,
+      "random": false,
+      "negated": false
+    },
+    "twm-58": {
+      "direction": "Down",
+      "tile": "tile-12",
+      "_sourceOffset": 2841,
+      "random": false,
+      "negated": false
+    },
+    "twm-59": {
+      "direction": "Left",
+      "tile": "tile-11",
+      "_sourceOffset": 2796,
+      "random": false,
+      "negated": false
+    },
+    "twm-60": {
+      "direction": "Left",
+      "tile": "tile-12",
+      "_sourceOffset": 2841,
+      "random": false,
+      "negated": false
+    },
+    "twm-61": {
+      "direction": "Right",
+      "tile": "tile-11",
+      "_sourceOffset": 2796,
+      "random": false,
+      "negated": false
+    },
+    "twm-62": {
+      "direction": "Right",
+      "tile": "tile-12",
+      "_sourceOffset": 2841,
+      "random": false,
+      "negated": false
+    },
+    "twm-63": {
+      "direction": "Action",
+      "tile": "tile-11",
+      "_sourceOffset": 2796,
+      "random": false,
+      "negated": false
+    },
+    "twm-64": {
+      "direction": "Action",
+      "tile": "tile-12",
+      "_sourceOffset": 2841,
+      "random": false,
+      "negated": false
+    },
+    "twm-65": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 2876,
+      "random": false,
+      "negated": false
+    },
+    "twm-66": {
+      "direction": "Action",
+      "tile": "tile-4",
+      "_sourceOffset": 3207,
+      "random": false,
+      "negated": false
+    },
+    "twm-67": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 3297,
+      "random": false,
+      "negated": false
+    },
+    "twm-68": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 4058,
+      "random": false,
+      "negated": true
+    },
+    "twm-69": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 4173,
+      "random": false,
+      "negated": true
+    },
+    "twm-70": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 4506,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 2031,
+      "tile_with_modifiers": [
+        "twm-0",
+        "twm-1"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 2049,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 2062,
+      "tile_with_modifiers": [
+        "twm-0",
+        "twm-3"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 2077,
+      "tile_with_modifiers": []
+    },
+    "neighbor-4": {
+      "_sourceOffset": 2089,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 2099,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 2122,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 2089,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 2122,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 2089,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 2122,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 2089,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 2122,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 2144,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 2170,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 2170,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 2170,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 2170,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 2208,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 2223,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 2252,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 2208,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 2252,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 2208,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 2252,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 2208,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 2252,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 2208,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 2252,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 2297,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 2420,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 2436,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 2467,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 2420,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 2467,
+      "tile_with_modifiers": [
+        "twm-34"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 2420,
+      "tile_with_modifiers": [
+        "twm-35"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 2467,
+      "tile_with_modifiers": [
+        "twm-36"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 2420,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 2467,
+      "tile_with_modifiers": [
+        "twm-38"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 2420,
+      "tile_with_modifiers": [
+        "twm-39"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 2467,
+      "tile_with_modifiers": [
+        "twm-40"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 2508,
+      "tile_with_modifiers": [
+        "twm-41"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 2567,
+      "tile_with_modifiers": [
+        "twm-42"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 2584,
+      "tile_with_modifiers": [
+        "twm-43"
+      ]
+    },
+    "neighbor-44": {
+      "_sourceOffset": 2617,
+      "tile_with_modifiers": [
+        "twm-44"
+      ]
+    },
+    "neighbor-45": {
+      "_sourceOffset": 2567,
+      "tile_with_modifiers": [
+        "twm-45"
+      ]
+    },
+    "neighbor-46": {
+      "_sourceOffset": 2617,
+      "tile_with_modifiers": [
+        "twm-46"
+      ]
+    },
+    "neighbor-47": {
+      "_sourceOffset": 2567,
+      "tile_with_modifiers": [
+        "twm-47"
+      ]
+    },
+    "neighbor-48": {
+      "_sourceOffset": 2617,
+      "tile_with_modifiers": [
+        "twm-48"
+      ]
+    },
+    "neighbor-49": {
+      "_sourceOffset": 2567,
+      "tile_with_modifiers": [
+        "twm-49"
+      ]
+    },
+    "neighbor-50": {
+      "_sourceOffset": 2617,
+      "tile_with_modifiers": [
+        "twm-50"
+      ]
+    },
+    "neighbor-51": {
+      "_sourceOffset": 2567,
+      "tile_with_modifiers": [
+        "twm-51"
+      ]
+    },
+    "neighbor-52": {
+      "_sourceOffset": 2617,
+      "tile_with_modifiers": [
+        "twm-52"
+      ]
+    },
+    "neighbor-53": {
+      "_sourceOffset": 2664,
+      "tile_with_modifiers": [
+        "twm-53"
+      ]
+    },
+    "neighbor-54": {
+      "_sourceOffset": 2796,
+      "tile_with_modifiers": [
+        "twm-54"
+      ]
+    },
+    "neighbor-55": {
+      "_sourceOffset": 2812,
+      "tile_with_modifiers": [
+        "twm-55"
+      ]
+    },
+    "neighbor-56": {
+      "_sourceOffset": 2840,
+      "tile_with_modifiers": [
+        "twm-56"
+      ]
+    },
+    "neighbor-57": {
+      "_sourceOffset": 2796,
+      "tile_with_modifiers": [
+        "twm-57"
+      ]
+    },
+    "neighbor-58": {
+      "_sourceOffset": 2840,
+      "tile_with_modifiers": [
+        "twm-58"
+      ]
+    },
+    "neighbor-59": {
+      "_sourceOffset": 2796,
+      "tile_with_modifiers": [
+        "twm-59"
+      ]
+    },
+    "neighbor-60": {
+      "_sourceOffset": 2840,
+      "tile_with_modifiers": [
+        "twm-60"
+      ]
+    },
+    "neighbor-61": {
+      "_sourceOffset": 2796,
+      "tile_with_modifiers": [
+        "twm-61"
+      ]
+    },
+    "neighbor-62": {
+      "_sourceOffset": 2840,
+      "tile_with_modifiers": [
+        "twm-62"
+      ]
+    },
+    "neighbor-63": {
+      "_sourceOffset": 2796,
+      "tile_with_modifiers": [
+        "twm-63"
+      ]
+    },
+    "neighbor-64": {
+      "_sourceOffset": 2840,
+      "tile_with_modifiers": [
+        "twm-64"
+      ]
+    },
+    "neighbor-65": {
+      "_sourceOffset": 2875,
+      "tile_with_modifiers": [
+        "twm-65"
+      ]
+    },
+    "neighbor-66": {
+      "_sourceOffset": 3136,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-67": {
+      "_sourceOffset": 3207,
+      "tile_with_modifiers": [
+        "twm-66"
+      ]
+    },
+    "neighbor-68": {
+      "_sourceOffset": 3297,
+      "tile_with_modifiers": [
+        "twm-67",
+        "twm-13"
+      ]
+    },
+    "neighbor-69": {
+      "_sourceOffset": 3367,
+      "tile_with_modifiers": [
+        "twm-29",
+        "twm-67"
+      ]
+    },
+    "neighbor-70": {
+      "_sourceOffset": 3596,
+      "tile_with_modifiers": [
+        "twm-53",
+        "twm-67"
+      ]
+    },
+    "neighbor-71": {
+      "_sourceOffset": 3805,
+      "tile_with_modifiers": [
+        "twm-31",
+        "twm-67"
+      ]
+    },
+    "neighbor-72": {
+      "_sourceOffset": 3879,
+      "tile_with_modifiers": [
+        "twm-41",
+        "twm-67"
+      ]
+    },
+    "neighbor-73": {
+      "_sourceOffset": 3955,
+      "tile_with_modifiers": [
+        "twm-55",
+        "twm-67"
+      ]
+    },
+    "neighbor-74": {
+      "_sourceOffset": 4030,
+      "tile_with_modifiers": [
+        "twm-65",
+        "twm-67"
+      ]
+    },
+    "neighbor-75": {
+      "_sourceOffset": 4058,
+      "tile_with_modifiers": [
+        "twm-68"
+      ]
+    },
+    "neighbor-76": {
+      "_sourceOffset": 4173,
+      "tile_with_modifiers": [
+        "twm-69"
+      ]
+    },
+    "neighbor-77": {
+      "_sourceOffset": 4506,
+      "tile_with_modifiers": [
+        "twm-70",
+        "twm-67"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2030
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2060
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2088
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2110
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2088
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-8"
+        ],
+        "_sourceOffset": 2110
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2088
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 2110
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2088
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 2110
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2133
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 2158
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2133
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 2158
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2133
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2158
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2133
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 2158
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-24"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-22"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-24"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 2207
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 2235
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-28",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-28",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-28",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2280
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-28",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 2308
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2353
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 2380
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2419
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 2449
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2419
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-34"
+        ],
+        "_sourceOffset": 2449
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-35",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2419
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-35",
+          "neighbor-36"
+        ],
+        "_sourceOffset": 2449
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2419
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 2449
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-39",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2419
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-39",
+          "neighbor-40"
+        ],
+        "_sourceOffset": 2449
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 2490
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 2520
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 2490
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 2520
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 2490
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-35"
+        ],
+        "_sourceOffset": 2520
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-38",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 2490
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-38",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 2520
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-40",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 2490
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-40",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 2520
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-44"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-46"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-50"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-44"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-46"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-50"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 2566
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 2598
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-45"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-122": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-123": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-124": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-50",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-125": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-50",
+          "neighbor-49"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-126": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-52",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-127": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-52",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-128": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-129": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-130": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-131": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-45"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-132": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-133": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-134": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-50",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-135": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-50",
+          "neighbor-49"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-136": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-52",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2645
+      }
+    },
+    "bracket-137": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-52",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 2677
+      }
+    },
+    "bracket-138": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-139": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-140": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-141": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-45"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-142": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-143": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-144": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-145": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-49"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-146": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-147": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-148": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-149": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-150": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-151": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-45"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-152": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-153": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-154": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-155": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-49"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-156": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 2724
+      }
+    },
+    "bracket-157": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 2755
+      }
+    },
+    "bracket-158": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-54",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 2795
+      }
+    },
+    "bracket-159": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-54",
+          "neighbor-56"
+        ],
+        "_sourceOffset": 2822
+      }
+    },
+    "bracket-160": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 2795
+      }
+    },
+    "bracket-161": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 2822
+      }
+    },
+    "bracket-162": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 2795
+      }
+    },
+    "bracket-163": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 2822
+      }
+    },
+    "bracket-164": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 2795
+      }
+    },
+    "bracket-165": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-62"
+        ],
+        "_sourceOffset": 2822
+      }
+    },
+    "bracket-166": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-63",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 2795
+      }
+    },
+    "bracket-167": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-63",
+          "neighbor-64"
+        ],
+        "_sourceOffset": 2822
+      }
+    },
+    "bracket-168": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-56",
+          "neighbor-65"
+        ],
+        "_sourceOffset": 2860
+      }
+    },
+    "bracket-169": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-56",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 2887
+      }
+    },
+    "bracket-170": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-58",
+          "neighbor-65"
+        ],
+        "_sourceOffset": 2860
+      }
+    },
+    "bracket-171": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-58",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 2887
+      }
+    },
+    "bracket-172": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-60",
+          "neighbor-65"
+        ],
+        "_sourceOffset": 2860
+      }
+    },
+    "bracket-173": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-60",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 2887
+      }
+    },
+    "bracket-174": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-62",
+          "neighbor-65"
+        ],
+        "_sourceOffset": 2860
+      }
+    },
+    "bracket-175": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-62",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 2887
+      }
+    },
+    "bracket-176": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-64",
+          "neighbor-65"
+        ],
+        "_sourceOffset": 2860
+      }
+    },
+    "bracket-177": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-64",
+          "neighbor-63"
+        ],
+        "_sourceOffset": 2887
+      }
+    },
+    "bracket-178": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2921
+      }
+    },
+    "bracket-179": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2946
+      }
+    },
+    "bracket-180": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2921
+      }
+    },
+    "bracket-181": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-8"
+        ],
+        "_sourceOffset": 2946
+      }
+    },
+    "bracket-182": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2921
+      }
+    },
+    "bracket-183": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 2946
+      }
+    },
+    "bracket-184": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2921
+      }
+    },
+    "bracket-185": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 2946
+      }
+    },
+    "bracket-186": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2972
+      }
+    },
+    "bracket-187": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 2997
+      }
+    },
+    "bracket-188": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2972
+      }
+    },
+    "bracket-189": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 2997
+      }
+    },
+    "bracket-190": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2972
+      }
+    },
+    "bracket-191": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2997
+      }
+    },
+    "bracket-192": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2972
+      }
+    },
+    "bracket-193": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 2997
+      }
+    },
+    "bracket-194": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3023
+      }
+    },
+    "bracket-195": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3045
+      }
+    },
+    "bracket-196": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3023
+      }
+    },
+    "bracket-197": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-8"
+        ],
+        "_sourceOffset": 3045
+      }
+    },
+    "bracket-198": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3023
+      }
+    },
+    "bracket-199": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3045
+      }
+    },
+    "bracket-200": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3023
+      }
+    },
+    "bracket-201": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3045
+      }
+    },
+    "bracket-202": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3068
+      }
+    },
+    "bracket-203": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3096
+      }
+    },
+    "bracket-204": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3068
+      }
+    },
+    "bracket-205": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3096
+      }
+    },
+    "bracket-206": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3068
+      }
+    },
+    "bracket-207": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3096
+      }
+    },
+    "bracket-208": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3068
+      }
+    },
+    "bracket-209": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3096
+      }
+    },
+    "bracket-210": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3125
+      }
+    },
+    "bracket-211": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3125
+      }
+    },
+    "bracket-212": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3125
+      }
+    },
+    "bracket-213": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3125
+      }
+    },
+    "bracket-214": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3153
+      }
+    },
+    "bracket-215": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3153
+      }
+    },
+    "bracket-216": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3153
+      }
+    },
+    "bracket-217": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-66"
+        ],
+        "_sourceOffset": 3153
+      }
+    },
+    "bracket-218": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-219": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-220": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-221": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-222": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-223": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-224": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-225": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-226": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-227": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-228": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-229": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-230": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-231": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-232": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-233": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-234": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-235": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-236": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-237": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-238": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-239": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-240": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-241": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-242": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-243": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-244": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-245": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-246": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-247": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-248": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3206
+      }
+    },
+    "bracket-249": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-67",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 3239
+      }
+    },
+    "bracket-250": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-251": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3349
+      }
+    },
+    "bracket-252": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-253": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3349
+      }
+    },
+    "bracket-254": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3414
+      }
+    },
+    "bracket-255": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3464
+      }
+    },
+    "bracket-256": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3414
+      }
+    },
+    "bracket-257": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3464
+      }
+    },
+    "bracket-258": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3525
+      }
+    },
+    "bracket-259": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3578
+      }
+    },
+    "bracket-260": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3525
+      }
+    },
+    "bracket-261": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3578
+      }
+    },
+    "bracket-262": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3643
+      }
+    },
+    "bracket-263": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3695
+      }
+    },
+    "bracket-264": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-68",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3643
+      }
+    },
+    "bracket-265": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3695
+      }
+    },
+    "bracket-266": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3757
+      }
+    },
+    "bracket-267": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 3790
+      }
+    },
+    "bracket-268": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3831
+      }
+    },
+    "bracket-269": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 3864
+      }
+    },
+    "bracket-270": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3903
+      }
+    },
+    "bracket-271": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-73"
+        ],
+        "_sourceOffset": 3938
+      }
+    },
+    "bracket-272": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 3978
+      }
+    },
+    "bracket-273": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 4013
+      }
+    },
+    "bracket-274": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-75",
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-75"
+        ],
+        "_sourceOffset": 4057
+      }
+    },
+    "bracket-275": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-72",
+          "neighbor-71",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 4123
+      }
+    },
+    "bracket-276": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-76",
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-76"
+        ],
+        "_sourceOffset": 4172
+      }
+    },
+    "bracket-277": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-75",
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-75"
+        ],
+        "_sourceOffset": 4277
+      }
+    },
+    "bracket-278": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-73",
+          "neighbor-74",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 4343
+      }
+    },
+    "bracket-279": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-76",
+          "neighbor-68",
+          "neighbor-68",
+          "neighbor-76"
+        ],
+        "_sourceOffset": 4388
+      }
+    },
+    "bracket-280": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68"
+        ],
+        "_sourceOffset": 4485
+      }
+    },
+    "bracket-281": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-77"
+        ],
+        "_sourceOffset": 4504
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 2025,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 2025,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-3"
+        ],
+        "commands": [],
+        "_sourceOffset": 2088,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-5"
+        ],
+        "commands": [],
+        "_sourceOffset": 2088,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7"
+        ],
+        "commands": [],
+        "_sourceOffset": 2088,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9"
+        ],
+        "commands": [],
+        "_sourceOffset": 2088,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Group": {
+        "rules": [
+          "rule-2",
+          "rule-3",
+          "rule-4",
+          "rule-5"
+        ],
+        "_sourceOffset": 2088,
+        "random": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-10"
+        ],
+        "actions": [
+          "bracket-11"
+        ],
+        "commands": [],
+        "_sourceOffset": 2133,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-13"
+        ],
+        "commands": [],
+        "_sourceOffset": 2133,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-15"
+        ],
+        "commands": [],
+        "_sourceOffset": 2133,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-17"
+        ],
+        "commands": [],
+        "_sourceOffset": 2133,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Group": {
+        "rules": [
+          "rule-7",
+          "rule-8",
+          "rule-9",
+          "rule-10"
+        ],
+        "_sourceOffset": 2133,
+        "random": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-21"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-23"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-25"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-27"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-28"
+        ],
+        "actions": [
+          "bracket-29"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-30"
+        ],
+        "actions": [
+          "bracket-31"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-32"
+        ],
+        "actions": [
+          "bracket-33"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-34"
+        ],
+        "actions": [
+          "bracket-35"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-36"
+        ],
+        "actions": [
+          "bracket-37"
+        ],
+        "commands": [],
+        "_sourceOffset": 2196,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Group": {
+        "rules": [
+          "rule-12",
+          "rule-13",
+          "rule-14",
+          "rule-15",
+          "rule-16",
+          "rule-17",
+          "rule-18",
+          "rule-19",
+          "rule-20",
+          "rule-21"
+        ],
+        "_sourceOffset": 2196,
+        "random": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-38"
+        ],
+        "actions": [
+          "bracket-39"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-40"
+        ],
+        "actions": [
+          "bracket-41"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-43"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-44"
+        ],
+        "actions": [
+          "bracket-45"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-46"
+        ],
+        "actions": [
+          "bracket-47"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-48"
+        ],
+        "actions": [
+          "bracket-49"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-50"
+        ],
+        "actions": [
+          "bracket-51"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-52"
+        ],
+        "actions": [
+          "bracket-53"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54"
+        ],
+        "actions": [
+          "bracket-55"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-56"
+        ],
+        "actions": [
+          "bracket-57"
+        ],
+        "commands": [],
+        "_sourceOffset": 2269,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Group": {
+        "rules": [
+          "rule-23",
+          "rule-24",
+          "rule-25",
+          "rule-26",
+          "rule-27",
+          "rule-28",
+          "rule-29",
+          "rule-30",
+          "rule-31",
+          "rule-32"
+        ],
+        "_sourceOffset": 2269,
+        "random": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-58"
+        ],
+        "actions": [
+          "bracket-59"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-60"
+        ],
+        "actions": [
+          "bracket-61"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-62"
+        ],
+        "actions": [
+          "bracket-63"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-64"
+        ],
+        "actions": [
+          "bracket-65"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-66"
+        ],
+        "actions": [
+          "bracket-67"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-68"
+        ],
+        "actions": [
+          "bracket-69"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-70"
+        ],
+        "actions": [
+          "bracket-71"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-72"
+        ],
+        "actions": [
+          "bracket-73"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-74"
+        ],
+        "actions": [
+          "bracket-75"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76"
+        ],
+        "actions": [
+          "bracket-77"
+        ],
+        "commands": [],
+        "_sourceOffset": 2342,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-44": {
+      "Group": {
+        "rules": [
+          "rule-34",
+          "rule-35",
+          "rule-36",
+          "rule-37",
+          "rule-38",
+          "rule-39",
+          "rule-40",
+          "rule-41",
+          "rule-42",
+          "rule-43"
+        ],
+        "_sourceOffset": 2342,
+        "random": false
+      }
+    },
+    "rule-45": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-78"
+        ],
+        "actions": [
+          "bracket-79"
+        ],
+        "commands": [],
+        "_sourceOffset": 2413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-80"
+        ],
+        "actions": [
+          "bracket-81"
+        ],
+        "commands": [],
+        "_sourceOffset": 2413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-82"
+        ],
+        "actions": [
+          "bracket-83"
+        ],
+        "commands": [],
+        "_sourceOffset": 2413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-84"
+        ],
+        "actions": [
+          "bracket-85"
+        ],
+        "commands": [],
+        "_sourceOffset": 2413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-86"
+        ],
+        "actions": [
+          "bracket-87"
+        ],
+        "commands": [],
+        "_sourceOffset": 2413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-50": {
+      "Group": {
+        "rules": [
+          "rule-45",
+          "rule-46",
+          "rule-47",
+          "rule-48",
+          "rule-49"
+        ],
+        "_sourceOffset": 2413,
+        "random": false
+      }
+    },
+    "rule-51": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-88"
+        ],
+        "actions": [
+          "bracket-89"
+        ],
+        "commands": [],
+        "_sourceOffset": 2485,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-90"
+        ],
+        "actions": [
+          "bracket-91"
+        ],
+        "commands": [],
+        "_sourceOffset": 2485,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-92"
+        ],
+        "actions": [
+          "bracket-93"
+        ],
+        "commands": [],
+        "_sourceOffset": 2485,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-54": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-94"
+        ],
+        "actions": [
+          "bracket-95"
+        ],
+        "commands": [],
+        "_sourceOffset": 2485,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-55": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-96"
+        ],
+        "actions": [
+          "bracket-97"
+        ],
+        "commands": [],
+        "_sourceOffset": 2485,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-56": {
+      "Group": {
+        "rules": [
+          "rule-51",
+          "rule-52",
+          "rule-53",
+          "rule-54",
+          "rule-55"
+        ],
+        "_sourceOffset": 2485,
+        "random": false
+      }
+    },
+    "rule-57": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-98"
+        ],
+        "actions": [
+          "bracket-99"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-58": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-59": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-102"
+        ],
+        "actions": [
+          "bracket-103"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-60": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-104"
+        ],
+        "actions": [
+          "bracket-105"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-61": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-106"
+        ],
+        "actions": [
+          "bracket-107"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-108"
+        ],
+        "actions": [
+          "bracket-109"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-110"
+        ],
+        "actions": [
+          "bracket-111"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-64": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-112"
+        ],
+        "actions": [
+          "bracket-113"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-65": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-114"
+        ],
+        "actions": [
+          "bracket-115"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-116"
+        ],
+        "actions": [
+          "bracket-117"
+        ],
+        "commands": [],
+        "_sourceOffset": 2557,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Group": {
+        "rules": [
+          "rule-57",
+          "rule-58",
+          "rule-59",
+          "rule-60",
+          "rule-61",
+          "rule-62",
+          "rule-63",
+          "rule-64",
+          "rule-65",
+          "rule-66"
+        ],
+        "_sourceOffset": 2557,
+        "random": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-118"
+        ],
+        "actions": [
+          "bracket-119"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-120"
+        ],
+        "actions": [
+          "bracket-121"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-70": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-122"
+        ],
+        "actions": [
+          "bracket-123"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-71": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-124"
+        ],
+        "actions": [
+          "bracket-125"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-72": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-126"
+        ],
+        "actions": [
+          "bracket-127"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-73": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-128"
+        ],
+        "actions": [
+          "bracket-129"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-74": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-130"
+        ],
+        "actions": [
+          "bracket-131"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-75": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-132"
+        ],
+        "actions": [
+          "bracket-133"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-76": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-135"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-77": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-136"
+        ],
+        "actions": [
+          "bracket-137"
+        ],
+        "commands": [],
+        "_sourceOffset": 2636,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-78": {
+      "Group": {
+        "rules": [
+          "rule-68",
+          "rule-69",
+          "rule-70",
+          "rule-71",
+          "rule-72",
+          "rule-73",
+          "rule-74",
+          "rule-75",
+          "rule-76",
+          "rule-77"
+        ],
+        "_sourceOffset": 2636,
+        "random": false
+      }
+    },
+    "rule-79": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-138"
+        ],
+        "actions": [
+          "bracket-139"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-140"
+        ],
+        "actions": [
+          "bracket-141"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-142"
+        ],
+        "actions": [
+          "bracket-143"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-144"
+        ],
+        "actions": [
+          "bracket-145"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-146"
+        ],
+        "actions": [
+          "bracket-147"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-148"
+        ],
+        "actions": [
+          "bracket-149"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-150"
+        ],
+        "actions": [
+          "bracket-151"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-152"
+        ],
+        "actions": [
+          "bracket-153"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-154"
+        ],
+        "actions": [
+          "bracket-155"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-156"
+        ],
+        "actions": [
+          "bracket-157"
+        ],
+        "commands": [],
+        "_sourceOffset": 2715,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Group": {
+        "rules": [
+          "rule-79",
+          "rule-80",
+          "rule-81",
+          "rule-82",
+          "rule-83",
+          "rule-84",
+          "rule-85",
+          "rule-86",
+          "rule-87",
+          "rule-88"
+        ],
+        "_sourceOffset": 2715,
+        "random": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-158"
+        ],
+        "actions": [
+          "bracket-159"
+        ],
+        "commands": [],
+        "_sourceOffset": 2792,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-160"
+        ],
+        "actions": [
+          "bracket-161"
+        ],
+        "commands": [],
+        "_sourceOffset": 2792,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-92": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-162"
+        ],
+        "actions": [
+          "bracket-163"
+        ],
+        "commands": [],
+        "_sourceOffset": 2792,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-93": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-164"
+        ],
+        "actions": [
+          "bracket-165"
+        ],
+        "commands": [],
+        "_sourceOffset": 2792,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-94": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-166"
+        ],
+        "actions": [
+          "bracket-167"
+        ],
+        "commands": [],
+        "_sourceOffset": 2792,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-95": {
+      "Group": {
+        "rules": [
+          "rule-90",
+          "rule-91",
+          "rule-92",
+          "rule-93",
+          "rule-94"
+        ],
+        "_sourceOffset": 2792,
+        "random": false
+      }
+    },
+    "rule-96": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-168"
+        ],
+        "actions": [
+          "bracket-169"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-97": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-170"
+        ],
+        "actions": [
+          "bracket-171"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-98": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-172"
+        ],
+        "actions": [
+          "bracket-173"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-99": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-174"
+        ],
+        "actions": [
+          "bracket-175"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-100": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-176"
+        ],
+        "actions": [
+          "bracket-177"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-101": {
+      "Group": {
+        "rules": [
+          "rule-96",
+          "rule-97",
+          "rule-98",
+          "rule-99",
+          "rule-100"
+        ],
+        "_sourceOffset": 2855,
+        "random": false
+      }
+    },
+    "rule-102": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-178"
+        ],
+        "actions": [
+          "bracket-179"
+        ],
+        "commands": [],
+        "_sourceOffset": 2921,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-103": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-180"
+        ],
+        "actions": [
+          "bracket-181"
+        ],
+        "commands": [],
+        "_sourceOffset": 2921,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-104": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-182"
+        ],
+        "actions": [
+          "bracket-183"
+        ],
+        "commands": [],
+        "_sourceOffset": 2921,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-105": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-184"
+        ],
+        "actions": [
+          "bracket-185"
+        ],
+        "commands": [],
+        "_sourceOffset": 2921,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-106": {
+      "Group": {
+        "rules": [
+          "rule-102",
+          "rule-103",
+          "rule-104",
+          "rule-105"
+        ],
+        "_sourceOffset": 2921,
+        "random": false
+      }
+    },
+    "rule-107": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-186"
+        ],
+        "actions": [
+          "bracket-187"
+        ],
+        "commands": [],
+        "_sourceOffset": 2972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-108": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-188"
+        ],
+        "actions": [
+          "bracket-189"
+        ],
+        "commands": [],
+        "_sourceOffset": 2972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-109": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-190"
+        ],
+        "actions": [
+          "bracket-191"
+        ],
+        "commands": [],
+        "_sourceOffset": 2972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-110": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-192"
+        ],
+        "actions": [
+          "bracket-193"
+        ],
+        "commands": [],
+        "_sourceOffset": 2972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-111": {
+      "Group": {
+        "rules": [
+          "rule-107",
+          "rule-108",
+          "rule-109",
+          "rule-110"
+        ],
+        "_sourceOffset": 2972,
+        "random": false
+      }
+    },
+    "rule-112": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-194"
+        ],
+        "actions": [
+          "bracket-195"
+        ],
+        "commands": [],
+        "_sourceOffset": 3023,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-113": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-196"
+        ],
+        "actions": [
+          "bracket-197"
+        ],
+        "commands": [],
+        "_sourceOffset": 3023,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-114": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-198"
+        ],
+        "actions": [
+          "bracket-199"
+        ],
+        "commands": [],
+        "_sourceOffset": 3023,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-115": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-200"
+        ],
+        "actions": [
+          "bracket-201"
+        ],
+        "commands": [],
+        "_sourceOffset": 3023,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-116": {
+      "Group": {
+        "rules": [
+          "rule-112",
+          "rule-113",
+          "rule-114",
+          "rule-115"
+        ],
+        "_sourceOffset": 3023,
+        "random": false
+      }
+    },
+    "rule-117": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-202"
+        ],
+        "actions": [
+          "bracket-203"
+        ],
+        "commands": [],
+        "_sourceOffset": 3068,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-118": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-204"
+        ],
+        "actions": [
+          "bracket-205"
+        ],
+        "commands": [],
+        "_sourceOffset": 3068,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-119": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-206"
+        ],
+        "actions": [
+          "bracket-207"
+        ],
+        "commands": [],
+        "_sourceOffset": 3068,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-120": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-208"
+        ],
+        "actions": [
+          "bracket-209"
+        ],
+        "commands": [],
+        "_sourceOffset": 3068,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-121": {
+      "Group": {
+        "rules": [
+          "rule-117",
+          "rule-118",
+          "rule-119",
+          "rule-120"
+        ],
+        "_sourceOffset": 3068,
+        "random": false
+      }
+    },
+    "rule-122": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-210"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3125,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-123": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-211"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3125,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-124": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-212"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3125,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-125": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-213"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3125,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-126": {
+      "Group": {
+        "rules": [
+          "rule-122",
+          "rule-123",
+          "rule-124",
+          "rule-125"
+        ],
+        "_sourceOffset": 3125,
+        "random": false
+      }
+    },
+    "rule-127": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-214"
+        ],
+        "actions": [],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3153,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-128": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-215"
+        ],
+        "actions": [],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3153,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-129": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-216"
+        ],
+        "actions": [],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3153,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-130": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-217"
+        ],
+        "actions": [],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3153,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-131": {
+      "Group": {
+        "rules": [
+          "rule-127",
+          "rule-128",
+          "rule-129",
+          "rule-130"
+        ],
+        "_sourceOffset": 3153,
+        "random": false
+      }
+    },
+    "rule-132": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-218"
+        ],
+        "actions": [
+          "bracket-219"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-133": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-220"
+        ],
+        "actions": [
+          "bracket-221"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-134": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-222"
+        ],
+        "actions": [
+          "bracket-223"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-135": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-224"
+        ],
+        "actions": [
+          "bracket-225"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-136": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-226"
+        ],
+        "actions": [
+          "bracket-227"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-137": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-228"
+        ],
+        "actions": [
+          "bracket-229"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-138": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-230"
+        ],
+        "actions": [
+          "bracket-231"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-139": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-232"
+        ],
+        "actions": [
+          "bracket-233"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-140": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-234"
+        ],
+        "actions": [
+          "bracket-235"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-141": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-236"
+        ],
+        "actions": [
+          "bracket-237"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-142": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-238"
+        ],
+        "actions": [
+          "bracket-239"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-143": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-240"
+        ],
+        "actions": [
+          "bracket-241"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-144": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-242"
+        ],
+        "actions": [
+          "bracket-243"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-145": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-244"
+        ],
+        "actions": [
+          "bracket-245"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-146": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-246"
+        ],
+        "actions": [
+          "bracket-247"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-147": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-248"
+        ],
+        "actions": [
+          "bracket-249"
+        ],
+        "commands": [],
+        "_sourceOffset": 3206,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-148": {
+      "Group": {
+        "rules": [
+          "rule-117",
+          "rule-132",
+          "rule-133",
+          "rule-134",
+          "rule-135",
+          "rule-136",
+          "rule-118",
+          "rule-137",
+          "rule-138",
+          "rule-139",
+          "rule-140",
+          "rule-141",
+          "rule-119",
+          "rule-142",
+          "rule-143",
+          "rule-144",
+          "rule-145",
+          "rule-146",
+          "rule-120",
+          "rule-147"
+        ],
+        "_sourceOffset": 3206,
+        "random": false
+      }
+    },
+    "rule-149": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-250"
+        ],
+        "actions": [
+          "bracket-251"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-150": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-252"
+        ],
+        "actions": [
+          "bracket-253"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-151": {
+      "Group": {
+        "rules": [
+          "rule-149",
+          "rule-150"
+        ],
+        "_sourceOffset": 3280,
+        "random": false
+      }
+    },
+    "rule-152": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-254"
+        ],
+        "actions": [
+          "bracket-255"
+        ],
+        "commands": [],
+        "_sourceOffset": 3398,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-153": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-256"
+        ],
+        "actions": [
+          "bracket-257"
+        ],
+        "commands": [],
+        "_sourceOffset": 3398,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-154": {
+      "Group": {
+        "rules": [
+          "rule-152",
+          "rule-153"
+        ],
+        "_sourceOffset": 3398,
+        "random": false
+      }
+    },
+    "rule-155": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-258"
+        ],
+        "actions": [
+          "bracket-259"
+        ],
+        "commands": [],
+        "_sourceOffset": 3511,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-156": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-260"
+        ],
+        "actions": [
+          "bracket-261"
+        ],
+        "commands": [],
+        "_sourceOffset": 3511,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-157": {
+      "Group": {
+        "rules": [
+          "rule-155",
+          "rule-156"
+        ],
+        "_sourceOffset": 3511,
+        "random": false
+      }
+    },
+    "rule-158": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-262"
+        ],
+        "actions": [
+          "bracket-263"
+        ],
+        "commands": [],
+        "_sourceOffset": 3629,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-159": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-264"
+        ],
+        "actions": [
+          "bracket-265"
+        ],
+        "commands": [],
+        "_sourceOffset": 3629,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-160": {
+      "Group": {
+        "rules": [
+          "rule-158",
+          "rule-159"
+        ],
+        "_sourceOffset": 3629,
+        "random": false
+      }
+    },
+    "rule-161": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-266"
+        ],
+        "actions": [
+          "bracket-267"
+        ],
+        "commands": [],
+        "_sourceOffset": 3746,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-162": {
+      "Group": {
+        "rules": [
+          "rule-161"
+        ],
+        "_sourceOffset": 3746,
+        "random": false
+      }
+    },
+    "rule-163": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-268"
+        ],
+        "actions": [
+          "bracket-269"
+        ],
+        "commands": [],
+        "_sourceOffset": 3821,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-164": {
+      "Group": {
+        "rules": [
+          "rule-163"
+        ],
+        "_sourceOffset": 3821,
+        "random": false
+      }
+    },
+    "rule-165": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-270"
+        ],
+        "actions": [
+          "bracket-271"
+        ],
+        "commands": [],
+        "_sourceOffset": 3895,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-166": {
+      "Group": {
+        "rules": [
+          "rule-165"
+        ],
+        "_sourceOffset": 3895,
+        "random": false
+      }
+    },
+    "rule-167": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-272"
+        ],
+        "actions": [
+          "bracket-273"
+        ],
+        "commands": [],
+        "_sourceOffset": 3968,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-168": {
+      "Group": {
+        "rules": [
+          "rule-167"
+        ],
+        "_sourceOffset": 3968,
+        "random": false
+      }
+    },
+    "rule-169": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-274"
+        ],
+        "actions": [
+          "bracket-275"
+        ],
+        "commands": [],
+        "_sourceOffset": 4046,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-170": {
+      "Group": {
+        "rules": [
+          "rule-169"
+        ],
+        "_sourceOffset": 4046,
+        "random": false
+      }
+    },
+    "rule-171": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-276"
+        ],
+        "actions": [
+          "bracket-275"
+        ],
+        "commands": [],
+        "_sourceOffset": 4161,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-172": {
+      "Group": {
+        "rules": [
+          "rule-171"
+        ],
+        "_sourceOffset": 4161,
+        "random": false
+      }
+    },
+    "rule-173": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-277"
+        ],
+        "actions": [
+          "bracket-278"
+        ],
+        "commands": [],
+        "_sourceOffset": 4267,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-174": {
+      "Group": {
+        "rules": [
+          "rule-173"
+        ],
+        "_sourceOffset": 4267,
+        "random": false
+      }
+    },
+    "rule-175": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-279"
+        ],
+        "actions": [
+          "bracket-278"
+        ],
+        "commands": [],
+        "_sourceOffset": 4378,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-176": {
+      "Group": {
+        "rules": [
+          "rule-175"
+        ],
+        "_sourceOffset": 4378,
+        "random": false
+      }
+    },
+    "rule-177": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-280"
+        ],
+        "actions": [
+          "bracket-281"
+        ],
+        "commands": [],
+        "_sourceOffset": 4480,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-178": {
+      "Group": {
+        "rules": [
+          "rule-177"
+        ],
+        "_sourceOffset": 4480,
+        "random": false
+      }
+    },
+    "rule-179": {
+      "Loop": {
+        "rules": [
+          "rule-22",
+          "rule-33",
+          "rule-44",
+          "rule-50",
+          "rule-56",
+          "rule-67",
+          "rule-78",
+          "rule-89",
+          "rule-95",
+          "rule-101",
+          "rule-106",
+          "rule-111",
+          "rule-116",
+          "rule-121",
+          "rule-126",
+          "rule-131",
+          "rule-148",
+          "rule-151",
+          "rule-154",
+          "rule-157",
+          "rule-160",
+          "rule-162",
+          "rule-164",
+          "rule-166",
+          "rule-168",
+          "rule-170",
+          "rule-172",
+          "rule-174",
+          "rule-176",
+          "rule-178"
+        ]
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "On": {
+        "_sourceOffset": 4580,
+        "qualifier": "All",
+        "tile": "tile-34",
+        "on_tile": "tile-7"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4606,
+        "qualifier": "All",
+        "tile": "tile-35",
+        "on_tile": "tile-8"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4634,
+        "qualifier": "All",
+        "tile": "tile-36",
+        "on_tile": "tile-5"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4658,
+        "qualifier": "All",
+        "tile": "tile-37",
+        "on_tile": "tile-9"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4686,
+        "qualifier": "All",
+        "tile": "tile-38",
+        "on_tile": "tile-12"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4708,
+        "qualifier": "All",
+        "tile": "tile-39",
+        "on_tile": "tile-11"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 4734,
+        "qualifier": "All",
+        "tile": "tile-40",
+        "on_tile": "tile-14"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-6",
+    "rule-11",
+    "rule-179"
+  ],
+  "levels": [
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-16",
+            "tile-19",
+            "tile-18",
+            "tile-20",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-20",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-17",
+            "tile-19",
+            "tile-20",
+            "tile-15",
+            "tile-22",
+            "tile-23",
+            "tile-15",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-23",
+            "tile-15",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 4790
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-20",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-19",
+            "tile-18",
+            "tile-20",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-19",
+            "tile-20",
+            "tile-15",
+            "tile-15",
+            "tile-17",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-19",
+            "tile-18",
+            "tile-20",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 4887
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-23",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-18",
+            "tile-20",
+            "tile-15",
+            "tile-19",
+            "tile-20",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-17",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-18",
+            "tile-18",
+            "tile-20",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5014
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-20",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-28",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-24",
+            "tile-27",
+            "tile-28",
+            "tile-24",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-25",
+            "tile-29",
+            "tile-27",
+            "tile-25",
+            "tile-17",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-26",
+            "tile-15",
+            "tile-29",
+            "tile-26",
+            "tile-15",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5092
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-24",
+            "tile-24",
+            "tile-28",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-17",
+            "tile-15",
+            "tile-26",
+            "tile-25",
+            "tile-27",
+            "tile-15",
+            "tile-15",
+            "tile-28",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-26",
+            "tile-29",
+            "tile-15",
+            "tile-15",
+            "tile-29",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-19",
+            "tile-20",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-28",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-27",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-29",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5183
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-30",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-24",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-17",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-30",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-25",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-30",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-26",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5296
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-17",
+            "tile-30",
+            "tile-30",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-30",
+            "tile-30",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-32",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5367
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-24",
+            "tile-24",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-30",
+            "tile-15",
+            "tile-26",
+            "tile-26",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-15",
+            "tile-30",
+            "tile-15",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-31",
+            "tile-17",
+            "tile-31",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-22",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5431
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-17",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-15",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-15",
+            "tile-31",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-23",
+            "tile-32",
+            "tile-22",
+            "tile-21",
+            "tile-23",
+            "tile-16"
+          ],
+          [
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16",
+            "tile-16"
+          ]
+        ],
+        "_sourceOffset": 5531
+      }
+    }
+  ]
+}

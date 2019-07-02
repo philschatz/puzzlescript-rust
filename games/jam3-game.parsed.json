@@ -1,0 +1,9337 @@
+{
+  "version": 1,
+  "title": "JAM3 Game",
+  "metadata": {
+    "author": "chaotic_iak",
+    "homepage": null,
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": 0.2,
+    "again_interval": 0.07,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": true
+  },
+  "colors": {
+    "#990099": "#990099",
+    "#0000cc": "#0000cc",
+    "#00cc00": "#00cc00",
+    "#999900": "#999900",
+    "#cc0000": "#cc0000",
+    "#FFFFFF": "#FFFFFF",
+    "#99ffff": "#99ffff",
+    "#000000": "#000000",
+    "#ff3333": "#ff3333",
+    "#cccc33": "#cccc33",
+    "#33ff33": "#33ff33",
+    "#3333ff": "#3333ff",
+    "#cc33cc": "#cc33cc",
+    "#333333": "#333333",
+    "#be2633": "#be2633",
+    "#1d57f7": "#1d57f7"
+  },
+  "sounds": {
+    "sound-0": {
+      "SpriteEvent": {
+        "sprite": "tile-0",
+        "eventEnum": "CREATE",
+        "soundCode": 66716500,
+        "_sourceOffset": 2324
+      }
+    },
+    "sound-1": {
+      "When": {
+        "when": "ENDLEVEL",
+        "soundCode": 54419303,
+        "_sourceOffset": 2347
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 1643,
+      "_sourceOffset": 2416
+    },
+    {
+      "id": 1644,
+      "_sourceOffset": 2423
+    },
+    {
+      "id": 1645,
+      "_sourceOffset": 2430
+    },
+    {
+      "id": 1646,
+      "_sourceOffset": 2441
+    },
+    {
+      "id": 1647,
+      "_sourceOffset": 2448
+    },
+    {
+      "id": 1648,
+      "_sourceOffset": 2461
+    },
+    {
+      "id": 1649,
+      "_sourceOffset": 2473
+    },
+    {
+      "id": 1650,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Again": {
+        "_sourceOffset": 4780
+      }
+    },
+    "command-1": {
+      "Again": {
+        "_sourceOffset": 4846
+      }
+    },
+    "command-2": {
+      "Again": {
+        "_sourceOffset": 4912
+      }
+    },
+    "command-3": {
+      "Again": {
+        "_sourceOffset": 4978
+      }
+    },
+    "command-4": {
+      "Again": {
+        "_sourceOffset": 5044
+      }
+    },
+    "command-5": {
+      "Again": {
+        "_sourceOffset": 5110
+      }
+    },
+    "command-6": {
+      "Again": {
+        "_sourceOffset": 5161
+      }
+    },
+    "command-7": {
+      "Again": {
+        "_sourceOffset": 5299
+      }
+    },
+    "command-8": {
+      "Again": {
+        "_sourceOffset": 6713
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "gem5pop",
+      "pixels": [
+        [
+          "#990099",
+          null,
+          "#990099",
+          null,
+          "#990099"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#990099",
+          null,
+          null,
+          null,
+          "#990099"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#990099",
+          null,
+          "#990099",
+          null,
+          "#990099"
+        ]
+      ],
+      "_sourceOffset": 652,
+      "collision_layer": 1648
+    },
+    "sprite-1": {
+      "name": "gem4pop",
+      "pixels": [
+        [
+          "#0000cc",
+          null,
+          "#0000cc",
+          null,
+          "#0000cc"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#0000cc",
+          null,
+          null,
+          null,
+          "#0000cc"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#0000cc",
+          null,
+          "#0000cc",
+          null,
+          "#0000cc"
+        ]
+      ],
+      "_sourceOffset": 608,
+      "collision_layer": 1648
+    },
+    "sprite-2": {
+      "name": "gem3pop",
+      "pixels": [
+        [
+          "#00cc00",
+          null,
+          "#00cc00",
+          null,
+          "#00cc00"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#00cc00",
+          null,
+          null,
+          null,
+          "#00cc00"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#00cc00",
+          null,
+          "#00cc00",
+          null,
+          "#00cc00"
+        ]
+      ],
+      "_sourceOffset": 564,
+      "collision_layer": 1648
+    },
+    "sprite-3": {
+      "name": "gem2pop",
+      "pixels": [
+        [
+          "#999900",
+          null,
+          "#999900",
+          null,
+          "#999900"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#999900",
+          null,
+          null,
+          null,
+          "#999900"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#999900",
+          null,
+          "#999900",
+          null,
+          "#999900"
+        ]
+      ],
+      "_sourceOffset": 520,
+      "collision_layer": 1648
+    },
+    "sprite-4": {
+      "name": "gem1pop",
+      "pixels": [
+        [
+          "#cc0000",
+          null,
+          "#cc0000",
+          null,
+          "#cc0000"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#cc0000",
+          null,
+          null,
+          null,
+          "#cc0000"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#cc0000",
+          null,
+          "#cc0000",
+          null,
+          "#cc0000"
+        ]
+      ],
+      "_sourceOffset": 476,
+      "collision_layer": 1648
+    },
+    "sprite-5": {
+      "name": "background",
+      "pixels": [
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 171,
+      "collision_layer": 1645
+    },
+    "sprite-6": {
+      "name": "target",
+      "pixels": [
+        [
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff"
+        ],
+        [
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff"
+        ],
+        [
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff"
+        ],
+        [
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff"
+        ],
+        [
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff",
+          "#99ffff"
+        ]
+      ],
+      "_sourceOffset": 189,
+      "collision_layer": 1646
+    },
+    "sprite-7": {
+      "name": "player",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 202,
+      "collision_layer": 1647
+    },
+    "sprite-8": {
+      "name": "gem1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#cc0000",
+          "#cc0000",
+          "#ff3333",
+          null
+        ],
+        [
+          null,
+          "#cc0000",
+          "#cc0000",
+          "#cc0000",
+          null
+        ],
+        [
+          null,
+          "#cc0000",
+          "#cc0000",
+          "#cc0000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 246,
+      "collision_layer": 1648
+    },
+    "sprite-9": {
+      "name": "gem2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#999900",
+          "#999900",
+          "#cccc33",
+          null
+        ],
+        [
+          null,
+          "#999900",
+          "#999900",
+          "#999900",
+          null
+        ],
+        [
+          null,
+          "#999900",
+          "#999900",
+          "#999900",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 292,
+      "collision_layer": 1648
+    },
+    "sprite-10": {
+      "name": "gem3",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#00cc00",
+          "#00cc00",
+          "#33ff33",
+          null
+        ],
+        [
+          null,
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          null
+        ],
+        [
+          null,
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 338,
+      "collision_layer": 1648
+    },
+    "sprite-11": {
+      "name": "gem4",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#0000cc",
+          "#0000cc",
+          "#3333ff",
+          null
+        ],
+        [
+          null,
+          "#0000cc",
+          "#0000cc",
+          "#0000cc",
+          null
+        ],
+        [
+          null,
+          "#0000cc",
+          "#0000cc",
+          "#0000cc",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 384,
+      "collision_layer": 1648
+    },
+    "sprite-12": {
+      "name": "gem5",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#990099",
+          "#990099",
+          "#cc33cc",
+          null
+        ],
+        [
+          null,
+          "#990099",
+          "#990099",
+          "#990099",
+          null
+        ],
+        [
+          null,
+          "#990099",
+          "#990099",
+          "#990099",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 430,
+      "collision_layer": 1648
+    },
+    "sprite-13": {
+      "name": "wall0",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#FFFFFF",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 696,
+      "collision_layer": 1647
+    },
+    "sprite-14": {
+      "name": "wall1",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#ff3333",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 744,
+      "collision_layer": 1647
+    },
+    "sprite-15": {
+      "name": "wall2",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#cccc33",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 791,
+      "collision_layer": 1647
+    },
+    "sprite-16": {
+      "name": "wall3",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#33ff33",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 838,
+      "collision_layer": 1647
+    },
+    "sprite-17": {
+      "name": "wall4",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#3333ff",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 885,
+      "collision_layer": 1647
+    },
+    "sprite-18": {
+      "name": "wall5",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#cc33cc",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 932,
+      "collision_layer": 1647
+    },
+    "sprite-19": {
+      "name": "walls",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 979,
+      "collision_layer": 1647
+    },
+    "sprite-20": {
+      "name": "lv1",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 991,
+      "collision_layer": 1649
+    },
+    "sprite-21": {
+      "name": "lv2",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1032,
+      "collision_layer": 1649
+    },
+    "sprite-22": {
+      "name": "lv3",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1073,
+      "collision_layer": 1649
+    },
+    "sprite-23": {
+      "name": "lv4",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1114,
+      "collision_layer": 1649
+    },
+    "sprite-24": {
+      "name": "lv5",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1155,
+      "collision_layer": 1649
+    },
+    "sprite-25": {
+      "name": "lv6",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1196,
+      "collision_layer": 1649
+    },
+    "sprite-26": {
+      "name": "lv7",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1237,
+      "collision_layer": 1649
+    },
+    "sprite-27": {
+      "name": "lv8",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1278,
+      "collision_layer": 1649
+    },
+    "sprite-28": {
+      "name": "lv9",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1319,
+      "collision_layer": 1649
+    },
+    "sprite-29": {
+      "name": "lv10",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 1360,
+      "collision_layer": 1649
+    },
+    "sprite-30": {
+      "name": "lv11",
+      "pixels": [
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 1402,
+      "collision_layer": 1649
+    },
+    "sprite-31": {
+      "name": "lv12",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 1444,
+      "collision_layer": 1649
+    },
+    "sprite-32": {
+      "name": "lv13",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 1486,
+      "collision_layer": 1649
+    },
+    "sprite-33": {
+      "name": "lv14",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 1528,
+      "collision_layer": 1649
+    },
+    "sprite-34": {
+      "name": "lv15",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 1570,
+      "collision_layer": 1649
+    },
+    "sprite-35": {
+      "name": "lvbin0",
+      "pixels": [
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ]
+      ],
+      "_sourceOffset": 1612,
+      "collision_layer": 1649
+    },
+    "sprite-36": {
+      "name": "lvbin1",
+      "pixels": [
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ]
+      ],
+      "_sourceOffset": 1624,
+      "collision_layer": 1649
+    },
+    "sprite-37": {
+      "name": "startlevel",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 1637,
+      "collision_layer": 1644
+    },
+    "sprite-38": {
+      "name": "pop",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 1655,
+      "collision_layer": 1644
+    },
+    "sprite-39": {
+      "name": "remnant",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 1666,
+      "collision_layer": 1644
+    },
+    "sprite-40": {
+      "name": "resume",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 1681,
+      "collision_layer": 1643
+    },
+    "sprite-41": {
+      "name": "winmarker",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 1695,
+      "collision_layer": 1644
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Or": {
+        "name": "gempop",
+        "sprites": [
+          "sprite-0",
+          "sprite-1",
+          "sprite-2",
+          "sprite-3",
+          "sprite-4"
+        ],
+        "collisionLayers": [
+          1648
+        ],
+        "_sourceOffset": 1943
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "startlevel",
+        "sprite": "sprite-37",
+        "_sourceOffset": 1637,
+        "collision_layer": 1644
+      }
+    },
+    "tile-2": {
+      "Or": {
+        "name": "wall",
+        "sprites": [
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-15",
+          "sprite-14",
+          "sprite-13",
+          "sprite-19"
+        ],
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 2028
+      }
+    },
+    "tile-3": {
+      "Sprite": {
+        "name": "player",
+        "sprite": "sprite-7",
+        "_sourceOffset": 202,
+        "collision_layer": 1647
+      }
+    },
+    "tile-4": {
+      "Or": {
+        "name": "gem",
+        "sprites": [
+          "sprite-12",
+          "sprite-11",
+          "sprite-10",
+          "sprite-9",
+          "sprite-8"
+        ],
+        "collisionLayers": [
+          1648
+        ],
+        "_sourceOffset": 1900
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "gem1",
+        "sprite": "sprite-8",
+        "_sourceOffset": 246,
+        "collision_layer": 1648
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "gem2",
+        "sprite": "sprite-9",
+        "_sourceOffset": 292,
+        "collision_layer": 1648
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "gem3",
+        "sprite": "sprite-10",
+        "_sourceOffset": 338,
+        "collision_layer": 1648
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "gem4",
+        "sprite": "sprite-11",
+        "_sourceOffset": 384,
+        "collision_layer": 1648
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "gem5",
+        "sprite": "sprite-12",
+        "_sourceOffset": 430,
+        "collision_layer": 1648
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "wall1",
+        "sprite": "sprite-14",
+        "_sourceOffset": 744,
+        "collision_layer": 1647
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "wall2",
+        "sprite": "sprite-15",
+        "_sourceOffset": 791,
+        "collision_layer": 1647
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "wall3",
+        "sprite": "sprite-16",
+        "_sourceOffset": 838,
+        "collision_layer": 1647
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "wall4",
+        "sprite": "sprite-17",
+        "_sourceOffset": 885,
+        "collision_layer": 1647
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "wall5",
+        "sprite": "sprite-18",
+        "_sourceOffset": 932,
+        "collision_layer": 1647
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "lvbin0",
+        "sprite": "sprite-35",
+        "_sourceOffset": 1612,
+        "collision_layer": 1649
+      }
+    },
+    "tile-16": {
+      "Sprite": {
+        "name": "lvbin1",
+        "sprite": "sprite-36",
+        "_sourceOffset": 1624,
+        "collision_layer": 1649
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "lv1",
+        "sprite": "sprite-20",
+        "_sourceOffset": 991,
+        "collision_layer": 1649
+      }
+    },
+    "tile-18": {
+      "Sprite": {
+        "name": "lv2",
+        "sprite": "sprite-21",
+        "_sourceOffset": 1032,
+        "collision_layer": 1649
+      }
+    },
+    "tile-19": {
+      "Sprite": {
+        "name": "lv3",
+        "sprite": "sprite-22",
+        "_sourceOffset": 1073,
+        "collision_layer": 1649
+      }
+    },
+    "tile-20": {
+      "Sprite": {
+        "name": "lv4",
+        "sprite": "sprite-23",
+        "_sourceOffset": 1114,
+        "collision_layer": 1649
+      }
+    },
+    "tile-21": {
+      "Sprite": {
+        "name": "lv5",
+        "sprite": "sprite-24",
+        "_sourceOffset": 1155,
+        "collision_layer": 1649
+      }
+    },
+    "tile-22": {
+      "Sprite": {
+        "name": "lv6",
+        "sprite": "sprite-25",
+        "_sourceOffset": 1196,
+        "collision_layer": 1649
+      }
+    },
+    "tile-23": {
+      "Sprite": {
+        "name": "lv7",
+        "sprite": "sprite-26",
+        "_sourceOffset": 1237,
+        "collision_layer": 1649
+      }
+    },
+    "tile-24": {
+      "Sprite": {
+        "name": "lv8",
+        "sprite": "sprite-27",
+        "_sourceOffset": 1278,
+        "collision_layer": 1649
+      }
+    },
+    "tile-25": {
+      "Sprite": {
+        "name": "lv9",
+        "sprite": "sprite-28",
+        "_sourceOffset": 1319,
+        "collision_layer": 1649
+      }
+    },
+    "tile-26": {
+      "Sprite": {
+        "name": "lv10",
+        "sprite": "sprite-29",
+        "_sourceOffset": 1360,
+        "collision_layer": 1649
+      }
+    },
+    "tile-27": {
+      "Sprite": {
+        "name": "lv11",
+        "sprite": "sprite-30",
+        "_sourceOffset": 1402,
+        "collision_layer": 1649
+      }
+    },
+    "tile-28": {
+      "Sprite": {
+        "name": "lv12",
+        "sprite": "sprite-31",
+        "_sourceOffset": 1444,
+        "collision_layer": 1649
+      }
+    },
+    "tile-29": {
+      "Sprite": {
+        "name": "lv13",
+        "sprite": "sprite-32",
+        "_sourceOffset": 1486,
+        "collision_layer": 1649
+      }
+    },
+    "tile-30": {
+      "Sprite": {
+        "name": "lv14",
+        "sprite": "sprite-33",
+        "_sourceOffset": 1528,
+        "collision_layer": 1649
+      }
+    },
+    "tile-31": {
+      "Sprite": {
+        "name": "lv15",
+        "sprite": "sprite-34",
+        "_sourceOffset": 1570,
+        "collision_layer": 1649
+      }
+    },
+    "tile-32": {
+      "Sprite": {
+        "name": "resume",
+        "sprite": "sprite-40",
+        "_sourceOffset": 1681,
+        "collision_layer": 1643
+      }
+    },
+    "tile-33": {
+      "Or": {
+        "name": "lv",
+        "sprites": [
+          "sprite-34",
+          "sprite-33",
+          "sprite-32",
+          "sprite-31",
+          "sprite-30",
+          "sprite-29",
+          "sprite-28",
+          "sprite-21",
+          "sprite-26",
+          "sprite-25",
+          "sprite-24",
+          "sprite-23",
+          "sprite-22",
+          "sprite-20",
+          "sprite-27"
+        ],
+        "collisionLayers": [
+          1649
+        ],
+        "_sourceOffset": 2187
+      }
+    },
+    "tile-34": {
+      "Sprite": {
+        "name": "remnant",
+        "sprite": "sprite-39",
+        "_sourceOffset": 1666,
+        "collision_layer": 1644
+      }
+    },
+    "tile-35": {
+      "Or": {
+        "name": "movable",
+        "sprites": [
+          "sprite-8",
+          "sprite-9",
+          "sprite-10",
+          "sprite-11",
+          "sprite-12",
+          "sprite-7"
+        ],
+        "collisionLayers": [
+          1648,
+          1647
+        ],
+        "_sourceOffset": 2004
+      }
+    },
+    "tile-36": {
+      "Or": {
+        "name": "object",
+        "sprites": [
+          "sprite-3",
+          "sprite-11",
+          "sprite-10",
+          "sprite-9",
+          "sprite-8",
+          "sprite-0",
+          "sprite-1",
+          "sprite-4",
+          "sprite-12",
+          "sprite-2",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-15",
+          "sprite-14",
+          "sprite-13",
+          "sprite-19",
+          "sprite-7"
+        ],
+        "collisionLayers": [
+          1648,
+          1647
+        ],
+        "_sourceOffset": 2095
+      }
+    },
+    "tile-37": {
+      "Sprite": {
+        "name": "wall0",
+        "sprite": "sprite-13",
+        "_sourceOffset": 696,
+        "collision_layer": 1647
+      }
+    },
+    "tile-38": {
+      "Sprite": {
+        "name": "pop",
+        "sprite": "sprite-38",
+        "_sourceOffset": 1655,
+        "collision_layer": 1644
+      }
+    },
+    "tile-39": {
+      "Sprite": {
+        "name": "gem1pop",
+        "sprite": "sprite-4",
+        "_sourceOffset": 476,
+        "collision_layer": 1648
+      }
+    },
+    "tile-40": {
+      "Sprite": {
+        "name": "gem2pop",
+        "sprite": "sprite-3",
+        "_sourceOffset": 520,
+        "collision_layer": 1648
+      }
+    },
+    "tile-41": {
+      "Sprite": {
+        "name": "gem3pop",
+        "sprite": "sprite-2",
+        "_sourceOffset": 564,
+        "collision_layer": 1648
+      }
+    },
+    "tile-42": {
+      "Sprite": {
+        "name": "gem4pop",
+        "sprite": "sprite-1",
+        "_sourceOffset": 608,
+        "collision_layer": 1648
+      }
+    },
+    "tile-43": {
+      "Sprite": {
+        "name": "gem5pop",
+        "sprite": "sprite-0",
+        "_sourceOffset": 652,
+        "collision_layer": 1648
+      }
+    },
+    "tile-44": {
+      "Sprite": {
+        "name": "winmarker",
+        "sprite": "sprite-41",
+        "_sourceOffset": 1695,
+        "collision_layer": 1644
+      }
+    },
+    "tile-45": {
+      "Sprite": {
+        "name": "target",
+        "sprite": "sprite-6",
+        "_sourceOffset": 189,
+        "collision_layer": 1646
+      }
+    },
+    "tile-46": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-5",
+        "collisionLayers": [
+          1645
+        ],
+        "_sourceOffset": 1735
+      }
+    },
+    "tile-47": {
+      "Simple": {
+        "name": "*",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          1646
+        ],
+        "_sourceOffset": 1750
+      }
+    },
+    "tile-48": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-19",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1761
+      }
+    },
+    "tile-49": {
+      "Simple": {
+        "name": "p",
+        "sprite": "sprite-13",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1771
+      }
+    },
+    "tile-50": {
+      "Simple": {
+        "name": "q",
+        "sprite": "sprite-14",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1781
+      }
+    },
+    "tile-51": {
+      "Simple": {
+        "name": "w",
+        "sprite": "sprite-15",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1791
+      }
+    },
+    "tile-52": {
+      "Simple": {
+        "name": "e",
+        "sprite": "sprite-16",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1801
+      }
+    },
+    "tile-53": {
+      "Simple": {
+        "name": "r",
+        "sprite": "sprite-17",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1811
+      }
+    },
+    "tile-54": {
+      "Simple": {
+        "name": "t",
+        "sprite": "sprite-18",
+        "collisionLayers": [
+          1647
+        ],
+        "_sourceOffset": 1821
+      }
+    },
+    "tile-55": {
+      "And": {
+        "name": "&",
+        "sprites": [
+          "sprite-7",
+          "sprite-37"
+        ],
+        "collisionLayers": [
+          1647,
+          1644
+        ],
+        "_sourceOffset": 1831
+      }
+    },
+    "tile-56": {
+      "And": {
+        "name": "0",
+        "sprites": [
+          "sprite-35",
+          "sprite-19"
+        ],
+        "collisionLayers": [
+          1649,
+          1647
+        ],
+        "_sourceOffset": 1857
+      }
+    },
+    "tile-57": {
+      "And": {
+        "name": "1",
+        "sprites": [
+          "sprite-36",
+          "sprite-19"
+        ],
+        "collisionLayers": [
+          1649,
+          1647
+        ],
+        "_sourceOffset": 1878
+      }
+    },
+    "tile-58": {
+      "Or": {
+        "name": "marker",
+        "sprites": [
+          "sprite-41",
+          "sprite-39",
+          "sprite-38",
+          "sprite-37"
+        ],
+        "collisionLayers": [
+          1644
+        ],
+        "_sourceOffset": 2136
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 2543,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 2555,
+      "random": false,
+      "negated": true
+    },
+    "twm-2": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 2563,
+      "random": false,
+      "negated": true
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 2573,
+      "random": false,
+      "negated": true
+    },
+    "twm-4": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 2597,
+      "random": true,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 2633,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 2713,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 2793,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 2873,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 2953,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 3037,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 3043,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 3047,
+      "random": false,
+      "negated": true
+    },
+    "twm-13": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 3102,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3112,
+      "random": false,
+      "negated": true
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 3167,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 3177,
+      "random": false,
+      "negated": true
+    },
+    "twm-17": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 3232,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 3242,
+      "random": false,
+      "negated": true
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 3297,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3307,
+      "random": false,
+      "negated": true
+    },
+    "twm-21": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 3409,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 3430,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 3454,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 3526,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 3598,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 3670,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": null,
+      "tile": "tile-21",
+      "_sourceOffset": 3742,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-22",
+      "_sourceOffset": 3814,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-23",
+      "_sourceOffset": 3886,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": null,
+      "tile": "tile-24",
+      "_sourceOffset": 3958,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-25",
+      "_sourceOffset": 4030,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": null,
+      "tile": "tile-26",
+      "_sourceOffset": 4102,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": null,
+      "tile": "tile-27",
+      "_sourceOffset": 4175,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": null,
+      "tile": "tile-28",
+      "_sourceOffset": 4248,
+      "random": false,
+      "negated": false
+    },
+    "twm-35": {
+      "direction": null,
+      "tile": "tile-29",
+      "_sourceOffset": 4321,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": null,
+      "tile": "tile-30",
+      "_sourceOffset": 4394,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": null,
+      "tile": "tile-31",
+      "_sourceOffset": 4467,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": "Up",
+      "tile": "tile-3",
+      "_sourceOffset": 4504,
+      "random": false,
+      "negated": false
+    },
+    "twm-39": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 4526,
+      "random": false,
+      "negated": false
+    },
+    "twm-40": {
+      "direction": "Down",
+      "tile": "tile-3",
+      "_sourceOffset": 4504,
+      "random": false,
+      "negated": false
+    },
+    "twm-41": {
+      "direction": "Left",
+      "tile": "tile-3",
+      "_sourceOffset": 4504,
+      "random": false,
+      "negated": false
+    },
+    "twm-42": {
+      "direction": "Right",
+      "tile": "tile-3",
+      "_sourceOffset": 4504,
+      "random": false,
+      "negated": false
+    },
+    "twm-43": {
+      "direction": null,
+      "tile": "tile-32",
+      "_sourceOffset": 4548,
+      "random": false,
+      "negated": false
+    },
+    "twm-44": {
+      "direction": null,
+      "tile": "tile-33",
+      "_sourceOffset": 4563,
+      "random": false,
+      "negated": false
+    },
+    "twm-45": {
+      "direction": null,
+      "tile": "tile-34",
+      "_sourceOffset": 4567,
+      "random": false,
+      "negated": false
+    },
+    "twm-46": {
+      "direction": null,
+      "tile": "tile-35",
+      "_sourceOffset": 4599,
+      "random": false,
+      "negated": false
+    },
+    "twm-47": {
+      "direction": null,
+      "tile": "tile-36",
+      "_sourceOffset": 4607,
+      "random": false,
+      "negated": true
+    },
+    "twm-48": {
+      "direction": "Down",
+      "tile": "tile-35",
+      "_sourceOffset": 4626,
+      "random": false,
+      "negated": false
+    },
+    "twm-49": {
+      "direction": null,
+      "tile": "tile-37",
+      "_sourceOffset": 4733,
+      "random": false,
+      "negated": false
+    },
+    "twm-50": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 5140,
+      "random": false,
+      "negated": false
+    },
+    "twm-51": {
+      "direction": null,
+      "tile": "tile-38",
+      "_sourceOffset": 5173,
+      "random": false,
+      "negated": false
+    },
+    "twm-52": {
+      "direction": null,
+      "tile": "tile-39",
+      "_sourceOffset": 5182,
+      "random": false,
+      "negated": false
+    },
+    "twm-53": {
+      "direction": null,
+      "tile": "tile-40",
+      "_sourceOffset": 5206,
+      "random": false,
+      "negated": false
+    },
+    "twm-54": {
+      "direction": null,
+      "tile": "tile-41",
+      "_sourceOffset": 5230,
+      "random": false,
+      "negated": false
+    },
+    "twm-55": {
+      "direction": null,
+      "tile": "tile-42",
+      "_sourceOffset": 5254,
+      "random": false,
+      "negated": false
+    },
+    "twm-56": {
+      "direction": null,
+      "tile": "tile-43",
+      "_sourceOffset": 5278,
+      "random": false,
+      "negated": false
+    },
+    "twm-57": {
+      "direction": null,
+      "tile": "tile-44",
+      "_sourceOffset": 5335,
+      "random": false,
+      "negated": false
+    },
+    "twm-58": {
+      "direction": null,
+      "tile": "tile-45",
+      "_sourceOffset": 5363,
+      "random": false,
+      "negated": false
+    },
+    "twm-59": {
+      "direction": null,
+      "tile": "tile-32",
+      "_sourceOffset": 6344,
+      "random": false,
+      "negated": true
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 2543,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 2555,
+      "tile_with_modifiers": [
+        "twm-1",
+        "twm-2",
+        "twm-3"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 2597,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 2633,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 2713,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 2793,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 2873,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 2953,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 3037,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 3043,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-12"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 3102,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 3108,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-14"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 3167,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 3173,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-16"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 3232,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 3238,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-18"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 3297,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 3303,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-20"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 3409,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 3430,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 3454,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 3458,
+      "tile_with_modifiers": []
+    },
+    "neighbor-22": {
+      "_sourceOffset": 3526,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 3598,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 3670,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 3742,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 3814,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 3886,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 3958,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 4030,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 4102,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 4175,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 4248,
+      "tile_with_modifiers": [
+        "twm-34"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 4321,
+      "tile_with_modifiers": [
+        "twm-35"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 4394,
+      "tile_with_modifiers": [
+        "twm-36"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 4467,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 4504,
+      "tile_with_modifiers": [
+        "twm-38"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 4513,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 4526,
+      "tile_with_modifiers": [
+        "twm-39"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 4504,
+      "tile_with_modifiers": [
+        "twm-40"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 4504,
+      "tile_with_modifiers": [
+        "twm-41"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 4504,
+      "tile_with_modifiers": [
+        "twm-42"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 4548,
+      "tile_with_modifiers": [
+        "twm-43"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 4563,
+      "tile_with_modifiers": [
+        "twm-44"
+      ]
+    },
+    "neighbor-44": {
+      "_sourceOffset": 4567,
+      "tile_with_modifiers": [
+        "twm-45"
+      ]
+    },
+    "neighbor-45": {
+      "_sourceOffset": 4580,
+      "tile_with_modifiers": [
+        "twm-44",
+        "twm-43"
+      ]
+    },
+    "neighbor-46": {
+      "_sourceOffset": 4599,
+      "tile_with_modifiers": [
+        "twm-46"
+      ]
+    },
+    "neighbor-47": {
+      "_sourceOffset": 4607,
+      "tile_with_modifiers": [
+        "twm-47"
+      ]
+    },
+    "neighbor-48": {
+      "_sourceOffset": 4626,
+      "tile_with_modifiers": [
+        "twm-48"
+      ]
+    },
+    "neighbor-49": {
+      "_sourceOffset": 4733,
+      "tile_with_modifiers": [
+        "twm-49"
+      ]
+    },
+    "neighbor-50": {
+      "_sourceOffset": 5140,
+      "tile_with_modifiers": [
+        "twm-50"
+      ]
+    },
+    "neighbor-51": {
+      "_sourceOffset": 5168,
+      "tile_with_modifiers": [
+        "twm-5",
+        "twm-51"
+      ]
+    },
+    "neighbor-52": {
+      "_sourceOffset": 5182,
+      "tile_with_modifiers": [
+        "twm-52"
+      ]
+    },
+    "neighbor-53": {
+      "_sourceOffset": 5192,
+      "tile_with_modifiers": [
+        "twm-6",
+        "twm-51"
+      ]
+    },
+    "neighbor-54": {
+      "_sourceOffset": 5206,
+      "tile_with_modifiers": [
+        "twm-53"
+      ]
+    },
+    "neighbor-55": {
+      "_sourceOffset": 5216,
+      "tile_with_modifiers": [
+        "twm-7",
+        "twm-51"
+      ]
+    },
+    "neighbor-56": {
+      "_sourceOffset": 5230,
+      "tile_with_modifiers": [
+        "twm-54"
+      ]
+    },
+    "neighbor-57": {
+      "_sourceOffset": 5240,
+      "tile_with_modifiers": [
+        "twm-8",
+        "twm-51"
+      ]
+    },
+    "neighbor-58": {
+      "_sourceOffset": 5254,
+      "tile_with_modifiers": [
+        "twm-55"
+      ]
+    },
+    "neighbor-59": {
+      "_sourceOffset": 5264,
+      "tile_with_modifiers": [
+        "twm-9",
+        "twm-51"
+      ]
+    },
+    "neighbor-60": {
+      "_sourceOffset": 5278,
+      "tile_with_modifiers": [
+        "twm-56"
+      ]
+    },
+    "neighbor-61": {
+      "_sourceOffset": 5332,
+      "tile_with_modifiers": [
+        "twm-44",
+        "twm-57"
+      ]
+    },
+    "neighbor-62": {
+      "_sourceOffset": 5352,
+      "tile_with_modifiers": [
+        "twm-57"
+      ]
+    },
+    "neighbor-63": {
+      "_sourceOffset": 5363,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-39"
+      ]
+    },
+    "neighbor-64": {
+      "_sourceOffset": 5416,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-11"
+      ]
+    },
+    "neighbor-65": {
+      "_sourceOffset": 5463,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-52"
+      ]
+    },
+    "neighbor-66": {
+      "_sourceOffset": 5479,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-53"
+      ]
+    },
+    "neighbor-67": {
+      "_sourceOffset": 5566,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-54"
+      ]
+    },
+    "neighbor-68": {
+      "_sourceOffset": 5653,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-55"
+      ]
+    },
+    "neighbor-69": {
+      "_sourceOffset": 5740,
+      "tile_with_modifiers": [
+        "twm-58",
+        "twm-56"
+      ]
+    },
+    "neighbor-70": {
+      "_sourceOffset": 6341,
+      "tile_with_modifiers": [
+        "twm-44",
+        "twm-59"
+      ]
+    },
+    "neighbor-71": {
+      "_sourceOffset": 6701,
+      "tile_with_modifiers": [
+        "twm-11",
+        "twm-51"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 2542
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2554
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2596
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-3",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2632
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-2",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2664
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-3",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2632
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-2",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2664
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-3",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2632
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-2",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2664
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-3",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 2632
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-2",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2664
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-4",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 2712
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-4",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 2712
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-4",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 2712
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-4",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 2712
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2792
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2792
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2792
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 2792
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-6",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2872
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-6",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2872
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-6",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2872
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-6",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2872
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-7",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 2952
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-7",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 2952
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-7",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 2952
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-7",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 2952
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3036
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 3071
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3101
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3136
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3101
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3136
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3101
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3136
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3101
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3136
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3166
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3201
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3166
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3201
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3166
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3201
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3166
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3201
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3231
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3266
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3231
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3266
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3231
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3266
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3231
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3266
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3331
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3331
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3331
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3296
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3331
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3408
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3453
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3480
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3525
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3552
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3597
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3624
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3669
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3696
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3741
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3768
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3813
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3840
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3885
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3912
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-28",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3957
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3984
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-29",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4029
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4056
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4101
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-19",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4129
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4174
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4202
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4247
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4275
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4320
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4348
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4393
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-19",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4421
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-35",
+          "neighbor-21",
+          "neighbor-21",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4466
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4491
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 4503
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4520
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-39",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 4503
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4520
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-40",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 4503
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4520
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 4503
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4520
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42"
+        ],
+        "_sourceOffset": 4547
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-43"
+        ],
+        "_sourceOffset": 4562
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44"
+        ],
+        "_sourceOffset": 4566
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45"
+        ],
+        "_sourceOffset": 4578
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4598
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4624
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 4654
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 4680
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4732
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 4761
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4804
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4870
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4936
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 5002
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-47"
+        ],
+        "_sourceOffset": 5068
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-50"
+        ],
+        "_sourceOffset": 5139
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51"
+        ],
+        "_sourceOffset": 5167
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-52"
+        ],
+        "_sourceOffset": 5180
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53"
+        ],
+        "_sourceOffset": 5191
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-54"
+        ],
+        "_sourceOffset": 5204
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-55"
+        ],
+        "_sourceOffset": 5215
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-56"
+        ],
+        "_sourceOffset": 5228
+      }
+    },
+    "bracket-122": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-57"
+        ],
+        "_sourceOffset": 5239
+      }
+    },
+    "bracket-123": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-58"
+        ],
+        "_sourceOffset": 5252
+      }
+    },
+    "bracket-124": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59"
+        ],
+        "_sourceOffset": 5263
+      }
+    },
+    "bracket-125": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-60"
+        ],
+        "_sourceOffset": 5276
+      }
+    },
+    "bracket-126": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61"
+        ],
+        "_sourceOffset": 5330
+      }
+    },
+    "bracket-127": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-62"
+        ],
+        "_sourceOffset": 5351
+      }
+    },
+    "bracket-128": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-63"
+        ],
+        "_sourceOffset": 5362
+      }
+    },
+    "bracket-129": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-64"
+        ],
+        "_sourceOffset": 5415
+      }
+    },
+    "bracket-130": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-65"
+        ],
+        "_sourceOffset": 5462
+      }
+    },
+    "bracket-131": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-66"
+        ],
+        "_sourceOffset": 5478
+      }
+    },
+    "bracket-132": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-67"
+        ],
+        "_sourceOffset": 5565
+      }
+    },
+    "bracket-133": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68"
+        ],
+        "_sourceOffset": 5652
+      }
+    },
+    "bracket-134": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-69"
+        ],
+        "_sourceOffset": 5739
+      }
+    },
+    "bracket-135": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70"
+        ],
+        "_sourceOffset": 6340
+      }
+    },
+    "bracket-136": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 6378
+      }
+    },
+    "bracket-137": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 6378
+      }
+    },
+    "bracket-138": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 6378
+      }
+    },
+    "bracket-139": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-51",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 6378
+      }
+    },
+    "bracket-140": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-53",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 6450
+      }
+    },
+    "bracket-141": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-53",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 6450
+      }
+    },
+    "bracket-142": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-53",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 6450
+      }
+    },
+    "bracket-143": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-53",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 6450
+      }
+    },
+    "bracket-144": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-55",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 6522
+      }
+    },
+    "bracket-145": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-55",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 6522
+      }
+    },
+    "bracket-146": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-55",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 6522
+      }
+    },
+    "bracket-147": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-55",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 6522
+      }
+    },
+    "bracket-148": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-57",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 6594
+      }
+    },
+    "bracket-149": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-57",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 6594
+      }
+    },
+    "bracket-150": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-57",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 6594
+      }
+    },
+    "bracket-151": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-57",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 6594
+      }
+    },
+    "bracket-152": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-59",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6666
+      }
+    },
+    "bracket-153": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-59",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6666
+      }
+    },
+    "bracket-154": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-59",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6666
+      }
+    },
+    "bracket-155": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-59",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6666
+      }
+    },
+    "bracket-156": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-71"
+        ],
+        "_sourceOffset": 6700
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-1"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-2"
+        ],
+        "commands": [],
+        "_sourceOffset": 2542,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 2542,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 2619,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-5"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 2619,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-7"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 2619,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-9"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 2619,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Group": {
+        "rules": [
+          "rule-2",
+          "rule-3",
+          "rule-4",
+          "rule-5"
+        ],
+        "_sourceOffset": 2619,
+        "random": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-11"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 2700,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 2700,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-13"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 2700,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 2700,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Group": {
+        "rules": [
+          "rule-7",
+          "rule-8",
+          "rule-9",
+          "rule-10"
+        ],
+        "_sourceOffset": 2700,
+        "random": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-15"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 2780,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 2780,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-17"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 2780,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 2780,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-16": {
+      "Group": {
+        "rules": [
+          "rule-12",
+          "rule-13",
+          "rule-14",
+          "rule-15"
+        ],
+        "_sourceOffset": 2780,
+        "random": false
+      }
+    },
+    "rule-17": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-19"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 2860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 2860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 2860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 2860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Group": {
+        "rules": [
+          "rule-17",
+          "rule-18",
+          "rule-19",
+          "rule-20"
+        ],
+        "_sourceOffset": 2860,
+        "random": false
+      }
+    },
+    "rule-22": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 2940,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 2940,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-25"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 2940,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 2940,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Group": {
+        "rules": [
+          "rule-22",
+          "rule-23",
+          "rule-24",
+          "rule-25"
+        ],
+        "_sourceOffset": 2940,
+        "random": false
+      }
+    },
+    "rule-27": {
+      "Group": {
+        "rules": [
+          "rule-6",
+          "rule-11",
+          "rule-16",
+          "rule-21",
+          "rule-26"
+        ],
+        "_sourceOffset": 2619,
+        "random": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-27"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-28"
+        ],
+        "commands": [],
+        "_sourceOffset": 3019,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Group": {
+        "rules": [
+          "rule-28"
+        ],
+        "_sourceOffset": 3019,
+        "random": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-29"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-30"
+        ],
+        "commands": [],
+        "_sourceOffset": 3085,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-31"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-32"
+        ],
+        "commands": [],
+        "_sourceOffset": 3085,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-33"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-34"
+        ],
+        "commands": [],
+        "_sourceOffset": 3085,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-35"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-36"
+        ],
+        "commands": [],
+        "_sourceOffset": 3085,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-34": {
+      "Group": {
+        "rules": [
+          "rule-30",
+          "rule-31",
+          "rule-32",
+          "rule-33"
+        ],
+        "_sourceOffset": 3085,
+        "random": false
+      }
+    },
+    "rule-35": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-37"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-38"
+        ],
+        "commands": [],
+        "_sourceOffset": 3150,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-39"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-40"
+        ],
+        "commands": [],
+        "_sourceOffset": 3150,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-42"
+        ],
+        "commands": [],
+        "_sourceOffset": 3150,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-43"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-44"
+        ],
+        "commands": [],
+        "_sourceOffset": 3150,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Group": {
+        "rules": [
+          "rule-35",
+          "rule-36",
+          "rule-37",
+          "rule-38"
+        ],
+        "_sourceOffset": 3150,
+        "random": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-45"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-46"
+        ],
+        "commands": [],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-47"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-48"
+        ],
+        "commands": [],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-49"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-50"
+        ],
+        "commands": [],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-51"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-52"
+        ],
+        "commands": [],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-44": {
+      "Group": {
+        "rules": [
+          "rule-40",
+          "rule-41",
+          "rule-42",
+          "rule-43"
+        ],
+        "_sourceOffset": 3215,
+        "random": false
+      }
+    },
+    "rule-45": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-53"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-54"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-55"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-56"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-57"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-58"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-59"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-60"
+        ],
+        "commands": [],
+        "_sourceOffset": 3280,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Group": {
+        "rules": [
+          "rule-45",
+          "rule-46",
+          "rule-47",
+          "rule-48"
+        ],
+        "_sourceOffset": 3280,
+        "random": false
+      }
+    },
+    "rule-50": {
+      "Group": {
+        "rules": [
+          "rule-29",
+          "rule-34",
+          "rule-39",
+          "rule-44",
+          "rule-49"
+        ],
+        "_sourceOffset": 3019,
+        "random": false
+      }
+    },
+    "rule-51": {
+      "Loop": {
+        "rules": [
+          "rule-27",
+          "rule-50"
+        ]
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-61"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-62"
+        ],
+        "commands": [],
+        "_sourceOffset": 3390,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Group": {
+        "rules": [
+          "rule-52"
+        ],
+        "_sourceOffset": 3390,
+        "random": false
+      }
+    },
+    "rule-54": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-63"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-64"
+        ],
+        "commands": [],
+        "_sourceOffset": 3462,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-55": {
+      "Group": {
+        "rules": [
+          "rule-54"
+        ],
+        "_sourceOffset": 3462,
+        "random": false
+      }
+    },
+    "rule-56": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-65"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-66"
+        ],
+        "commands": [],
+        "_sourceOffset": 3534,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-57": {
+      "Group": {
+        "rules": [
+          "rule-56"
+        ],
+        "_sourceOffset": 3534,
+        "random": false
+      }
+    },
+    "rule-58": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-67"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-68"
+        ],
+        "commands": [],
+        "_sourceOffset": 3606,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-59": {
+      "Group": {
+        "rules": [
+          "rule-58"
+        ],
+        "_sourceOffset": 3606,
+        "random": false
+      }
+    },
+    "rule-60": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-69"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-70"
+        ],
+        "commands": [],
+        "_sourceOffset": 3678,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-61": {
+      "Group": {
+        "rules": [
+          "rule-60"
+        ],
+        "_sourceOffset": 3678,
+        "random": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-71"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-72"
+        ],
+        "commands": [],
+        "_sourceOffset": 3750,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Group": {
+        "rules": [
+          "rule-62"
+        ],
+        "_sourceOffset": 3750,
+        "random": false
+      }
+    },
+    "rule-64": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-73"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-74"
+        ],
+        "commands": [],
+        "_sourceOffset": 3822,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-65": {
+      "Group": {
+        "rules": [
+          "rule-64"
+        ],
+        "_sourceOffset": 3822,
+        "random": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-75"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-76"
+        ],
+        "commands": [],
+        "_sourceOffset": 3894,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Group": {
+        "rules": [
+          "rule-66"
+        ],
+        "_sourceOffset": 3894,
+        "random": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-77"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-78"
+        ],
+        "commands": [],
+        "_sourceOffset": 3966,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Group": {
+        "rules": [
+          "rule-68"
+        ],
+        "_sourceOffset": 3966,
+        "random": false
+      }
+    },
+    "rule-70": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-79"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-80"
+        ],
+        "commands": [],
+        "_sourceOffset": 4038,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-71": {
+      "Group": {
+        "rules": [
+          "rule-70"
+        ],
+        "_sourceOffset": 4038,
+        "random": false
+      }
+    },
+    "rule-72": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-81"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-82"
+        ],
+        "commands": [],
+        "_sourceOffset": 4111,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-73": {
+      "Group": {
+        "rules": [
+          "rule-72"
+        ],
+        "_sourceOffset": 4111,
+        "random": false
+      }
+    },
+    "rule-74": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-83"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-84"
+        ],
+        "commands": [],
+        "_sourceOffset": 4184,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-75": {
+      "Group": {
+        "rules": [
+          "rule-74"
+        ],
+        "_sourceOffset": 4184,
+        "random": false
+      }
+    },
+    "rule-76": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-85"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-86"
+        ],
+        "commands": [],
+        "_sourceOffset": 4257,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-77": {
+      "Group": {
+        "rules": [
+          "rule-76"
+        ],
+        "_sourceOffset": 4257,
+        "random": false
+      }
+    },
+    "rule-78": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-87"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-88"
+        ],
+        "commands": [],
+        "_sourceOffset": 4330,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-79": {
+      "Group": {
+        "rules": [
+          "rule-78"
+        ],
+        "_sourceOffset": 4330,
+        "random": false
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-89"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-90"
+        ],
+        "commands": [],
+        "_sourceOffset": 4403,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Group": {
+        "rules": [
+          "rule-80"
+        ],
+        "_sourceOffset": 4403,
+        "random": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-91"
+        ],
+        "commands": [],
+        "_sourceOffset": 4476,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Group": {
+        "rules": [
+          "rule-82"
+        ],
+        "_sourceOffset": 4476,
+        "random": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-92"
+        ],
+        "actions": [
+          "bracket-93"
+        ],
+        "commands": [],
+        "_sourceOffset": 4503,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-94"
+        ],
+        "actions": [
+          "bracket-95"
+        ],
+        "commands": [],
+        "_sourceOffset": 4503,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-96"
+        ],
+        "actions": [
+          "bracket-97"
+        ],
+        "commands": [],
+        "_sourceOffset": 4503,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-98"
+        ],
+        "actions": [
+          "bracket-99"
+        ],
+        "commands": [],
+        "_sourceOffset": 4503,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-88": {
+      "Group": {
+        "rules": [
+          "rule-84",
+          "rule-85",
+          "rule-86",
+          "rule-87"
+        ],
+        "_sourceOffset": 4503,
+        "random": false
+      }
+    },
+    "rule-89": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-91"
+        ],
+        "commands": [],
+        "_sourceOffset": 4547,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-90": {
+      "Group": {
+        "rules": [
+          "rule-89"
+        ],
+        "_sourceOffset": 4547,
+        "random": false
+      }
+    },
+    "rule-91": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-101",
+          "bracket-102"
+        ],
+        "actions": [
+          "bracket-103",
+          "bracket-91"
+        ],
+        "commands": [],
+        "_sourceOffset": 4562,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-92": {
+      "Group": {
+        "rules": [
+          "rule-91"
+        ],
+        "_sourceOffset": 4562,
+        "random": false
+      }
+    },
+    "rule-93": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-104",
+          "bracket-101"
+        ],
+        "actions": [
+          "bracket-105",
+          "bracket-103"
+        ],
+        "commands": [],
+        "_sourceOffset": 4593,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-94": {
+      "Group": {
+        "rules": [
+          "rule-93"
+        ],
+        "_sourceOffset": 4593,
+        "random": false
+      }
+    },
+    "rule-95": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-106",
+          "bracket-101"
+        ],
+        "actions": [
+          "bracket-107",
+          "bracket-103"
+        ],
+        "commands": [],
+        "_sourceOffset": 4649,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-96": {
+      "Group": {
+        "rules": [
+          "rule-95"
+        ],
+        "_sourceOffset": 4649,
+        "random": false
+      }
+    },
+    "rule-97": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-108"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-109"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 4714,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-98": {
+      "Group": {
+        "rules": [
+          "rule-97"
+        ],
+        "_sourceOffset": 4714,
+        "random": false
+      }
+    },
+    "rule-99": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-110"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-28"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 4786,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-100": {
+      "Group": {
+        "rules": [
+          "rule-99"
+        ],
+        "_sourceOffset": 4786,
+        "random": false
+      }
+    },
+    "rule-101": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-111"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-32"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 4852,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-102": {
+      "Group": {
+        "rules": [
+          "rule-101"
+        ],
+        "_sourceOffset": 4852,
+        "random": false
+      }
+    },
+    "rule-103": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-112"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-40"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 4918,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-104": {
+      "Group": {
+        "rules": [
+          "rule-103"
+        ],
+        "_sourceOffset": 4918,
+        "random": false
+      }
+    },
+    "rule-105": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-113"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-48"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 4984,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-106": {
+      "Group": {
+        "rules": [
+          "rule-105"
+        ],
+        "_sourceOffset": 4984,
+        "random": false
+      }
+    },
+    "rule-107": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100",
+          "bracket-114"
+        ],
+        "actions": [
+          "bracket-100",
+          "bracket-56"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 5050,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-108": {
+      "Group": {
+        "rules": [
+          "rule-107"
+        ],
+        "_sourceOffset": 5050,
+        "random": false
+      }
+    },
+    "rule-109": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-115"
+        ],
+        "actions": [
+          "bracket-102"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 5139,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-110": {
+      "Group": {
+        "rules": [
+          "rule-109"
+        ],
+        "_sourceOffset": 5139,
+        "random": false
+      }
+    },
+    "rule-111": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-116"
+        ],
+        "actions": [
+          "bracket-117"
+        ],
+        "commands": [],
+        "_sourceOffset": 5167,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-112": {
+      "Group": {
+        "rules": [
+          "rule-111"
+        ],
+        "_sourceOffset": 5167,
+        "random": false
+      }
+    },
+    "rule-113": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-118"
+        ],
+        "actions": [
+          "bracket-119"
+        ],
+        "commands": [],
+        "_sourceOffset": 5191,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-114": {
+      "Group": {
+        "rules": [
+          "rule-113"
+        ],
+        "_sourceOffset": 5191,
+        "random": false
+      }
+    },
+    "rule-115": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-120"
+        ],
+        "actions": [
+          "bracket-121"
+        ],
+        "commands": [],
+        "_sourceOffset": 5215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-116": {
+      "Group": {
+        "rules": [
+          "rule-115"
+        ],
+        "_sourceOffset": 5215,
+        "random": false
+      }
+    },
+    "rule-117": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-122"
+        ],
+        "actions": [
+          "bracket-123"
+        ],
+        "commands": [],
+        "_sourceOffset": 5239,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-118": {
+      "Group": {
+        "rules": [
+          "rule-117"
+        ],
+        "_sourceOffset": 5239,
+        "random": false
+      }
+    },
+    "rule-119": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-124"
+        ],
+        "actions": [
+          "bracket-125"
+        ],
+        "commands": [],
+        "_sourceOffset": 5263,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-120": {
+      "Group": {
+        "rules": [
+          "rule-119"
+        ],
+        "_sourceOffset": 5263,
+        "random": false
+      }
+    },
+    "rule-121": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-115"
+        ],
+        "actions": [],
+        "commands": [
+          "command-7"
+        ],
+        "_sourceOffset": 5287,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-122": {
+      "Group": {
+        "rules": [
+          "rule-121"
+        ],
+        "_sourceOffset": 5287,
+        "random": false
+      }
+    },
+    "rule-123": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-101"
+        ],
+        "actions": [
+          "bracket-126"
+        ],
+        "commands": [],
+        "_sourceOffset": 5318,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-124": {
+      "Group": {
+        "rules": [
+          "rule-123"
+        ],
+        "_sourceOffset": 5318,
+        "random": false
+      }
+    },
+    "rule-125": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-128"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-128"
+        ],
+        "commands": [],
+        "_sourceOffset": 5346,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-126": {
+      "Group": {
+        "rules": [
+          "rule-125"
+        ],
+        "_sourceOffset": 5346,
+        "random": false
+      }
+    },
+    "rule-127": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-129"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-129"
+        ],
+        "commands": [],
+        "_sourceOffset": 5399,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-128": {
+      "Group": {
+        "rules": [
+          "rule-127"
+        ],
+        "_sourceOffset": 5399,
+        "random": false
+      }
+    },
+    "rule-129": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-130",
+          "bracket-131"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-130",
+          "bracket-131"
+        ],
+        "commands": [],
+        "_sourceOffset": 5446,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-130": {
+      "Group": {
+        "rules": [
+          "rule-129"
+        ],
+        "_sourceOffset": 5446,
+        "random": false
+      }
+    },
+    "rule-131": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-130",
+          "bracket-132"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-130",
+          "bracket-132"
+        ],
+        "commands": [],
+        "_sourceOffset": 5533,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-132": {
+      "Group": {
+        "rules": [
+          "rule-131"
+        ],
+        "_sourceOffset": 5533,
+        "random": false
+      }
+    },
+    "rule-133": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-130",
+          "bracket-133"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-130",
+          "bracket-133"
+        ],
+        "commands": [],
+        "_sourceOffset": 5620,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-134": {
+      "Group": {
+        "rules": [
+          "rule-133"
+        ],
+        "_sourceOffset": 5620,
+        "random": false
+      }
+    },
+    "rule-135": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-130",
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-130",
+          "bracket-134"
+        ],
+        "commands": [],
+        "_sourceOffset": 5707,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-136": {
+      "Group": {
+        "rules": [
+          "rule-135"
+        ],
+        "_sourceOffset": 5707,
+        "random": false
+      }
+    },
+    "rule-137": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-131",
+          "bracket-132"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-131",
+          "bracket-132"
+        ],
+        "commands": [],
+        "_sourceOffset": 5794,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-138": {
+      "Group": {
+        "rules": [
+          "rule-137"
+        ],
+        "_sourceOffset": 5794,
+        "random": false
+      }
+    },
+    "rule-139": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-131",
+          "bracket-133"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-131",
+          "bracket-133"
+        ],
+        "commands": [],
+        "_sourceOffset": 5881,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-140": {
+      "Group": {
+        "rules": [
+          "rule-139"
+        ],
+        "_sourceOffset": 5881,
+        "random": false
+      }
+    },
+    "rule-141": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-131",
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-131",
+          "bracket-134"
+        ],
+        "commands": [],
+        "_sourceOffset": 5968,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-142": {
+      "Group": {
+        "rules": [
+          "rule-141"
+        ],
+        "_sourceOffset": 5968,
+        "random": false
+      }
+    },
+    "rule-143": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-132",
+          "bracket-133"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-132",
+          "bracket-133"
+        ],
+        "commands": [],
+        "_sourceOffset": 6055,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-144": {
+      "Group": {
+        "rules": [
+          "rule-143"
+        ],
+        "_sourceOffset": 6055,
+        "random": false
+      }
+    },
+    "rule-145": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-132",
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-132",
+          "bracket-134"
+        ],
+        "commands": [],
+        "_sourceOffset": 6142,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-146": {
+      "Group": {
+        "rules": [
+          "rule-145"
+        ],
+        "_sourceOffset": 6142,
+        "random": false
+      }
+    },
+    "rule-147": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127",
+          "bracket-133",
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-91",
+          "bracket-133",
+          "bracket-134"
+        ],
+        "commands": [],
+        "_sourceOffset": 6229,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-148": {
+      "Group": {
+        "rules": [
+          "rule-147"
+        ],
+        "_sourceOffset": 6229,
+        "random": false
+      }
+    },
+    "rule-149": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-136"
+        ],
+        "commands": [],
+        "_sourceOffset": 6335,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-150": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-5"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-137"
+        ],
+        "commands": [],
+        "_sourceOffset": 6335,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-151": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-7"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-138"
+        ],
+        "commands": [],
+        "_sourceOffset": 6335,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-152": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-9"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-139"
+        ],
+        "commands": [],
+        "_sourceOffset": 6335,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-153": {
+      "Group": {
+        "rules": [
+          "rule-149",
+          "rule-150",
+          "rule-151",
+          "rule-152"
+        ],
+        "_sourceOffset": 6335,
+        "random": false
+      }
+    },
+    "rule-154": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-11"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-140"
+        ],
+        "commands": [],
+        "_sourceOffset": 6407,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-155": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-141"
+        ],
+        "commands": [],
+        "_sourceOffset": 6407,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-156": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-13"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-142"
+        ],
+        "commands": [],
+        "_sourceOffset": 6407,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-157": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-143"
+        ],
+        "commands": [],
+        "_sourceOffset": 6407,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-158": {
+      "Group": {
+        "rules": [
+          "rule-154",
+          "rule-155",
+          "rule-156",
+          "rule-157"
+        ],
+        "_sourceOffset": 6407,
+        "random": false
+      }
+    },
+    "rule-159": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-15"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-144"
+        ],
+        "commands": [],
+        "_sourceOffset": 6479,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-160": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-145"
+        ],
+        "commands": [],
+        "_sourceOffset": 6479,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-161": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-17"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-146"
+        ],
+        "commands": [],
+        "_sourceOffset": 6479,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-162": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-147"
+        ],
+        "commands": [],
+        "_sourceOffset": 6479,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-163": {
+      "Group": {
+        "rules": [
+          "rule-159",
+          "rule-160",
+          "rule-161",
+          "rule-162"
+        ],
+        "_sourceOffset": 6479,
+        "random": false
+      }
+    },
+    "rule-164": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-19"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-148"
+        ],
+        "commands": [],
+        "_sourceOffset": 6551,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-165": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-149"
+        ],
+        "commands": [],
+        "_sourceOffset": 6551,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-166": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-150"
+        ],
+        "commands": [],
+        "_sourceOffset": 6551,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-167": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-151"
+        ],
+        "commands": [],
+        "_sourceOffset": 6551,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-168": {
+      "Group": {
+        "rules": [
+          "rule-164",
+          "rule-165",
+          "rule-166",
+          "rule-167"
+        ],
+        "_sourceOffset": 6551,
+        "random": false
+      }
+    },
+    "rule-169": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-152"
+        ],
+        "commands": [],
+        "_sourceOffset": 6623,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-170": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-153"
+        ],
+        "commands": [],
+        "_sourceOffset": 6623,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-171": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-25"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-154"
+        ],
+        "commands": [],
+        "_sourceOffset": 6623,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-172": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135",
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-155"
+        ],
+        "commands": [],
+        "_sourceOffset": 6623,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-173": {
+      "Group": {
+        "rules": [
+          "rule-169",
+          "rule-170",
+          "rule-171",
+          "rule-172"
+        ],
+        "_sourceOffset": 6623,
+        "random": false
+      }
+    },
+    "rule-174": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-156"
+        ],
+        "actions": [],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 6695,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-175": {
+      "Group": {
+        "rules": [
+          "rule-174"
+        ],
+        "_sourceOffset": 6695,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "Simple": {
+        "_sourceOffset": 6764,
+        "qualifier": "Some",
+        "tile": "tile-44"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-51",
+    "rule-53",
+    "rule-55",
+    "rule-57",
+    "rule-59",
+    "rule-61",
+    "rule-63",
+    "rule-65",
+    "rule-67",
+    "rule-69",
+    "rule-71",
+    "rule-73",
+    "rule-75",
+    "rule-77",
+    "rule-79",
+    "rule-81",
+    "rule-83",
+    "rule-88",
+    "rule-90",
+    "rule-92",
+    "rule-94",
+    "rule-96",
+    "rule-98",
+    "rule-100",
+    "rule-102",
+    "rule-104",
+    "rule-106",
+    "rule-108",
+    "rule-110",
+    "rule-112",
+    "rule-114",
+    "rule-116",
+    "rule-118",
+    "rule-120",
+    "rule-122",
+    "rule-124",
+    "rule-126",
+    "rule-128",
+    "rule-130",
+    "rule-132",
+    "rule-134",
+    "rule-136",
+    "rule-138",
+    "rule-140",
+    "rule-142",
+    "rule-144",
+    "rule-146",
+    "rule-148",
+    "rule-153",
+    "rule-158",
+    "rule-163",
+    "rule-168",
+    "rule-173",
+    "rule-175"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "JUST ANOTHER MATCH 3 GAME",
+        "_sourceOffset": 6803
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-56",
+            "tile-56",
+            "tile-57",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 6838
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-46",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-56",
+            "tile-57",
+            "tile-56",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 7047
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-56",
+            "tile-57",
+            "tile-57",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 7256
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-47",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-47",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-47",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-57",
+            "tile-56",
+            "tile-56",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 7465
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-50",
+            "tile-53",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-57",
+            "tile-56",
+            "tile-57",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 7674
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-55",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-57",
+            "tile-57",
+            "tile-56",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 7883
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-48",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-49",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-55",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-47",
+            "tile-47",
+            "tile-47",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-56",
+            "tile-57",
+            "tile-57",
+            "tile-57",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-48"
+          ]
+        ],
+        "_sourceOffset": 8092
+      }
+    }
+  ]
+}

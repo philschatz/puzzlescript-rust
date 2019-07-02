@@ -1,0 +1,8123 @@
+{
+  "version": 1,
+  "title": "Flying Kick",
+  "metadata": {
+    "author": "Aaron Steed",
+    "homepage": "www.robotacid.com",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": "#000000",
+    "text_color": "#f7e26b",
+    "realtime_interval": null,
+    "key_repeat_interval": 0.23,
+    "again_interval": 0.1,
+    "no_action": true,
+    "no_undo": false,
+    "run_rules_on_level_start": null,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#000000": "#000000",
+    "#f7e26b": "#f7e26b",
+    "#ffc700": "#ffc700",
+    "#c87700": "#c87700",
+    "#ffe02c": "#ffe02c",
+    "#ff8126": "#ff8126",
+    "#c93700": "#c93700",
+    "#ffa30d": "#ffa30d",
+    "#e5b679": "#e5b679",
+    "#d34900": "#d34900",
+    "#d32112": "#d32112",
+    "#820e00": "#820e00",
+    "#ffd600": "#ffd600",
+    "#b76800": "#b76800",
+    "#9da3c7": "#9da3c7",
+    "#ffffff": "#ffffff",
+    "#878787": "#878787",
+    "#d21d00": "#d21d00",
+    "#e72119": "#e72119",
+    "#a62514": "#a62514",
+    "#de65e2": "#de65e2"
+  },
+  "sounds": {
+    "sound-0": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 8545502,
+        "_sourceOffset": 3138
+      }
+    },
+    "sound-1": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 25968909,
+        "_sourceOffset": 3164
+      }
+    },
+    "sound-2": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 2437309,
+        "_sourceOffset": 3185
+      }
+    },
+    "sound-3": {
+      "Sfx": {
+        "soundEffect": "SFX3",
+        "soundCode": 31029704,
+        "_sourceOffset": 3205
+      }
+    },
+    "sound-4": {
+      "Sfx": {
+        "soundEffect": "SFX4",
+        "soundCode": 31651909,
+        "_sourceOffset": 3231
+      }
+    },
+    "sound-5": {
+      "Sfx": {
+        "soundEffect": "SFX5",
+        "soundCode": 83279102,
+        "_sourceOffset": 3253
+      }
+    },
+    "sound-6": {
+      "SpriteMove": {
+        "sprite": "tile-0",
+        "soundCode": 29447307,
+        "_sourceOffset": 3274
+      }
+    },
+    "sound-7": {
+      "Sfx": {
+        "soundEffect": "SFX6",
+        "soundCode": 42954502,
+        "_sourceOffset": 3294
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 1290,
+      "_sourceOffset": 3374
+    },
+    {
+      "id": 1291,
+      "_sourceOffset": 3386
+    },
+    {
+      "id": 1292,
+      "_sourceOffset": 3397
+    },
+    {
+      "id": 1293,
+      "_sourceOffset": 3427
+    },
+    {
+      "id": 1294,
+      "_sourceOffset": 3470
+    },
+    {
+      "id": 1295,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Restart": {
+        "_sourceOffset": 3542
+      }
+    },
+    "command-1": {
+      "Again": {
+        "_sourceOffset": 3605
+      }
+    },
+    "command-2": {
+      "Again": {
+        "_sourceOffset": 3644
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 3723
+      }
+    },
+    "command-4": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 3779
+      }
+    },
+    "command-5": {
+      "Again": {
+        "_sourceOffset": 3858
+      }
+    },
+    "command-6": {
+      "Again": {
+        "_sourceOffset": 4018
+      }
+    },
+    "command-7": {
+      "Sfx": {
+        "sound": "sound-1",
+        "_sourceOffset": 4024
+      }
+    },
+    "command-8": {
+      "Again": {
+        "_sourceOffset": 4094
+      }
+    },
+    "command-9": {
+      "Again": {
+        "_sourceOffset": 4211
+      }
+    },
+    "command-10": {
+      "Sfx": {
+        "sound": "sound-0",
+        "_sourceOffset": 4304
+      }
+    },
+    "command-11": {
+      "Again": {
+        "_sourceOffset": 4376
+      }
+    },
+    "command-12": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 4382
+      }
+    },
+    "command-13": {
+      "Again": {
+        "_sourceOffset": 4441
+      }
+    },
+    "command-14": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 4447
+      }
+    },
+    "command-15": {
+      "Again": {
+        "_sourceOffset": 4517
+      }
+    },
+    "command-16": {
+      "Again": {
+        "_sourceOffset": 4566
+      }
+    },
+    "command-17": {
+      "Again": {
+        "_sourceOffset": 4623
+      }
+    },
+    "command-18": {
+      "Sfx": {
+        "sound": "sound-0",
+        "_sourceOffset": 4697
+      }
+    },
+    "command-19": {
+      "Again": {
+        "_sourceOffset": 4767
+      }
+    },
+    "command-20": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 4773
+      }
+    },
+    "command-21": {
+      "Again": {
+        "_sourceOffset": 4830
+      }
+    },
+    "command-22": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 4836
+      }
+    },
+    "command-23": {
+      "Again": {
+        "_sourceOffset": 4903
+      }
+    },
+    "command-24": {
+      "Again": {
+        "_sourceOffset": 4950
+      }
+    },
+    "command-25": {
+      "Again": {
+        "_sourceOffset": 5005
+      }
+    },
+    "command-26": {
+      "Again": {
+        "_sourceOffset": 5145
+      }
+    },
+    "command-27": {
+      "Again": {
+        "_sourceOffset": 5258
+      }
+    },
+    "command-28": {
+      "Again": {
+        "_sourceOffset": 5335
+      }
+    },
+    "command-29": {
+      "Again": {
+        "_sourceOffset": 5402
+      }
+    },
+    "command-30": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5408
+      }
+    },
+    "command-31": {
+      "Again": {
+        "_sourceOffset": 5461
+      }
+    },
+    "command-32": {
+      "Again": {
+        "_sourceOffset": 5522
+      }
+    },
+    "command-33": {
+      "Again": {
+        "_sourceOffset": 5586
+      }
+    },
+    "command-34": {
+      "Again": {
+        "_sourceOffset": 5651
+      }
+    },
+    "command-35": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5657
+      }
+    },
+    "command-36": {
+      "Again": {
+        "_sourceOffset": 5708
+      }
+    },
+    "command-37": {
+      "Again": {
+        "_sourceOffset": 5766
+      }
+    },
+    "command-38": {
+      "Again": {
+        "_sourceOffset": 5852
+      }
+    },
+    "command-39": {
+      "Again": {
+        "_sourceOffset": 5889
+      }
+    },
+    "command-40": {
+      "Again": {
+        "_sourceOffset": 5933
+      }
+    },
+    "command-41": {
+      "Sfx": {
+        "sound": "sound-4",
+        "_sourceOffset": 5939
+      }
+    },
+    "command-42": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6118
+      }
+    },
+    "command-43": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6181
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "CrateLeft",
+      "pixels": [
+        [
+          null,
+          "#ffc700",
+          "#ffc700",
+          "#c87700",
+          null
+        ],
+        [
+          "#ffc700",
+          "#ffe02c",
+          "#ffe02c",
+          "#ffc700",
+          "#c87700"
+        ],
+        [
+          "#ffc700",
+          "#ffe02c",
+          "#ffe02c",
+          "#ffc700",
+          "#c87700"
+        ],
+        [
+          "#c87700",
+          "#ffc700",
+          "#ffc700",
+          "#c87700",
+          "#c87700"
+        ],
+        [
+          null,
+          "#c87700",
+          "#c87700",
+          "#c87700",
+          null
+        ]
+      ],
+      "_sourceOffset": 1988,
+      "collision_layer": 1293
+    },
+    "sprite-1": {
+      "name": "CrateRight",
+      "pixels": [
+        [
+          null,
+          "#ffc700",
+          "#ffc700",
+          "#c87700",
+          null
+        ],
+        [
+          "#ffc700",
+          "#ffe02c",
+          "#ffe02c",
+          "#ffc700",
+          "#c87700"
+        ],
+        [
+          "#ffc700",
+          "#ffe02c",
+          "#ffe02c",
+          "#ffc700",
+          "#c87700"
+        ],
+        [
+          "#c87700",
+          "#ffc700",
+          "#ffc700",
+          "#c87700",
+          "#c87700"
+        ],
+        [
+          null,
+          "#c87700",
+          "#c87700",
+          "#c87700",
+          null
+        ]
+      ],
+      "_sourceOffset": 2062,
+      "collision_layer": 1293
+    },
+    "sprite-2": {
+      "name": "CrateFall",
+      "pixels": [
+        [
+          null,
+          "#ff8126",
+          "#ff8126",
+          "#c93700",
+          null
+        ],
+        [
+          "#ff8126",
+          "#ffa30d",
+          "#ffa30d",
+          "#ff8126",
+          "#c93700"
+        ],
+        [
+          "#ff8126",
+          "#ffa30d",
+          "#ffa30d",
+          "#ff8126",
+          "#c93700"
+        ],
+        [
+          "#c93700",
+          "#ff8126",
+          "#ff8126",
+          "#c93700",
+          "#c93700"
+        ],
+        [
+          null,
+          "#c93700",
+          "#c93700",
+          "#c93700",
+          null
+        ]
+      ],
+      "_sourceOffset": 1915,
+      "collision_layer": 1293
+    },
+    "sprite-3": {
+      "name": "CrateGround",
+      "pixels": [
+        [
+          null,
+          "#ff8126",
+          "#ff8126",
+          "#c93700",
+          null
+        ],
+        [
+          "#ff8126",
+          "#ffa30d",
+          "#ffa30d",
+          "#ff8126",
+          "#c93700"
+        ],
+        [
+          "#ff8126",
+          "#ffa30d",
+          "#ffa30d",
+          "#ff8126",
+          "#c93700"
+        ],
+        [
+          "#c93700",
+          "#ff8126",
+          "#ff8126",
+          "#c93700",
+          "#c93700"
+        ],
+        [
+          null,
+          "#c93700",
+          "#c93700",
+          "#c93700",
+          null
+        ]
+      ],
+      "_sourceOffset": 1839,
+      "collision_layer": 1293
+    },
+    "sprite-4": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679"
+        ],
+        [
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679"
+        ],
+        [
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679"
+        ],
+        [
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679"
+        ],
+        [
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679",
+          "#e5b679"
+        ]
+      ],
+      "_sourceOffset": 187,
+      "collision_layer": 1291
+    },
+    "sprite-5": {
+      "name": "WallTop",
+      "pixels": [
+        [
+          "#d34900",
+          "#d34900",
+          "#d34900",
+          "#d34900",
+          "#d32112"
+        ],
+        [
+          "#d34900",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#d32112"
+        ],
+        [
+          "#d32112",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ]
+      ],
+      "_sourceOffset": 207,
+      "collision_layer": 1293
+    },
+    "sprite-6": {
+      "name": "WallBase",
+      "pixels": [
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ],
+        [
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00",
+          "#820e00"
+        ]
+      ],
+      "_sourceOffset": 280,
+      "collision_layer": 1293
+    },
+    "sprite-7": {
+      "name": "BreakWall",
+      "pixels": [
+        [
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d"
+        ],
+        [
+          "#ffd600",
+          "#ffd600",
+          "#ffd600",
+          "#ffd600",
+          "#b76800"
+        ],
+        [
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d"
+        ],
+        [
+          "#ffd600",
+          "#ffd600",
+          "#ffd600",
+          "#ffd600",
+          "#b76800"
+        ],
+        [
+          "#ffa30d",
+          "#b76800",
+          "#ffa30d",
+          "#b76800",
+          "#ffa30d"
+        ]
+      ],
+      "_sourceOffset": 298,
+      "collision_layer": 1293
+    },
+    "sprite-8": {
+      "name": "BreakDebris1",
+      "pixels": [
+        [
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d",
+          "#ffd600",
+          "#ffa30d"
+        ],
+        [
+          "#ffd600",
+          null,
+          "#ffd600",
+          null,
+          "#b76800"
+        ],
+        [
+          "#ffa30d",
+          "#ffd600",
+          null,
+          "#ffd600",
+          "#ffa30d"
+        ],
+        [
+          "#ffd600",
+          null,
+          "#ffd600",
+          null,
+          "#b76800"
+        ],
+        [
+          "#ffa30d",
+          "#b76800",
+          "#ffa30d",
+          "#b76800",
+          "#ffa30d"
+        ]
+      ],
+      "_sourceOffset": 372,
+      "collision_layer": 1294
+    },
+    "sprite-9": {
+      "name": "BreakDebris2",
+      "pixels": [
+        [
+          null,
+          "#ffd600",
+          null,
+          "#ffd600",
+          null
+        ],
+        [
+          "#ffd600",
+          null,
+          "#ffd600",
+          null,
+          "#b76800"
+        ],
+        [
+          null,
+          "#ffd600",
+          null,
+          "#ffd600",
+          null
+        ],
+        [
+          "#ffd600",
+          null,
+          "#ffd600",
+          null,
+          "#b76800"
+        ],
+        [
+          null,
+          "#b76800",
+          null,
+          "#b76800",
+          null
+        ]
+      ],
+      "_sourceOffset": 449,
+      "collision_layer": 1294
+    },
+    "sprite-10": {
+      "name": "BreakDebris3",
+      "pixels": [
+        [
+          null,
+          "#ffd600",
+          null,
+          "#ffd600",
+          null
+        ],
+        [
+          "#ffd600",
+          null,
+          null,
+          null,
+          "#b76800"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#ffd600",
+          null,
+          null,
+          null,
+          "#b76800"
+        ],
+        [
+          null,
+          "#b76800",
+          null,
+          "#b76800",
+          null
+        ]
+      ],
+      "_sourceOffset": 526,
+      "collision_layer": 1294
+    },
+    "sprite-11": {
+      "name": "SpikeUp",
+      "pixels": [
+        [
+          null,
+          null,
+          "#9da3c7",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#ffffff",
+          null,
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#ffffff",
+          "#9da3c7",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#ffffff",
+          "#9da3c7",
+          null
+        ],
+        [
+          "#820e00",
+          "#d32112",
+          "#ffffff",
+          "#d32112",
+          "#820e00"
+        ]
+      ],
+      "_sourceOffset": 603,
+      "collision_layer": 1292
+    },
+    "sprite-12": {
+      "name": "Mine",
+      "pixels": [
+        [
+          null,
+          null,
+          "#ffffff",
+          null,
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#ffffff",
+          "#9da3c7",
+          null
+        ],
+        [
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#9da3c7",
+          "#878787"
+        ],
+        [
+          null,
+          "#9da3c7",
+          "#9da3c7",
+          "#878787",
+          null
+        ],
+        [
+          null,
+          null,
+          "#878787",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 675,
+      "collision_layer": 1292
+    },
+    "sprite-13": {
+      "name": "Blood1",
+      "pixels": [
+        [
+          "#d21d00",
+          null,
+          "#d21d00",
+          null,
+          "#d21d00"
+        ],
+        [
+          null,
+          "#d21d00",
+          "#d21d00",
+          "#d21d00",
+          null
+        ],
+        [
+          "#d21d00",
+          "#d21d00",
+          "#d21d00",
+          "#d21d00",
+          "#d21d00"
+        ],
+        [
+          null,
+          "#d21d00",
+          "#d21d00",
+          "#d21d00",
+          null
+        ],
+        [
+          "#d21d00",
+          null,
+          "#d21d00",
+          null,
+          "#d21d00"
+        ]
+      ],
+      "_sourceOffset": 744,
+      "collision_layer": 1294
+    },
+    "sprite-14": {
+      "name": "Blood2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#d21d00",
+          null,
+          "#d21d00",
+          null
+        ],
+        [
+          null,
+          null,
+          "#d21d00",
+          null,
+          null
+        ],
+        [
+          null,
+          "#d21d00",
+          null,
+          "#d21d00",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 815,
+      "collision_layer": 1294
+    },
+    "sprite-15": {
+      "name": "Blood3",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#d21d00",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 886,
+      "collision_layer": 1294
+    },
+    "sprite-16": {
+      "name": "Blood4",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 957,
+      "collision_layer": 1294
+    },
+    "sprite-17": {
+      "name": "PlayerGround",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ]
+      ],
+      "_sourceOffset": 1028,
+      "collision_layer": 1293
+    },
+    "sprite-18": {
+      "name": "PlayerFall",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          "#000000",
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1105,
+      "collision_layer": 1293
+    },
+    "sprite-19": {
+      "name": "PlayerJumpStart",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1180,
+      "collision_layer": 1293
+    },
+    "sprite-20": {
+      "name": "PlayerJump",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1260,
+      "collision_layer": 1293
+    },
+    "sprite-21": {
+      "name": "PlayerKickRight",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          null,
+          null
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#ffffff",
+          null,
+          null
+        ],
+        [
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1335,
+      "collision_layer": 1293
+    },
+    "sprite-22": {
+      "name": "PlayerKickRightBack",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          "#000000",
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1415,
+      "collision_layer": 1293
+    },
+    "sprite-23": {
+      "name": "PlayerKickRightBackWait",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#ffffff",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          "#000000",
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1500,
+      "collision_layer": 1293
+    },
+    "sprite-24": {
+      "name": "PlayerKickLeft",
+      "pixels": [
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#ffffff",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#e72119",
+          "#e72119",
+          "#e72119"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1589,
+      "collision_layer": 1293
+    },
+    "sprite-25": {
+      "name": "PlayerKickLeftBack",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1669,
+      "collision_layer": 1293
+    },
+    "sprite-26": {
+      "name": "PlayerKickLeftBackWait",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#ffffff",
+          null
+        ],
+        [
+          null,
+          "#e72119",
+          "#e72119",
+          "#e72119",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1752,
+      "collision_layer": 1293
+    },
+    "sprite-27": {
+      "name": "Exit",
+      "pixels": [
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#ffe02c",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 2137,
+      "collision_layer": 1292
+    },
+    "sprite-28": {
+      "name": "Switch",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#ffd600",
+          "#ffd600",
+          "#ffa30d",
+          null
+        ],
+        [
+          null,
+          "#ffd600",
+          "#ffd600",
+          "#ffa30d",
+          null
+        ],
+        [
+          "#a62514",
+          "#ffd600",
+          "#ffd600",
+          "#ffa30d",
+          "#a62514"
+        ]
+      ],
+      "_sourceOffset": 2206,
+      "collision_layer": 1292
+    },
+    "sprite-29": {
+      "name": "GateClosed",
+      "pixels": [
+        [
+          "#c93700",
+          "#c93700",
+          "#c93700",
+          "#c93700",
+          "#c93700"
+        ],
+        [
+          "#c93700",
+          "#ffd600",
+          "#ffd600",
+          "#ffa30d",
+          "#a62514"
+        ],
+        [
+          "#c93700",
+          "#ffa30d",
+          null,
+          "#ffa30d",
+          "#a62514"
+        ],
+        [
+          "#a62514",
+          "#ffa30d",
+          "#ffa30d",
+          "#ffa30d",
+          "#a62514"
+        ],
+        [
+          "#a62514",
+          "#a62514",
+          "#a62514",
+          "#a62514",
+          "#a62514"
+        ]
+      ],
+      "_sourceOffset": 2277,
+      "collision_layer": 1293
+    },
+    "sprite-30": {
+      "name": "GateOpen",
+      "pixels": [
+        [
+          "#c93700",
+          null,
+          "#c93700",
+          null,
+          "#c93700"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#c93700",
+          null,
+          null,
+          null,
+          "#a62514"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#a62514",
+          null,
+          "#a62514",
+          null,
+          "#a62514"
+        ]
+      ],
+      "_sourceOffset": 2352,
+      "collision_layer": 1292
+    },
+    "sprite-31": {
+      "name": "GateClosing",
+      "pixels": [
+        [
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2"
+        ],
+        [
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2"
+        ],
+        [
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2"
+        ],
+        [
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2"
+        ],
+        [
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2",
+          "#de65e2"
+        ]
+      ],
+      "_sourceOffset": 2425,
+      "collision_layer": 1290
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Or": {
+        "name": "Crate",
+        "sprites": [
+          "sprite-0",
+          "sprite-1",
+          "sprite-2",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2872
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "Blood4",
+        "sprite": "sprite-16",
+        "_sourceOffset": 957,
+        "collision_layer": 1294
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "BreakDebris3",
+        "sprite": "sprite-10",
+        "_sourceOffset": 526,
+        "collision_layer": 1294
+      }
+    },
+    "tile-3": {
+      "Sprite": {
+        "name": "BreakDebris2",
+        "sprite": "sprite-9",
+        "_sourceOffset": 449,
+        "collision_layer": 1294
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "BreakDebris1",
+        "sprite": "sprite-8",
+        "_sourceOffset": 372,
+        "collision_layer": 1294
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "PlayerJump",
+        "sprite": "sprite-20",
+        "_sourceOffset": 1260,
+        "collision_layer": 1293
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "PlayerKickRightBackWait",
+        "sprite": "sprite-23",
+        "_sourceOffset": 1500,
+        "collision_layer": 1293
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "PlayerKickLeftBackWait",
+        "sprite": "sprite-26",
+        "_sourceOffset": 1752,
+        "collision_layer": 1293
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "PlayerFall",
+        "sprite": "sprite-18",
+        "_sourceOffset": 1105,
+        "collision_layer": 1293
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "PlayerJumpStart",
+        "sprite": "sprite-19",
+        "_sourceOffset": 1180,
+        "collision_layer": 1293
+      }
+    },
+    "tile-10": {
+      "Or": {
+        "name": "Item",
+        "sprites": [
+          "sprite-7",
+          "sprite-29",
+          "sprite-3",
+          "sprite-2",
+          "sprite-1",
+          "sprite-0",
+          "sprite-5",
+          "sprite-6",
+          "sprite-18",
+          "sprite-20",
+          "sprite-24",
+          "sprite-21",
+          "sprite-25",
+          "sprite-22",
+          "sprite-26",
+          "sprite-23",
+          "sprite-19",
+          "sprite-17"
+        ],
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2932
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "PlayerGround",
+        "sprite": "sprite-17",
+        "_sourceOffset": 1028,
+        "collision_layer": 1293
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "PlayerKickRight",
+        "sprite": "sprite-21",
+        "_sourceOffset": 1335,
+        "collision_layer": 1293
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "CrateGround",
+        "sprite": "sprite-3",
+        "_sourceOffset": 1839,
+        "collision_layer": 1293
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "CrateRight",
+        "sprite": "sprite-1",
+        "_sourceOffset": 2062,
+        "collision_layer": 1293
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "BreakWall",
+        "sprite": "sprite-7",
+        "_sourceOffset": 298,
+        "collision_layer": 1293
+      }
+    },
+    "tile-16": {
+      "Sprite": {
+        "name": "PlayerKickRightBack",
+        "sprite": "sprite-22",
+        "_sourceOffset": 1415,
+        "collision_layer": 1293
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "PlayerKickLeft",
+        "sprite": "sprite-24",
+        "_sourceOffset": 1589,
+        "collision_layer": 1293
+      }
+    },
+    "tile-18": {
+      "Sprite": {
+        "name": "CrateLeft",
+        "sprite": "sprite-0",
+        "_sourceOffset": 1988,
+        "collision_layer": 1293
+      }
+    },
+    "tile-19": {
+      "Sprite": {
+        "name": "PlayerKickLeftBack",
+        "sprite": "sprite-25",
+        "_sourceOffset": 1669,
+        "collision_layer": 1293
+      }
+    },
+    "tile-20": {
+      "Or": {
+        "name": "Player",
+        "sprites": [
+          "sprite-19",
+          "sprite-18",
+          "sprite-23",
+          "sprite-26",
+          "sprite-22",
+          "sprite-25",
+          "sprite-21",
+          "sprite-24",
+          "sprite-20",
+          "sprite-17"
+        ],
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2611
+      }
+    },
+    "tile-21": {
+      "Sprite": {
+        "name": "CrateFall",
+        "sprite": "sprite-2",
+        "_sourceOffset": 1915,
+        "collision_layer": 1293
+      }
+    },
+    "tile-22": {
+      "Sprite": {
+        "name": "Blood3",
+        "sprite": "sprite-15",
+        "_sourceOffset": 886,
+        "collision_layer": 1294
+      }
+    },
+    "tile-23": {
+      "Sprite": {
+        "name": "Blood2",
+        "sprite": "sprite-14",
+        "_sourceOffset": 815,
+        "collision_layer": 1294
+      }
+    },
+    "tile-24": {
+      "Sprite": {
+        "name": "Blood1",
+        "sprite": "sprite-13",
+        "_sourceOffset": 744,
+        "collision_layer": 1294
+      }
+    },
+    "tile-25": {
+      "Or": {
+        "name": "Spike",
+        "sprites": [
+          "sprite-12",
+          "sprite-11"
+        ],
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2990
+      }
+    },
+    "tile-26": {
+      "Sprite": {
+        "name": "Switch",
+        "sprite": "sprite-28",
+        "_sourceOffset": 2206,
+        "collision_layer": 1292
+      }
+    },
+    "tile-27": {
+      "Sprite": {
+        "name": "GateOpen",
+        "sprite": "sprite-30",
+        "_sourceOffset": 2352,
+        "collision_layer": 1292
+      }
+    },
+    "tile-28": {
+      "Sprite": {
+        "name": "GateClosing",
+        "sprite": "sprite-31",
+        "_sourceOffset": 2425,
+        "collision_layer": 1290
+      }
+    },
+    "tile-29": {
+      "Sprite": {
+        "name": "GateClosed",
+        "sprite": "sprite-29",
+        "_sourceOffset": 2277,
+        "collision_layer": 1293
+      }
+    },
+    "tile-30": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-4",
+        "collisionLayers": [
+          1291
+        ],
+        "_sourceOffset": 2469
+      }
+    },
+    "tile-31": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2484
+      }
+    },
+    "tile-32": {
+      "Simple": {
+        "name": "h",
+        "sprite": "sprite-5",
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2497
+      }
+    },
+    "tile-33": {
+      "Simple": {
+        "name": "@",
+        "sprite": "sprite-17",
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2509
+      }
+    },
+    "tile-34": {
+      "Simple": {
+        "name": "o",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2526
+      }
+    },
+    "tile-35": {
+      "Simple": {
+        "name": "a",
+        "sprite": "sprite-11",
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2542
+      }
+    },
+    "tile-36": {
+      "Simple": {
+        "name": "e",
+        "sprite": "sprite-27",
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2554
+      }
+    },
+    "tile-37": {
+      "Simple": {
+        "name": "f",
+        "sprite": "sprite-28",
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2563
+      }
+    },
+    "tile-38": {
+      "Simple": {
+        "name": "g",
+        "sprite": "sprite-30",
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2574
+      }
+    },
+    "tile-39": {
+      "Simple": {
+        "name": "j",
+        "sprite": "sprite-12",
+        "collisionLayers": [
+          1292
+        ],
+        "_sourceOffset": 2587
+      }
+    },
+    "tile-40": {
+      "Simple": {
+        "name": "k",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2596
+      }
+    },
+    "tile-41": {
+      "Or": {
+        "name": "Wall",
+        "sprites": [
+          "sprite-6",
+          "sprite-5"
+        ],
+        "collisionLayers": [
+          1293
+        ],
+        "_sourceOffset": 2815
+      }
+    },
+    "tile-42": {
+      "Or": {
+        "name": "Gate",
+        "sprites": [
+          "sprite-29",
+          "sprite-30"
+        ],
+        "collisionLayers": [
+          1293,
+          1292
+        ],
+        "_sourceOffset": 2842
+      }
+    },
+    "tile-43": {
+      "Or": {
+        "name": "Blood",
+        "sprites": [
+          "sprite-16",
+          "sprite-15",
+          "sprite-14",
+          "sprite-13"
+        ],
+        "collisionLayers": [
+          1294
+        ],
+        "_sourceOffset": 3014
+      }
+    },
+    "tile-44": {
+      "Or": {
+        "name": "Debris",
+        "sprites": [
+          "sprite-10",
+          "sprite-9",
+          "sprite-8"
+        ],
+        "collisionLayers": [
+          1294
+        ],
+        "_sourceOffset": 3059
+      }
+    },
+    "tile-45": {
+      "Sprite": {
+        "name": "Exit",
+        "sprite": "sprite-27",
+        "_sourceOffset": 2137,
+        "collision_layer": 1292
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 3531,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 3552,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 3573,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 3612,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Right",
+      "tile": "tile-5",
+      "_sourceOffset": 3676,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3698,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": "Left",
+      "tile": "tile-5",
+      "_sourceOffset": 3734,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 3755,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": "Up",
+      "tile": "tile-5",
+      "_sourceOffset": 3788,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 3807,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": "Down",
+      "tile": "tile-5",
+      "_sourceOffset": 3825,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 3846,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3876,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 3894,
+      "random": false,
+      "negated": true
+    },
+    "twm-14": {
+      "direction": "Up",
+      "tile": "tile-11",
+      "_sourceOffset": 3967,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 4126,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 4136,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 4239,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 4257,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 4292,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4334,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 4524,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 4635,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4686,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4910,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": "Left",
+      "tile": "tile-20",
+      "_sourceOffset": 5041,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 5052,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": "Left",
+      "tile": "tile-0",
+      "_sourceOffset": 5074,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": "Right",
+      "tile": "tile-20",
+      "_sourceOffset": 5041,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": "Right",
+      "tile": "tile-0",
+      "_sourceOffset": 5074,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": null,
+      "tile": "tile-21",
+      "_sourceOffset": 5106,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-22",
+      "_sourceOffset": 5791,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": null,
+      "tile": "tile-23",
+      "_sourceOffset": 5822,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": null,
+      "tile": "tile-24",
+      "_sourceOffset": 5859,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 5901,
+      "random": false,
+      "negated": false
+    },
+    "twm-35": {
+      "direction": null,
+      "tile": "tile-25",
+      "_sourceOffset": 5908,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": null,
+      "tile": "tile-26",
+      "_sourceOffset": 5964,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": null,
+      "tile": "tile-27",
+      "_sourceOffset": 5973,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": null,
+      "tile": "tile-28",
+      "_sourceOffset": 6010,
+      "random": false,
+      "negated": false
+    },
+    "twm-39": {
+      "direction": null,
+      "tile": "tile-29",
+      "_sourceOffset": 6106,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 3531,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 3552,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 3570,
+      "tile_with_modifiers": []
+    },
+    "neighbor-3": {
+      "_sourceOffset": 3573,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 3612,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 3676,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 3698,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 3734,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 3755,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 3788,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 3807,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 3825,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 3846,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 3876,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 3893,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 3967,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 4125,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 4136,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 4239,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 4256,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 4291,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 4333,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 4524,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 4635,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 4685,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 4910,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 5041,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 5051,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 5073,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 5041,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 5073,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 5106,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 5791,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 5822,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 5859,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 5901,
+      "tile_with_modifiers": [
+        "twm-34",
+        "twm-35"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 5919,
+      "tile_with_modifiers": [
+        "twm-33",
+        "twm-35"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 5959,
+      "tile_with_modifiers": [
+        "twm-15",
+        "twm-36"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 5973,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 6001,
+      "tile_with_modifiers": [
+        "twm-37",
+        "twm-38"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 6029,
+      "tile_with_modifiers": [
+        "twm-13",
+        "twm-36"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 6046,
+      "tile_with_modifiers": [
+        "twm-38"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 6063,
+      "tile_with_modifiers": [
+        "twm-36"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 6106,
+      "tile_with_modifiers": [
+        "twm-39"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 3530
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3551
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 3568
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3"
+        ],
+        "_sourceOffset": 3572
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3611
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3675
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3696
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3733
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8"
+        ],
+        "_sourceOffset": 3753
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3787
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3805
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3824
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3844
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3875
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3905
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3922
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3966
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3996
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4052
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4077
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4112
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4134
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4167
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 4194
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4238
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4272
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4315
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4347
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4393
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4420
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4465
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4495
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 4523
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4547
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4634
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-24"
+        ],
+        "_sourceOffset": 4667
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4707
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4738
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4783
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4809
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4853
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 4882
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 4909
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 4932
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 5040
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 5061
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-29",
+          "neighbor-27"
+        ],
+        "_sourceOffset": 5040
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-29",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 5061
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 5105
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 5129
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5163
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5184
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 5216
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5242
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 5280
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5309
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 5347
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 5374
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5419
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5441
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 5480
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5505
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-19"
+        ],
+        "_sourceOffset": 5533
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-24"
+        ],
+        "_sourceOffset": 5561
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 5597
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 5623
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5667
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 5688
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 5726
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-24"
+        ],
+        "_sourceOffset": 5750
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5790
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-0"
+        ],
+        "_sourceOffset": 5802
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5790
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-0"
+        ],
+        "_sourceOffset": 5802
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5790
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-0"
+        ],
+        "_sourceOffset": 5802
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5790
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-0"
+        ],
+        "_sourceOffset": 5802
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5821
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 5833
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5821
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 5833
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5821
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 5833
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5821
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 5833
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5858
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5870
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5858
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5870
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5858
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5870
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 5858
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5870
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-35"
+        ],
+        "_sourceOffset": 5900
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36"
+        ],
+        "_sourceOffset": 5917
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-37"
+        ],
+        "_sourceOffset": 5958
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-38"
+        ],
+        "_sourceOffset": 5972
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-39"
+        ],
+        "_sourceOffset": 5999
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 6028
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-41"
+        ],
+        "_sourceOffset": 6045
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42"
+        ],
+        "_sourceOffset": 6061
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-43"
+        ],
+        "_sourceOffset": 6104
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 3530,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 3530,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-1"
+        ],
+        "actions": [
+          "bracket-2"
+        ],
+        "commands": [],
+        "_sourceOffset": 3551,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2"
+        ],
+        "_sourceOffset": 3551,
+        "random": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 3572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Group": {
+        "rules": [
+          "rule-4"
+        ],
+        "_sourceOffset": 3572,
+        "random": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-3"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 3611,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Group": {
+        "rules": [
+          "rule-6"
+        ],
+        "_sourceOffset": 3611,
+        "random": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-5"
+        ],
+        "actions": [
+          "bracket-6"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 3669,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Group": {
+        "rules": [
+          "rule-8"
+        ],
+        "_sourceOffset": 3669,
+        "random": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-7"
+        ],
+        "actions": [
+          "bracket-8"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 3728,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Group": {
+        "rules": [
+          "rule-10"
+        ],
+        "_sourceOffset": 3728,
+        "random": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-9"
+        ],
+        "actions": [
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 3784,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-12"
+        ],
+        "_sourceOffset": 3784,
+        "random": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-11"
+        ],
+        "actions": [
+          "bracket-12"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 3819,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Group": {
+        "rules": [
+          "rule-14"
+        ],
+        "_sourceOffset": 3819,
+        "random": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-13"
+        ],
+        "actions": [
+          "bracket-14"
+        ],
+        "commands": [],
+        "_sourceOffset": 3872,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Group": {
+        "rules": [
+          "rule-16"
+        ],
+        "_sourceOffset": 3872,
+        "random": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-15"
+        ],
+        "actions": [
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 3922,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Group": {
+        "rules": [
+          "rule-18"
+        ],
+        "_sourceOffset": 3922,
+        "random": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-17"
+        ],
+        "commands": [
+          "command-6",
+          "command-7"
+        ],
+        "_sourceOffset": 3956,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Group": {
+        "rules": [
+          "rule-20"
+        ],
+        "_sourceOffset": 3956,
+        "random": true
+      }
+    },
+    "rule-22": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 4040,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-23": {
+      "Group": {
+        "rules": [
+          "rule-22"
+        ],
+        "_sourceOffset": 4040,
+        "random": true
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-21"
+        ],
+        "commands": [],
+        "_sourceOffset": 4100,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Group": {
+        "rules": [
+          "rule-24"
+        ],
+        "_sourceOffset": 4100,
+        "random": true
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-23"
+        ],
+        "commands": [
+          "command-9"
+        ],
+        "_sourceOffset": 4157,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Group": {
+        "rules": [
+          "rule-26"
+        ],
+        "_sourceOffset": 4157,
+        "random": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-25"
+        ],
+        "commands": [
+          "command-10"
+        ],
+        "_sourceOffset": 4232,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Group": {
+        "rules": [
+          "rule-28"
+        ],
+        "_sourceOffset": 4232,
+        "random": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-27"
+        ],
+        "commands": [
+          "command-11",
+          "command-12"
+        ],
+        "_sourceOffset": 4309,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Group": {
+        "rules": [
+          "rule-30"
+        ],
+        "_sourceOffset": 4309,
+        "random": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-28"
+        ],
+        "actions": [
+          "bracket-29"
+        ],
+        "commands": [
+          "command-13",
+          "command-14"
+        ],
+        "_sourceOffset": 4387,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Group": {
+        "rules": [
+          "rule-32"
+        ],
+        "_sourceOffset": 4387,
+        "random": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-30"
+        ],
+        "actions": [
+          "bracket-31"
+        ],
+        "commands": [
+          "command-15"
+        ],
+        "_sourceOffset": 4452,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Group": {
+        "rules": [
+          "rule-34"
+        ],
+        "_sourceOffset": 4452,
+        "random": true
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-32"
+        ],
+        "actions": [
+          "bracket-33"
+        ],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 4523,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Group": {
+        "rules": [
+          "rule-36"
+        ],
+        "_sourceOffset": 4523,
+        "random": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-32"
+        ],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Group": {
+        "rules": [
+          "rule-38"
+        ],
+        "_sourceOffset": 4572,
+        "random": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-34"
+        ],
+        "actions": [
+          "bracket-35"
+        ],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 4629,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Group": {
+        "rules": [
+          "rule-40"
+        ],
+        "_sourceOffset": 4629,
+        "random": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-36"
+        ],
+        "actions": [
+          "bracket-37"
+        ],
+        "commands": [
+          "command-19",
+          "command-20"
+        ],
+        "_sourceOffset": 4702,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Group": {
+        "rules": [
+          "rule-42"
+        ],
+        "_sourceOffset": 4702,
+        "random": false
+      }
+    },
+    "rule-44": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-38"
+        ],
+        "actions": [
+          "bracket-39"
+        ],
+        "commands": [
+          "command-21",
+          "command-22"
+        ],
+        "_sourceOffset": 4778,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-45": {
+      "Group": {
+        "rules": [
+          "rule-44"
+        ],
+        "_sourceOffset": 4778,
+        "random": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-40"
+        ],
+        "actions": [
+          "bracket-41"
+        ],
+        "commands": [
+          "command-23"
+        ],
+        "_sourceOffset": 4841,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Group": {
+        "rules": [
+          "rule-46"
+        ],
+        "_sourceOffset": 4841,
+        "random": true
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-43"
+        ],
+        "commands": [
+          "command-24"
+        ],
+        "_sourceOffset": 4909,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Group": {
+        "rules": [
+          "rule-48"
+        ],
+        "_sourceOffset": 4909,
+        "random": false
+      }
+    },
+    "rule-50": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-42"
+        ],
+        "commands": [
+          "command-25"
+        ],
+        "_sourceOffset": 4956,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-51": {
+      "Group": {
+        "rules": [
+          "rule-50"
+        ],
+        "_sourceOffset": 4956,
+        "random": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-44"
+        ],
+        "actions": [
+          "bracket-45"
+        ],
+        "commands": [],
+        "_sourceOffset": 5029,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-46"
+        ],
+        "actions": [
+          "bracket-47"
+        ],
+        "commands": [],
+        "_sourceOffset": 5029,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-54": {
+      "Group": {
+        "rules": [
+          "rule-52",
+          "rule-53"
+        ],
+        "_sourceOffset": 5029,
+        "random": false
+      }
+    },
+    "rule-55": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-48"
+        ],
+        "actions": [
+          "bracket-49"
+        ],
+        "commands": [
+          "command-26"
+        ],
+        "_sourceOffset": 5094,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-56": {
+      "Group": {
+        "rules": [
+          "rule-55"
+        ],
+        "_sourceOffset": 5094,
+        "random": true
+      }
+    },
+    "rule-57": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-50"
+        ],
+        "actions": [
+          "bracket-51"
+        ],
+        "commands": [],
+        "_sourceOffset": 5151,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-58": {
+      "Group": {
+        "rules": [
+          "rule-57"
+        ],
+        "_sourceOffset": 5151,
+        "random": true
+      }
+    },
+    "rule-59": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-52"
+        ],
+        "actions": [
+          "bracket-53"
+        ],
+        "commands": [
+          "command-27"
+        ],
+        "_sourceOffset": 5206,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-60": {
+      "Group": {
+        "rules": [
+          "rule-59"
+        ],
+        "_sourceOffset": 5206,
+        "random": false
+      }
+    },
+    "rule-61": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54"
+        ],
+        "actions": [
+          "bracket-55"
+        ],
+        "commands": [
+          "command-28"
+        ],
+        "_sourceOffset": 5274,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-62": {
+      "Group": {
+        "rules": [
+          "rule-61"
+        ],
+        "_sourceOffset": 5274,
+        "random": false
+      }
+    },
+    "rule-63": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-56"
+        ],
+        "actions": [
+          "bracket-57"
+        ],
+        "commands": [
+          "command-29",
+          "command-30"
+        ],
+        "_sourceOffset": 5341,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-64": {
+      "Group": {
+        "rules": [
+          "rule-63"
+        ],
+        "_sourceOffset": 5341,
+        "random": false
+      }
+    },
+    "rule-65": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-58"
+        ],
+        "actions": [
+          "bracket-59"
+        ],
+        "commands": [
+          "command-31"
+        ],
+        "_sourceOffset": 5413,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-66": {
+      "Group": {
+        "rules": [
+          "rule-65"
+        ],
+        "_sourceOffset": 5413,
+        "random": false
+      }
+    },
+    "rule-67": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-60"
+        ],
+        "actions": [
+          "bracket-61"
+        ],
+        "commands": [
+          "command-32"
+        ],
+        "_sourceOffset": 5467,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-68": {
+      "Group": {
+        "rules": [
+          "rule-67"
+        ],
+        "_sourceOffset": 5467,
+        "random": true
+      }
+    },
+    "rule-69": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-62"
+        ],
+        "actions": [
+          "bracket-63"
+        ],
+        "commands": [
+          "command-33"
+        ],
+        "_sourceOffset": 5528,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-70": {
+      "Group": {
+        "rules": [
+          "rule-69"
+        ],
+        "_sourceOffset": 5528,
+        "random": false
+      }
+    },
+    "rule-71": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-64"
+        ],
+        "actions": [
+          "bracket-65"
+        ],
+        "commands": [
+          "command-34",
+          "command-35"
+        ],
+        "_sourceOffset": 5592,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-72": {
+      "Group": {
+        "rules": [
+          "rule-71"
+        ],
+        "_sourceOffset": 5592,
+        "random": false
+      }
+    },
+    "rule-73": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-66"
+        ],
+        "actions": [
+          "bracket-67"
+        ],
+        "commands": [
+          "command-36"
+        ],
+        "_sourceOffset": 5662,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-74": {
+      "Group": {
+        "rules": [
+          "rule-73"
+        ],
+        "_sourceOffset": 5662,
+        "random": false
+      }
+    },
+    "rule-75": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-68"
+        ],
+        "actions": [
+          "bracket-69"
+        ],
+        "commands": [
+          "command-37"
+        ],
+        "_sourceOffset": 5714,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-76": {
+      "Group": {
+        "rules": [
+          "rule-75"
+        ],
+        "_sourceOffset": 5714,
+        "random": true
+      }
+    },
+    "rule-77": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-70"
+        ],
+        "actions": [
+          "bracket-71"
+        ],
+        "commands": [],
+        "_sourceOffset": 5790,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-78": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-72"
+        ],
+        "actions": [
+          "bracket-73"
+        ],
+        "commands": [],
+        "_sourceOffset": 5790,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-79": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-74"
+        ],
+        "actions": [
+          "bracket-75"
+        ],
+        "commands": [],
+        "_sourceOffset": 5790,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76"
+        ],
+        "actions": [
+          "bracket-77"
+        ],
+        "commands": [],
+        "_sourceOffset": 5790,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Group": {
+        "rules": [
+          "rule-77",
+          "rule-78",
+          "rule-79",
+          "rule-80"
+        ],
+        "_sourceOffset": 5790,
+        "random": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-78"
+        ],
+        "actions": [
+          "bracket-79"
+        ],
+        "commands": [
+          "command-38"
+        ],
+        "_sourceOffset": 5821,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-80"
+        ],
+        "actions": [
+          "bracket-81"
+        ],
+        "commands": [
+          "command-38"
+        ],
+        "_sourceOffset": 5821,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-82"
+        ],
+        "actions": [
+          "bracket-83"
+        ],
+        "commands": [
+          "command-38"
+        ],
+        "_sourceOffset": 5821,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-84"
+        ],
+        "actions": [
+          "bracket-85"
+        ],
+        "commands": [
+          "command-38"
+        ],
+        "_sourceOffset": 5821,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-86": {
+      "Group": {
+        "rules": [
+          "rule-82",
+          "rule-83",
+          "rule-84",
+          "rule-85"
+        ],
+        "_sourceOffset": 5821,
+        "random": false
+      }
+    },
+    "rule-87": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-86"
+        ],
+        "actions": [
+          "bracket-87"
+        ],
+        "commands": [
+          "command-39"
+        ],
+        "_sourceOffset": 5858,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-88"
+        ],
+        "actions": [
+          "bracket-89"
+        ],
+        "commands": [
+          "command-39"
+        ],
+        "_sourceOffset": 5858,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-90"
+        ],
+        "actions": [
+          "bracket-91"
+        ],
+        "commands": [
+          "command-39"
+        ],
+        "_sourceOffset": 5858,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-92"
+        ],
+        "actions": [
+          "bracket-93"
+        ],
+        "commands": [
+          "command-39"
+        ],
+        "_sourceOffset": 5858,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Group": {
+        "rules": [
+          "rule-87",
+          "rule-88",
+          "rule-89",
+          "rule-90"
+        ],
+        "_sourceOffset": 5858,
+        "random": false
+      }
+    },
+    "rule-92": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-94"
+        ],
+        "actions": [
+          "bracket-95"
+        ],
+        "commands": [
+          "command-40",
+          "command-41"
+        ],
+        "_sourceOffset": 5895,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-93": {
+      "Group": {
+        "rules": [
+          "rule-92"
+        ],
+        "_sourceOffset": 5895,
+        "random": false
+      }
+    },
+    "rule-94": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-96",
+          "bracket-97"
+        ],
+        "actions": [
+          "bracket-96",
+          "bracket-98"
+        ],
+        "commands": [],
+        "_sourceOffset": 5953,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-95": {
+      "Group": {
+        "rules": [
+          "rule-94"
+        ],
+        "_sourceOffset": 5953,
+        "random": false
+      }
+    },
+    "rule-96": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-99",
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-2"
+        ],
+        "commands": [],
+        "_sourceOffset": 6023,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-97": {
+      "Group": {
+        "rules": [
+          "rule-96"
+        ],
+        "_sourceOffset": 6023,
+        "random": false
+      }
+    },
+    "rule-98": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-98"
+        ],
+        "actions": [
+          "bracket-102"
+        ],
+        "commands": [
+          "command-42"
+        ],
+        "_sourceOffset": 6074,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-99": {
+      "Group": {
+        "rules": [
+          "rule-98"
+        ],
+        "_sourceOffset": 6074,
+        "random": false
+      }
+    },
+    "rule-100": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-99",
+          "bracket-102"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-97"
+        ],
+        "commands": [
+          "command-43"
+        ],
+        "_sourceOffset": 6123,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-101": {
+      "Group": {
+        "rules": [
+          "rule-100"
+        ],
+        "_sourceOffset": 6123,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "On": {
+        "_sourceOffset": 6232,
+        "qualifier": "Some",
+        "tile": "tile-20",
+        "on_tile": "tile-45"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-3",
+    "rule-5",
+    "rule-7",
+    "rule-9",
+    "rule-11",
+    "rule-13",
+    "rule-15",
+    "rule-17",
+    "rule-19",
+    "rule-21",
+    "rule-23",
+    "rule-25",
+    "rule-27",
+    "rule-29",
+    "rule-31",
+    "rule-33",
+    "rule-35",
+    "rule-37",
+    "rule-39",
+    "rule-41",
+    "rule-43",
+    "rule-45",
+    "rule-47",
+    "rule-49",
+    "rule-51",
+    "rule-54",
+    "rule-56",
+    "rule-58",
+    "rule-60",
+    "rule-62",
+    "rule-64",
+    "rule-66",
+    "rule-68",
+    "rule-70",
+    "rule-72",
+    "rule-74",
+    "rule-76",
+    "rule-81",
+    "rule-86",
+    "rule-91",
+    "rule-93",
+    "rule-95",
+    "rule-97",
+    "rule-99",
+    "rule-101"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "AIIIYYAAAARRGGHH!!",
+        "_sourceOffset": 6284
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 6312
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 6412
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-35",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-35",
+            "tile-35",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-35",
+            "tile-35",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 6593
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-38",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 6762
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 6883
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7004
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-38",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7155
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-38",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7300
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7553
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7654
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 7795
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-38",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32"
+          ],
+          [
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32"
+          ]
+        ],
+        "_sourceOffset": 7992
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-38",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-31",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 8169
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-38",
+            "tile-38",
+            "tile-38",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-37",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 8368
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-34",
+            "tile-34",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-35",
+            "tile-35",
+            "tile-35",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 8585
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-36",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-34",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-30",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-40",
+            "tile-30",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-30",
+            "tile-33",
+            "tile-30",
+            "tile-40",
+            "tile-30",
+            "tile-40",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-30",
+            "tile-31"
+          ],
+          [
+            "tile-31",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-32",
+            "tile-31"
+          ]
+        ],
+        "_sourceOffset": 8784
+      }
+    },
+    {
+      "Message": {
+        "message": "Right, that's my training done for the day...",
+        "_sourceOffset": 8928
+      }
+    },
+    {
+      "Message": {
+        "message": "...off to the pub I go.",
+        "_sourceOffset": 8983
+      }
+    }
+  ]
+}

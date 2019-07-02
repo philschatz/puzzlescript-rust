@@ -1,0 +1,7032 @@
+{
+  "version": 1,
+  "title": "Dharma Dojo demake",
+  "metadata": {
+    "author": "Metro [cloned by CHz]",
+    "homepage": "quiteajolt.com",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": 0.03,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#44891a": "#44891a",
+    "#a46422": "#a46422",
+    "#000000": "#000000",
+    "#be2633": "#be2633",
+    "#1d57f7": "#1d57f7",
+    "#f7e26b": "#f7e26b",
+    "#FFFFFF": "#FFFFFF",
+    "#493c2b": "#493c2b",
+    "#B2DCEF": "#B2DCEF",
+    "#eb8931": "#eb8931",
+    "#9d9d9d": "#9d9d9d"
+  },
+  "sounds": {
+    "sound-0": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 23301902,
+        "_sourceOffset": 2378
+      }
+    },
+    "sound-1": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 79689507,
+        "_sourceOffset": 2400
+      }
+    },
+    "sound-2": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 69201902,
+        "_sourceOffset": 2422
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 762,
+      "_sourceOffset": 2497
+    },
+    {
+      "id": 763,
+      "_sourceOffset": 2508
+    },
+    {
+      "id": 764,
+      "_sourceOffset": 2536
+    },
+    {
+      "id": 765,
+      "_sourceOffset": 2553
+    },
+    {
+      "id": 766,
+      "_sourceOffset": 2586
+    },
+    {
+      "id": 767,
+      "_sourceOffset": 2670
+    },
+    {
+      "id": 768,
+      "_sourceOffset": 2681
+    },
+    {
+      "id": 769,
+      "_sourceOffset": 2692
+    },
+    {
+      "id": 770,
+      "_sourceOffset": 2703
+    },
+    {
+      "id": 771,
+      "_sourceOffset": 2714
+    },
+    {
+      "id": 772,
+      "_sourceOffset": 2725
+    },
+    {
+      "id": 773,
+      "_sourceOffset": 2736
+    },
+    {
+      "id": 774,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Cancel": {
+        "_sourceOffset": 4132
+      }
+    },
+    "command-1": {
+      "Cancel": {
+        "_sourceOffset": 4161
+      }
+    },
+    "command-2": {
+      "Cancel": {
+        "_sourceOffset": 4193
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-2",
+        "_sourceOffset": 4758
+      }
+    },
+    "command-4": {
+      "Again": {
+        "_sourceOffset": 5105
+      }
+    },
+    "command-5": {
+      "Again": {
+        "_sourceOffset": 5344
+      }
+    },
+    "command-6": {
+      "Again": {
+        "_sourceOffset": 7004
+      }
+    },
+    "command-7": {
+      "Sfx": {
+        "sound": "sound-1",
+        "_sourceOffset": 7285
+      }
+    },
+    "command-8": {
+      "Again": {
+        "_sourceOffset": 7501
+      }
+    },
+    "command-9": {
+      "Sfx": {
+        "sound": "sound-0",
+        "_sourceOffset": 8207
+      }
+    },
+    "command-10": {
+      "Again": {
+        "_sourceOffset": 8405
+      }
+    },
+    "command-11": {
+      "Again": {
+        "_sourceOffset": 8472
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ]
+      ],
+      "_sourceOffset": 169,
+      "collision_layer": 762
+    },
+    "sprite-1": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ]
+      ],
+      "_sourceOffset": 190,
+      "collision_layer": 764
+    },
+    "sprite-2": {
+      "name": "Ceiling",
+      "pixels": [
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422",
+          "#a46422"
+        ]
+      ],
+      "_sourceOffset": 203,
+      "collision_layer": 763
+    },
+    "sprite-3": {
+      "name": "Player",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 219,
+      "collision_layer": 765
+    },
+    "sprite-4": {
+      "name": "DeadPlayer",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 263,
+      "collision_layer": 765
+    },
+    "sprite-5": {
+      "name": "PlayerSmacking",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          null,
+          null
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 311,
+      "collision_layer": 765
+    },
+    "sprite-6": {
+      "name": "Block1",
+      "pixels": [
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          "#be2633",
+          "#be2633",
+          null
+        ]
+      ],
+      "_sourceOffset": 364,
+      "collision_layer": 764
+    },
+    "sprite-7": {
+      "name": "Block2",
+      "pixels": [
+        [
+          null,
+          null,
+          "#1d57f7",
+          null,
+          null
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          null,
+          "#1d57f7",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 406,
+      "collision_layer": 764
+    },
+    "sprite-8": {
+      "name": "Block3",
+      "pixels": [
+        [
+          null,
+          null,
+          "#f7e26b",
+          null,
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b"
+        ]
+      ],
+      "_sourceOffset": 449,
+      "collision_layer": 764
+    },
+    "sprite-9": {
+      "name": "Block4",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ]
+      ],
+      "_sourceOffset": 494,
+      "collision_layer": 764
+    },
+    "sprite-10": {
+      "name": "Block5",
+      "pixels": [
+        [
+          null,
+          null,
+          "#493c2b",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#493c2b",
+          null,
+          null
+        ],
+        [
+          "#493c2b",
+          "#493c2b",
+          "#493c2b",
+          "#493c2b",
+          "#493c2b"
+        ],
+        [
+          null,
+          null,
+          "#493c2b",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#493c2b",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 538,
+      "collision_layer": 764
+    },
+    "sprite-11": {
+      "name": "Block6",
+      "pixels": [
+        [
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF"
+        ],
+        [
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF"
+        ],
+        [
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF",
+          "#B2DCEF"
+        ]
+      ],
+      "_sourceOffset": 586,
+      "collision_layer": 764
+    },
+    "sprite-12": {
+      "name": "Block7",
+      "pixels": [
+        [
+          "#eb8931",
+          "#eb8931",
+          null,
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          null,
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          null,
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          null,
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          null,
+          "#eb8931",
+          "#eb8931"
+        ]
+      ],
+      "_sourceOffset": 634,
+      "collision_layer": 764
+    },
+    "sprite-13": {
+      "name": "Chute",
+      "pixels": [
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ]
+      ],
+      "_sourceOffset": 680,
+      "collision_layer": 763
+    },
+    "sprite-14": {
+      "name": "Feeder",
+      "pixels": [
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#9d9d9d"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#9d9d9d",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d"
+        ]
+      ],
+      "_sourceOffset": 728,
+      "collision_layer": 763
+    },
+    "sprite-15": {
+      "name": "Hopper",
+      "pixels": [
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d"
+        ]
+      ],
+      "_sourceOffset": 777,
+      "collision_layer": 763
+    },
+    "sprite-16": {
+      "name": "SetsToken1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 827,
+      "collision_layer": 767
+    },
+    "sprite-17": {
+      "name": "SetsToken2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 851,
+      "collision_layer": 768
+    },
+    "sprite-18": {
+      "name": "SetsToken3",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 875,
+      "collision_layer": 769
+    },
+    "sprite-19": {
+      "name": "SetsToken4",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 899,
+      "collision_layer": 770
+    },
+    "sprite-20": {
+      "name": "SetsToken5",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 923,
+      "collision_layer": 771
+    },
+    "sprite-21": {
+      "name": "SetsToken6",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 947,
+      "collision_layer": 772
+    },
+    "sprite-22": {
+      "name": "SetsToken7",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 971,
+      "collision_layer": 773
+    },
+    "sprite-23": {
+      "name": "BlockToken",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 995,
+      "collision_layer": 766
+    },
+    "sprite-24": {
+      "name": "Field",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1019,
+      "collision_layer": 764
+    },
+    "sprite-25": {
+      "name": "AssertGravityToken",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1039,
+      "collision_layer": 766
+    },
+    "sprite-26": {
+      "name": "MatchTokenPositive",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1071,
+      "collision_layer": 766
+    },
+    "sprite-27": {
+      "name": "MatchTokenNegative",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1103,
+      "collision_layer": 766
+    },
+    "sprite-28": {
+      "name": "CheckMatchToken",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1135,
+      "collision_layer": 766
+    },
+    "sprite-29": {
+      "name": "DeathCoverSeed1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1165,
+      "collision_layer": 766
+    },
+    "sprite-30": {
+      "name": "DeathCoverSeed2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1194,
+      "collision_layer": 766
+    },
+    "sprite-31": {
+      "name": "DeathCover1",
+      "pixels": [
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          null,
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          null,
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ]
+      ],
+      "_sourceOffset": 1223,
+      "collision_layer": 766
+    },
+    "sprite-32": {
+      "name": "DeathCover1Token",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1270,
+      "collision_layer": 766
+    },
+    "sprite-33": {
+      "name": "DeathCover2",
+      "pixels": [
+        [
+          null,
+          "#be2633",
+          null,
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          null,
+          "#be2633",
+          null
+        ],
+        [
+          "#be2633",
+          null,
+          "#be2633",
+          null,
+          "#be2633"
+        ],
+        [
+          null,
+          "#be2633",
+          null,
+          "#be2633",
+          null
+        ]
+      ],
+      "_sourceOffset": 1300,
+      "collision_layer": 766
+    },
+    "sprite-34": {
+      "name": "DeathCover2Token",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1347,
+      "collision_layer": 766
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Sprite": {
+        "name": "SetsToken1",
+        "sprite": "sprite-16",
+        "_sourceOffset": 827,
+        "collision_layer": 767
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "Hopper",
+        "sprite": "sprite-15",
+        "_sourceOffset": 777,
+        "collision_layer": 763
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "BlockToken",
+        "sprite": "sprite-23",
+        "_sourceOffset": 995,
+        "collision_layer": 766
+      }
+    },
+    "tile-3": {
+      "Sprite": {
+        "name": "Field",
+        "sprite": "sprite-24",
+        "_sourceOffset": 1019,
+        "collision_layer": 764
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "Block1",
+        "sprite": "sprite-6",
+        "_sourceOffset": 364,
+        "collision_layer": 764
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "SetsToken2",
+        "sprite": "sprite-17",
+        "_sourceOffset": 851,
+        "collision_layer": 768
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "Block2",
+        "sprite": "sprite-7",
+        "_sourceOffset": 406,
+        "collision_layer": 764
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "SetsToken3",
+        "sprite": "sprite-18",
+        "_sourceOffset": 875,
+        "collision_layer": 769
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "Block3",
+        "sprite": "sprite-8",
+        "_sourceOffset": 449,
+        "collision_layer": 764
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "SetsToken4",
+        "sprite": "sprite-19",
+        "_sourceOffset": 899,
+        "collision_layer": 770
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "Block4",
+        "sprite": "sprite-9",
+        "_sourceOffset": 494,
+        "collision_layer": 764
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "SetsToken5",
+        "sprite": "sprite-20",
+        "_sourceOffset": 923,
+        "collision_layer": 771
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "Block5",
+        "sprite": "sprite-10",
+        "_sourceOffset": 538,
+        "collision_layer": 764
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "SetsToken6",
+        "sprite": "sprite-21",
+        "_sourceOffset": 947,
+        "collision_layer": 772
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "Block6",
+        "sprite": "sprite-11",
+        "_sourceOffset": 586,
+        "collision_layer": 764
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "SetsToken7",
+        "sprite": "sprite-22",
+        "_sourceOffset": 971,
+        "collision_layer": 773
+      }
+    },
+    "tile-16": {
+      "Sprite": {
+        "name": "Block7",
+        "sprite": "sprite-12",
+        "_sourceOffset": 634,
+        "collision_layer": 764
+      }
+    },
+    "tile-17": {
+      "Or": {
+        "name": "SetsToken",
+        "sprites": [
+          "sprite-22",
+          "sprite-21",
+          "sprite-20",
+          "sprite-19",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16"
+        ],
+        "collisionLayers": [
+          773,
+          772,
+          771,
+          770,
+          769,
+          768,
+          767
+        ],
+        "_sourceOffset": 1969
+      }
+    },
+    "tile-18": {
+      "Or": {
+        "name": "Block",
+        "sprites": [
+          "sprite-12",
+          "sprite-11",
+          "sprite-10",
+          "sprite-9",
+          "sprite-8",
+          "sprite-7",
+          "sprite-6"
+        ],
+        "collisionLayers": [
+          764
+        ],
+        "_sourceOffset": 2088
+      }
+    },
+    "tile-19": {
+      "Sprite": {
+        "name": "Player",
+        "sprite": "sprite-3",
+        "_sourceOffset": 219,
+        "collision_layer": 765
+      }
+    },
+    "tile-20": {
+      "Sprite": {
+        "name": "Chute",
+        "sprite": "sprite-13",
+        "_sourceOffset": 680,
+        "collision_layer": 763
+      }
+    },
+    "tile-21": {
+      "Sprite": {
+        "name": "Feeder",
+        "sprite": "sprite-14",
+        "_sourceOffset": 728,
+        "collision_layer": 763
+      }
+    },
+    "tile-22": {
+      "Sprite": {
+        "name": "Wall",
+        "sprite": "sprite-1",
+        "_sourceOffset": 190,
+        "collision_layer": 764
+      }
+    },
+    "tile-23": {
+      "Sprite": {
+        "name": "Ceiling",
+        "sprite": "sprite-2",
+        "_sourceOffset": 203,
+        "collision_layer": 763
+      }
+    },
+    "tile-24": {
+      "Or": {
+        "name": "MatchToken",
+        "sprites": [
+          "sprite-27",
+          "sprite-26"
+        ],
+        "collisionLayers": [
+          766
+        ],
+        "_sourceOffset": 2164
+      }
+    },
+    "tile-25": {
+      "Sprite": {
+        "name": "PlayerSmacking",
+        "sprite": "sprite-5",
+        "_sourceOffset": 311,
+        "collision_layer": 765
+      }
+    },
+    "tile-26": {
+      "Sprite": {
+        "name": "CheckMatchToken",
+        "sprite": "sprite-28",
+        "_sourceOffset": 1135,
+        "collision_layer": 766
+      }
+    },
+    "tile-27": {
+      "Sprite": {
+        "name": "MatchTokenNegative",
+        "sprite": "sprite-27",
+        "_sourceOffset": 1103,
+        "collision_layer": 766
+      }
+    },
+    "tile-28": {
+      "Sprite": {
+        "name": "MatchTokenPositive",
+        "sprite": "sprite-26",
+        "_sourceOffset": 1071,
+        "collision_layer": 766
+      }
+    },
+    "tile-29": {
+      "Sprite": {
+        "name": "AssertGravityToken",
+        "sprite": "sprite-25",
+        "_sourceOffset": 1039,
+        "collision_layer": 766
+      }
+    },
+    "tile-30": {
+      "Or": {
+        "name": "DeathCover",
+        "sprites": [
+          "sprite-33",
+          "sprite-31",
+          "sprite-30",
+          "sprite-29"
+        ],
+        "collisionLayers": [
+          766
+        ],
+        "_sourceOffset": 2219
+      }
+    },
+    "tile-31": {
+      "Sprite": {
+        "name": "DeathCoverSeed1",
+        "sprite": "sprite-29",
+        "_sourceOffset": 1165,
+        "collision_layer": 766
+      }
+    },
+    "tile-32": {
+      "Sprite": {
+        "name": "DeathCoverSeed2",
+        "sprite": "sprite-30",
+        "_sourceOffset": 1194,
+        "collision_layer": 766
+      }
+    },
+    "tile-33": {
+      "Sprite": {
+        "name": "DeathCover1Token",
+        "sprite": "sprite-32",
+        "_sourceOffset": 1270,
+        "collision_layer": 766
+      }
+    },
+    "tile-34": {
+      "Sprite": {
+        "name": "DeathCover2Token",
+        "sprite": "sprite-34",
+        "_sourceOffset": 1347,
+        "collision_layer": 766
+      }
+    },
+    "tile-35": {
+      "Or": {
+        "name": "DeathCoverToken",
+        "sprites": [
+          "sprite-34",
+          "sprite-32"
+        ],
+        "collisionLayers": [
+          766
+        ],
+        "_sourceOffset": 2297
+      }
+    },
+    "tile-36": {
+      "Sprite": {
+        "name": "DeadPlayer",
+        "sprite": "sprite-4",
+        "_sourceOffset": 263,
+        "collision_layer": 765
+      }
+    },
+    "tile-37": {
+      "Sprite": {
+        "name": "DeathCover1",
+        "sprite": "sprite-31",
+        "_sourceOffset": 1223,
+        "collision_layer": 766
+      }
+    },
+    "tile-38": {
+      "Sprite": {
+        "name": "DeathCover2",
+        "sprite": "sprite-33",
+        "_sourceOffset": 1300,
+        "collision_layer": 766
+      }
+    },
+    "tile-39": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          762
+        ],
+        "_sourceOffset": 1402
+      }
+    },
+    "tile-40": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-1",
+        "collisionLayers": [
+          764
+        ],
+        "_sourceOffset": 1417
+      }
+    },
+    "tile-41": {
+      "Simple": {
+        "name": "x",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          763
+        ],
+        "_sourceOffset": 1426
+      }
+    },
+    "tile-42": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          765
+        ],
+        "_sourceOffset": 1439
+      }
+    },
+    "tile-43": {
+      "Simple": {
+        "name": "|",
+        "sprite": "sprite-13",
+        "collisionLayers": [
+          763
+        ],
+        "_sourceOffset": 1451
+      }
+    },
+    "tile-44": {
+      "Simple": {
+        "name": "-",
+        "sprite": "sprite-15",
+        "collisionLayers": [
+          763
+        ],
+        "_sourceOffset": 1461
+      }
+    },
+    "tile-45": {
+      "And": {
+        "name": "1",
+        "sprites": [
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          767,
+          763
+        ],
+        "_sourceOffset": 1472
+      }
+    },
+    "tile-46": {
+      "And": {
+        "name": "2",
+        "sprites": [
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1498
+      }
+    },
+    "tile-47": {
+      "And": {
+        "name": "3",
+        "sprites": [
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          769,
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1539
+      }
+    },
+    "tile-48": {
+      "And": {
+        "name": "4",
+        "sprites": [
+          "sprite-19",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          770,
+          769,
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1595
+      }
+    },
+    "tile-49": {
+      "And": {
+        "name": "5",
+        "sprites": [
+          "sprite-20",
+          "sprite-19",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          771,
+          770,
+          769,
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1666
+      }
+    },
+    "tile-50": {
+      "And": {
+        "name": "6",
+        "sprites": [
+          "sprite-21",
+          "sprite-20",
+          "sprite-19",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          772,
+          771,
+          770,
+          769,
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1752
+      }
+    },
+    "tile-51": {
+      "And": {
+        "name": "7",
+        "sprites": [
+          "sprite-22",
+          "sprite-21",
+          "sprite-20",
+          "sprite-19",
+          "sprite-18",
+          "sprite-17",
+          "sprite-16",
+          "sprite-14"
+        ],
+        "collisionLayers": [
+          773,
+          772,
+          771,
+          770,
+          769,
+          768,
+          767,
+          763
+        ],
+        "_sourceOffset": 1853
+      }
+    },
+    "tile-52": {
+      "Simple": {
+        "name": "F",
+        "sprite": "sprite-24",
+        "collisionLayers": [
+          764
+        ],
+        "_sourceOffset": 2077
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 2930,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 2943,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 2975,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 3005,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 3042,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 3105,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3121,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 3184,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 3200,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3263,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 3279,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 3342,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 3358,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 3421,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 3437,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 3500,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 3516,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 3585,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 3600,
+      "random": false,
+      "negated": true
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 3671,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": "Left",
+      "tile": "tile-19",
+      "_sourceOffset": 3972,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": "Action",
+      "tile": "tile-19",
+      "_sourceOffset": 3989,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4016,
+      "random": false,
+      "negated": true
+    },
+    "twm-23": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 4025,
+      "random": false,
+      "negated": true
+    },
+    "twm-24": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4036,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": null,
+      "tile": "tile-21",
+      "_sourceOffset": 4121,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-22",
+      "_sourceOffset": 4152,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": null,
+      "tile": "tile-23",
+      "_sourceOffset": 4181,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-24",
+      "_sourceOffset": 4485,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-25",
+      "_sourceOffset": 4498,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": null,
+      "tile": "tile-26",
+      "_sourceOffset": 4555,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-27",
+      "_sourceOffset": 4573,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": "Up",
+      "tile": "tile-18",
+      "_sourceOffset": 4855,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": "Up",
+      "tile": "tile-25",
+      "_sourceOffset": 5018,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": null,
+      "tile": "tile-24",
+      "_sourceOffset": 5284,
+      "random": false,
+      "negated": true
+    },
+    "twm-35": {
+      "direction": "Right",
+      "tile": "tile-18",
+      "_sourceOffset": 5312,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": null,
+      "tile": "tile-28",
+      "_sourceOffset": 5426,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": null,
+      "tile": "tile-29",
+      "_sourceOffset": 6919,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": null,
+      "tile": "tile-22",
+      "_sourceOffset": 6948,
+      "random": false,
+      "negated": true
+    },
+    "twm-39": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 6956,
+      "random": false,
+      "negated": true
+    },
+    "twm-40": {
+      "direction": "Down",
+      "tile": "tile-18",
+      "_sourceOffset": 6992,
+      "random": false,
+      "negated": false
+    },
+    "twm-41": {
+      "direction": "Action",
+      "tile": "tile-25",
+      "_sourceOffset": 7262,
+      "random": false,
+      "negated": false
+    },
+    "twm-42": {
+      "direction": "Left",
+      "tile": "tile-18",
+      "_sourceOffset": 7332,
+      "random": false,
+      "negated": false
+    },
+    "twm-43": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 7424,
+      "random": false,
+      "negated": false
+    },
+    "twm-44": {
+      "direction": null,
+      "tile": "tile-30",
+      "_sourceOffset": 7671,
+      "random": false,
+      "negated": true
+    },
+    "twm-45": {
+      "direction": null,
+      "tile": "tile-31",
+      "_sourceOffset": 7704,
+      "random": false,
+      "negated": false
+    },
+    "twm-46": {
+      "direction": null,
+      "tile": "tile-32",
+      "_sourceOffset": 7843,
+      "random": false,
+      "negated": false
+    },
+    "twm-47": {
+      "direction": null,
+      "tile": "tile-33",
+      "_sourceOffset": 8053,
+      "random": false,
+      "negated": false
+    },
+    "twm-48": {
+      "direction": null,
+      "tile": "tile-34",
+      "_sourceOffset": 8127,
+      "random": false,
+      "negated": false
+    },
+    "twm-49": {
+      "direction": null,
+      "tile": "tile-35",
+      "_sourceOffset": 8156,
+      "random": false,
+      "negated": false
+    },
+    "twm-50": {
+      "direction": null,
+      "tile": "tile-36",
+      "_sourceOffset": 8177,
+      "random": false,
+      "negated": false
+    },
+    "twm-51": {
+      "direction": null,
+      "tile": "tile-37",
+      "_sourceOffset": 8213,
+      "random": false,
+      "negated": false
+    },
+    "twm-52": {
+      "direction": null,
+      "tile": "tile-38",
+      "_sourceOffset": 8279,
+      "random": false,
+      "negated": false
+    },
+    "twm-53": {
+      "direction": null,
+      "tile": "tile-33",
+      "_sourceOffset": 8384,
+      "random": false,
+      "negated": true
+    },
+    "twm-54": {
+      "direction": null,
+      "tile": "tile-34",
+      "_sourceOffset": 8451,
+      "random": false,
+      "negated": true
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 2930,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 2943,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 2968,
+      "tile_with_modifiers": [
+        "twm-1",
+        "twm-2"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 3005,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 3013,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 3042,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 3105,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 3121,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 3184,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 3200,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 3263,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 3279,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 3342,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 3358,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 3421,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 3437,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 3500,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 3516,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 3574,
+      "tile_with_modifiers": []
+    },
+    "neighbor-19": {
+      "_sourceOffset": 3585,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 3600,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 3671,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 3972,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 3989,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 4016,
+      "tile_with_modifiers": [
+        "twm-22",
+        "twm-23"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 4035,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 4071,
+      "tile_with_modifiers": [
+        "twm-24",
+        "twm-19"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 4114,
+      "tile_with_modifiers": [
+        "twm-24",
+        "twm-25"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 4145,
+      "tile_with_modifiers": [
+        "twm-24",
+        "twm-26"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 4174,
+      "tile_with_modifiers": [
+        "twm-24",
+        "twm-27"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 4476,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 4484,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 4498,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 4540,
+      "tile_with_modifiers": [
+        "twm-29",
+        "twm-30"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 4573,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 4701,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-28"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 4854,
+      "tile_with_modifiers": [
+        "twm-32",
+        "twm-28"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 4882,
+      "tile_with_modifiers": [
+        "twm-32",
+        "twm-1"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 4926,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 5018,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 5052,
+      "tile_with_modifiers": [
+        "twm-28",
+        "twm-22"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 5278,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-34"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 5312,
+      "tile_with_modifiers": [
+        "twm-35",
+        "twm-34"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 5400,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-44": {
+      "_sourceOffset": 5420,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-36"
+      ]
+    },
+    "neighbor-45": {
+      "_sourceOffset": 5482,
+      "tile_with_modifiers": [
+        "twm-4",
+        "twm-34"
+      ]
+    },
+    "neighbor-46": {
+      "_sourceOffset": 5504,
+      "tile_with_modifiers": [
+        "twm-4",
+        "twm-36"
+      ]
+    },
+    "neighbor-47": {
+      "_sourceOffset": 5629,
+      "tile_with_modifiers": [
+        "twm-6",
+        "twm-34"
+      ]
+    },
+    "neighbor-48": {
+      "_sourceOffset": 5651,
+      "tile_with_modifiers": [
+        "twm-6",
+        "twm-36"
+      ]
+    },
+    "neighbor-49": {
+      "_sourceOffset": 5776,
+      "tile_with_modifiers": [
+        "twm-8",
+        "twm-34"
+      ]
+    },
+    "neighbor-50": {
+      "_sourceOffset": 5798,
+      "tile_with_modifiers": [
+        "twm-8",
+        "twm-36"
+      ]
+    },
+    "neighbor-51": {
+      "_sourceOffset": 5923,
+      "tile_with_modifiers": [
+        "twm-10",
+        "twm-34"
+      ]
+    },
+    "neighbor-52": {
+      "_sourceOffset": 5945,
+      "tile_with_modifiers": [
+        "twm-10",
+        "twm-36"
+      ]
+    },
+    "neighbor-53": {
+      "_sourceOffset": 6070,
+      "tile_with_modifiers": [
+        "twm-12",
+        "twm-34"
+      ]
+    },
+    "neighbor-54": {
+      "_sourceOffset": 6092,
+      "tile_with_modifiers": [
+        "twm-12",
+        "twm-36"
+      ]
+    },
+    "neighbor-55": {
+      "_sourceOffset": 6217,
+      "tile_with_modifiers": [
+        "twm-14",
+        "twm-34"
+      ]
+    },
+    "neighbor-56": {
+      "_sourceOffset": 6239,
+      "tile_with_modifiers": [
+        "twm-14",
+        "twm-36"
+      ]
+    },
+    "neighbor-57": {
+      "_sourceOffset": 6364,
+      "tile_with_modifiers": [
+        "twm-16",
+        "twm-34"
+      ]
+    },
+    "neighbor-58": {
+      "_sourceOffset": 6386,
+      "tile_with_modifiers": [
+        "twm-16",
+        "twm-36"
+      ]
+    },
+    "neighbor-59": {
+      "_sourceOffset": 6564,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-31"
+      ]
+    },
+    "neighbor-60": {
+      "_sourceOffset": 6919,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-61": {
+      "_sourceOffset": 6947,
+      "tile_with_modifiers": [
+        "twm-38",
+        "twm-39"
+      ]
+    },
+    "neighbor-62": {
+      "_sourceOffset": 6992,
+      "tile_with_modifiers": [
+        "twm-40"
+      ]
+    },
+    "neighbor-63": {
+      "_sourceOffset": 7261,
+      "tile_with_modifiers": [
+        "twm-41"
+      ]
+    },
+    "neighbor-64": {
+      "_sourceOffset": 7332,
+      "tile_with_modifiers": [
+        "twm-42"
+      ]
+    },
+    "neighbor-65": {
+      "_sourceOffset": 7418,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-43"
+      ]
+    },
+    "neighbor-66": {
+      "_sourceOffset": 7466,
+      "tile_with_modifiers": [
+        "twm-29",
+        "twm-37"
+      ]
+    },
+    "neighbor-67": {
+      "_sourceOffset": 7657,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-27",
+        "twm-44"
+      ]
+    },
+    "neighbor-68": {
+      "_sourceOffset": 7690,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-27",
+        "twm-45"
+      ]
+    },
+    "neighbor-69": {
+      "_sourceOffset": 7828,
+      "tile_with_modifiers": [
+        "twm-19",
+        "twm-27",
+        "twm-46"
+      ]
+    },
+    "neighbor-70": {
+      "_sourceOffset": 7998,
+      "tile_with_modifiers": [
+        "twm-45"
+      ]
+    },
+    "neighbor-71": {
+      "_sourceOffset": 8015,
+      "tile_with_modifiers": [
+        "twm-44"
+      ]
+    },
+    "neighbor-72": {
+      "_sourceOffset": 8052,
+      "tile_with_modifiers": [
+        "twm-47"
+      ]
+    },
+    "neighbor-73": {
+      "_sourceOffset": 8072,
+      "tile_with_modifiers": [
+        "twm-46"
+      ]
+    },
+    "neighbor-74": {
+      "_sourceOffset": 8126,
+      "tile_with_modifiers": [
+        "twm-48"
+      ]
+    },
+    "neighbor-75": {
+      "_sourceOffset": 8156,
+      "tile_with_modifiers": [
+        "twm-49"
+      ]
+    },
+    "neighbor-76": {
+      "_sourceOffset": 8177,
+      "tile_with_modifiers": [
+        "twm-50"
+      ]
+    },
+    "neighbor-77": {
+      "_sourceOffset": 8213,
+      "tile_with_modifiers": [
+        "twm-51"
+      ]
+    },
+    "neighbor-78": {
+      "_sourceOffset": 8279,
+      "tile_with_modifiers": [
+        "twm-52"
+      ]
+    },
+    "neighbor-79": {
+      "_sourceOffset": 8372,
+      "tile_with_modifiers": [
+        "twm-51",
+        "twm-53"
+      ]
+    },
+    "neighbor-80": {
+      "_sourceOffset": 8439,
+      "tile_with_modifiers": [
+        "twm-52",
+        "twm-54"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 2929
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2942
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2966
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3"
+        ],
+        "_sourceOffset": 3004
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4"
+        ],
+        "_sourceOffset": 3012
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5"
+        ],
+        "_sourceOffset": 3040
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6"
+        ],
+        "_sourceOffset": 3104
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-7"
+        ],
+        "_sourceOffset": 3119
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-8"
+        ],
+        "_sourceOffset": 3183
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3198
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3262
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3277
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3341
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3356
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 3420
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3435
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16"
+        ],
+        "_sourceOffset": 3499
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-17"
+        ],
+        "_sourceOffset": 3514
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-18"
+        ],
+        "_sourceOffset": 3572
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-19"
+        ],
+        "_sourceOffset": 3584
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-20"
+        ],
+        "_sourceOffset": 3598
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 3670
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3688
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3711
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-3"
+        ],
+        "_sourceOffset": 3729
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3971
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 3987
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3971
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 3987
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3971
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 3987
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 3971
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 3987
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 4015
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4046
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-26",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4070
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 4090
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 4113
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 4144
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-29"
+        ],
+        "_sourceOffset": 4173
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 4475
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32"
+        ],
+        "_sourceOffset": 4497
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33"
+        ],
+        "_sourceOffset": 4538
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-34"
+        ],
+        "_sourceOffset": 4572
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-35"
+        ],
+        "_sourceOffset": 4700
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 4798
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-35"
+        ],
+        "_sourceOffset": 4814
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-36"
+        ],
+        "_sourceOffset": 4844
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 4881
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4908
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4941
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-38",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4961
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 4987
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-39",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 5016
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 5051
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 5277
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-42",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 5310
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 5378
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-43"
+        ],
+        "_sourceOffset": 5418
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-46"
+        ],
+        "_sourceOffset": 5481
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-46"
+        ],
+        "_sourceOffset": 5543
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-47",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 5628
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-48"
+        ],
+        "_sourceOffset": 5690
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-49",
+          "neighbor-50"
+        ],
+        "_sourceOffset": 5775
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-50",
+          "neighbor-50"
+        ],
+        "_sourceOffset": 5837
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-51",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 5922
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-52",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 5984
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6069
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-54",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6131
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-56"
+        ],
+        "_sourceOffset": 6216
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-56",
+          "neighbor-56"
+        ],
+        "_sourceOffset": 6278
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-57",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 6363
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-58",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 6425
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-41",
+          "neighbor-35"
+        ],
+        "_sourceOffset": 6510
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-35"
+        ],
+        "_sourceOffset": 6562
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-30",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 6789
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6918
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6939
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-62",
+          "neighbor-18"
+        ],
+        "_sourceOffset": 6990
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-23"
+        ],
+        "_sourceOffset": 7226
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-63"
+        ],
+        "_sourceOffset": 7252
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-64",
+          "neighbor-63"
+        ],
+        "_sourceOffset": 7330
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-64"
+        ],
+        "_sourceOffset": 7371
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-64",
+          "neighbor-64"
+        ],
+        "_sourceOffset": 7391
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-65"
+        ],
+        "_sourceOffset": 7417
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-66"
+        ],
+        "_sourceOffset": 7464
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7656
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68"
+        ],
+        "_sourceOffset": 7688
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7731
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69"
+        ],
+        "_sourceOffset": 7795
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7731
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69"
+        ],
+        "_sourceOffset": 7795
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7731
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69"
+        ],
+        "_sourceOffset": 7795
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7731
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-68",
+          "neighbor-69"
+        ],
+        "_sourceOffset": 7795
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7860
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 7924
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7860
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 7924
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7860
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 7924
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-67"
+        ],
+        "_sourceOffset": 7860
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-69",
+          "neighbor-68"
+        ],
+        "_sourceOffset": 7924
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 7997
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8033
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 7997
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8033
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 7997
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8033
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 7997
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-70",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8033
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8071
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8107
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8071
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8107
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8071
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8107
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8071
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-73",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8107
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-75"
+        ],
+        "_sourceOffset": 8155
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-76"
+        ],
+        "_sourceOffset": 8175
+      }
+    },
+    "bracket-122": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8212
+      }
+    },
+    "bracket-123": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8244
+      }
+    },
+    "bracket-124": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8212
+      }
+    },
+    "bracket-125": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8244
+      }
+    },
+    "bracket-126": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8212
+      }
+    },
+    "bracket-127": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8244
+      }
+    },
+    "bracket-128": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8212
+      }
+    },
+    "bracket-129": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-77",
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8244
+      }
+    },
+    "bracket-130": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8278
+      }
+    },
+    "bracket-131": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8310
+      }
+    },
+    "bracket-132": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8278
+      }
+    },
+    "bracket-133": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8310
+      }
+    },
+    "bracket-134": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8278
+      }
+    },
+    "bracket-135": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8310
+      }
+    },
+    "bracket-136": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-71"
+        ],
+        "_sourceOffset": 8278
+      }
+    },
+    "bracket-137": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-78",
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8310
+      }
+    },
+    "bracket-138": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-72"
+        ],
+        "_sourceOffset": 8349
+      }
+    },
+    "bracket-139": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-79"
+        ],
+        "_sourceOffset": 8370
+      }
+    },
+    "bracket-140": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-74"
+        ],
+        "_sourceOffset": 8416
+      }
+    },
+    "bracket-141": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-80"
+        ],
+        "_sourceOffset": 8437
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0",
+          "bracket-1"
+        ],
+        "actions": [
+          "bracket-0",
+          "bracket-2"
+        ],
+        "commands": [],
+        "_sourceOffset": 2929,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 2929,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-5",
+          "bracket-4",
+          "bracket-0"
+        ],
+        "commands": [],
+        "_sourceOffset": 2997,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2",
+          "rule-2",
+          "rule-2",
+          "rule-2"
+        ],
+        "_sourceOffset": 2997,
+        "random": true
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7",
+          "bracket-4",
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 3076,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Group": {
+        "rules": [
+          "rule-4",
+          "rule-4",
+          "rule-4",
+          "rule-4"
+        ],
+        "_sourceOffset": 3076,
+        "random": true
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9",
+          "bracket-4",
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 3155,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Group": {
+        "rules": [
+          "rule-6",
+          "rule-6",
+          "rule-6",
+          "rule-6"
+        ],
+        "_sourceOffset": 3155,
+        "random": true
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-10"
+        ],
+        "actions": [
+          "bracket-11",
+          "bracket-4",
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 3234,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Group": {
+        "rules": [
+          "rule-8",
+          "rule-8",
+          "rule-8",
+          "rule-8"
+        ],
+        "_sourceOffset": 3234,
+        "random": true
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-13",
+          "bracket-4",
+          "bracket-12"
+        ],
+        "commands": [],
+        "_sourceOffset": 3313,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Group": {
+        "rules": [
+          "rule-10",
+          "rule-10",
+          "rule-10",
+          "rule-10"
+        ],
+        "_sourceOffset": 3313,
+        "random": true
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-15",
+          "bracket-4",
+          "bracket-14"
+        ],
+        "commands": [],
+        "_sourceOffset": 3392,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-12",
+          "rule-12",
+          "rule-12",
+          "rule-12"
+        ],
+        "_sourceOffset": 3392,
+        "random": true
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3",
+          "bracket-4",
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-17",
+          "bracket-4",
+          "bracket-16"
+        ],
+        "commands": [],
+        "_sourceOffset": 3471,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Group": {
+        "rules": [
+          "rule-14",
+          "rule-14",
+          "rule-14",
+          "rule-14"
+        ],
+        "_sourceOffset": 3471,
+        "random": true
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 3550,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Group": {
+        "rules": [
+          "rule-16",
+          "rule-16",
+          "rule-16",
+          "rule-16"
+        ],
+        "_sourceOffset": 3550,
+        "random": true
+      }
+    },
+    "rule-18": {
+      "Loop": {
+        "rules": [
+          "rule-3",
+          "rule-5",
+          "rule-7",
+          "rule-9",
+          "rule-11",
+          "rule-13",
+          "rule-15",
+          "rule-17"
+        ]
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-19"
+        ],
+        "actions": [
+          "bracket-20"
+        ],
+        "commands": [],
+        "_sourceOffset": 3584,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Group": {
+        "rules": [
+          "rule-19"
+        ],
+        "_sourceOffset": 3584,
+        "random": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-22"
+        ],
+        "commands": [],
+        "_sourceOffset": 3665,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Group": {
+        "rules": [
+          "rule-21"
+        ],
+        "_sourceOffset": 3665,
+        "random": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-24"
+        ],
+        "commands": [],
+        "_sourceOffset": 3705,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Group": {
+        "rules": [
+          "rule-23"
+        ],
+        "_sourceOffset": 3705,
+        "random": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 3746,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Group": {
+        "rules": [
+          "rule-25"
+        ],
+        "_sourceOffset": 3746,
+        "random": false
+      }
+    },
+    "rule-27": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-25"
+        ],
+        "actions": [
+          "bracket-26"
+        ],
+        "commands": [],
+        "_sourceOffset": 3971,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-27"
+        ],
+        "actions": [
+          "bracket-28"
+        ],
+        "commands": [],
+        "_sourceOffset": 3971,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-29"
+        ],
+        "actions": [
+          "bracket-30"
+        ],
+        "commands": [],
+        "_sourceOffset": 3971,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-31"
+        ],
+        "actions": [
+          "bracket-32"
+        ],
+        "commands": [],
+        "_sourceOffset": 3971,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Group": {
+        "rules": [
+          "rule-27",
+          "rule-28",
+          "rule-29",
+          "rule-30"
+        ],
+        "_sourceOffset": 3971,
+        "random": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-33"
+        ],
+        "actions": [
+          "bracket-34"
+        ],
+        "commands": [],
+        "_sourceOffset": 4004,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Group": {
+        "rules": [
+          "rule-32"
+        ],
+        "_sourceOffset": 4004,
+        "random": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-35"
+        ],
+        "actions": [
+          "bracket-36"
+        ],
+        "commands": [],
+        "_sourceOffset": 4059,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Group": {
+        "rules": [
+          "rule-34"
+        ],
+        "_sourceOffset": 4059,
+        "random": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-37"
+        ],
+        "actions": [],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 4108,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Group": {
+        "rules": [
+          "rule-36"
+        ],
+        "_sourceOffset": 4108,
+        "random": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-38"
+        ],
+        "actions": [],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 4139,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Group": {
+        "rules": [
+          "rule-38"
+        ],
+        "_sourceOffset": 4139,
+        "random": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-39"
+        ],
+        "actions": [],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 4168,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Group": {
+        "rules": [
+          "rule-40"
+        ],
+        "_sourceOffset": 4168,
+        "random": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-40",
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-40",
+          "bracket-42"
+        ],
+        "commands": [],
+        "_sourceOffset": 4469,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Group": {
+        "rules": [
+          "rule-42"
+        ],
+        "_sourceOffset": 4469,
+        "random": false
+      }
+    },
+    "rule-44": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-43",
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-43",
+          "bracket-41"
+        ],
+        "commands": [],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-45": {
+      "Group": {
+        "rules": [
+          "rule-44"
+        ],
+        "_sourceOffset": 4572,
+        "random": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42",
+          "bracket-44"
+        ],
+        "actions": [
+          "bracket-42",
+          "bracket-18"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 4667,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Group": {
+        "rules": [
+          "rule-46"
+        ],
+        "_sourceOffset": 4667,
+        "random": false
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-45"
+        ],
+        "commands": [],
+        "_sourceOffset": 4763,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Group": {
+        "rules": [
+          "rule-48"
+        ],
+        "_sourceOffset": 4763,
+        "random": false
+      }
+    },
+    "rule-50": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-46"
+        ],
+        "actions": [
+          "bracket-47"
+        ],
+        "commands": [],
+        "_sourceOffset": 4808,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-51": {
+      "Group": {
+        "rules": [
+          "rule-50"
+        ],
+        "_sourceOffset": 4808,
+        "random": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-48"
+        ],
+        "actions": [
+          "bracket-49"
+        ],
+        "commands": [],
+        "_sourceOffset": 4875,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Group": {
+        "rules": [
+          "rule-52"
+        ],
+        "_sourceOffset": 4875,
+        "random": false
+      }
+    },
+    "rule-54": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-50"
+        ],
+        "actions": [
+          "bracket-51"
+        ],
+        "commands": [],
+        "_sourceOffset": 4936,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-55": {
+      "Group": {
+        "rules": [
+          "rule-54"
+        ],
+        "_sourceOffset": 4936,
+        "random": false
+      }
+    },
+    "rule-56": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-52"
+        ],
+        "actions": [
+          "bracket-53"
+        ],
+        "commands": [],
+        "_sourceOffset": 4982,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-57": {
+      "Group": {
+        "rules": [
+          "rule-56"
+        ],
+        "_sourceOffset": 4982,
+        "random": false
+      }
+    },
+    "rule-58": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54",
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-18",
+          "bracket-45"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 5046,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-59": {
+      "Group": {
+        "rules": [
+          "rule-58"
+        ],
+        "_sourceOffset": 5046,
+        "random": false
+      }
+    },
+    "rule-60": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 5111,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-61": {
+      "Group": {
+        "rules": [
+          "rule-60"
+        ],
+        "_sourceOffset": 5111,
+        "random": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-55"
+        ],
+        "actions": [
+          "bracket-56"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 5271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Group": {
+        "rules": [
+          "rule-62"
+        ],
+        "_sourceOffset": 5271,
+        "random": false
+      }
+    },
+    "rule-64": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-57"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-58"
+        ],
+        "commands": [],
+        "_sourceOffset": 5350,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-65": {
+      "Group": {
+        "rules": [
+          "rule-64"
+        ],
+        "_sourceOffset": 5350,
+        "random": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-59"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-60"
+        ],
+        "commands": [],
+        "_sourceOffset": 5453,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Group": {
+        "rules": [
+          "rule-66"
+        ],
+        "_sourceOffset": 5453,
+        "random": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-61"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-62"
+        ],
+        "commands": [],
+        "_sourceOffset": 5600,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Group": {
+        "rules": [
+          "rule-68"
+        ],
+        "_sourceOffset": 5600,
+        "random": false
+      }
+    },
+    "rule-70": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-63"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-64"
+        ],
+        "commands": [],
+        "_sourceOffset": 5747,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-71": {
+      "Group": {
+        "rules": [
+          "rule-70"
+        ],
+        "_sourceOffset": 5747,
+        "random": false
+      }
+    },
+    "rule-72": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-65"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-66"
+        ],
+        "commands": [],
+        "_sourceOffset": 5894,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-73": {
+      "Group": {
+        "rules": [
+          "rule-72"
+        ],
+        "_sourceOffset": 5894,
+        "random": false
+      }
+    },
+    "rule-74": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-67"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-68"
+        ],
+        "commands": [],
+        "_sourceOffset": 6041,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-75": {
+      "Group": {
+        "rules": [
+          "rule-74"
+        ],
+        "_sourceOffset": 6041,
+        "random": false
+      }
+    },
+    "rule-76": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-69"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-70"
+        ],
+        "commands": [],
+        "_sourceOffset": 6188,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-77": {
+      "Group": {
+        "rules": [
+          "rule-76"
+        ],
+        "_sourceOffset": 6188,
+        "random": false
+      }
+    },
+    "rule-78": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-71"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-72"
+        ],
+        "commands": [],
+        "_sourceOffset": 6335,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-79": {
+      "Group": {
+        "rules": [
+          "rule-78"
+        ],
+        "_sourceOffset": 6335,
+        "random": false
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41",
+          "bracket-73"
+        ],
+        "actions": [
+          "bracket-45",
+          "bracket-74"
+        ],
+        "commands": [],
+        "_sourceOffset": 6482,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Group": {
+        "rules": [
+          "rule-80"
+        ],
+        "_sourceOffset": 6482,
+        "random": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-45",
+          "bracket-75"
+        ],
+        "actions": [
+          "bracket-41",
+          "bracket-75"
+        ],
+        "commands": [],
+        "_sourceOffset": 6769,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Group": {
+        "rules": [
+          "rule-82"
+        ],
+        "_sourceOffset": 6769,
+        "random": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76",
+          "bracket-77"
+        ],
+        "actions": [
+          "bracket-76",
+          "bracket-78"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 6913,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Group": {
+        "rules": [
+          "rule-84"
+        ],
+        "_sourceOffset": 6913,
+        "random": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 7010,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Group": {
+        "rules": [
+          "rule-86"
+        ],
+        "_sourceOffset": 7010,
+        "random": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-79"
+        ],
+        "actions": [
+          "bracket-80"
+        ],
+        "commands": [
+          "command-7"
+        ],
+        "_sourceOffset": 7220,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Group": {
+        "rules": [
+          "rule-88"
+        ],
+        "_sourceOffset": 7220,
+        "random": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-80"
+        ],
+        "actions": [
+          "bracket-81"
+        ],
+        "commands": [],
+        "_sourceOffset": 7290,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Group": {
+        "rules": [
+          "rule-90"
+        ],
+        "_sourceOffset": 7290,
+        "random": false
+      }
+    },
+    "rule-92": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-82"
+        ],
+        "actions": [
+          "bracket-83"
+        ],
+        "commands": [],
+        "_sourceOffset": 7365,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-93": {
+      "Group": {
+        "rules": [
+          "rule-92"
+        ],
+        "_sourceOffset": 7365,
+        "random": false
+      }
+    },
+    "rule-94": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-84",
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-84",
+          "bracket-85"
+        ],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 7412,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-95": {
+      "Group": {
+        "rules": [
+          "rule-94"
+        ],
+        "_sourceOffset": 7412,
+        "random": false
+      }
+    },
+    "rule-96": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-86"
+        ],
+        "actions": [
+          "bracket-87"
+        ],
+        "commands": [],
+        "_sourceOffset": 7649,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-97": {
+      "Group": {
+        "rules": [
+          "rule-96",
+          "rule-96",
+          "rule-96",
+          "rule-96"
+        ],
+        "_sourceOffset": 7649,
+        "random": true
+      }
+    },
+    "rule-98": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-88"
+        ],
+        "actions": [
+          "bracket-89"
+        ],
+        "commands": [],
+        "_sourceOffset": 7731,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-99": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-90"
+        ],
+        "actions": [
+          "bracket-91"
+        ],
+        "commands": [],
+        "_sourceOffset": 7731,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-100": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-92"
+        ],
+        "actions": [
+          "bracket-93"
+        ],
+        "commands": [],
+        "_sourceOffset": 7731,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-101": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-94"
+        ],
+        "actions": [
+          "bracket-95"
+        ],
+        "commands": [],
+        "_sourceOffset": 7731,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-102": {
+      "Group": {
+        "rules": [
+          "rule-98",
+          "rule-99",
+          "rule-100",
+          "rule-101"
+        ],
+        "_sourceOffset": 7731,
+        "random": false
+      }
+    },
+    "rule-103": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-96"
+        ],
+        "actions": [
+          "bracket-97"
+        ],
+        "commands": [],
+        "_sourceOffset": 7860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-104": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-98"
+        ],
+        "actions": [
+          "bracket-99"
+        ],
+        "commands": [],
+        "_sourceOffset": 7860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-105": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101"
+        ],
+        "commands": [],
+        "_sourceOffset": 7860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-106": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-102"
+        ],
+        "actions": [
+          "bracket-103"
+        ],
+        "commands": [],
+        "_sourceOffset": 7860,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-107": {
+      "Group": {
+        "rules": [
+          "rule-103",
+          "rule-104",
+          "rule-105",
+          "rule-106"
+        ],
+        "_sourceOffset": 7860,
+        "random": false
+      }
+    },
+    "rule-108": {
+      "Loop": {
+        "rules": [
+          "rule-102",
+          "rule-107"
+        ]
+      }
+    },
+    "rule-109": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-104"
+        ],
+        "actions": [
+          "bracket-105"
+        ],
+        "commands": [],
+        "_sourceOffset": 7997,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-110": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-106"
+        ],
+        "actions": [
+          "bracket-107"
+        ],
+        "commands": [],
+        "_sourceOffset": 7997,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-111": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-108"
+        ],
+        "actions": [
+          "bracket-109"
+        ],
+        "commands": [],
+        "_sourceOffset": 7997,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-112": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-110"
+        ],
+        "actions": [
+          "bracket-111"
+        ],
+        "commands": [],
+        "_sourceOffset": 7997,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-113": {
+      "Group": {
+        "rules": [
+          "rule-109",
+          "rule-110",
+          "rule-111",
+          "rule-112"
+        ],
+        "_sourceOffset": 7997,
+        "random": false
+      }
+    },
+    "rule-114": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-112"
+        ],
+        "actions": [
+          "bracket-113"
+        ],
+        "commands": [],
+        "_sourceOffset": 8071,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-115": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-114"
+        ],
+        "actions": [
+          "bracket-115"
+        ],
+        "commands": [],
+        "_sourceOffset": 8071,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-116": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-116"
+        ],
+        "actions": [
+          "bracket-117"
+        ],
+        "commands": [],
+        "_sourceOffset": 8071,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-117": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-118"
+        ],
+        "actions": [
+          "bracket-119"
+        ],
+        "commands": [],
+        "_sourceOffset": 8071,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-118": {
+      "Group": {
+        "rules": [
+          "rule-114",
+          "rule-115",
+          "rule-116",
+          "rule-117"
+        ],
+        "_sourceOffset": 8071,
+        "random": false
+      }
+    },
+    "rule-119": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-45",
+          "bracket-120"
+        ],
+        "actions": [
+          "bracket-121",
+          "bracket-120"
+        ],
+        "commands": [
+          "command-9"
+        ],
+        "_sourceOffset": 8146,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-120": {
+      "Group": {
+        "rules": [
+          "rule-119"
+        ],
+        "_sourceOffset": 8146,
+        "random": false
+      }
+    },
+    "rule-121": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-122"
+        ],
+        "actions": [
+          "bracket-123"
+        ],
+        "commands": [],
+        "_sourceOffset": 8212,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-122": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-124"
+        ],
+        "actions": [
+          "bracket-125"
+        ],
+        "commands": [],
+        "_sourceOffset": 8212,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-123": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-126"
+        ],
+        "actions": [
+          "bracket-127"
+        ],
+        "commands": [],
+        "_sourceOffset": 8212,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-124": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-128"
+        ],
+        "actions": [
+          "bracket-129"
+        ],
+        "commands": [],
+        "_sourceOffset": 8212,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-125": {
+      "Group": {
+        "rules": [
+          "rule-121",
+          "rule-122",
+          "rule-123",
+          "rule-124"
+        ],
+        "_sourceOffset": 8212,
+        "random": false
+      }
+    },
+    "rule-126": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-130"
+        ],
+        "actions": [
+          "bracket-131"
+        ],
+        "commands": [],
+        "_sourceOffset": 8278,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-127": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-132"
+        ],
+        "actions": [
+          "bracket-133"
+        ],
+        "commands": [],
+        "_sourceOffset": 8278,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-128": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-134"
+        ],
+        "actions": [
+          "bracket-135"
+        ],
+        "commands": [],
+        "_sourceOffset": 8278,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-129": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-136"
+        ],
+        "actions": [
+          "bracket-137"
+        ],
+        "commands": [],
+        "_sourceOffset": 8278,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-130": {
+      "Group": {
+        "rules": [
+          "rule-126",
+          "rule-127",
+          "rule-128",
+          "rule-129"
+        ],
+        "_sourceOffset": 8278,
+        "random": false
+      }
+    },
+    "rule-131": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-138"
+        ],
+        "actions": [
+          "bracket-139"
+        ],
+        "commands": [
+          "command-10"
+        ],
+        "_sourceOffset": 8344,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-132": {
+      "Group": {
+        "rules": [
+          "rule-131"
+        ],
+        "_sourceOffset": 8344,
+        "random": false
+      }
+    },
+    "rule-133": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-140"
+        ],
+        "actions": [
+          "bracket-141"
+        ],
+        "commands": [
+          "command-11"
+        ],
+        "_sourceOffset": 8411,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-134": {
+      "Group": {
+        "rules": [
+          "rule-133"
+        ],
+        "_sourceOffset": 8411,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "Simple": {
+        "_sourceOffset": 8527,
+        "qualifier": "No",
+        "tile": "tile-18"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-18",
+    "rule-20",
+    "rule-22",
+    "rule-24",
+    "rule-26",
+    "rule-31",
+    "rule-33",
+    "rule-35",
+    "rule-37",
+    "rule-39",
+    "rule-41",
+    "rule-43",
+    "rule-45",
+    "rule-47",
+    "rule-49",
+    "rule-51",
+    "rule-53",
+    "rule-55",
+    "rule-57",
+    "rule-59",
+    "rule-61",
+    "rule-63",
+    "rule-65",
+    "rule-67",
+    "rule-69",
+    "rule-71",
+    "rule-73",
+    "rule-75",
+    "rule-77",
+    "rule-79",
+    "rule-81",
+    "rule-83",
+    "rule-85",
+    "rule-87",
+    "rule-89",
+    "rule-91",
+    "rule-93",
+    "rule-95",
+    "rule-97",
+    "rule-108",
+    "rule-113",
+    "rule-118",
+    "rule-120",
+    "rule-125",
+    "rule-130",
+    "rule-132",
+    "rule-134"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "Move up and down with the arrows and hammer a row with X.",
+        "_sourceOffset": 8567
+      }
+    },
+    {
+      "Message": {
+        "message": "Fill the hopper with blocks of the same color to clear them. A mismatched row will be pushed back up into the stack.",
+        "_sourceOffset": 8633
+      }
+    },
+    {
+      "Message": {
+        "message": "Clear all the blocks to proceed.",
+        "_sourceOffset": 8758
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-42",
+            "tile-40"
+          ],
+          [
+            "tile-48",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ]
+        ],
+        "_sourceOffset": 8800
+      }
+    },
+    {
+      "Message": {
+        "message": "Don't let blocks hit the ceiling!",
+        "_sourceOffset": 8897
+      }
+    },
+    {
+      "Message": {
+        "message": "Z undoes moves. R will reset with a new puzzle.",
+        "_sourceOffset": 8939
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-42",
+            "tile-40"
+          ],
+          [
+            "tile-49",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ]
+        ],
+        "_sourceOffset": 8996
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-42",
+            "tile-40"
+          ],
+          [
+            "tile-50",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ]
+        ],
+        "_sourceOffset": 9078
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41"
+          ],
+          [
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-42",
+            "tile-40"
+          ],
+          [
+            "tile-51",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ]
+        ],
+        "_sourceOffset": 9179
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41",
+            "tile-41"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-43",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-52",
+            "tile-42",
+            "tile-40"
+          ],
+          [
+            "tile-48",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-44",
+            "tile-40",
+            "tile-40"
+          ]
+        ],
+        "_sourceOffset": 9290
+      }
+    },
+    {
+      "Message": {
+        "message": ":)",
+        "_sourceOffset": 9361
+      }
+    }
+  ]
+}

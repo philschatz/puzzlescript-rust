@@ -1,0 +1,23 @@
+[package]
+name = "puzzlescript_rust"
+version = "0.1.0"
+authors = ["Philip Schatz <253202+philschatz@users.noreply.github.com>"]
+edition = "2018"
+
+[profile.release]
+debug = true
+
+[dependencies]
+
+log = "0.4"
+env_logger = "0.6.1"
+rand = "*"
+rand_core = "0.4.0"
+termion = "1.5.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand_xorshift = "0.1.1"
+hex = "0.3.2"
+fnv = "1.0.3"
+clap = "2.33.0"
+tui = "0.6.1"

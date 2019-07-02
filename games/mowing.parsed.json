@@ -1,0 +1,2852 @@
+{
+  "version": 1,
+  "title": "Mowing",
+  "metadata": {
+    "author": null,
+    "homepage": null,
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": null,
+    "key_repeat_interval": 0.5,
+    "again_interval": null,
+    "no_action": false,
+    "no_undo": false,
+    "run_rules_on_level_start": null,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#00cc00": "#00cc00",
+    "#44891a": "#44891a",
+    "#006600": "#006600",
+    "#1d57f7": "#1d57f7",
+    "#cccccc": "#cccccc",
+    "#9d9d9d": "#9d9d9d",
+    "#a46422": "#a46422",
+    "#697175": "#697175",
+    "#000000": "#000000"
+  },
+  "sounds": {},
+  "collision_layers": [
+    {
+      "id": 1969,
+      "_sourceOffset": 1195
+    },
+    {
+      "id": 1970,
+      "_sourceOffset": 1206
+    },
+    {
+      "id": 1971,
+      "_sourceOffset": 1214
+    },
+    {
+      "id": 1972,
+      "_sourceOffset": 1252
+    },
+    {
+      "id": 1973,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Again": {
+        "_sourceOffset": 1548
+      }
+    },
+    "command-1": {
+      "Again": {
+        "_sourceOffset": 1654
+      }
+    },
+    "command-2": {
+      "Again": {
+        "_sourceOffset": 1755
+      }
+    },
+    "command-3": {
+      "Again": {
+        "_sourceOffset": 1856
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00"
+        ],
+        [
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00"
+        ],
+        [
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00"
+        ],
+        [
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00"
+        ],
+        [
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00",
+          "#00cc00"
+        ]
+      ],
+      "_sourceOffset": 65,
+      "collision_layer": 1969
+    },
+    "sprite-1": {
+      "name": "Unmowed",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#44891a"
+        ],
+        [
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          "#006600",
+          "#006600"
+        ],
+        [
+          "#006600",
+          "#006600",
+          "#006600",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 82,
+      "collision_layer": 1970
+    },
+    "sprite-2": {
+      "name": "PlayerU",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 133,
+      "collision_layer": 1971
+    },
+    "sprite-3": {
+      "name": "PlayerD",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          null
+        ],
+        [
+          null,
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 177,
+      "collision_layer": 1971
+    },
+    "sprite-4": {
+      "name": "PlayerUSwing",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#9d9d9d"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 231,
+      "collision_layer": 1971
+    },
+    "sprite-5": {
+      "name": "PlayerDSwing",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          null
+        ],
+        [
+          null,
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 285,
+      "collision_layer": 1971
+    },
+    "sprite-6": {
+      "name": "PlayerL",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          "#cccccc",
+          "#cccccc",
+          "#cccccc",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#cccccc",
+          "#cccccc",
+          "#1d57f7",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 344,
+      "collision_layer": 1971
+    },
+    "sprite-7": {
+      "name": "PlayerR",
+      "pixels": [
+        [
+          null,
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          null
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#cccccc",
+          "#cccccc",
+          "#cccccc"
+        ],
+        [
+          null,
+          "#1d57f7",
+          "#cccccc",
+          "#cccccc",
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          "#1d57f7",
+          null,
+          "#1d57f7",
+          null
+        ]
+      ],
+      "_sourceOffset": 398,
+      "collision_layer": 1971
+    },
+    "sprite-8": {
+      "name": "SwordU",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#9d9d9d"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#9d9d9d"
+        ]
+      ],
+      "_sourceOffset": 452,
+      "collision_layer": 1972
+    },
+    "sprite-9": {
+      "name": "SwordD",
+      "pixels": [
+        [
+          "#1d57f7",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#9d9d9d",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#9d9d9d",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#9d9d9d",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 495,
+      "collision_layer": 1972
+    },
+    "sprite-10": {
+      "name": "SwordL",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#1d57f7",
+          "#1d57f7"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 543,
+      "collision_layer": 1972
+    },
+    "sprite-11": {
+      "name": "SwordR",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#1d57f7",
+          "#1d57f7",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 591,
+      "collision_layer": 1972
+    },
+    "sprite-12": {
+      "name": "Tree",
+      "pixels": [
+        [
+          null,
+          null,
+          "#44891a",
+          null,
+          null
+        ],
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ],
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ],
+        [
+          null,
+          "#44891a",
+          "#44891a",
+          "#44891a",
+          null
+        ],
+        [
+          null,
+          null,
+          "#a46422",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 639,
+      "collision_layer": 1971
+    },
+    "sprite-13": {
+      "name": "Rock",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#9d9d9d",
+          "#9d9d9d",
+          null,
+          null
+        ],
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#9d9d9d",
+          null
+        ],
+        [
+          "#697175",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175",
+          null
+        ],
+        [
+          null,
+          "#697175",
+          "#697175",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 687,
+      "collision_layer": 1971
+    },
+    "sprite-14": {
+      "name": "BlackBlock",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 737,
+      "collision_layer": 1971
+    },
+    "sprite-15": {
+      "name": "SwordIcon",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#9d9d9d",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#9d9d9d",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#9d9d9d",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#697175",
+          "#697175",
+          "#697175",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#697175",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 755,
+      "collision_layer": 1971
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Or": {
+        "name": "Sword",
+        "sprites": [
+          "sprite-11",
+          "sprite-10",
+          "sprite-9",
+          "sprite-8"
+        ],
+        "collisionLayers": [
+          1972
+        ],
+        "_sourceOffset": 1029
+      }
+    },
+    "tile-1": {
+      "Sprite": {
+        "name": "Unmowed",
+        "sprite": "sprite-1",
+        "_sourceOffset": 82,
+        "collision_layer": 1970
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "Tree",
+        "sprite": "sprite-12",
+        "_sourceOffset": 639,
+        "collision_layer": 1971
+      }
+    },
+    "tile-3": {
+      "Sprite": {
+        "name": "SwordIcon",
+        "sprite": "sprite-15",
+        "_sourceOffset": 755,
+        "collision_layer": 1971
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "BlackBlock",
+        "sprite": "sprite-14",
+        "_sourceOffset": 737,
+        "collision_layer": 1971
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "PlayerUSwing",
+        "sprite": "sprite-4",
+        "_sourceOffset": 231,
+        "collision_layer": 1971
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "PlayerU",
+        "sprite": "sprite-2",
+        "_sourceOffset": 133,
+        "collision_layer": 1971
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "PlayerDSwing",
+        "sprite": "sprite-5",
+        "_sourceOffset": 285,
+        "collision_layer": 1971
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "PlayerD",
+        "sprite": "sprite-3",
+        "_sourceOffset": 177,
+        "collision_layer": 1971
+      }
+    },
+    "tile-9": {
+      "Or": {
+        "name": "Unswordable",
+        "sprites": [
+          "sprite-13",
+          "sprite-14",
+          "sprite-15"
+        ],
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 1074
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "SwordU",
+        "sprite": "sprite-8",
+        "_sourceOffset": 452,
+        "collision_layer": 1972
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "SwordD",
+        "sprite": "sprite-9",
+        "_sourceOffset": 495,
+        "collision_layer": 1972
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "PlayerL",
+        "sprite": "sprite-6",
+        "_sourceOffset": 344,
+        "collision_layer": 1971
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "SwordL",
+        "sprite": "sprite-10",
+        "_sourceOffset": 543,
+        "collision_layer": 1972
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "PlayerR",
+        "sprite": "sprite-7",
+        "_sourceOffset": 398,
+        "collision_layer": 1971
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "SwordR",
+        "sprite": "sprite-11",
+        "_sourceOffset": 591,
+        "collision_layer": 1972
+      }
+    },
+    "tile-16": {
+      "Or": {
+        "name": "Player",
+        "sprites": [
+          "sprite-7",
+          "sprite-6",
+          "sprite-3",
+          "sprite-5",
+          "sprite-4",
+          "sprite-2"
+        ],
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 947
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "Rock",
+        "sprite": "sprite-13",
+        "_sourceOffset": 687,
+        "collision_layer": 1971
+      }
+    },
+    "tile-18": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          1969
+        ],
+        "_sourceOffset": 839
+      }
+    },
+    "tile-19": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-1",
+        "collisionLayers": [
+          1970
+        ],
+        "_sourceOffset": 854
+      }
+    },
+    "tile-20": {
+      "Simple": {
+        "name": "@",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 866
+      }
+    },
+    "tile-21": {
+      "Simple": {
+        "name": "T",
+        "sprite": "sprite-12",
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 878
+      }
+    },
+    "tile-22": {
+      "Simple": {
+        "name": "*",
+        "sprite": "sprite-13",
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 887
+      }
+    },
+    "tile-23": {
+      "And": {
+        "name": "R",
+        "sprites": [
+          "sprite-13",
+          "sprite-1"
+        ],
+        "collisionLayers": [
+          1971,
+          1970
+        ],
+        "_sourceOffset": 896
+      }
+    },
+    "tile-24": {
+      "Simple": {
+        "name": "S",
+        "sprite": "sprite-15",
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 917
+      }
+    },
+    "tile-25": {
+      "Simple": {
+        "name": "B",
+        "sprite": "sprite-14",
+        "collisionLayers": [
+          1971
+        ],
+        "_sourceOffset": 931
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 1281,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 1287,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 1318,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 1350,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 1371,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 1386,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 1406,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 1418,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 1438,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": "Action",
+      "tile": "tile-6",
+      "_sourceOffset": 1456,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 1473,
+      "random": false,
+      "negated": true
+    },
+    "twm-11": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 1525,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": "Action",
+      "tile": "tile-8",
+      "_sourceOffset": 1562,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 1631,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": "Action",
+      "tile": "tile-12",
+      "_sourceOffset": 1668,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 1722,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 1732,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": "Action",
+      "tile": "tile-14",
+      "_sourceOffset": 1769,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 1823,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 1833,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": "Up",
+      "tile": "tile-16",
+      "_sourceOffset": 1865,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": "Up",
+      "tile": "tile-6",
+      "_sourceOffset": 1885,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": "Down",
+      "tile": "tile-16",
+      "_sourceOffset": 1900,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": "Down",
+      "tile": "tile-8",
+      "_sourceOffset": 1920,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": "Left",
+      "tile": "tile-16",
+      "_sourceOffset": 1937,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": "Left",
+      "tile": "tile-12",
+      "_sourceOffset": 1957,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": "Right",
+      "tile": "tile-16",
+      "_sourceOffset": 1974,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": "Right",
+      "tile": "tile-14",
+      "_sourceOffset": 1994,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 2024,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": "Up",
+      "tile": "tile-17",
+      "_sourceOffset": 2047,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": "Down",
+      "tile": "tile-17",
+      "_sourceOffset": 2047,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": "Left",
+      "tile": "tile-17",
+      "_sourceOffset": 2047,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": "Right",
+      "tile": "tile-17",
+      "_sourceOffset": 2047,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 1280,
+      "tile_with_modifiers": [
+        "twm-0",
+        "twm-1"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 1301,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 1311,
+      "tile_with_modifiers": [
+        "twm-0",
+        "twm-2"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 1349,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 1366,
+      "tile_with_modifiers": []
+    },
+    "neighbor-5": {
+      "_sourceOffset": 1370,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 1385,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 1405,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 1417,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 1437,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 1455,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 1472,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 1524,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 1561,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 1630,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 1667,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 1721,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 1731,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 1768,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 1822,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 1832,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 1864,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 1884,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 1899,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 1919,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 1936,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 1956,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 1973,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 1993,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 2023,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 2046,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 2046,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 2046,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 2046,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 1279
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 1299
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 1310
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3"
+        ],
+        "_sourceOffset": 1348
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4"
+        ],
+        "_sourceOffset": 1364
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5"
+        ],
+        "_sourceOffset": 1368
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6"
+        ],
+        "_sourceOffset": 1384
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-7"
+        ],
+        "_sourceOffset": 1403
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-8"
+        ],
+        "_sourceOffset": 1416
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-9"
+        ],
+        "_sourceOffset": 1435
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 1454
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 1506
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 1560
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-14"
+        ],
+        "_sourceOffset": 1612
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 1666
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-16",
+          "neighbor-17"
+        ],
+        "_sourceOffset": 1718
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 1767
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 1819
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21"
+        ],
+        "_sourceOffset": 1863
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 1882
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-21"
+        ],
+        "_sourceOffset": 1863
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 1882
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21"
+        ],
+        "_sourceOffset": 1863
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 1882
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-21"
+        ],
+        "_sourceOffset": 1863
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22"
+        ],
+        "_sourceOffset": 1882
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 1898
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-24"
+        ],
+        "_sourceOffset": 1917
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 1898
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-24"
+        ],
+        "_sourceOffset": 1917
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 1898
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-24"
+        ],
+        "_sourceOffset": 1917
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-23"
+        ],
+        "_sourceOffset": 1898
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24"
+        ],
+        "_sourceOffset": 1917
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 1935
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-26"
+        ],
+        "_sourceOffset": 1954
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 1935
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-26"
+        ],
+        "_sourceOffset": 1954
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 1935
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-26"
+        ],
+        "_sourceOffset": 1954
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25"
+        ],
+        "_sourceOffset": 1935
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-26"
+        ],
+        "_sourceOffset": 1954
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 1972
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 1991
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 1972
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 1991
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 1972
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 1991
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 1972
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-28"
+        ],
+        "_sourceOffset": 1991
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2011
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 2033
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2011
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-31"
+        ],
+        "_sourceOffset": 2033
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2011
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 2033
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 2011
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 2033
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 1279,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 1279,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 1310,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2"
+        ],
+        "_sourceOffset": 1310,
+        "random": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-1",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-4",
+          "bracket-5"
+        ],
+        "commands": [],
+        "_sourceOffset": 1338,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Group": {
+        "rules": [
+          "rule-4"
+        ],
+        "_sourceOffset": 1338,
+        "random": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7"
+        ],
+        "commands": [],
+        "_sourceOffset": 1384,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Group": {
+        "rules": [
+          "rule-6"
+        ],
+        "_sourceOffset": 1384,
+        "random": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9"
+        ],
+        "commands": [],
+        "_sourceOffset": 1416,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Group": {
+        "rules": [
+          "rule-8"
+        ],
+        "_sourceOffset": 1416,
+        "random": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-10",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-11",
+          "bracket-3"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 1448,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Group": {
+        "rules": [
+          "rule-10"
+        ],
+        "_sourceOffset": 1448,
+        "random": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-12",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-13",
+          "bracket-3"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 1554,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-12"
+        ],
+        "_sourceOffset": 1554,
+        "random": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-14",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-15",
+          "bracket-3"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 1660,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Group": {
+        "rules": [
+          "rule-14"
+        ],
+        "_sourceOffset": 1660,
+        "random": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16",
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-17",
+          "bracket-3"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 1761,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Group": {
+        "rules": [
+          "rule-16"
+        ],
+        "_sourceOffset": 1761,
+        "random": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [],
+        "_sourceOffset": 1863,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-21"
+        ],
+        "commands": [],
+        "_sourceOffset": 1863,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-23"
+        ],
+        "commands": [],
+        "_sourceOffset": 1863,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-25"
+        ],
+        "commands": [],
+        "_sourceOffset": 1863,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Group": {
+        "rules": [
+          "rule-18",
+          "rule-19",
+          "rule-20",
+          "rule-21"
+        ],
+        "_sourceOffset": 1863,
+        "random": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-27"
+        ],
+        "commands": [],
+        "_sourceOffset": 1898,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-28"
+        ],
+        "actions": [
+          "bracket-29"
+        ],
+        "commands": [],
+        "_sourceOffset": 1898,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-30"
+        ],
+        "actions": [
+          "bracket-31"
+        ],
+        "commands": [],
+        "_sourceOffset": 1898,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-32"
+        ],
+        "actions": [
+          "bracket-33"
+        ],
+        "commands": [],
+        "_sourceOffset": 1898,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Group": {
+        "rules": [
+          "rule-23",
+          "rule-24",
+          "rule-25",
+          "rule-26"
+        ],
+        "_sourceOffset": 1898,
+        "random": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-34"
+        ],
+        "actions": [
+          "bracket-35"
+        ],
+        "commands": [],
+        "_sourceOffset": 1935,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-36"
+        ],
+        "actions": [
+          "bracket-37"
+        ],
+        "commands": [],
+        "_sourceOffset": 1935,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-38"
+        ],
+        "actions": [
+          "bracket-39"
+        ],
+        "commands": [],
+        "_sourceOffset": 1935,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-40"
+        ],
+        "actions": [
+          "bracket-41"
+        ],
+        "commands": [],
+        "_sourceOffset": 1935,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-32": {
+      "Group": {
+        "rules": [
+          "rule-28",
+          "rule-29",
+          "rule-30",
+          "rule-31"
+        ],
+        "_sourceOffset": 1935,
+        "random": false
+      }
+    },
+    "rule-33": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-43"
+        ],
+        "commands": [],
+        "_sourceOffset": 1972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-44"
+        ],
+        "actions": [
+          "bracket-45"
+        ],
+        "commands": [],
+        "_sourceOffset": 1972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-46"
+        ],
+        "actions": [
+          "bracket-47"
+        ],
+        "commands": [],
+        "_sourceOffset": 1972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-48"
+        ],
+        "actions": [
+          "bracket-49"
+        ],
+        "commands": [],
+        "_sourceOffset": 1972,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Group": {
+        "rules": [
+          "rule-33",
+          "rule-34",
+          "rule-35",
+          "rule-36"
+        ],
+        "_sourceOffset": 1972,
+        "random": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-50"
+        ],
+        "actions": [
+          "bracket-51"
+        ],
+        "commands": [],
+        "_sourceOffset": 2011,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-52"
+        ],
+        "actions": [
+          "bracket-53"
+        ],
+        "commands": [],
+        "_sourceOffset": 2011,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54"
+        ],
+        "actions": [
+          "bracket-55"
+        ],
+        "commands": [],
+        "_sourceOffset": 2011,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-56"
+        ],
+        "actions": [
+          "bracket-57"
+        ],
+        "commands": [],
+        "_sourceOffset": 2011,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Group": {
+        "rules": [
+          "rule-38",
+          "rule-39",
+          "rule-40",
+          "rule-41"
+        ],
+        "_sourceOffset": 2011,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "Simple": {
+        "_sourceOffset": 2102,
+        "qualifier": "No",
+        "tile": "tile-1"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-3",
+    "rule-5",
+    "rule-7",
+    "rule-9",
+    "rule-11",
+    "rule-13",
+    "rule-15",
+    "rule-17",
+    "rule-22",
+    "rule-27",
+    "rule-32",
+    "rule-37",
+    "rule-42"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "cut the grass!",
+        "_sourceOffset": 2138
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-20",
+            "tile-19",
+            "tile-19",
+            "tile-19",
+            "tile-19"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-25"
+          ]
+        ],
+        "_sourceOffset": 2162
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-20",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-19",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-19",
+            "tile-18",
+            "tile-19",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-19",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-25"
+          ]
+        ],
+        "_sourceOffset": 2199
+      }
+    },
+    {
+      "Message": {
+        "message": "trees get in the way!",
+        "_sourceOffset": 2236
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-20",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21"
+          ],
+          [
+            "tile-19",
+            "tile-19",
+            "tile-18",
+            "tile-19",
+            "tile-19"
+          ],
+          [
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24"
+          ]
+        ],
+        "_sourceOffset": 2267
+      }
+    },
+    {
+      "Message": {
+        "message": "so do rocks",
+        "_sourceOffset": 2304
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-20",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18",
+            "tile-18"
+          ],
+          [
+            "tile-23",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-18",
+            "tile-19",
+            "tile-19",
+            "tile-19",
+            "tile-18"
+          ],
+          [
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24",
+            "tile-24"
+          ]
+        ],
+        "_sourceOffset": 2325
+      }
+    }
+  ]
+}

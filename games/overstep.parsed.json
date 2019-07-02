@@ -1,0 +1,9055 @@
+{
+  "version": 1,
+  "title": "Overstep",
+  "metadata": {
+    "author": "Rosden Shadow [Mark Signorelli]",
+    "homepage": "rosden.itch.io",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": "#191919",
+    "text_color": "#E0AAF2",
+    "realtime_interval": null,
+    "key_repeat_interval": null,
+    "again_interval": 0.01,
+    "no_action": true,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#191919": "#191919",
+    "#E0AAF2": "#E0AAF2",
+    "#eb8931": "#eb8931",
+    "#DB7F55": "#DB7F55",
+    "#E5C17E": "#E5C17E",
+    "#B32D2D": "#B32D2D",
+    "#73342E": "#73342E",
+    "#CC7A52": "#CC7A52",
+    "#F2F2AA": "#F2F2AA",
+    "#736053": "#736053",
+    "#D9FFDC": "#D9FFDC",
+    "#7EE58D": "#7EE58D",
+    "#423D39": "#423D39",
+    "#333333": "#333333",
+    "#FFEED9": "#FFEED9",
+    "#536673": "#536673",
+    "#705C84": "#705C84",
+    "#FFD9FC": "#FFD9FC",
+    "#52465B": "#52465B",
+    "#C3C3D9": "#C3C3D9",
+    "#AFA2C1": "#AFA2C1",
+    "#7F7CA1": "#7F7CA1",
+    "#000000": "#000000"
+  },
+  "sounds": {
+    "sound-0": {
+      "SpriteMove": {
+        "sprite": "tile-0",
+        "soundCode": 36772507,
+        "_sourceOffset": 3584
+      }
+    },
+    "sound-1": {
+      "When": {
+        "when": "ENDLEVEL",
+        "soundCode": 74089700,
+        "_sourceOffset": 3608
+      }
+    },
+    "sound-2": {
+      "SpriteMove": {
+        "sprite": "tile-1",
+        "soundCode": 68988304,
+        "_sourceOffset": 3627
+      }
+    },
+    "sound-3": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 52836103,
+        "_sourceOffset": 3648
+      }
+    },
+    "sound-4": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 45427502,
+        "_sourceOffset": 3662
+      }
+    },
+    "sound-5": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 29503700,
+        "_sourceOffset": 3677
+      }
+    },
+    "sound-6": {
+      "Sfx": {
+        "soundEffect": "SFX3",
+        "soundCode": 81951902,
+        "_sourceOffset": 3691
+      }
+    },
+    "sound-7": {
+      "Sfx": {
+        "soundEffect": "SFX4",
+        "soundCode": 5012103,
+        "_sourceOffset": 3706
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 2146,
+      "_sourceOffset": 3771
+    },
+    {
+      "id": 2147,
+      "_sourceOffset": 3782
+    },
+    {
+      "id": 2148,
+      "_sourceOffset": 3794
+    },
+    {
+      "id": 2149,
+      "_sourceOffset": 3811
+    },
+    {
+      "id": 2150,
+      "_sourceOffset": 3818
+    },
+    {
+      "id": 2151,
+      "_sourceOffset": 3825
+    },
+    {
+      "id": 2152,
+      "_sourceOffset": 3830
+    },
+    {
+      "id": 2153,
+      "_sourceOffset": 3836
+    },
+    {
+      "id": 2154,
+      "_sourceOffset": 3842
+    },
+    {
+      "id": 2155,
+      "_sourceOffset": 3848
+    },
+    {
+      "id": 2156,
+      "_sourceOffset": 3854
+    },
+    {
+      "id": 2157,
+      "_sourceOffset": 3905
+    },
+    {
+      "id": 2158,
+      "_sourceOffset": 3914
+    },
+    {
+      "id": 2159,
+      "_sourceOffset": 3945
+    },
+    {
+      "id": 2160,
+      "_sourceOffset": 3952
+    },
+    {
+      "id": 2161,
+      "_sourceOffset": 3957
+    },
+    {
+      "id": 2162,
+      "_sourceOffset": 3967
+    },
+    {
+      "id": 2163,
+      "_sourceOffset": 3972
+    },
+    {
+      "id": 2164,
+      "_sourceOffset": 3976
+    },
+    {
+      "id": 2165,
+      "_sourceOffset": 3983
+    },
+    {
+      "id": 2166,
+      "_sourceOffset": 3990
+    },
+    {
+      "id": 2167,
+      "_sourceOffset": 3997
+    },
+    {
+      "id": 2168,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5326
+      }
+    },
+    "command-1": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5365
+      }
+    },
+    "command-2": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5402
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 5441
+      }
+    },
+    "command-4": {
+      "Sfx": {
+        "sound": "sound-7",
+        "_sourceOffset": 6129
+      }
+    },
+    "command-5": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6457
+      }
+    },
+    "command-6": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6457
+      }
+    },
+    "command-7": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6457
+      }
+    },
+    "command-8": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6457
+      }
+    },
+    "command-9": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 6483
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "switcrate2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2456,
+      "collision_layer": 2156
+    },
+    "sprite-1": {
+      "name": "switcrate",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2409,
+      "collision_layer": 2156
+    },
+    "sprite-2": {
+      "name": "swapcrate",
+      "pixels": [
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          null,
+          null,
+          null,
+          "#eb8931"
+        ],
+        [
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931",
+          "#eb8931"
+        ]
+      ],
+      "_sourceOffset": 1339,
+      "collision_layer": 2156
+    },
+    "sprite-3": {
+      "name": "cloner",
+      "pixels": [
+        [
+          null,
+          "#DB7F55",
+          "#E5C17E",
+          "#E5C17E",
+          null
+        ],
+        [
+          null,
+          "#B32D2D",
+          "#DB7F55",
+          "#E5C17E",
+          null
+        ],
+        [
+          null,
+          "#B32D2D",
+          "#B32D2D",
+          "#DB7F55",
+          null
+        ],
+        [
+          null,
+          "#73342E",
+          "#73342E",
+          "#B32D2D",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1269,
+      "collision_layer": 2156
+    },
+    "sprite-4": {
+      "name": "Crate",
+      "pixels": [
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#736053",
+          "#CC7A52",
+          "#CC7A52",
+          "#CC7A52",
+          "#736053"
+        ],
+        [
+          null,
+          "#736053",
+          "#736053",
+          "#736053",
+          null
+        ]
+      ],
+      "_sourceOffset": 991,
+      "collision_layer": 2156
+    },
+    "sprite-5": {
+      "name": "playerleft",
+      "pixels": [
+        [
+          null,
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          null
+        ],
+        [
+          "#736053",
+          "#D9FFDC",
+          "#736053",
+          "#7EE58D",
+          "#7EE58D"
+        ],
+        [
+          "#423D39",
+          "#7EE58D",
+          "#423D39",
+          "#7EE58D",
+          "#7EE58D"
+        ],
+        [
+          "#D9FFDC",
+          "#7EE58D",
+          "#7EE58D",
+          "#7EE58D",
+          "#7EE58D"
+        ],
+        [
+          null,
+          "#7EE58D",
+          null,
+          "#7EE58D",
+          null
+        ]
+      ],
+      "_sourceOffset": 917,
+      "collision_layer": 2156
+    },
+    "sprite-6": {
+      "name": "Playerright",
+      "pixels": [
+        [
+          null,
+          "#D9FFDC",
+          "#D9FFDC",
+          "#D9FFDC",
+          null
+        ],
+        [
+          "#7EE58D",
+          "#7EE58D",
+          "#736053",
+          "#D9FFDC",
+          "#736053"
+        ],
+        [
+          "#7EE58D",
+          "#7EE58D",
+          "#423D39",
+          "#7EE58D",
+          "#423D39"
+        ],
+        [
+          "#7EE58D",
+          "#7EE58D",
+          "#7EE58D",
+          "#7EE58D",
+          "#D9FFDC"
+        ],
+        [
+          null,
+          "#7EE58D",
+          null,
+          "#7EE58D",
+          null
+        ]
+      ],
+      "_sourceOffset": 690,
+      "collision_layer": 2156
+    },
+    "sprite-7": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#333333",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#333333",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#333333",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ]
+      ],
+      "_sourceOffset": 207,
+      "collision_layer": 2146
+    },
+    "sprite-8": {
+      "name": "Background1",
+      "pixels": [
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#191919",
+          "#333333",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#191919",
+          "#333333",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#191919",
+          "#333333"
+        ],
+        [
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333",
+          "#333333"
+        ]
+      ],
+      "_sourceOffset": 348,
+      "collision_layer": 2147
+    },
+    "sprite-9": {
+      "name": "nomove",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#FFEED9",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#536673",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          "#FFEED9",
+          "#FFEED9",
+          "#FFEED9",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 441,
+      "collision_layer": 2150
+    },
+    "sprite-10": {
+      "name": "Target",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#F2F2AA",
+          null,
+          "#F2F2AA",
+          null
+        ],
+        [
+          null,
+          null,
+          "#F2F2AA",
+          null,
+          null
+        ],
+        [
+          null,
+          "#F2F2AA",
+          null,
+          "#F2F2AA",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 495,
+      "collision_layer": 2149
+    },
+    "sprite-11": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#705C84",
+          "#705C84",
+          "#705C84",
+          "#E0AAF2"
+        ],
+        [
+          "#705C84",
+          "#52465B",
+          "#705C84",
+          "#52465B",
+          "#705C84"
+        ],
+        [
+          "#52465B",
+          "#705C84",
+          "#52465B",
+          "#705C84",
+          "#52465B"
+        ]
+      ],
+      "_sourceOffset": 549,
+      "collision_layer": 2156
+    },
+    "sprite-12": {
+      "name": "overwall",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#E0AAF2",
+          "#FFD9FC",
+          "#FFD9FC",
+          "#FFD9FC",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ]
+      ],
+      "_sourceOffset": 617,
+      "collision_layer": 2162
+    },
+    "sprite-13": {
+      "name": "Playerright1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "#C3C3D9"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#AFA2C1",
+          "#AFA2C1"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#AFA2C1"
+        ]
+      ],
+      "_sourceOffset": 765,
+      "collision_layer": 2157
+    },
+    "sprite-14": {
+      "name": "Playerright2",
+      "pixels": [
+        [
+          "#C3C3D9",
+          "#C3C3D9",
+          null,
+          null,
+          null
+        ],
+        [
+          "#7F7CA1",
+          "#C3C3D9",
+          "#7F7CA1",
+          null,
+          null
+        ],
+        [
+          "#705C84",
+          "#AFA2C1",
+          "#705C84",
+          null,
+          null
+        ],
+        [
+          "#AFA2C1",
+          "#AFA2C1",
+          "#C3C3D9",
+          null,
+          null
+        ],
+        [
+          null,
+          "#AFA2C1",
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 841,
+      "collision_layer": 2157
+    },
+    "sprite-15": {
+      "name": "overcrate",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#F2F2AA",
+          "#F2F2AA",
+          "#F2F2AA",
+          null
+        ]
+      ],
+      "_sourceOffset": 1060,
+      "collision_layer": 2162
+    },
+    "sprite-16": {
+      "name": "end",
+      "pixels": [
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#736053",
+          "#CC7A52",
+          "#CC7A52",
+          "#CC7A52",
+          "#736053"
+        ],
+        [
+          null,
+          "#736053",
+          "#736053",
+          "#736053",
+          null
+        ]
+      ],
+      "_sourceOffset": 1133,
+      "collision_layer": 2161
+    },
+    "sprite-17": {
+      "name": "endx",
+      "pixels": [
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#CC7A52",
+          "#CC7A52",
+          "#E5C17E",
+          "#E5C17E",
+          "#F2F2AA"
+        ],
+        [
+          "#736053",
+          "#CC7A52",
+          "#CC7A52",
+          "#CC7A52",
+          "#736053"
+        ],
+        [
+          null,
+          "#736053",
+          "#736053",
+          "#736053",
+          null
+        ]
+      ],
+      "_sourceOffset": 1199,
+      "collision_layer": 2161
+    },
+    "sprite-18": {
+      "name": "swapwall",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1394,
+      "collision_layer": 2156
+    },
+    "sprite-19": {
+      "name": "thefloor",
+      "pixels": [
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ]
+      ],
+      "_sourceOffset": 1440,
+      "collision_layer": 2156
+    },
+    "sprite-20": {
+      "name": "thefloorx",
+      "pixels": [
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ]
+      ],
+      "_sourceOffset": 1488,
+      "collision_layer": 2156
+    },
+    "sprite-21": {
+      "name": "eend",
+      "pixels": [
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ],
+        [
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919",
+          "#191919"
+        ]
+      ],
+      "_sourceOffset": 1537,
+      "collision_layer": 2160
+    },
+    "sprite-22": {
+      "name": "cskip",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1679,
+      "collision_layer": 2153
+    },
+    "sprite-23": {
+      "name": "skipr",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1722,
+      "collision_layer": 2151
+    },
+    "sprite-24": {
+      "name": "skipl",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1765,
+      "collision_layer": 2151
+    },
+    "sprite-25": {
+      "name": "skipu",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1808,
+      "collision_layer": 2151
+    },
+    "sprite-26": {
+      "name": "skipd",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1851,
+      "collision_layer": 2151
+    },
+    "sprite-27": {
+      "name": "colr",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1894,
+      "collision_layer": 2163
+    },
+    "sprite-28": {
+      "name": "coll",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1936,
+      "collision_layer": 2163
+    },
+    "sprite-29": {
+      "name": "colu",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1978,
+      "collision_layer": 2163
+    },
+    "sprite-30": {
+      "name": "cold",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2020,
+      "collision_layer": 2163
+    },
+    "sprite-31": {
+      "name": "nocolr",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2062,
+      "collision_layer": 2164
+    },
+    "sprite-32": {
+      "name": "nocoll",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2106,
+      "collision_layer": 2165
+    },
+    "sprite-33": {
+      "name": "nocolu",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2150,
+      "collision_layer": 2166
+    },
+    "sprite-34": {
+      "name": "nocold",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2194,
+      "collision_layer": 2167
+    },
+    "sprite-35": {
+      "name": "sskip",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2239,
+      "collision_layer": 2152
+    },
+    "sprite-36": {
+      "name": "playe",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2282,
+      "collision_layer": 2155
+    },
+    "sprite-37": {
+      "name": "pright",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2324,
+      "collision_layer": 2154
+    },
+    "sprite-38": {
+      "name": "pleft",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2367,
+      "collision_layer": 2154
+    },
+    "sprite-39": {
+      "name": "checker",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2504,
+      "collision_layer": 2148
+    },
+    "sprite-40": {
+      "name": "checker1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2548,
+      "collision_layer": 2148
+    },
+    "sprite-41": {
+      "name": "arrow",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2593,
+      "collision_layer": 2158
+    },
+    "sprite-42": {
+      "name": "arrow2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          null,
+          "#000000",
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ],
+        [
+          null,
+          null,
+          "#000000",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2636,
+      "collision_layer": 2158
+    },
+    "sprite-43": {
+      "name": "arrowx",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2680,
+      "collision_layer": 2158
+    },
+    "sprite-44": {
+      "name": "arrowx2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 2724,
+      "collision_layer": 2158
+    },
+    "sprite-45": {
+      "name": "winend",
+      "pixels": [
+        [
+          "#E0AAF2",
+          "#FFD9FC",
+          "#FFD9FC",
+          "#FFD9FC",
+          null
+        ],
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          "#705C84",
+          "#705C84",
+          "#E0AAF2",
+          "#E0AAF2",
+          "#FFD9FC"
+        ],
+        [
+          null,
+          "#705C84",
+          "#705C84",
+          "#705C84",
+          "#E0AAF2"
+        ]
+      ],
+      "_sourceOffset": 2769,
+      "collision_layer": 2159
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Or": {
+        "name": "pushable",
+        "sprites": [
+          "sprite-0",
+          "sprite-1",
+          "sprite-2",
+          "sprite-3",
+          "sprite-4"
+        ],
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3066
+      }
+    },
+    "tile-1": {
+      "Or": {
+        "name": "player",
+        "sprites": [
+          "sprite-5",
+          "sprite-6"
+        ],
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3166
+      }
+    },
+    "tile-2": {
+      "Or": {
+        "name": "feel",
+        "sprites": [
+          "sprite-15",
+          "sprite-12"
+        ],
+        "collisionLayers": [
+          2162
+        ],
+        "_sourceOffset": 3038
+      }
+    },
+    "tile-3": {
+      "Or": {
+        "name": "nocol",
+        "sprites": [
+          "sprite-34",
+          "sprite-33",
+          "sprite-32",
+          "sprite-31"
+        ],
+        "collisionLayers": [
+          2167,
+          2166,
+          2165,
+          2164
+        ],
+        "_sourceOffset": 3489
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "Crate",
+        "sprite": "sprite-4",
+        "_sourceOffset": 991,
+        "collision_layer": 2156
+      }
+    },
+    "tile-5": {
+      "Sprite": {
+        "name": "Playerright",
+        "sprite": "sprite-6",
+        "_sourceOffset": 690,
+        "collision_layer": 2156
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "playerleft",
+        "sprite": "sprite-5",
+        "_sourceOffset": 917,
+        "collision_layer": 2156
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "pright",
+        "sprite": "sprite-37",
+        "_sourceOffset": 2324,
+        "collision_layer": 2154
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "pleft",
+        "sprite": "sprite-38",
+        "_sourceOffset": 2367,
+        "collision_layer": 2154
+      }
+    },
+    "tile-9": {
+      "Sprite": {
+        "name": "Background",
+        "sprite": "sprite-7",
+        "_sourceOffset": 207,
+        "collision_layer": 2146
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "nocoll",
+        "sprite": "sprite-32",
+        "_sourceOffset": 2106,
+        "collision_layer": 2165
+      }
+    },
+    "tile-11": {
+      "Sprite": {
+        "name": "nocolr",
+        "sprite": "sprite-31",
+        "_sourceOffset": 2062,
+        "collision_layer": 2164
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "nocolu",
+        "sprite": "sprite-33",
+        "_sourceOffset": 2150,
+        "collision_layer": 2166
+      }
+    },
+    "tile-13": {
+      "Sprite": {
+        "name": "nocold",
+        "sprite": "sprite-34",
+        "_sourceOffset": 2194,
+        "collision_layer": 2167
+      }
+    },
+    "tile-14": {
+      "Or": {
+        "name": "blx",
+        "sprites": [
+          "sprite-41",
+          "sprite-6",
+          "sprite-5",
+          "sprite-4",
+          "sprite-11",
+          "sprite-9"
+        ],
+        "collisionLayers": [
+          2158,
+          2156,
+          2150
+        ],
+        "_sourceOffset": 3261
+      }
+    },
+    "tile-15": {
+      "Sprite": {
+        "name": "cskip",
+        "sprite": "sprite-22",
+        "_sourceOffset": 1679,
+        "collision_layer": 2153
+      }
+    },
+    "tile-16": {
+      "Sprite": {
+        "name": "skipr",
+        "sprite": "sprite-23",
+        "_sourceOffset": 1722,
+        "collision_layer": 2151
+      }
+    },
+    "tile-17": {
+      "Sprite": {
+        "name": "skipl",
+        "sprite": "sprite-24",
+        "_sourceOffset": 1765,
+        "collision_layer": 2151
+      }
+    },
+    "tile-18": {
+      "Sprite": {
+        "name": "skipu",
+        "sprite": "sprite-25",
+        "_sourceOffset": 1808,
+        "collision_layer": 2151
+      }
+    },
+    "tile-19": {
+      "Sprite": {
+        "name": "skipd",
+        "sprite": "sprite-26",
+        "_sourceOffset": 1851,
+        "collision_layer": 2151
+      }
+    },
+    "tile-20": {
+      "Or": {
+        "name": "bl",
+        "sprites": [
+          "sprite-41",
+          "sprite-19",
+          "sprite-6",
+          "sprite-5",
+          "sprite-4",
+          "sprite-11",
+          "sprite-9"
+        ],
+        "collisionLayers": [
+          2158,
+          2156,
+          2150
+        ],
+        "_sourceOffset": 3200
+      }
+    },
+    "tile-21": {
+      "Sprite": {
+        "name": "playe",
+        "sprite": "sprite-36",
+        "_sourceOffset": 2282,
+        "collision_layer": 2155
+      }
+    },
+    "tile-22": {
+      "Sprite": {
+        "name": "cold",
+        "sprite": "sprite-30",
+        "_sourceOffset": 2020,
+        "collision_layer": 2163
+      }
+    },
+    "tile-23": {
+      "Sprite": {
+        "name": "colu",
+        "sprite": "sprite-29",
+        "_sourceOffset": 1978,
+        "collision_layer": 2163
+      }
+    },
+    "tile-24": {
+      "Sprite": {
+        "name": "colr",
+        "sprite": "sprite-27",
+        "_sourceOffset": 1894,
+        "collision_layer": 2163
+      }
+    },
+    "tile-25": {
+      "Sprite": {
+        "name": "coll",
+        "sprite": "sprite-28",
+        "_sourceOffset": 1936,
+        "collision_layer": 2163
+      }
+    },
+    "tile-26": {
+      "Or": {
+        "name": "skip",
+        "sprites": [
+          "sprite-26",
+          "sprite-25",
+          "sprite-24",
+          "sprite-23"
+        ],
+        "collisionLayers": [
+          2151
+        ],
+        "_sourceOffset": 3358
+      }
+    },
+    "tile-27": {
+      "Or": {
+        "name": "pdir",
+        "sprites": [
+          "sprite-38",
+          "sprite-37"
+        ],
+        "collisionLayers": [
+          2154
+        ],
+        "_sourceOffset": 3396
+      }
+    },
+    "tile-28": {
+      "Sprite": {
+        "name": "Target",
+        "sprite": "sprite-10",
+        "_sourceOffset": 495,
+        "collision_layer": 2149
+      }
+    },
+    "tile-29": {
+      "Sprite": {
+        "name": "endx",
+        "sprite": "sprite-17",
+        "_sourceOffset": 1199,
+        "collision_layer": 2161
+      }
+    },
+    "tile-30": {
+      "Sprite": {
+        "name": "thefloor",
+        "sprite": "sprite-19",
+        "_sourceOffset": 1440,
+        "collision_layer": 2156
+      }
+    },
+    "tile-31": {
+      "Sprite": {
+        "name": "end",
+        "sprite": "sprite-16",
+        "_sourceOffset": 1133,
+        "collision_layer": 2161
+      }
+    },
+    "tile-32": {
+      "Sprite": {
+        "name": "Wall",
+        "sprite": "sprite-11",
+        "_sourceOffset": 549,
+        "collision_layer": 2156
+      }
+    },
+    "tile-33": {
+      "Sprite": {
+        "name": "overwall",
+        "sprite": "sprite-12",
+        "_sourceOffset": 617,
+        "collision_layer": 2162
+      }
+    },
+    "tile-34": {
+      "Sprite": {
+        "name": "overcrate",
+        "sprite": "sprite-15",
+        "_sourceOffset": 1060,
+        "collision_layer": 2162
+      }
+    },
+    "tile-35": {
+      "Sprite": {
+        "name": "checker",
+        "sprite": "sprite-39",
+        "_sourceOffset": 2504,
+        "collision_layer": 2148
+      }
+    },
+    "tile-36": {
+      "Or": {
+        "name": "check",
+        "sprites": [
+          "sprite-40",
+          "sprite-39"
+        ],
+        "collisionLayers": [
+          2148
+        ],
+        "_sourceOffset": 3534
+      }
+    },
+    "tile-37": {
+      "Sprite": {
+        "name": "checker1",
+        "sprite": "sprite-40",
+        "_sourceOffset": 2548,
+        "collision_layer": 2148
+      }
+    },
+    "tile-38": {
+      "Sprite": {
+        "name": "Background1",
+        "sprite": "sprite-8",
+        "_sourceOffset": 348,
+        "collision_layer": 2147
+      }
+    },
+    "tile-39": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          2146
+        ],
+        "_sourceOffset": 2856
+      }
+    },
+    "tile-40": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-11",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 2871
+      }
+    },
+    "tile-41": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-6",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 2880
+      }
+    },
+    "tile-42": {
+      "Simple": {
+        "name": "*",
+        "sprite": "sprite-4",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 2896
+      }
+    },
+    "tile-43": {
+      "And": {
+        "name": "O",
+        "sprites": [
+          "sprite-10",
+          "sprite-39"
+        ],
+        "collisionLayers": [
+          2149,
+          2148
+        ],
+        "_sourceOffset": 2907
+      }
+    },
+    "tile-44": {
+      "Simple": {
+        "name": "n",
+        "sprite": "sprite-9",
+        "collisionLayers": [
+          2150
+        ],
+        "_sourceOffset": 2930
+      }
+    },
+    "tile-45": {
+      "And": {
+        "name": "a",
+        "sprites": [
+          "sprite-42",
+          "sprite-11"
+        ],
+        "collisionLayers": [
+          2158,
+          2156
+        ],
+        "_sourceOffset": 2941
+      }
+    },
+    "tile-46": {
+      "Simple": {
+        "name": "e",
+        "sprite": "sprite-7",
+        "collisionLayers": [
+          2146
+        ],
+        "_sourceOffset": 2961
+      }
+    },
+    "tile-47": {
+      "And": {
+        "name": "t",
+        "sprites": [
+          "sprite-21",
+          "sprite-10"
+        ],
+        "collisionLayers": [
+          2160,
+          2149
+        ],
+        "_sourceOffset": 2974
+      }
+    },
+    "tile-48": {
+      "Simple": {
+        "name": "w",
+        "sprite": "sprite-45",
+        "collisionLayers": [
+          2159
+        ],
+        "_sourceOffset": 2995
+      }
+    },
+    "tile-49": {
+      "Simple": {
+        "name": "c",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3005
+      }
+    },
+    "tile-50": {
+      "Simple": {
+        "name": "-",
+        "sprite": "sprite-19",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3014
+      }
+    },
+    "tile-51": {
+      "Simple": {
+        "name": "x",
+        "sprite": "sprite-20",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3025
+      }
+    },
+    "tile-52": {
+      "Or": {
+        "name": "win",
+        "sprites": [
+          "sprite-11",
+          "sprite-4"
+        ],
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3132
+      }
+    },
+    "tile-53": {
+      "Simple": {
+        "name": "theemx",
+        "sprite": "sprite-4",
+        "collisionLayers": [
+          2156
+        ],
+        "_sourceOffset": 3151
+      }
+    },
+    "tile-54": {
+      "Or": {
+        "name": "arrowk",
+        "sprites": [
+          "sprite-44",
+          "sprite-43",
+          "sprite-42",
+          "sprite-41"
+        ],
+        "collisionLayers": [
+          2158
+        ],
+        "_sourceOffset": 3312
+      }
+    },
+    "tile-55": {
+      "Or": {
+        "name": "plinbet",
+        "sprites": [
+          "sprite-14",
+          "sprite-13"
+        ],
+        "collisionLayers": [
+          2157
+        ],
+        "_sourceOffset": 3418
+      }
+    },
+    "tile-56": {
+      "Or": {
+        "name": "col",
+        "sprites": [
+          "sprite-30",
+          "sprite-29",
+          "sprite-28",
+          "sprite-27"
+        ],
+        "collisionLayers": [
+          2163
+        ],
+        "_sourceOffset": 3455
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 4026,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 4038,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": "Up",
+      "tile": "tile-1",
+      "_sourceOffset": 4052,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 4064,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Up",
+      "tile": "tile-4",
+      "_sourceOffset": 4090,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": "Down",
+      "tile": "tile-1",
+      "_sourceOffset": 4052,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": "Down",
+      "tile": "tile-4",
+      "_sourceOffset": 4090,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": "Left",
+      "tile": "tile-1",
+      "_sourceOffset": 4052,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": "Left",
+      "tile": "tile-4",
+      "_sourceOffset": 4090,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": "Right",
+      "tile": "tile-1",
+      "_sourceOffset": 4052,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": "Right",
+      "tile": "tile-4",
+      "_sourceOffset": 4090,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": "Left",
+      "tile": "tile-5",
+      "_sourceOffset": 4150,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": "Left",
+      "tile": "tile-6",
+      "_sourceOffset": 4173,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": "Right",
+      "tile": "tile-6",
+      "_sourceOffset": 4192,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": "Right",
+      "tile": "tile-5",
+      "_sourceOffset": 4215,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 4236,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 4263,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 4272,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 4297,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 4317,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 4337,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 4389,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 4438,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 4489,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": null,
+      "tile": "tile-1",
+      "_sourceOffset": 4510,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 4535,
+      "random": false,
+      "negated": false
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4549,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 4555,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 4617,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4677,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4739,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 5183,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 5307,
+      "random": false,
+      "negated": true
+    },
+    "twm-33": {
+      "direction": null,
+      "tile": "tile-21",
+      "_sourceOffset": 5319,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": null,
+      "tile": "tile-22",
+      "_sourceOffset": 5484,
+      "random": false,
+      "negated": false
+    },
+    "twm-35": {
+      "direction": null,
+      "tile": "tile-23",
+      "_sourceOffset": 5524,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": null,
+      "tile": "tile-24",
+      "_sourceOffset": 5567,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": null,
+      "tile": "tile-25",
+      "_sourceOffset": 5609,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": null,
+      "tile": "tile-26",
+      "_sourceOffset": 6108,
+      "random": false,
+      "negated": false
+    },
+    "twm-39": {
+      "direction": null,
+      "tile": "tile-27",
+      "_sourceOffset": 6157,
+      "random": false,
+      "negated": false
+    },
+    "twm-40": {
+      "direction": null,
+      "tile": "tile-28",
+      "_sourceOffset": 6431,
+      "random": false,
+      "negated": false
+    },
+    "twm-41": {
+      "direction": null,
+      "tile": "tile-29",
+      "_sourceOffset": 6464,
+      "random": false,
+      "negated": false
+    },
+    "twm-42": {
+      "direction": null,
+      "tile": "tile-30",
+      "_sourceOffset": 6473,
+      "random": false,
+      "negated": false
+    },
+    "twm-43": {
+      "direction": null,
+      "tile": "tile-31",
+      "_sourceOffset": 6489,
+      "random": false,
+      "negated": false
+    },
+    "twm-44": {
+      "direction": null,
+      "tile": "tile-32",
+      "_sourceOffset": 6535,
+      "random": false,
+      "negated": false
+    },
+    "twm-45": {
+      "direction": null,
+      "tile": "tile-33",
+      "_sourceOffset": 6551,
+      "random": false,
+      "negated": false
+    },
+    "twm-46": {
+      "direction": null,
+      "tile": "tile-34",
+      "_sourceOffset": 6590,
+      "random": false,
+      "negated": false
+    },
+    "twm-47": {
+      "direction": null,
+      "tile": "tile-35",
+      "_sourceOffset": 6728,
+      "random": false,
+      "negated": false
+    },
+    "twm-48": {
+      "direction": null,
+      "tile": "tile-36",
+      "_sourceOffset": 6736,
+      "random": false,
+      "negated": true
+    },
+    "twm-49": {
+      "direction": null,
+      "tile": "tile-37",
+      "_sourceOffset": 6756,
+      "random": false,
+      "negated": false
+    },
+    "twm-50": {
+      "direction": null,
+      "tile": "tile-38",
+      "_sourceOffset": 6851,
+      "random": false,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 4026,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 4034,
+      "tile_with_modifiers": []
+    },
+    "neighbor-2": {
+      "_sourceOffset": 4038,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 4051,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 4063,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 4089,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 4051,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 4089,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 4051,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 4089,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 4051,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 4089,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 4149,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 4172,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 4191,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 4214,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-16": {
+      "_sourceOffset": 4236,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 4251,
+      "tile_with_modifiers": [
+        "twm-15",
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 4272,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 4286,
+      "tile_with_modifiers": [
+        "twm-17",
+        "twm-18"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 4317,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 4331,
+      "tile_with_modifiers": [
+        "twm-3",
+        "twm-20"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 4383,
+      "tile_with_modifiers": [
+        "twm-3",
+        "twm-21"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 4432,
+      "tile_with_modifiers": [
+        "twm-3",
+        "twm-22"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 4483,
+      "tile_with_modifiers": [
+        "twm-3",
+        "twm-23"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 4510,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 4535,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 4549,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 4555,
+      "tile_with_modifiers": [
+        "twm-27",
+        "twm-3"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 4617,
+      "tile_with_modifiers": [
+        "twm-28",
+        "twm-3"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 4677,
+      "tile_with_modifiers": [
+        "twm-29",
+        "twm-3"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 4739,
+      "tile_with_modifiers": [
+        "twm-30",
+        "twm-3"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 5176,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 5183,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 5190,
+      "tile_with_modifiers": [
+        "twm-27",
+        "twm-31"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 5206,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 5220,
+      "tile_with_modifiers": [
+        "twm-28",
+        "twm-31"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 5234,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 5248,
+      "tile_with_modifiers": [
+        "twm-29",
+        "twm-31"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 5264,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 5278,
+      "tile_with_modifiers": [
+        "twm-30",
+        "twm-31"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 5307,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 5319,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 5484,
+      "tile_with_modifiers": [
+        "twm-34"
+      ]
+    },
+    "neighbor-44": {
+      "_sourceOffset": 5524,
+      "tile_with_modifiers": [
+        "twm-35"
+      ]
+    },
+    "neighbor-45": {
+      "_sourceOffset": 5567,
+      "tile_with_modifiers": [
+        "twm-36"
+      ]
+    },
+    "neighbor-46": {
+      "_sourceOffset": 5609,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-47": {
+      "_sourceOffset": 6108,
+      "tile_with_modifiers": [
+        "twm-38",
+        "twm-32"
+      ]
+    },
+    "neighbor-48": {
+      "_sourceOffset": 6141,
+      "tile_with_modifiers": [
+        "twm-38"
+      ]
+    },
+    "neighbor-49": {
+      "_sourceOffset": 6157,
+      "tile_with_modifiers": [
+        "twm-39"
+      ]
+    },
+    "neighbor-50": {
+      "_sourceOffset": 6323,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-51": {
+      "_sourceOffset": 6362,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-52": {
+      "_sourceOffset": 6431,
+      "tile_with_modifiers": [
+        "twm-40"
+      ]
+    },
+    "neighbor-53": {
+      "_sourceOffset": 6464,
+      "tile_with_modifiers": [
+        "twm-41"
+      ]
+    },
+    "neighbor-54": {
+      "_sourceOffset": 6473,
+      "tile_with_modifiers": [
+        "twm-42"
+      ]
+    },
+    "neighbor-55": {
+      "_sourceOffset": 6489,
+      "tile_with_modifiers": [
+        "twm-43"
+      ]
+    },
+    "neighbor-56": {
+      "_sourceOffset": 6535,
+      "tile_with_modifiers": [
+        "twm-44"
+      ]
+    },
+    "neighbor-57": {
+      "_sourceOffset": 6551,
+      "tile_with_modifiers": [
+        "twm-45"
+      ]
+    },
+    "neighbor-58": {
+      "_sourceOffset": 6590,
+      "tile_with_modifiers": [
+        "twm-46"
+      ]
+    },
+    "neighbor-59": {
+      "_sourceOffset": 6728,
+      "tile_with_modifiers": [
+        "twm-47"
+      ]
+    },
+    "neighbor-60": {
+      "_sourceOffset": 6736,
+      "tile_with_modifiers": [
+        "twm-48"
+      ]
+    },
+    "neighbor-61": {
+      "_sourceOffset": 6756,
+      "tile_with_modifiers": [
+        "twm-49"
+      ]
+    },
+    "neighbor-62": {
+      "_sourceOffset": 6851,
+      "tile_with_modifiers": [
+        "twm-50"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0"
+        ],
+        "_sourceOffset": 4025
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1"
+        ],
+        "_sourceOffset": 4033
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2"
+        ],
+        "_sourceOffset": 4037
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4050
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 4074
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4050
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 4074
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4050
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 4074
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4050
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 4074
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4100
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-5"
+        ],
+        "_sourceOffset": 4123
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4100
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-7"
+        ],
+        "_sourceOffset": 4123
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4100
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 4123
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 4100
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 4123
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4148
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 4170
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4148
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 4170
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4148
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 4170
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-12"
+        ],
+        "_sourceOffset": 4148
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13"
+        ],
+        "_sourceOffset": 4170
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4190
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 4212
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4190
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 4212
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4190
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 4212
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-14"
+        ],
+        "_sourceOffset": 4190
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 4212
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-16"
+        ],
+        "_sourceOffset": 4235
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-17"
+        ],
+        "_sourceOffset": 4250
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-18"
+        ],
+        "_sourceOffset": 4271
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-19"
+        ],
+        "_sourceOffset": 4285
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4310
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-21",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4330
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4362
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4382
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4411
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4431
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4462
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 4482
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4509
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4541
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4509
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4541
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4509
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4541
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4509
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4541
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4572
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4603
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4572
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4603
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4572
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4603
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4572
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4603
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4634
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4663
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4634
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4663
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4634
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4663
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4634
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4663
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4694
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4725
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4694
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4725
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4694
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4725
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-4",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4694
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-27",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4725
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4991
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5018
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4991
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5018
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4991
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5018
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-11",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 4991
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-28",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5018
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5037
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5062
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5037
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5062
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5037
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5062
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-9",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5037
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-29",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5062
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5081
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5104
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5081
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5104
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5081
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5104
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-5",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5081
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-30",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5104
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5123
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5148
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5123
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5148
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5123
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5148
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-25",
+          "neighbor-7",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5123
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-31",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 5148
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-32",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5175
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-34"
+        ],
+        "_sourceOffset": 5188
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-35",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5205
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-36"
+        ],
+        "_sourceOffset": 5218
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-37",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5233
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-38"
+        ],
+        "_sourceOffset": 5246
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-39",
+          "neighbor-33"
+        ],
+        "_sourceOffset": 5263
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-40"
+        ],
+        "_sourceOffset": 5276
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 5296
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 5315
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 5336
+      }
+    },
+    "bracket-122": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 5354
+      }
+    },
+    "bracket-123": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-38",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 5373
+      }
+    },
+    "bracket-124": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 5391
+      }
+    },
+    "bracket-125": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-40",
+          "neighbor-41"
+        ],
+        "_sourceOffset": 5412
+      }
+    },
+    "bracket-126": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-42"
+        ],
+        "_sourceOffset": 5430
+      }
+    },
+    "bracket-127": {
+      "Ellipsis": {
+        "direction": "Down",
+        "_sourceOffset": 5453,
+        "before_neighbors": [
+          "neighbor-38"
+        ],
+        "after_neighbors": [
+          "neighbor-1"
+        ]
+      }
+    },
+    "bracket-128": {
+      "Ellipsis": {
+        "direction": "Down",
+        "_sourceOffset": 5470,
+        "before_neighbors": [
+          "neighbor-38"
+        ],
+        "after_neighbors": [
+          "neighbor-43"
+        ]
+      }
+    },
+    "bracket-129": {
+      "Ellipsis": {
+        "direction": "Up",
+        "_sourceOffset": 5493,
+        "before_neighbors": [
+          "neighbor-40"
+        ],
+        "after_neighbors": [
+          "neighbor-1"
+        ]
+      }
+    },
+    "bracket-130": {
+      "Ellipsis": {
+        "direction": "Up",
+        "_sourceOffset": 5510,
+        "before_neighbors": [
+          "neighbor-40"
+        ],
+        "after_neighbors": [
+          "neighbor-44"
+        ]
+      }
+    },
+    "bracket-131": {
+      "Ellipsis": {
+        "direction": "Right",
+        "_sourceOffset": 5536,
+        "before_neighbors": [
+          "neighbor-36"
+        ],
+        "after_neighbors": [
+          "neighbor-1"
+        ]
+      }
+    },
+    "bracket-132": {
+      "Ellipsis": {
+        "direction": "Right",
+        "_sourceOffset": 5553,
+        "before_neighbors": [
+          "neighbor-36"
+        ],
+        "after_neighbors": [
+          "neighbor-45"
+        ]
+      }
+    },
+    "bracket-133": {
+      "Ellipsis": {
+        "direction": "Left",
+        "_sourceOffset": 5578,
+        "before_neighbors": [
+          "neighbor-34"
+        ],
+        "after_neighbors": [
+          "neighbor-1"
+        ]
+      }
+    },
+    "bracket-134": {
+      "Ellipsis": {
+        "direction": "Left",
+        "_sourceOffset": 5595,
+        "before_neighbors": [
+          "neighbor-34"
+        ],
+        "after_neighbors": [
+          "neighbor-46"
+        ]
+      }
+    },
+    "bracket-135": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-43",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5620
+      }
+    },
+    "bracket-136": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5639
+      }
+    },
+    "bracket-137": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5655
+      }
+    },
+    "bracket-138": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5674
+      }
+    },
+    "bracket-139": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-45",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5693
+      }
+    },
+    "bracket-140": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5712
+      }
+    },
+    "bracket-141": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-46",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5730
+      }
+    },
+    "bracket-142": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-1",
+          "neighbor-20"
+        ],
+        "_sourceOffset": 5749
+      }
+    },
+    "bracket-143": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-43"
+        ],
+        "_sourceOffset": 5764
+      }
+    },
+    "bracket-144": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-37"
+        ],
+        "_sourceOffset": 5772
+      }
+    },
+    "bracket-145": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44"
+        ],
+        "_sourceOffset": 5780
+      }
+    },
+    "bracket-146": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-39"
+        ],
+        "_sourceOffset": 5788
+      }
+    },
+    "bracket-147": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45"
+        ],
+        "_sourceOffset": 5796
+      }
+    },
+    "bracket-148": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-35"
+        ],
+        "_sourceOffset": 5804
+      }
+    },
+    "bracket-149": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-46"
+        ],
+        "_sourceOffset": 5812
+      }
+    },
+    "bracket-150": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-32"
+        ],
+        "_sourceOffset": 5820
+      }
+    },
+    "bracket-151": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47"
+        ],
+        "_sourceOffset": 6107
+      }
+    },
+    "bracket-152": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42"
+        ],
+        "_sourceOffset": 6121
+      }
+    },
+    "bracket-153": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-48"
+        ],
+        "_sourceOffset": 6140
+      }
+    },
+    "bracket-154": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-49"
+        ],
+        "_sourceOffset": 6156
+      }
+    },
+    "bracket-155": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 6296
+      }
+    },
+    "bracket-156": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4"
+        ],
+        "_sourceOffset": 6305
+      }
+    },
+    "bracket-157": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-50"
+        ],
+        "_sourceOffset": 6322
+      }
+    },
+    "bracket-158": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-51"
+        ],
+        "_sourceOffset": 6361
+      }
+    },
+    "bracket-159": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 6422
+      }
+    },
+    "bracket-160": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 6422
+      }
+    },
+    "bracket-161": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-9",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 6422
+      }
+    },
+    "bracket-162": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 6422
+      }
+    },
+    "bracket-163": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53"
+        ],
+        "_sourceOffset": 6463
+      }
+    },
+    "bracket-164": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6472
+      }
+    },
+    "bracket-165": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6488
+      }
+    },
+    "bracket-166": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6506
+      }
+    },
+    "bracket-167": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6488
+      }
+    },
+    "bracket-168": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6506
+      }
+    },
+    "bracket-169": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6488
+      }
+    },
+    "bracket-170": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6506
+      }
+    },
+    "bracket-171": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6488
+      }
+    },
+    "bracket-172": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 6506
+      }
+    },
+    "bracket-173": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-56",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 6534
+      }
+    },
+    "bracket-174": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-56",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 6544
+      }
+    },
+    "bracket-175": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 6569
+      }
+    },
+    "bracket-176": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 6581
+      }
+    },
+    "bracket-177": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 6654
+      }
+    },
+    "bracket-178": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-55",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 6663
+      }
+    },
+    "bracket-179": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 6688
+      }
+    },
+    "bracket-180": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-53",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 6698
+      }
+    },
+    "bracket-181": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6727
+      }
+    },
+    "bracket-182": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6747
+      }
+    },
+    "bracket-183": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6727
+      }
+    },
+    "bracket-184": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6747
+      }
+    },
+    "bracket-185": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6727
+      }
+    },
+    "bracket-186": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6747
+      }
+    },
+    "bracket-187": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6727
+      }
+    },
+    "bracket-188": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-59",
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6747
+      }
+    },
+    "bracket-189": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6766
+      }
+    },
+    "bracket-190": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6787
+      }
+    },
+    "bracket-191": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6766
+      }
+    },
+    "bracket-192": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6787
+      }
+    },
+    "bracket-193": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6766
+      }
+    },
+    "bracket-194": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6787
+      }
+    },
+    "bracket-195": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 6766
+      }
+    },
+    "bracket-196": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-61",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6787
+      }
+    },
+    "bracket-197": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-59"
+        ],
+        "_sourceOffset": 6814
+      }
+    },
+    "bracket-198": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-20"
+        ],
+        "_sourceOffset": 6825
+      }
+    },
+    "bracket-199": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-61"
+        ],
+        "_sourceOffset": 6838
+      }
+    },
+    "bracket-200": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-62"
+        ],
+        "_sourceOffset": 6850
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 4025,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Group": {
+        "rules": [
+          "rule-0"
+        ],
+        "_sourceOffset": 4025,
+        "random": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 4037,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Group": {
+        "rules": [
+          "rule-2"
+        ],
+        "_sourceOffset": 4037,
+        "random": false
+      }
+    },
+    "rule-4": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-3"
+        ],
+        "actions": [
+          "bracket-4"
+        ],
+        "commands": [],
+        "_sourceOffset": 4050,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-5"
+        ],
+        "actions": [
+          "bracket-6"
+        ],
+        "commands": [],
+        "_sourceOffset": 4050,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-7"
+        ],
+        "actions": [
+          "bracket-8"
+        ],
+        "commands": [],
+        "_sourceOffset": 4050,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-9"
+        ],
+        "actions": [
+          "bracket-10"
+        ],
+        "commands": [],
+        "_sourceOffset": 4050,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Group": {
+        "rules": [
+          "rule-4",
+          "rule-5",
+          "rule-6",
+          "rule-7"
+        ],
+        "_sourceOffset": 4050,
+        "random": false
+      }
+    },
+    "rule-9": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-11"
+        ],
+        "actions": [
+          "bracket-12"
+        ],
+        "commands": [],
+        "_sourceOffset": 4100,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-13"
+        ],
+        "actions": [
+          "bracket-14"
+        ],
+        "commands": [],
+        "_sourceOffset": 4100,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-15"
+        ],
+        "actions": [
+          "bracket-16"
+        ],
+        "commands": [],
+        "_sourceOffset": 4100,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-17"
+        ],
+        "actions": [
+          "bracket-18"
+        ],
+        "commands": [],
+        "_sourceOffset": 4100,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Group": {
+        "rules": [
+          "rule-9",
+          "rule-10",
+          "rule-11",
+          "rule-12"
+        ],
+        "_sourceOffset": 4100,
+        "random": false
+      }
+    },
+    "rule-14": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-19"
+        ],
+        "actions": [
+          "bracket-20"
+        ],
+        "commands": [],
+        "_sourceOffset": 4148,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-15": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-21"
+        ],
+        "actions": [
+          "bracket-22"
+        ],
+        "commands": [],
+        "_sourceOffset": 4148,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-23"
+        ],
+        "actions": [
+          "bracket-24"
+        ],
+        "commands": [],
+        "_sourceOffset": 4148,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-25"
+        ],
+        "actions": [
+          "bracket-26"
+        ],
+        "commands": [],
+        "_sourceOffset": 4148,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-18": {
+      "Group": {
+        "rules": [
+          "rule-14",
+          "rule-15",
+          "rule-16",
+          "rule-17"
+        ],
+        "_sourceOffset": 4148,
+        "random": false
+      }
+    },
+    "rule-19": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-27"
+        ],
+        "actions": [
+          "bracket-28"
+        ],
+        "commands": [],
+        "_sourceOffset": 4190,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-29"
+        ],
+        "actions": [
+          "bracket-30"
+        ],
+        "commands": [],
+        "_sourceOffset": 4190,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-31"
+        ],
+        "actions": [
+          "bracket-32"
+        ],
+        "commands": [],
+        "_sourceOffset": 4190,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-33"
+        ],
+        "actions": [
+          "bracket-34"
+        ],
+        "commands": [],
+        "_sourceOffset": 4190,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-23": {
+      "Group": {
+        "rules": [
+          "rule-19",
+          "rule-20",
+          "rule-21",
+          "rule-22"
+        ],
+        "_sourceOffset": 4190,
+        "random": false
+      }
+    },
+    "rule-24": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-35"
+        ],
+        "actions": [
+          "bracket-36"
+        ],
+        "commands": [],
+        "_sourceOffset": 4235,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-25": {
+      "Group": {
+        "rules": [
+          "rule-24"
+        ],
+        "_sourceOffset": 4235,
+        "random": false
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-37"
+        ],
+        "actions": [
+          "bracket-38"
+        ],
+        "commands": [],
+        "_sourceOffset": 4271,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Group": {
+        "rules": [
+          "rule-26"
+        ],
+        "_sourceOffset": 4271,
+        "random": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-39"
+        ],
+        "actions": [
+          "bracket-40"
+        ],
+        "commands": [],
+        "_sourceOffset": 4305,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Group": {
+        "rules": [
+          "rule-28"
+        ],
+        "_sourceOffset": 4305,
+        "random": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-41"
+        ],
+        "actions": [
+          "bracket-42"
+        ],
+        "commands": [],
+        "_sourceOffset": 4356,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Group": {
+        "rules": [
+          "rule-30"
+        ],
+        "_sourceOffset": 4356,
+        "random": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-43"
+        ],
+        "actions": [
+          "bracket-44"
+        ],
+        "commands": [],
+        "_sourceOffset": 4408,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Group": {
+        "rules": [
+          "rule-32"
+        ],
+        "_sourceOffset": 4408,
+        "random": false
+      }
+    },
+    "rule-34": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-45"
+        ],
+        "actions": [
+          "bracket-46"
+        ],
+        "commands": [],
+        "_sourceOffset": 4457,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-35": {
+      "Group": {
+        "rules": [
+          "rule-34"
+        ],
+        "_sourceOffset": 4457,
+        "random": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-47"
+        ],
+        "actions": [
+          "bracket-48"
+        ],
+        "commands": [],
+        "_sourceOffset": 4509,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-49"
+        ],
+        "actions": [
+          "bracket-50"
+        ],
+        "commands": [],
+        "_sourceOffset": 4509,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-51"
+        ],
+        "actions": [
+          "bracket-52"
+        ],
+        "commands": [],
+        "_sourceOffset": 4509,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-53"
+        ],
+        "actions": [
+          "bracket-54"
+        ],
+        "commands": [],
+        "_sourceOffset": 4509,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-40": {
+      "Group": {
+        "rules": [
+          "rule-36",
+          "rule-37",
+          "rule-38",
+          "rule-39"
+        ],
+        "_sourceOffset": 4509,
+        "random": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-55"
+        ],
+        "actions": [
+          "bracket-56"
+        ],
+        "commands": [],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-57"
+        ],
+        "actions": [
+          "bracket-58"
+        ],
+        "commands": [],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-59"
+        ],
+        "actions": [
+          "bracket-60"
+        ],
+        "commands": [],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-44": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-61"
+        ],
+        "actions": [
+          "bracket-62"
+        ],
+        "commands": [],
+        "_sourceOffset": 4572,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-45": {
+      "Group": {
+        "rules": [
+          "rule-41",
+          "rule-42",
+          "rule-43",
+          "rule-44"
+        ],
+        "_sourceOffset": 4572,
+        "random": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-63"
+        ],
+        "actions": [
+          "bracket-64"
+        ],
+        "commands": [],
+        "_sourceOffset": 4634,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-65"
+        ],
+        "actions": [
+          "bracket-66"
+        ],
+        "commands": [],
+        "_sourceOffset": 4634,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-67"
+        ],
+        "actions": [
+          "bracket-68"
+        ],
+        "commands": [],
+        "_sourceOffset": 4634,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-69"
+        ],
+        "actions": [
+          "bracket-70"
+        ],
+        "commands": [],
+        "_sourceOffset": 4634,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-50": {
+      "Group": {
+        "rules": [
+          "rule-46",
+          "rule-47",
+          "rule-48",
+          "rule-49"
+        ],
+        "_sourceOffset": 4634,
+        "random": false
+      }
+    },
+    "rule-51": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-71"
+        ],
+        "actions": [
+          "bracket-72"
+        ],
+        "commands": [],
+        "_sourceOffset": 4694,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-73"
+        ],
+        "actions": [
+          "bracket-74"
+        ],
+        "commands": [],
+        "_sourceOffset": 4694,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-75"
+        ],
+        "actions": [
+          "bracket-76"
+        ],
+        "commands": [],
+        "_sourceOffset": 4694,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-54": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-77"
+        ],
+        "actions": [
+          "bracket-78"
+        ],
+        "commands": [],
+        "_sourceOffset": 4694,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-55": {
+      "Group": {
+        "rules": [
+          "rule-51",
+          "rule-52",
+          "rule-53",
+          "rule-54"
+        ],
+        "_sourceOffset": 4694,
+        "random": false
+      }
+    },
+    "rule-56": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-79"
+        ],
+        "actions": [
+          "bracket-80"
+        ],
+        "commands": [],
+        "_sourceOffset": 4991,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-57": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-81"
+        ],
+        "actions": [
+          "bracket-82"
+        ],
+        "commands": [],
+        "_sourceOffset": 4991,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-58": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-83"
+        ],
+        "actions": [
+          "bracket-84"
+        ],
+        "commands": [],
+        "_sourceOffset": 4991,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-59": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-85"
+        ],
+        "actions": [
+          "bracket-86"
+        ],
+        "commands": [],
+        "_sourceOffset": 4991,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-60": {
+      "Group": {
+        "rules": [
+          "rule-56",
+          "rule-57",
+          "rule-58",
+          "rule-59"
+        ],
+        "_sourceOffset": 4991,
+        "random": false
+      }
+    },
+    "rule-61": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-87"
+        ],
+        "actions": [
+          "bracket-88"
+        ],
+        "commands": [],
+        "_sourceOffset": 5037,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-89"
+        ],
+        "actions": [
+          "bracket-90"
+        ],
+        "commands": [],
+        "_sourceOffset": 5037,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-91"
+        ],
+        "actions": [
+          "bracket-92"
+        ],
+        "commands": [],
+        "_sourceOffset": 5037,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-64": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-93"
+        ],
+        "actions": [
+          "bracket-94"
+        ],
+        "commands": [],
+        "_sourceOffset": 5037,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-65": {
+      "Group": {
+        "rules": [
+          "rule-61",
+          "rule-62",
+          "rule-63",
+          "rule-64"
+        ],
+        "_sourceOffset": 5037,
+        "random": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-95"
+        ],
+        "actions": [
+          "bracket-96"
+        ],
+        "commands": [],
+        "_sourceOffset": 5081,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-97"
+        ],
+        "actions": [
+          "bracket-98"
+        ],
+        "commands": [],
+        "_sourceOffset": 5081,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-99"
+        ],
+        "actions": [
+          "bracket-100"
+        ],
+        "commands": [],
+        "_sourceOffset": 5081,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-101"
+        ],
+        "actions": [
+          "bracket-102"
+        ],
+        "commands": [],
+        "_sourceOffset": 5081,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-70": {
+      "Group": {
+        "rules": [
+          "rule-66",
+          "rule-67",
+          "rule-68",
+          "rule-69"
+        ],
+        "_sourceOffset": 5081,
+        "random": false
+      }
+    },
+    "rule-71": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-103"
+        ],
+        "actions": [
+          "bracket-104"
+        ],
+        "commands": [],
+        "_sourceOffset": 5123,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-72": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-105"
+        ],
+        "actions": [
+          "bracket-106"
+        ],
+        "commands": [],
+        "_sourceOffset": 5123,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-73": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-107"
+        ],
+        "actions": [
+          "bracket-108"
+        ],
+        "commands": [],
+        "_sourceOffset": 5123,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-74": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-109"
+        ],
+        "actions": [
+          "bracket-110"
+        ],
+        "commands": [],
+        "_sourceOffset": 5123,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-75": {
+      "Group": {
+        "rules": [
+          "rule-71",
+          "rule-72",
+          "rule-73",
+          "rule-74"
+        ],
+        "_sourceOffset": 5123,
+        "random": false
+      }
+    },
+    "rule-76": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-111"
+        ],
+        "actions": [
+          "bracket-112"
+        ],
+        "commands": [],
+        "_sourceOffset": 5169,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-77": {
+      "Group": {
+        "rules": [
+          "rule-76"
+        ],
+        "_sourceOffset": 5169,
+        "random": false
+      }
+    },
+    "rule-78": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-113"
+        ],
+        "actions": [
+          "bracket-114"
+        ],
+        "commands": [],
+        "_sourceOffset": 5200,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-79": {
+      "Group": {
+        "rules": [
+          "rule-78"
+        ],
+        "_sourceOffset": 5200,
+        "random": false
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-115"
+        ],
+        "actions": [
+          "bracket-116"
+        ],
+        "commands": [],
+        "_sourceOffset": 5230,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Group": {
+        "rules": [
+          "rule-80"
+        ],
+        "_sourceOffset": 5230,
+        "random": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-117"
+        ],
+        "actions": [
+          "bracket-118"
+        ],
+        "commands": [],
+        "_sourceOffset": 5258,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Group": {
+        "rules": [
+          "rule-82"
+        ],
+        "_sourceOffset": 5258,
+        "random": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-119"
+        ],
+        "actions": [
+          "bracket-120"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 5290,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Group": {
+        "rules": [
+          "rule-84"
+        ],
+        "_sourceOffset": 5290,
+        "random": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-121"
+        ],
+        "actions": [
+          "bracket-122"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 5331,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Group": {
+        "rules": [
+          "rule-86"
+        ],
+        "_sourceOffset": 5331,
+        "random": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-123"
+        ],
+        "actions": [
+          "bracket-124"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 5370,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Group": {
+        "rules": [
+          "rule-88"
+        ],
+        "_sourceOffset": 5370,
+        "random": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-125"
+        ],
+        "actions": [
+          "bracket-126"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 5407,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Group": {
+        "rules": [
+          "rule-90"
+        ],
+        "_sourceOffset": 5407,
+        "random": false
+      }
+    },
+    "rule-92": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-127"
+        ],
+        "actions": [
+          "bracket-128"
+        ],
+        "commands": [],
+        "_sourceOffset": 5448,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-93": {
+      "Group": {
+        "rules": [
+          "rule-92"
+        ],
+        "_sourceOffset": 5448,
+        "random": false
+      }
+    },
+    "rule-94": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-129"
+        ],
+        "actions": [
+          "bracket-130"
+        ],
+        "commands": [],
+        "_sourceOffset": 5490,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-95": {
+      "Group": {
+        "rules": [
+          "rule-94"
+        ],
+        "_sourceOffset": 5490,
+        "random": false
+      }
+    },
+    "rule-96": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-131"
+        ],
+        "actions": [
+          "bracket-132"
+        ],
+        "commands": [],
+        "_sourceOffset": 5530,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-97": {
+      "Group": {
+        "rules": [
+          "rule-96"
+        ],
+        "_sourceOffset": 5530,
+        "random": false
+      }
+    },
+    "rule-98": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-133"
+        ],
+        "actions": [
+          "bracket-134"
+        ],
+        "commands": [],
+        "_sourceOffset": 5573,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-99": {
+      "Group": {
+        "rules": [
+          "rule-98"
+        ],
+        "_sourceOffset": 5573,
+        "random": false
+      }
+    },
+    "rule-100": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-135"
+        ],
+        "actions": [
+          "bracket-136"
+        ],
+        "commands": [],
+        "_sourceOffset": 5616,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-101": {
+      "Group": {
+        "rules": [
+          "rule-100"
+        ],
+        "_sourceOffset": 5616,
+        "random": false
+      }
+    },
+    "rule-102": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-137"
+        ],
+        "actions": [
+          "bracket-138"
+        ],
+        "commands": [],
+        "_sourceOffset": 5653,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-103": {
+      "Group": {
+        "rules": [
+          "rule-102"
+        ],
+        "_sourceOffset": 5653,
+        "random": false
+      }
+    },
+    "rule-104": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-139"
+        ],
+        "actions": [
+          "bracket-140"
+        ],
+        "commands": [],
+        "_sourceOffset": 5688,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-105": {
+      "Group": {
+        "rules": [
+          "rule-104"
+        ],
+        "_sourceOffset": 5688,
+        "random": false
+      }
+    },
+    "rule-106": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-141"
+        ],
+        "actions": [
+          "bracket-142"
+        ],
+        "commands": [],
+        "_sourceOffset": 5726,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-107": {
+      "Group": {
+        "rules": [
+          "rule-106"
+        ],
+        "_sourceOffset": 5726,
+        "random": false
+      }
+    },
+    "rule-108": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-143"
+        ],
+        "actions": [
+          "bracket-144"
+        ],
+        "commands": [],
+        "_sourceOffset": 5764,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-109": {
+      "Group": {
+        "rules": [
+          "rule-108"
+        ],
+        "_sourceOffset": 5764,
+        "random": false
+      }
+    },
+    "rule-110": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-145"
+        ],
+        "actions": [
+          "bracket-146"
+        ],
+        "commands": [],
+        "_sourceOffset": 5780,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-111": {
+      "Group": {
+        "rules": [
+          "rule-110"
+        ],
+        "_sourceOffset": 5780,
+        "random": false
+      }
+    },
+    "rule-112": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-147"
+        ],
+        "actions": [
+          "bracket-148"
+        ],
+        "commands": [],
+        "_sourceOffset": 5796,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-113": {
+      "Group": {
+        "rules": [
+          "rule-112"
+        ],
+        "_sourceOffset": 5796,
+        "random": false
+      }
+    },
+    "rule-114": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-149"
+        ],
+        "actions": [
+          "bracket-150"
+        ],
+        "commands": [],
+        "_sourceOffset": 5812,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-115": {
+      "Group": {
+        "rules": [
+          "rule-114"
+        ],
+        "_sourceOffset": 5812,
+        "random": false
+      }
+    },
+    "rule-116": {
+      "Group": {
+        "rules": [
+          "rule-76"
+        ],
+        "_sourceOffset": 5829,
+        "random": false
+      }
+    },
+    "rule-117": {
+      "Group": {
+        "rules": [
+          "rule-78"
+        ],
+        "_sourceOffset": 5860,
+        "random": false
+      }
+    },
+    "rule-118": {
+      "Group": {
+        "rules": [
+          "rule-80"
+        ],
+        "_sourceOffset": 5890,
+        "random": false
+      }
+    },
+    "rule-119": {
+      "Group": {
+        "rules": [
+          "rule-82"
+        ],
+        "_sourceOffset": 5918,
+        "random": false
+      }
+    },
+    "rule-120": {
+      "Group": {
+        "rules": [
+          "rule-84"
+        ],
+        "_sourceOffset": 5950,
+        "random": false
+      }
+    },
+    "rule-121": {
+      "Group": {
+        "rules": [
+          "rule-86"
+        ],
+        "_sourceOffset": 5991,
+        "random": false
+      }
+    },
+    "rule-122": {
+      "Group": {
+        "rules": [
+          "rule-88"
+        ],
+        "_sourceOffset": 6030,
+        "random": false
+      }
+    },
+    "rule-123": {
+      "Group": {
+        "rules": [
+          "rule-90"
+        ],
+        "_sourceOffset": 6067,
+        "random": false
+      }
+    },
+    "rule-124": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-151"
+        ],
+        "actions": [
+          "bracket-152"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 6107,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-125": {
+      "Group": {
+        "rules": [
+          "rule-124"
+        ],
+        "_sourceOffset": 6107,
+        "random": false
+      }
+    },
+    "rule-126": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-153"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 6135,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-127": {
+      "Group": {
+        "rules": [
+          "rule-126"
+        ],
+        "_sourceOffset": 6135,
+        "random": false
+      }
+    },
+    "rule-128": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-154"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 6152,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-129": {
+      "Group": {
+        "rules": [
+          "rule-128"
+        ],
+        "_sourceOffset": 6152,
+        "random": false
+      }
+    },
+    "rule-130": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-152",
+          "bracket-155"
+        ],
+        "actions": [
+          "bracket-156",
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 6289,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-131": {
+      "Group": {
+        "rules": [
+          "rule-130"
+        ],
+        "_sourceOffset": 6289,
+        "random": false
+      }
+    },
+    "rule-132": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-152",
+          "bracket-157"
+        ],
+        "actions": [
+          "bracket-35",
+          "bracket-157"
+        ],
+        "commands": [],
+        "_sourceOffset": 6315,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-133": {
+      "Group": {
+        "rules": [
+          "rule-132"
+        ],
+        "_sourceOffset": 6315,
+        "random": false
+      }
+    },
+    "rule-134": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-152",
+          "bracket-158"
+        ],
+        "actions": [
+          "bracket-37",
+          "bracket-158"
+        ],
+        "commands": [],
+        "_sourceOffset": 6354,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-135": {
+      "Group": {
+        "rules": [
+          "rule-134"
+        ],
+        "_sourceOffset": 6354,
+        "random": false
+      }
+    },
+    "rule-136": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-159"
+        ],
+        "actions": [
+          "bracket-159"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 6422,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-137": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-160"
+        ],
+        "actions": [
+          "bracket-160"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 6422,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-138": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-161"
+        ],
+        "actions": [
+          "bracket-161"
+        ],
+        "commands": [
+          "command-7"
+        ],
+        "_sourceOffset": 6422,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-139": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-162"
+        ],
+        "actions": [
+          "bracket-162"
+        ],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 6422,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-140": {
+      "Group": {
+        "rules": [
+          "rule-136",
+          "rule-137",
+          "rule-138",
+          "rule-139"
+        ],
+        "_sourceOffset": 6422,
+        "random": false
+      }
+    },
+    "rule-141": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-163"
+        ],
+        "actions": [
+          "bracket-164"
+        ],
+        "commands": [
+          "command-9"
+        ],
+        "_sourceOffset": 6463,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-142": {
+      "Group": {
+        "rules": [
+          "rule-141"
+        ],
+        "_sourceOffset": 6463,
+        "random": false
+      }
+    },
+    "rule-143": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-165"
+        ],
+        "actions": [
+          "bracket-166"
+        ],
+        "commands": [],
+        "_sourceOffset": 6488,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-144": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-167"
+        ],
+        "actions": [
+          "bracket-168"
+        ],
+        "commands": [],
+        "_sourceOffset": 6488,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-145": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-169"
+        ],
+        "actions": [
+          "bracket-170"
+        ],
+        "commands": [],
+        "_sourceOffset": 6488,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-146": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-171"
+        ],
+        "actions": [
+          "bracket-172"
+        ],
+        "commands": [],
+        "_sourceOffset": 6488,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-147": {
+      "Group": {
+        "rules": [
+          "rule-143",
+          "rule-144",
+          "rule-145",
+          "rule-146"
+        ],
+        "_sourceOffset": 6488,
+        "random": false
+      }
+    },
+    "rule-148": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-173"
+        ],
+        "actions": [
+          "bracket-174"
+        ],
+        "commands": [],
+        "_sourceOffset": 6526,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-149": {
+      "Group": {
+        "rules": [
+          "rule-148"
+        ],
+        "_sourceOffset": 6526,
+        "random": false
+      }
+    },
+    "rule-150": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-175"
+        ],
+        "actions": [
+          "bracket-176"
+        ],
+        "commands": [],
+        "_sourceOffset": 6561,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-151": {
+      "Group": {
+        "rules": [
+          "rule-150"
+        ],
+        "_sourceOffset": 6561,
+        "random": false
+      }
+    },
+    "rule-152": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-177"
+        ],
+        "actions": [
+          "bracket-178"
+        ],
+        "commands": [],
+        "_sourceOffset": 6646,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-153": {
+      "Group": {
+        "rules": [
+          "rule-152"
+        ],
+        "_sourceOffset": 6646,
+        "random": false
+      }
+    },
+    "rule-154": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-179"
+        ],
+        "actions": [
+          "bracket-180"
+        ],
+        "commands": [],
+        "_sourceOffset": 6680,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-155": {
+      "Group": {
+        "rules": [
+          "rule-154"
+        ],
+        "_sourceOffset": 6680,
+        "random": false
+      }
+    },
+    "rule-156": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-181"
+        ],
+        "actions": [
+          "bracket-182"
+        ],
+        "commands": [],
+        "_sourceOffset": 6727,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-157": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-183"
+        ],
+        "actions": [
+          "bracket-184"
+        ],
+        "commands": [],
+        "_sourceOffset": 6727,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-158": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-185"
+        ],
+        "actions": [
+          "bracket-186"
+        ],
+        "commands": [],
+        "_sourceOffset": 6727,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-159": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-187"
+        ],
+        "actions": [
+          "bracket-188"
+        ],
+        "commands": [],
+        "_sourceOffset": 6727,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-160": {
+      "Group": {
+        "rules": [
+          "rule-156",
+          "rule-157",
+          "rule-158",
+          "rule-159"
+        ],
+        "_sourceOffset": 6727,
+        "random": false
+      }
+    },
+    "rule-161": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-189"
+        ],
+        "actions": [
+          "bracket-190"
+        ],
+        "commands": [],
+        "_sourceOffset": 6766,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-162": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-191"
+        ],
+        "actions": [
+          "bracket-192"
+        ],
+        "commands": [],
+        "_sourceOffset": 6766,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-163": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-193"
+        ],
+        "actions": [
+          "bracket-194"
+        ],
+        "commands": [],
+        "_sourceOffset": 6766,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-164": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-195"
+        ],
+        "actions": [
+          "bracket-196"
+        ],
+        "commands": [],
+        "_sourceOffset": 6766,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-165": {
+      "Group": {
+        "rules": [
+          "rule-161",
+          "rule-162",
+          "rule-163",
+          "rule-164"
+        ],
+        "_sourceOffset": 6766,
+        "random": false
+      }
+    },
+    "rule-166": {
+      "Loop": {
+        "rules": [
+          "rule-160",
+          "rule-165"
+        ]
+      }
+    },
+    "rule-167": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-197"
+        ],
+        "actions": [
+          "bracket-198"
+        ],
+        "commands": [],
+        "_sourceOffset": 6814,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-168": {
+      "Group": {
+        "rules": [
+          "rule-167"
+        ],
+        "_sourceOffset": 6814,
+        "random": false
+      }
+    },
+    "rule-169": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-199"
+        ],
+        "actions": [
+          "bracket-200"
+        ],
+        "commands": [],
+        "_sourceOffset": 6838,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-170": {
+      "Group": {
+        "rules": [
+          "rule-169"
+        ],
+        "_sourceOffset": 6838,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "On": {
+        "_sourceOffset": 7004,
+        "qualifier": "All",
+        "tile": "tile-1",
+        "on_tile": "tile-28"
+      }
+    },
+    {
+      "On": {
+        "_sourceOffset": 7025,
+        "qualifier": "All",
+        "tile": "tile-28",
+        "on_tile": "tile-1"
+      }
+    },
+    {
+      "Simple": {
+        "_sourceOffset": 7047,
+        "qualifier": "Some",
+        "tile": "tile-28"
+      }
+    },
+    {
+      "Simple": {
+        "_sourceOffset": 7059,
+        "qualifier": "Some",
+        "tile": "tile-1"
+      }
+    }
+  ],
+  "rules": [
+    "rule-1",
+    "rule-3",
+    "rule-8",
+    "rule-13",
+    "rule-18",
+    "rule-23",
+    "rule-25",
+    "rule-27",
+    "rule-29",
+    "rule-31",
+    "rule-33",
+    "rule-35",
+    "rule-40",
+    "rule-45",
+    "rule-50",
+    "rule-55",
+    "rule-60",
+    "rule-65",
+    "rule-70",
+    "rule-75",
+    "rule-77",
+    "rule-79",
+    "rule-81",
+    "rule-83",
+    "rule-85",
+    "rule-87",
+    "rule-89",
+    "rule-91",
+    "rule-93",
+    "rule-95",
+    "rule-97",
+    "rule-99",
+    "rule-101",
+    "rule-103",
+    "rule-105",
+    "rule-107",
+    "rule-109",
+    "rule-111",
+    "rule-113",
+    "rule-115",
+    "rule-116",
+    "rule-117",
+    "rule-118",
+    "rule-119",
+    "rule-120",
+    "rule-121",
+    "rule-122",
+    "rule-123",
+    "rule-125",
+    "rule-127",
+    "rule-129",
+    "rule-131",
+    "rule-133",
+    "rule-135",
+    "rule-140",
+    "rule-142",
+    "rule-147",
+    "rule-149",
+    "rule-151",
+    "rule-153",
+    "rule-155",
+    "rule-166",
+    "rule-168",
+    "rule-170"
+  ],
+  "levels": [
+    {
+      "Message": {
+        "message": "level 1 of 6",
+        "_sourceOffset": 7260
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-43",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 7281
+      }
+    },
+    {
+      "Message": {
+        "message": "level 2 of 6",
+        "_sourceOffset": 7392
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-50"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-43",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-50",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 7413
+      }
+    },
+    {
+      "Message": {
+        "message": "level 3 of 6",
+        "_sourceOffset": 7524
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-43",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 7545
+      }
+    },
+    {
+      "Message": {
+        "message": "level 4 of 6",
+        "_sourceOffset": 7767
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-43",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-50",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-40",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 7788
+      }
+    },
+    {
+      "Message": {
+        "message": "level 5 of 6",
+        "_sourceOffset": 7899
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-50",
+            "tile-50",
+            "tile-43",
+            "tile-50",
+            "tile-50",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-50",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 7920
+      }
+    },
+    {
+      "Message": {
+        "message": "level 6 of 6",
+        "_sourceOffset": 8031
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50",
+            "tile-50"
+          ],
+          [
+            "tile-50",
+            "tile-39",
+            "tile-50",
+            "tile-50",
+            "tile-39",
+            "tile-50",
+            "tile-50",
+            "tile-39",
+            "tile-50"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-40",
+            "tile-40",
+            "tile-50",
+            "tile-50",
+            "tile-43",
+            "tile-50",
+            "tile-50",
+            "tile-40",
+            "tile-40"
+          ],
+          [
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-40",
+            "tile-40",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-40",
+            "tile-39",
+            "tile-40",
+            "tile-42",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-40",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-41",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-42",
+            "tile-39",
+            "tile-39"
+          ],
+          [
+            "tile-39",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-39",
+            "tile-39",
+            "tile-50",
+            "tile-39",
+            "tile-39"
+          ]
+        ],
+        "_sourceOffset": 8052
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51",
+            "tile-51"
+          ],
+          [
+            "tile-50",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-50"
+          ],
+          [
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46"
+          ],
+          [
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-47",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-48",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-48"
+          ],
+          [
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48",
+            "tile-48",
+            "tile-48",
+            "tile-46",
+            "tile-48",
+            "tile-46",
+            "tile-46",
+            "tile-48"
+          ],
+          [
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46"
+          ],
+          [
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46"
+          ],
+          [
+            "tile-50",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-46",
+            "tile-50"
+          ]
+        ],
+        "_sourceOffset": 8276
+      }
+    }
+  ]
+}

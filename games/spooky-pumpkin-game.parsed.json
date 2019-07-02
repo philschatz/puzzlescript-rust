@@ -1,0 +1,6573 @@
+{
+  "version": 1,
+  "title": "Spooky Pumpkin Game",
+  "metadata": {
+    "author": "Alan Hazelden",
+    "homepage": "www.draknek.org",
+    "youtube": null,
+    "zoomscreen": null,
+    "flickscreen": null,
+    "color_palette": null,
+    "background_color": null,
+    "text_color": null,
+    "realtime_interval": 0.15,
+    "key_repeat_interval": 0.25,
+    "again_interval": 0.1,
+    "no_action": true,
+    "no_undo": false,
+    "run_rules_on_level_start": true,
+    "no_repeat_action": false,
+    "throttle_movement": false,
+    "no_restart": false,
+    "require_player_movement": false,
+    "verbose_logging": false
+  },
+  "colors": {
+    "#a3ce27": "#a3ce27",
+    "#a46422": "#a46422",
+    "#f2a342": "#f2a342",
+    "#eb8931": "#eb8931",
+    "#e46f20": "#e46f20",
+    "#5e3714": "#5e3714",
+    "#FFFFFF": "#FFFFFF",
+    "#f7e26b": "#f7e26b",
+    "#be2633": "#be2633",
+    "#000000": "#000000",
+    "#732930": "#732930",
+    "#9d9d9d": "#9d9d9d",
+    "#493c2b": "#493c2b",
+    "#1B2632": "#1B2632",
+    "#697175": "#697175",
+    "#3c361a": "#3c361a",
+    "#50533f": "#50533f"
+  },
+  "sounds": {
+    "sound-0": {
+      "SpriteMove": {
+        "sprite": "tile-0",
+        "soundCode": 67518907,
+        "_sourceOffset": 2511
+      }
+    },
+    "sound-1": {
+      "SpriteMove": {
+        "sprite": "tile-1",
+        "soundCode": 71614907,
+        "_sourceOffset": 2533
+      }
+    },
+    "sound-2": {
+      "SpriteEvent": {
+        "sprite": "tile-2",
+        "eventEnum": "CREATE",
+        "soundCode": 46154308,
+        "_sourceOffset": 2556
+      }
+    },
+    "sound-3": {
+      "Sfx": {
+        "soundEffect": "SFX0",
+        "soundCode": 46154308,
+        "_sourceOffset": 2579
+      }
+    },
+    "sound-4": {
+      "SpriteMove": {
+        "sprite": "tile-3",
+        "soundCode": 93617507,
+        "_sourceOffset": 2594
+      }
+    },
+    "sound-5": {
+      "Sfx": {
+        "soundEffect": "SFX1",
+        "soundCode": 93617507,
+        "_sourceOffset": 2615
+      }
+    },
+    "sound-6": {
+      "Sfx": {
+        "soundEffect": "SFX2",
+        "soundCode": 68280908,
+        "_sourceOffset": 2645
+      }
+    },
+    "sound-7": {
+      "When": {
+        "when": "ENDLEVEL",
+        "soundCode": 67922308,
+        "_sourceOffset": 2674
+      }
+    }
+  },
+  "collision_layers": [
+    {
+      "id": 2896,
+      "_sourceOffset": 2764
+    },
+    {
+      "id": 2897,
+      "_sourceOffset": 2775
+    },
+    {
+      "id": 2898,
+      "_sourceOffset": 2787
+    },
+    {
+      "id": 2899,
+      "_sourceOffset": 2799
+    },
+    {
+      "id": 2900,
+      "_sourceOffset": 2829
+    },
+    {
+      "id": 2901,
+      "_sourceOffset": 0
+    }
+  ],
+  "commands": {
+    "command-0": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3017
+      }
+    },
+    "command-1": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3017
+      }
+    },
+    "command-2": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3017
+      }
+    },
+    "command-3": {
+      "Sfx": {
+        "sound": "sound-6",
+        "_sourceOffset": 3017
+      }
+    },
+    "command-4": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3086
+      }
+    },
+    "command-5": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3086
+      }
+    },
+    "command-6": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3086
+      }
+    },
+    "command-7": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3086
+      }
+    },
+    "command-8": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3294
+      }
+    },
+    "command-9": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3294
+      }
+    },
+    "command-10": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3294
+      }
+    },
+    "command-11": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3294
+      }
+    },
+    "command-12": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3391
+      }
+    },
+    "command-13": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3391
+      }
+    },
+    "command-14": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3391
+      }
+    },
+    "command-15": {
+      "Sfx": {
+        "sound": "sound-5",
+        "_sourceOffset": 3391
+      }
+    },
+    "command-16": {
+      "Cancel": {
+        "_sourceOffset": 3434
+      }
+    },
+    "command-17": {
+      "Cancel": {
+        "_sourceOffset": 3489
+      }
+    },
+    "command-18": {
+      "Cancel": {
+        "_sourceOffset": 3530
+      }
+    },
+    "command-19": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 3621
+      }
+    },
+    "command-20": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 3621
+      }
+    },
+    "command-21": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 3621
+      }
+    },
+    "command-22": {
+      "Sfx": {
+        "sound": "sound-3",
+        "_sourceOffset": 3621
+      }
+    },
+    "command-23": {
+      "Again": {
+        "_sourceOffset": 3668
+      }
+    },
+    "command-24": {
+      "Again": {
+        "_sourceOffset": 3713
+      }
+    },
+    "command-25": {
+      "Again": {
+        "_sourceOffset": 3828
+      }
+    },
+    "command-26": {
+      "Again": {
+        "_sourceOffset": 3892
+      }
+    }
+  },
+  "sprites": {
+    "sprite-0": {
+      "name": "Player",
+      "pixels": [
+        [
+          null,
+          null,
+          "#a3ce27",
+          null,
+          null
+        ],
+        [
+          "#a46422",
+          "#f2a342",
+          "#eb8931",
+          "#eb8931",
+          "#a46422"
+        ],
+        [
+          "#a46422",
+          "#eb8931",
+          "#eb8931",
+          "#e46f20",
+          "#a46422"
+        ],
+        [
+          null,
+          "#eb8931",
+          "#e46f20",
+          "#e46f20",
+          null
+        ],
+        [
+          null,
+          "#a46422",
+          null,
+          "#a46422",
+          null
+        ]
+      ],
+      "_sourceOffset": 313,
+      "collision_layer": 2899
+    },
+    "sprite-1": {
+      "name": "UnlitPumpkinAndCandle",
+      "pixels": [
+        [
+          null,
+          "#f2a342",
+          "#f2a342",
+          "#eb8931",
+          null
+        ],
+        [
+          "#f2a342",
+          "#5e3714",
+          "#eb8931",
+          "#5e3714",
+          "#e46f20"
+        ],
+        [
+          "#f2a342",
+          "#eb8931",
+          "#eb8931",
+          "#e46f20",
+          "#e46f20"
+        ],
+        [
+          "#eb8931",
+          "#5e3714",
+          "#FFFFFF",
+          "#5e3714",
+          "#e46f20"
+        ],
+        [
+          null,
+          "#e46f20",
+          "#e46f20",
+          "#e46f20",
+          null
+        ]
+      ],
+      "_sourceOffset": 468,
+      "collision_layer": 2899
+    },
+    "sprite-2": {
+      "name": "LitPumpkin",
+      "pixels": [
+        [
+          null,
+          "#f2a342",
+          "#f2a342",
+          "#eb8931",
+          null
+        ],
+        [
+          "#f2a342",
+          "#f7e26b",
+          "#eb8931",
+          "#f7e26b",
+          "#e46f20"
+        ],
+        [
+          "#f2a342",
+          "#eb8931",
+          "#eb8931",
+          "#e46f20",
+          "#e46f20"
+        ],
+        [
+          "#eb8931",
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          "#e46f20"
+        ],
+        [
+          null,
+          "#e46f20",
+          "#e46f20",
+          "#e46f20",
+          null
+        ]
+      ],
+      "_sourceOffset": 559,
+      "collision_layer": 2899
+    },
+    "sprite-3": {
+      "name": "EmptyPumpkin",
+      "pixels": [
+        [
+          null,
+          "#f2a342",
+          "#f2a342",
+          "#eb8931",
+          null
+        ],
+        [
+          "#f2a342",
+          "#5e3714",
+          "#eb8931",
+          "#5e3714",
+          "#e46f20"
+        ],
+        [
+          "#f2a342",
+          "#eb8931",
+          "#eb8931",
+          "#e46f20",
+          "#e46f20"
+        ],
+        [
+          "#eb8931",
+          "#5e3714",
+          "#5e3714",
+          "#5e3714",
+          "#e46f20"
+        ],
+        [
+          null,
+          "#e46f20",
+          "#e46f20",
+          "#e46f20",
+          null
+        ]
+      ],
+      "_sourceOffset": 392,
+      "collision_layer": 2899
+    },
+    "sprite-4": {
+      "name": "LitWeb",
+      "pixels": [
+        [
+          "#f7e26b",
+          null,
+          null,
+          null,
+          "#f7e26b"
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          null,
+          "#f7e26b"
+        ],
+        [
+          null,
+          "#f7e26b",
+          null,
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          null,
+          null,
+          "#f7e26b"
+        ],
+        [
+          "#f7e26b",
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ]
+      ],
+      "_sourceOffset": 678,
+      "collision_layer": 2900
+    },
+    "sprite-5": {
+      "name": "LitCandle1",
+      "pixels": [
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#be2633",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#FFFFFF",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ]
+      ],
+      "_sourceOffset": 723,
+      "collision_layer": 2899
+    },
+    "sprite-6": {
+      "name": "LitCandle2",
+      "pixels": [
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#eb8931",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#FFFFFF",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ]
+      ],
+      "_sourceOffset": 788,
+      "collision_layer": 2899
+    },
+    "sprite-7": {
+      "name": "LitCandle3",
+      "pixels": [
+        [
+          null,
+          "#f7e26b",
+          "#f7e26b",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#732930",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          "#f7e26b",
+          "#FFFFFF",
+          "#f7e26b",
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#000000",
+          "#000000",
+          "#000000",
+          null
+        ]
+      ],
+      "_sourceOffset": 856,
+      "collision_layer": 2899
+    },
+    "sprite-8": {
+      "name": "UnlitCandle",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#9d9d9d",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#FFFFFF",
+          null,
+          null
+        ],
+        [
+          null,
+          "#493c2b",
+          "#493c2b",
+          "#493c2b",
+          null
+        ]
+      ],
+      "_sourceOffset": 925,
+      "collision_layer": 2899
+    },
+    "sprite-9": {
+      "name": "Background",
+      "pixels": [
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#1B2632",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#1B2632",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000",
+          "#000000"
+        ],
+        [
+          "#000000",
+          "#1B2632",
+          "#000000",
+          "#000000",
+          "#000000"
+        ]
+      ],
+      "_sourceOffset": 206,
+      "collision_layer": 2896
+    },
+    "sprite-10": {
+      "name": "Wall",
+      "pixels": [
+        [
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175",
+          "#697175",
+          "#697175"
+        ],
+        [
+          "#697175",
+          "#697175",
+          "#697175",
+          "#9d9d9d",
+          "#697175"
+        ],
+        [
+          "#9d9d9d",
+          "#697175",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175"
+        ],
+        [
+          "#697175",
+          "#697175",
+          "#697175",
+          "#697175",
+          "#9d9d9d"
+        ],
+        [
+          "#697175",
+          "#9d9d9d",
+          "#9d9d9d",
+          "#697175",
+          "#697175"
+        ]
+      ],
+      "_sourceOffset": 263,
+      "collision_layer": 2899
+    },
+    "sprite-11": {
+      "name": "UnlitWeb",
+      "pixels": [
+        [
+          "#FFFFFF",
+          null,
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          null,
+          "#FFFFFF"
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          null
+        ],
+        [
+          null,
+          "#FFFFFF",
+          null,
+          null,
+          "#FFFFFF"
+        ],
+        [
+          "#FFFFFF",
+          null,
+          "#FFFFFF",
+          "#FFFFFF",
+          null
+        ]
+      ],
+      "_sourceOffset": 632,
+      "collision_layer": 2900
+    },
+    "sprite-12": {
+      "name": "LightHere",
+      "pixels": [
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#50533f",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 989,
+      "collision_layer": 2897
+    },
+    "sprite-13": {
+      "name": "LightL1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#50533f",
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1046,
+      "collision_layer": 2897
+    },
+    "sprite-14": {
+      "name": "LightL2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#50533f",
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1101,
+      "collision_layer": 2897
+    },
+    "sprite-15": {
+      "name": "LightR1",
+      "pixels": [
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#50533f",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1156,
+      "collision_layer": 2897
+    },
+    "sprite-16": {
+      "name": "LightR2",
+      "pixels": [
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#50533f",
+          "#3c361a",
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1211,
+      "collision_layer": 2897
+    },
+    "sprite-17": {
+      "name": "LightLR1",
+      "pixels": [
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          "#50533f",
+          "#3c361a",
+          null,
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          "#50533f",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1266,
+      "collision_layer": 2897
+    },
+    "sprite-18": {
+      "name": "LightLR2",
+      "pixels": [
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          "#50533f",
+          "#3c361a",
+          null,
+          null,
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          "#50533f",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          "#3c361a",
+          null,
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          "#3c361a",
+          null,
+          null,
+          null,
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1322,
+      "collision_layer": 2897
+    },
+    "sprite-19": {
+      "name": "LightU1",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#3c361a",
+          "#3c361a",
+          null
+        ],
+        [
+          "#3c361a",
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1378,
+      "collision_layer": 2898
+    },
+    "sprite-20": {
+      "name": "LightU2",
+      "pixels": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#3c361a",
+          "#3c361a",
+          null,
+          null
+        ],
+        [
+          "#3c361a",
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1433,
+      "collision_layer": 2898
+    },
+    "sprite-21": {
+      "name": "LightD1",
+      "pixels": [
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          "#3c361a",
+          "#3c361a",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1488,
+      "collision_layer": 2898
+    },
+    "sprite-22": {
+      "name": "LightD2",
+      "pixels": [
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          null,
+          "#3c361a",
+          "#3c361a",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "_sourceOffset": 1543,
+      "collision_layer": 2898
+    },
+    "sprite-23": {
+      "name": "LightUD1",
+      "pixels": [
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          "#3c361a",
+          "#3c361a",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          null
+        ],
+        [
+          "#3c361a",
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1598,
+      "collision_layer": 2898
+    },
+    "sprite-24": {
+      "name": "LightUD2",
+      "pixels": [
+        [
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ],
+        [
+          null,
+          "#3c361a",
+          "#3c361a",
+          "#3c361a",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "#3c361a",
+          "#3c361a",
+          null
+        ],
+        [
+          "#3c361a",
+          "#50533f",
+          "#3c361a",
+          "#3c361a",
+          "#3c361a"
+        ]
+      ],
+      "_sourceOffset": 1654,
+      "collision_layer": 2898
+    }
+  },
+  "tiles": {
+    "tile-0": {
+      "Sprite": {
+        "name": "Player",
+        "sprite": "sprite-0",
+        "_sourceOffset": 313,
+        "collision_layer": 2899
+      }
+    },
+    "tile-1": {
+      "Or": {
+        "name": "Pumpkin",
+        "sprites": [
+          "sprite-1",
+          "sprite-2",
+          "sprite-3"
+        ],
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 2013
+      }
+    },
+    "tile-2": {
+      "Sprite": {
+        "name": "LitWeb",
+        "sprite": "sprite-4",
+        "_sourceOffset": 678,
+        "collision_layer": 2900
+      }
+    },
+    "tile-3": {
+      "Or": {
+        "name": "Candle",
+        "sprites": [
+          "sprite-5",
+          "sprite-6",
+          "sprite-7",
+          "sprite-8"
+        ],
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1979
+      }
+    },
+    "tile-4": {
+      "Sprite": {
+        "name": "EmptyPumpkin",
+        "sprite": "sprite-3",
+        "_sourceOffset": 392,
+        "collision_layer": 2899
+      }
+    },
+    "tile-5": {
+      "Or": {
+        "name": "LitCandle",
+        "sprites": [
+          "sprite-7",
+          "sprite-6",
+          "sprite-5"
+        ],
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1927
+      }
+    },
+    "tile-6": {
+      "Sprite": {
+        "name": "LitPumpkin",
+        "sprite": "sprite-2",
+        "_sourceOffset": 559,
+        "collision_layer": 2899
+      }
+    },
+    "tile-7": {
+      "Sprite": {
+        "name": "UnlitCandle",
+        "sprite": "sprite-8",
+        "_sourceOffset": 925,
+        "collision_layer": 2899
+      }
+    },
+    "tile-8": {
+      "Sprite": {
+        "name": "UnlitPumpkinAndCandle",
+        "sprite": "sprite-1",
+        "_sourceOffset": 468,
+        "collision_layer": 2899
+      }
+    },
+    "tile-9": {
+      "Or": {
+        "name": "Solid",
+        "sprites": [
+          "sprite-10",
+          "sprite-3",
+          "sprite-2",
+          "sprite-1",
+          "sprite-8",
+          "sprite-7",
+          "sprite-6",
+          "sprite-5"
+        ],
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 2139
+      }
+    },
+    "tile-10": {
+      "Sprite": {
+        "name": "LitCandle1",
+        "sprite": "sprite-5",
+        "_sourceOffset": 723,
+        "collision_layer": 2899
+      }
+    },
+    "tile-11": {
+      "Or": {
+        "name": "LitCandleOrWeb",
+        "sprites": [
+          "sprite-4",
+          "sprite-5",
+          "sprite-6",
+          "sprite-7"
+        ],
+        "collisionLayers": [
+          2900,
+          2899
+        ],
+        "_sourceOffset": 2101
+      }
+    },
+    "tile-12": {
+      "Sprite": {
+        "name": "UnlitWeb",
+        "sprite": "sprite-11",
+        "_sourceOffset": 632,
+        "collision_layer": 2900
+      }
+    },
+    "tile-13": {
+      "Or": {
+        "name": "Lighting",
+        "sprites": [
+          "sprite-20",
+          "sprite-19",
+          "sprite-22",
+          "sprite-21",
+          "sprite-24",
+          "sprite-23",
+          "sprite-18",
+          "sprite-14",
+          "sprite-13",
+          "sprite-16",
+          "sprite-15",
+          "sprite-17",
+          "sprite-12"
+        ],
+        "collisionLayers": [
+          2898,
+          2897
+        ],
+        "_sourceOffset": 2447
+      }
+    },
+    "tile-14": {
+      "Sprite": {
+        "name": "LightHere",
+        "sprite": "sprite-12",
+        "_sourceOffset": 989,
+        "collision_layer": 2897
+      }
+    },
+    "tile-15": {
+      "Or": {
+        "name": "LightU",
+        "sprites": [
+          "sprite-20",
+          "sprite-19"
+        ],
+        "collisionLayers": [
+          2898
+        ],
+        "_sourceOffset": 2262
+      }
+    },
+    "tile-16": {
+      "Or": {
+        "name": "LightD",
+        "sprites": [
+          "sprite-22",
+          "sprite-21"
+        ],
+        "collisionLayers": [
+          2898
+        ],
+        "_sourceOffset": 2290
+      }
+    },
+    "tile-17": {
+      "Or": {
+        "name": "LightUD",
+        "sprites": [
+          "sprite-24",
+          "sprite-23"
+        ],
+        "collisionLayers": [
+          2898
+        ],
+        "_sourceOffset": 2318
+      }
+    },
+    "tile-18": {
+      "Or": {
+        "name": "LightL",
+        "sprites": [
+          "sprite-14",
+          "sprite-13"
+        ],
+        "collisionLayers": [
+          2897
+        ],
+        "_sourceOffset": 2174
+      }
+    },
+    "tile-19": {
+      "Or": {
+        "name": "LightR",
+        "sprites": [
+          "sprite-16",
+          "sprite-15"
+        ],
+        "collisionLayers": [
+          2897
+        ],
+        "_sourceOffset": 2202
+      }
+    },
+    "tile-20": {
+      "Or": {
+        "name": "LightLR",
+        "sprites": [
+          "sprite-18",
+          "sprite-17"
+        ],
+        "collisionLayers": [
+          2897
+        ],
+        "_sourceOffset": 2230
+      }
+    },
+    "tile-21": {
+      "Simple": {
+        "name": ".",
+        "sprite": "sprite-9",
+        "collisionLayers": [
+          2896
+        ],
+        "_sourceOffset": 1736
+      }
+    },
+    "tile-22": {
+      "Simple": {
+        "name": "#",
+        "sprite": "sprite-10",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1751
+      }
+    },
+    "tile-23": {
+      "Simple": {
+        "name": "P",
+        "sprite": "sprite-0",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1760
+      }
+    },
+    "tile-24": {
+      "Simple": {
+        "name": "*",
+        "sprite": "sprite-5",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1771
+      }
+    },
+    "tile-25": {
+      "Simple": {
+        "name": "|",
+        "sprite": "sprite-8",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1786
+      }
+    },
+    "tile-26": {
+      "Simple": {
+        "name": "O",
+        "sprite": "sprite-3",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1802
+      }
+    },
+    "tile-27": {
+      "Simple": {
+        "name": "@",
+        "sprite": "sprite-2",
+        "collisionLayers": [
+          2899
+        ],
+        "_sourceOffset": 1819
+      }
+    },
+    "tile-28": {
+      "Simple": {
+        "name": "W",
+        "sprite": "sprite-11",
+        "collisionLayers": [
+          2900
+        ],
+        "_sourceOffset": 1834
+      }
+    },
+    "tile-29": {
+      "And": {
+        "name": "X",
+        "sprites": [
+          "sprite-11",
+          "sprite-10"
+        ],
+        "collisionLayers": [
+          2900,
+          2899
+        ],
+        "_sourceOffset": 1847
+      }
+    },
+    "tile-30": {
+      "Or": {
+        "name": "Web",
+        "sprites": [
+          "sprite-4",
+          "sprite-11"
+        ],
+        "collisionLayers": [
+          2900
+        ],
+        "_sourceOffset": 2075
+      }
+    },
+    "tile-31": {
+      "Or": {
+        "name": "LightLayer1",
+        "sprites": [
+          "sprite-17",
+          "sprite-18",
+          "sprite-15",
+          "sprite-16",
+          "sprite-13",
+          "sprite-14",
+          "sprite-12"
+        ],
+        "collisionLayers": [
+          2897
+        ],
+        "_sourceOffset": 2350
+      }
+    },
+    "tile-32": {
+      "Or": {
+        "name": "LightLayer2",
+        "sprites": [
+          "sprite-23",
+          "sprite-24",
+          "sprite-21",
+          "sprite-22",
+          "sprite-19",
+          "sprite-20"
+        ],
+        "collisionLayers": [
+          2898
+        ],
+        "_sourceOffset": 2405
+      }
+    }
+  },
+  "tiles_with_modifiers": {
+    "twm-0": {
+      "direction": "Up",
+      "tile": "tile-0",
+      "_sourceOffset": 2857,
+      "random": false,
+      "negated": false
+    },
+    "twm-1": {
+      "direction": null,
+      "tile": "tile-4",
+      "_sourceOffset": 2868,
+      "random": false,
+      "negated": false
+    },
+    "twm-2": {
+      "direction": "Up",
+      "tile": "tile-4",
+      "_sourceOffset": 2899,
+      "random": false,
+      "negated": false
+    },
+    "twm-3": {
+      "direction": "Down",
+      "tile": "tile-0",
+      "_sourceOffset": 2857,
+      "random": false,
+      "negated": false
+    },
+    "twm-4": {
+      "direction": "Down",
+      "tile": "tile-4",
+      "_sourceOffset": 2899,
+      "random": false,
+      "negated": false
+    },
+    "twm-5": {
+      "direction": "Left",
+      "tile": "tile-0",
+      "_sourceOffset": 2857,
+      "random": false,
+      "negated": false
+    },
+    "twm-6": {
+      "direction": "Left",
+      "tile": "tile-4",
+      "_sourceOffset": 2899,
+      "random": false,
+      "negated": false
+    },
+    "twm-7": {
+      "direction": "Right",
+      "tile": "tile-0",
+      "_sourceOffset": 2857,
+      "random": false,
+      "negated": false
+    },
+    "twm-8": {
+      "direction": "Right",
+      "tile": "tile-4",
+      "_sourceOffset": 2899,
+      "random": false,
+      "negated": false
+    },
+    "twm-9": {
+      "direction": null,
+      "tile": "tile-3",
+      "_sourceOffset": 2929,
+      "random": false,
+      "negated": false
+    },
+    "twm-10": {
+      "direction": "Up",
+      "tile": "tile-3",
+      "_sourceOffset": 2954,
+      "random": false,
+      "negated": false
+    },
+    "twm-11": {
+      "direction": "Down",
+      "tile": "tile-3",
+      "_sourceOffset": 2954,
+      "random": false,
+      "negated": false
+    },
+    "twm-12": {
+      "direction": "Left",
+      "tile": "tile-3",
+      "_sourceOffset": 2954,
+      "random": false,
+      "negated": false
+    },
+    "twm-13": {
+      "direction": "Right",
+      "tile": "tile-3",
+      "_sourceOffset": 2954,
+      "random": false,
+      "negated": false
+    },
+    "twm-14": {
+      "direction": "Up",
+      "tile": "tile-5",
+      "_sourceOffset": 2968,
+      "random": false,
+      "negated": false
+    },
+    "twm-15": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3004,
+      "random": false,
+      "negated": false
+    },
+    "twm-16": {
+      "direction": "Down",
+      "tile": "tile-5",
+      "_sourceOffset": 2968,
+      "random": false,
+      "negated": false
+    },
+    "twm-17": {
+      "direction": "Left",
+      "tile": "tile-5",
+      "_sourceOffset": 2968,
+      "random": false,
+      "negated": false
+    },
+    "twm-18": {
+      "direction": "Right",
+      "tile": "tile-5",
+      "_sourceOffset": 2968,
+      "random": false,
+      "negated": false
+    },
+    "twm-19": {
+      "direction": "Up",
+      "tile": "tile-7",
+      "_sourceOffset": 3024,
+      "random": false,
+      "negated": false
+    },
+    "twm-20": {
+      "direction": null,
+      "tile": "tile-8",
+      "_sourceOffset": 3062,
+      "random": false,
+      "negated": false
+    },
+    "twm-21": {
+      "direction": "Down",
+      "tile": "tile-7",
+      "_sourceOffset": 3024,
+      "random": false,
+      "negated": false
+    },
+    "twm-22": {
+      "direction": "Left",
+      "tile": "tile-7",
+      "_sourceOffset": 3024,
+      "random": false,
+      "negated": false
+    },
+    "twm-23": {
+      "direction": "Right",
+      "tile": "tile-7",
+      "_sourceOffset": 3024,
+      "random": false,
+      "negated": false
+    },
+    "twm-24": {
+      "direction": "Stationary",
+      "tile": "tile-3",
+      "_sourceOffset": 3167,
+      "random": false,
+      "negated": false
+    },
+    "twm-25": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3241,
+      "random": false,
+      "negated": true
+    },
+    "twm-26": {
+      "direction": null,
+      "tile": "tile-0",
+      "_sourceOffset": 3257,
+      "random": false,
+      "negated": false
+    },
+    "twm-27": {
+      "direction": null,
+      "tile": "tile-10",
+      "_sourceOffset": 3281,
+      "random": false,
+      "negated": false
+    },
+    "twm-28": {
+      "direction": null,
+      "tile": "tile-7",
+      "_sourceOffset": 3377,
+      "random": false,
+      "negated": false
+    },
+    "twm-29": {
+      "direction": null,
+      "tile": "tile-9",
+      "_sourceOffset": 3423,
+      "random": false,
+      "negated": false
+    },
+    "twm-30": {
+      "direction": "Up",
+      "tile": "tile-9",
+      "_sourceOffset": 3498,
+      "random": false,
+      "negated": false
+    },
+    "twm-31": {
+      "direction": "Stationary",
+      "tile": "tile-9",
+      "_sourceOffset": 3508,
+      "random": false,
+      "negated": false
+    },
+    "twm-32": {
+      "direction": "Down",
+      "tile": "tile-9",
+      "_sourceOffset": 3498,
+      "random": false,
+      "negated": false
+    },
+    "twm-33": {
+      "direction": "Left",
+      "tile": "tile-9",
+      "_sourceOffset": 3498,
+      "random": false,
+      "negated": false
+    },
+    "twm-34": {
+      "direction": "Right",
+      "tile": "tile-9",
+      "_sourceOffset": 3498,
+      "random": false,
+      "negated": false
+    },
+    "twm-35": {
+      "direction": null,
+      "tile": "tile-11",
+      "_sourceOffset": 3555,
+      "random": false,
+      "negated": false
+    },
+    "twm-36": {
+      "direction": null,
+      "tile": "tile-12",
+      "_sourceOffset": 3699,
+      "random": false,
+      "negated": false
+    },
+    "twm-37": {
+      "direction": "Stationary",
+      "tile": "tile-0",
+      "_sourceOffset": 3759,
+      "random": false,
+      "negated": false
+    },
+    "twm-38": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 3801,
+      "random": false,
+      "negated": false
+    },
+    "twm-39": {
+      "direction": "Action",
+      "tile": "tile-0",
+      "_sourceOffset": 3812,
+      "random": false,
+      "negated": false
+    },
+    "twm-40": {
+      "direction": null,
+      "tile": "tile-13",
+      "_sourceOffset": 3924,
+      "random": false,
+      "negated": false
+    },
+    "twm-41": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 3960,
+      "random": false,
+      "negated": true
+    },
+    "twm-42": {
+      "direction": null,
+      "tile": "tile-14",
+      "_sourceOffset": 3980,
+      "random": false,
+      "negated": false
+    },
+    "twm-43": {
+      "direction": null,
+      "tile": "tile-6",
+      "_sourceOffset": 3990,
+      "random": true,
+      "negated": false
+    },
+    "twm-44": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 4017,
+      "random": false,
+      "negated": false
+    },
+    "twm-45": {
+      "direction": null,
+      "tile": "tile-5",
+      "_sourceOffset": 4057,
+      "random": true,
+      "negated": false
+    },
+    "twm-46": {
+      "direction": null,
+      "tile": "tile-2",
+      "_sourceOffset": 4120,
+      "random": true,
+      "negated": false
+    },
+    "twm-47": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4172,
+      "random": false,
+      "negated": true
+    },
+    "twm-48": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4201,
+      "random": true,
+      "negated": false
+    },
+    "twm-49": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 4264,
+      "random": false,
+      "negated": true
+    },
+    "twm-50": {
+      "direction": null,
+      "tile": "tile-16",
+      "_sourceOffset": 4293,
+      "random": true,
+      "negated": false
+    },
+    "twm-51": {
+      "direction": null,
+      "tile": "tile-15",
+      "_sourceOffset": 4333,
+      "random": false,
+      "negated": false
+    },
+    "twm-52": {
+      "direction": null,
+      "tile": "tile-17",
+      "_sourceOffset": 4359,
+      "random": true,
+      "negated": false
+    },
+    "twm-53": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4414,
+      "random": false,
+      "negated": true
+    },
+    "twm-54": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4443,
+      "random": true,
+      "negated": false
+    },
+    "twm-55": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4507,
+      "random": false,
+      "negated": true
+    },
+    "twm-56": {
+      "direction": null,
+      "tile": "tile-19",
+      "_sourceOffset": 4536,
+      "random": true,
+      "negated": false
+    },
+    "twm-57": {
+      "direction": null,
+      "tile": "tile-18",
+      "_sourceOffset": 4577,
+      "random": false,
+      "negated": false
+    },
+    "twm-58": {
+      "direction": null,
+      "tile": "tile-20",
+      "_sourceOffset": 4603,
+      "random": true,
+      "negated": false
+    }
+  },
+  "neighbors": {
+    "neighbor-0": {
+      "_sourceOffset": 2856,
+      "tile_with_modifiers": [
+        "twm-0"
+      ]
+    },
+    "neighbor-1": {
+      "_sourceOffset": 2867,
+      "tile_with_modifiers": [
+        "twm-1"
+      ]
+    },
+    "neighbor-2": {
+      "_sourceOffset": 2898,
+      "tile_with_modifiers": [
+        "twm-2"
+      ]
+    },
+    "neighbor-3": {
+      "_sourceOffset": 2856,
+      "tile_with_modifiers": [
+        "twm-3"
+      ]
+    },
+    "neighbor-4": {
+      "_sourceOffset": 2898,
+      "tile_with_modifiers": [
+        "twm-4"
+      ]
+    },
+    "neighbor-5": {
+      "_sourceOffset": 2856,
+      "tile_with_modifiers": [
+        "twm-5"
+      ]
+    },
+    "neighbor-6": {
+      "_sourceOffset": 2898,
+      "tile_with_modifiers": [
+        "twm-6"
+      ]
+    },
+    "neighbor-7": {
+      "_sourceOffset": 2856,
+      "tile_with_modifiers": [
+        "twm-7"
+      ]
+    },
+    "neighbor-8": {
+      "_sourceOffset": 2898,
+      "tile_with_modifiers": [
+        "twm-8"
+      ]
+    },
+    "neighbor-9": {
+      "_sourceOffset": 2928,
+      "tile_with_modifiers": [
+        "twm-9"
+      ]
+    },
+    "neighbor-10": {
+      "_sourceOffset": 2953,
+      "tile_with_modifiers": [
+        "twm-10"
+      ]
+    },
+    "neighbor-11": {
+      "_sourceOffset": 2953,
+      "tile_with_modifiers": [
+        "twm-11"
+      ]
+    },
+    "neighbor-12": {
+      "_sourceOffset": 2953,
+      "tile_with_modifiers": [
+        "twm-12"
+      ]
+    },
+    "neighbor-13": {
+      "_sourceOffset": 2953,
+      "tile_with_modifiers": [
+        "twm-13"
+      ]
+    },
+    "neighbor-14": {
+      "_sourceOffset": 2967,
+      "tile_with_modifiers": [
+        "twm-14"
+      ]
+    },
+    "neighbor-15": {
+      "_sourceOffset": 3001,
+      "tile_with_modifiers": []
+    },
+    "neighbor-16": {
+      "_sourceOffset": 3003,
+      "tile_with_modifiers": [
+        "twm-15"
+      ]
+    },
+    "neighbor-17": {
+      "_sourceOffset": 2967,
+      "tile_with_modifiers": [
+        "twm-16"
+      ]
+    },
+    "neighbor-18": {
+      "_sourceOffset": 2967,
+      "tile_with_modifiers": [
+        "twm-17"
+      ]
+    },
+    "neighbor-19": {
+      "_sourceOffset": 2967,
+      "tile_with_modifiers": [
+        "twm-18"
+      ]
+    },
+    "neighbor-20": {
+      "_sourceOffset": 3023,
+      "tile_with_modifiers": [
+        "twm-19"
+      ]
+    },
+    "neighbor-21": {
+      "_sourceOffset": 3061,
+      "tile_with_modifiers": [
+        "twm-20"
+      ]
+    },
+    "neighbor-22": {
+      "_sourceOffset": 3023,
+      "tile_with_modifiers": [
+        "twm-21"
+      ]
+    },
+    "neighbor-23": {
+      "_sourceOffset": 3023,
+      "tile_with_modifiers": [
+        "twm-22"
+      ]
+    },
+    "neighbor-24": {
+      "_sourceOffset": 3023,
+      "tile_with_modifiers": [
+        "twm-23"
+      ]
+    },
+    "neighbor-25": {
+      "_sourceOffset": 3166,
+      "tile_with_modifiers": [
+        "twm-24"
+      ]
+    },
+    "neighbor-26": {
+      "_sourceOffset": 3240,
+      "tile_with_modifiers": [
+        "twm-25"
+      ]
+    },
+    "neighbor-27": {
+      "_sourceOffset": 3256,
+      "tile_with_modifiers": [
+        "twm-26"
+      ]
+    },
+    "neighbor-28": {
+      "_sourceOffset": 3280,
+      "tile_with_modifiers": [
+        "twm-27"
+      ]
+    },
+    "neighbor-29": {
+      "_sourceOffset": 3376,
+      "tile_with_modifiers": [
+        "twm-28"
+      ]
+    },
+    "neighbor-30": {
+      "_sourceOffset": 3422,
+      "tile_with_modifiers": [
+        "twm-29"
+      ]
+    },
+    "neighbor-31": {
+      "_sourceOffset": 3497,
+      "tile_with_modifiers": [
+        "twm-30"
+      ]
+    },
+    "neighbor-32": {
+      "_sourceOffset": 3507,
+      "tile_with_modifiers": [
+        "twm-31"
+      ]
+    },
+    "neighbor-33": {
+      "_sourceOffset": 3497,
+      "tile_with_modifiers": [
+        "twm-32"
+      ]
+    },
+    "neighbor-34": {
+      "_sourceOffset": 3497,
+      "tile_with_modifiers": [
+        "twm-33"
+      ]
+    },
+    "neighbor-35": {
+      "_sourceOffset": 3497,
+      "tile_with_modifiers": [
+        "twm-34"
+      ]
+    },
+    "neighbor-36": {
+      "_sourceOffset": 3554,
+      "tile_with_modifiers": [
+        "twm-35"
+      ]
+    },
+    "neighbor-37": {
+      "_sourceOffset": 3698,
+      "tile_with_modifiers": [
+        "twm-36"
+      ]
+    },
+    "neighbor-38": {
+      "_sourceOffset": 3758,
+      "tile_with_modifiers": [
+        "twm-37"
+      ]
+    },
+    "neighbor-39": {
+      "_sourceOffset": 3800,
+      "tile_with_modifiers": [
+        "twm-38"
+      ]
+    },
+    "neighbor-40": {
+      "_sourceOffset": 3811,
+      "tile_with_modifiers": [
+        "twm-39"
+      ]
+    },
+    "neighbor-41": {
+      "_sourceOffset": 3923,
+      "tile_with_modifiers": [
+        "twm-40"
+      ]
+    },
+    "neighbor-42": {
+      "_sourceOffset": 3948,
+      "tile_with_modifiers": [
+        "twm-15",
+        "twm-41"
+      ]
+    },
+    "neighbor-43": {
+      "_sourceOffset": 3979,
+      "tile_with_modifiers": [
+        "twm-42",
+        "twm-43"
+      ]
+    },
+    "neighbor-44": {
+      "_sourceOffset": 4016,
+      "tile_with_modifiers": [
+        "twm-44",
+        "twm-41"
+      ]
+    },
+    "neighbor-45": {
+      "_sourceOffset": 4046,
+      "tile_with_modifiers": [
+        "twm-42",
+        "twm-45"
+      ]
+    },
+    "neighbor-46": {
+      "_sourceOffset": 4082,
+      "tile_with_modifiers": [
+        "twm-38",
+        "twm-41"
+      ]
+    },
+    "neighbor-47": {
+      "_sourceOffset": 4109,
+      "tile_with_modifiers": [
+        "twm-42",
+        "twm-46"
+      ]
+    },
+    "neighbor-48": {
+      "_sourceOffset": 4146,
+      "tile_with_modifiers": [
+        "twm-42"
+      ]
+    },
+    "neighbor-49": {
+      "_sourceOffset": 4158,
+      "tile_with_modifiers": [
+        "twm-41",
+        "twm-47"
+      ]
+    },
+    "neighbor-50": {
+      "_sourceOffset": 4200,
+      "tile_with_modifiers": [
+        "twm-48"
+      ]
+    },
+    "neighbor-51": {
+      "_sourceOffset": 4240,
+      "tile_with_modifiers": [
+        "twm-41",
+        "twm-47",
+        "twm-49"
+      ]
+    },
+    "neighbor-52": {
+      "_sourceOffset": 4292,
+      "tile_with_modifiers": [
+        "twm-50"
+      ]
+    },
+    "neighbor-53": {
+      "_sourceOffset": 4332,
+      "tile_with_modifiers": [
+        "twm-51"
+      ]
+    },
+    "neighbor-54": {
+      "_sourceOffset": 4358,
+      "tile_with_modifiers": [
+        "twm-52"
+      ]
+    },
+    "neighbor-55": {
+      "_sourceOffset": 4400,
+      "tile_with_modifiers": [
+        "twm-41",
+        "twm-53"
+      ]
+    },
+    "neighbor-56": {
+      "_sourceOffset": 4442,
+      "tile_with_modifiers": [
+        "twm-54"
+      ]
+    },
+    "neighbor-57": {
+      "_sourceOffset": 4483,
+      "tile_with_modifiers": [
+        "twm-41",
+        "twm-53",
+        "twm-55"
+      ]
+    },
+    "neighbor-58": {
+      "_sourceOffset": 4535,
+      "tile_with_modifiers": [
+        "twm-56"
+      ]
+    },
+    "neighbor-59": {
+      "_sourceOffset": 4576,
+      "tile_with_modifiers": [
+        "twm-57"
+      ]
+    },
+    "neighbor-60": {
+      "_sourceOffset": 4602,
+      "tile_with_modifiers": [
+        "twm-58"
+      ]
+    }
+  },
+  "brackets": {
+    "bracket-0": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2855
+      }
+    },
+    "bracket-1": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-2"
+        ],
+        "_sourceOffset": 2885
+      }
+    },
+    "bracket-2": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2855
+      }
+    },
+    "bracket-3": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-4"
+        ],
+        "_sourceOffset": 2885
+      }
+    },
+    "bracket-4": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2855
+      }
+    },
+    "bracket-5": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-6"
+        ],
+        "_sourceOffset": 2885
+      }
+    },
+    "bracket-6": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2855
+      }
+    },
+    "bracket-7": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-8"
+        ],
+        "_sourceOffset": 2885
+      }
+    },
+    "bracket-8": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 2916
+      }
+    },
+    "bracket-9": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 2940
+      }
+    },
+    "bracket-10": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 2916
+      }
+    },
+    "bracket-11": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 2940
+      }
+    },
+    "bracket-12": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 2916
+      }
+    },
+    "bracket-13": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 2940
+      }
+    },
+    "bracket-14": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 2916
+      }
+    },
+    "bracket-15": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 2940
+      }
+    },
+    "bracket-16": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-14",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2966
+      }
+    },
+    "bracket-17": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2999
+      }
+    },
+    "bracket-18": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-17",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2966
+      }
+    },
+    "bracket-19": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2999
+      }
+    },
+    "bracket-20": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-18",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2966
+      }
+    },
+    "bracket-21": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2999
+      }
+    },
+    "bracket-22": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-19",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 2966
+      }
+    },
+    "bracket-23": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-16"
+        ],
+        "_sourceOffset": 2999
+      }
+    },
+    "bracket-24": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-20",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3022
+      }
+    },
+    "bracket-25": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3057
+      }
+    },
+    "bracket-26": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-22",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3022
+      }
+    },
+    "bracket-27": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3057
+      }
+    },
+    "bracket-28": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-23",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3022
+      }
+    },
+    "bracket-29": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3057
+      }
+    },
+    "bracket-30": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-24",
+          "neighbor-1"
+        ],
+        "_sourceOffset": 3022
+      }
+    },
+    "bracket-31": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-15",
+          "neighbor-21"
+        ],
+        "_sourceOffset": 3057
+      }
+    },
+    "bracket-32": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3092
+      }
+    },
+    "bracket-33": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-2",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3122
+      }
+    },
+    "bracket-34": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3092
+      }
+    },
+    "bracket-35": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-4",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3122
+      }
+    },
+    "bracket-36": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3092
+      }
+    },
+    "bracket-37": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-6",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3122
+      }
+    },
+    "bracket-38": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-9"
+        ],
+        "_sourceOffset": 3092
+      }
+    },
+    "bracket-39": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-8",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3122
+      }
+    },
+    "bracket-40": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 3154
+      }
+    },
+    "bracket-41": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-10",
+          "neighbor-10"
+        ],
+        "_sourceOffset": 3189
+      }
+    },
+    "bracket-42": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 3154
+      }
+    },
+    "bracket-43": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-11",
+          "neighbor-11"
+        ],
+        "_sourceOffset": 3189
+      }
+    },
+    "bracket-44": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 3154
+      }
+    },
+    "bracket-45": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-12",
+          "neighbor-12"
+        ],
+        "_sourceOffset": 3189
+      }
+    },
+    "bracket-46": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-25"
+        ],
+        "_sourceOffset": 3154
+      }
+    },
+    "bracket-47": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-13",
+          "neighbor-13"
+        ],
+        "_sourceOffset": 3189
+      }
+    },
+    "bracket-48": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-16",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3215
+      }
+    },
+    "bracket-49": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3254
+      }
+    },
+    "bracket-50": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-16",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3215
+      }
+    },
+    "bracket-51": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3254
+      }
+    },
+    "bracket-52": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-16",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3215
+      }
+    },
+    "bracket-53": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3254
+      }
+    },
+    "bracket-54": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-16",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3215
+      }
+    },
+    "bracket-55": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3254
+      }
+    },
+    "bracket-56": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-21",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-57": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3350
+      }
+    },
+    "bracket-58": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-21",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-59": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3350
+      }
+    },
+    "bracket-60": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-21",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-61": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3350
+      }
+    },
+    "bracket-62": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-21",
+          "neighbor-26"
+        ],
+        "_sourceOffset": 3300
+      }
+    },
+    "bracket-63": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-27",
+          "neighbor-1",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3350
+      }
+    },
+    "bracket-64": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-16",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3397
+      }
+    },
+    "bracket-65": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-16",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3397
+      }
+    },
+    "bracket-66": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-16",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3397
+      }
+    },
+    "bracket-67": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-16",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3397
+      }
+    },
+    "bracket-68": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-0",
+          "neighbor-21",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3441
+      }
+    },
+    "bracket-69": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-3",
+          "neighbor-21",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3441
+      }
+    },
+    "bracket-70": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-5",
+          "neighbor-21",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3441
+      }
+    },
+    "bracket-71": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-7",
+          "neighbor-21",
+          "neighbor-30"
+        ],
+        "_sourceOffset": 3441
+      }
+    },
+    "bracket-72": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-31",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 3496
+      }
+    },
+    "bracket-73": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-33",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 3496
+      }
+    },
+    "bracket-74": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-34",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 3496
+      }
+    },
+    "bracket-75": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-35",
+          "neighbor-32"
+        ],
+        "_sourceOffset": 3496
+      }
+    },
+    "bracket-76": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3553
+      }
+    },
+    "bracket-77": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3588
+      }
+    },
+    "bracket-78": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3553
+      }
+    },
+    "bracket-79": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3588
+      }
+    },
+    "bracket-80": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3553
+      }
+    },
+    "bracket-81": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3588
+      }
+    },
+    "bracket-82": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-29"
+        ],
+        "_sourceOffset": 3553
+      }
+    },
+    "bracket-83": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-28"
+        ],
+        "_sourceOffset": 3588
+      }
+    },
+    "bracket-84": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 3680
+      }
+    },
+    "bracket-85": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 3680
+      }
+    },
+    "bracket-86": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 3680
+      }
+    },
+    "bracket-87": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-37"
+        ],
+        "_sourceOffset": 3680
+      }
+    },
+    "bracket-88": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-38"
+        ],
+        "_sourceOffset": 3757
+      }
+    },
+    "bracket-89": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 3781
+      }
+    },
+    "bracket-90": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 3809
+      }
+    },
+    "bracket-91": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-38"
+        ],
+        "_sourceOffset": 3757
+      }
+    },
+    "bracket-92": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 3781
+      }
+    },
+    "bracket-93": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 3809
+      }
+    },
+    "bracket-94": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-38"
+        ],
+        "_sourceOffset": 3757
+      }
+    },
+    "bracket-95": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 3781
+      }
+    },
+    "bracket-96": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 3809
+      }
+    },
+    "bracket-97": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-38"
+        ],
+        "_sourceOffset": 3757
+      }
+    },
+    "bracket-98": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-36",
+          "neighbor-39"
+        ],
+        "_sourceOffset": 3781
+      }
+    },
+    "bracket-99": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-40"
+        ],
+        "_sourceOffset": 3809
+      }
+    },
+    "bracket-100": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-39"
+        ],
+        "_sourceOffset": 3864
+      }
+    },
+    "bracket-101": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-27"
+        ],
+        "_sourceOffset": 3877
+      }
+    },
+    "bracket-102": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-15"
+        ],
+        "_sourceOffset": 3888
+      }
+    },
+    "bracket-103": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-41"
+        ],
+        "_sourceOffset": 3922
+      }
+    },
+    "bracket-104": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-42"
+        ],
+        "_sourceOffset": 3947
+      }
+    },
+    "bracket-105": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-43"
+        ],
+        "_sourceOffset": 3977
+      }
+    },
+    "bracket-106": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-44"
+        ],
+        "_sourceOffset": 4015
+      }
+    },
+    "bracket-107": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-45"
+        ],
+        "_sourceOffset": 4044
+      }
+    },
+    "bracket-108": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-46"
+        ],
+        "_sourceOffset": 4081
+      }
+    },
+    "bracket-109": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-47"
+        ],
+        "_sourceOffset": 4107
+      }
+    },
+    "bracket-110": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-49"
+        ],
+        "_sourceOffset": 4145
+      }
+    },
+    "bracket-111": {
+      "Simple": {
+        "direction": "Up",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-50"
+        ],
+        "_sourceOffset": 4186
+      }
+    },
+    "bracket-112": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-51"
+        ],
+        "_sourceOffset": 4227
+      }
+    },
+    "bracket-113": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-52"
+        ],
+        "_sourceOffset": 4278
+      }
+    },
+    "bracket-114": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-53"
+        ],
+        "_sourceOffset": 4319
+      }
+    },
+    "bracket-115": {
+      "Simple": {
+        "direction": "Down",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-54"
+        ],
+        "_sourceOffset": 4344
+      }
+    },
+    "bracket-116": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-55"
+        ],
+        "_sourceOffset": 4387
+      }
+    },
+    "bracket-117": {
+      "Simple": {
+        "direction": "Left",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-56"
+        ],
+        "_sourceOffset": 4428
+      }
+    },
+    "bracket-118": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-57"
+        ],
+        "_sourceOffset": 4470
+      }
+    },
+    "bracket-119": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-58"
+        ],
+        "_sourceOffset": 4521
+      }
+    },
+    "bracket-120": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-59"
+        ],
+        "_sourceOffset": 4563
+      }
+    },
+    "bracket-121": {
+      "Simple": {
+        "direction": "Right",
+        "neighbors": [
+          "neighbor-48",
+          "neighbor-60"
+        ],
+        "_sourceOffset": 4588
+      }
+    }
+  },
+  "rule_definitions": {
+    "rule-0": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-0"
+        ],
+        "actions": [
+          "bracket-1"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-1": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-2"
+        ],
+        "actions": [
+          "bracket-3"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-2": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-4"
+        ],
+        "actions": [
+          "bracket-5"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-3": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-6"
+        ],
+        "actions": [
+          "bracket-7"
+        ],
+        "commands": [],
+        "_sourceOffset": 2855,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-4": {
+      "Group": {
+        "rules": [
+          "rule-0",
+          "rule-1",
+          "rule-2",
+          "rule-3"
+        ],
+        "_sourceOffset": 2855,
+        "random": false
+      }
+    },
+    "rule-5": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-8"
+        ],
+        "actions": [
+          "bracket-9"
+        ],
+        "commands": [],
+        "_sourceOffset": 2916,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-6": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-10"
+        ],
+        "actions": [
+          "bracket-11"
+        ],
+        "commands": [],
+        "_sourceOffset": 2916,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-7": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-12"
+        ],
+        "actions": [
+          "bracket-13"
+        ],
+        "commands": [],
+        "_sourceOffset": 2916,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-8": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-14"
+        ],
+        "actions": [
+          "bracket-15"
+        ],
+        "commands": [],
+        "_sourceOffset": 2916,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-9": {
+      "Group": {
+        "rules": [
+          "rule-5",
+          "rule-6",
+          "rule-7",
+          "rule-8"
+        ],
+        "_sourceOffset": 2916,
+        "random": false
+      }
+    },
+    "rule-10": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-16"
+        ],
+        "actions": [
+          "bracket-17"
+        ],
+        "commands": [
+          "command-0"
+        ],
+        "_sourceOffset": 2966,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-11": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-18"
+        ],
+        "actions": [
+          "bracket-19"
+        ],
+        "commands": [
+          "command-1"
+        ],
+        "_sourceOffset": 2966,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-12": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-20"
+        ],
+        "actions": [
+          "bracket-21"
+        ],
+        "commands": [
+          "command-2"
+        ],
+        "_sourceOffset": 2966,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-13": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-22"
+        ],
+        "actions": [
+          "bracket-23"
+        ],
+        "commands": [
+          "command-3"
+        ],
+        "_sourceOffset": 2966,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-14": {
+      "Group": {
+        "rules": [
+          "rule-10",
+          "rule-11",
+          "rule-12",
+          "rule-13"
+        ],
+        "_sourceOffset": 2966,
+        "random": false
+      }
+    },
+    "rule-15": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-24"
+        ],
+        "actions": [
+          "bracket-25"
+        ],
+        "commands": [
+          "command-4"
+        ],
+        "_sourceOffset": 3022,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-16": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-26"
+        ],
+        "actions": [
+          "bracket-27"
+        ],
+        "commands": [
+          "command-5"
+        ],
+        "_sourceOffset": 3022,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-17": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-28"
+        ],
+        "actions": [
+          "bracket-29"
+        ],
+        "commands": [
+          "command-6"
+        ],
+        "_sourceOffset": 3022,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-18": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-30"
+        ],
+        "actions": [
+          "bracket-31"
+        ],
+        "commands": [
+          "command-7"
+        ],
+        "_sourceOffset": 3022,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-19": {
+      "Group": {
+        "rules": [
+          "rule-15",
+          "rule-16",
+          "rule-17",
+          "rule-18"
+        ],
+        "_sourceOffset": 3022,
+        "random": false
+      }
+    },
+    "rule-20": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-32"
+        ],
+        "actions": [
+          "bracket-33"
+        ],
+        "commands": [],
+        "_sourceOffset": 3092,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-21": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-34"
+        ],
+        "actions": [
+          "bracket-35"
+        ],
+        "commands": [],
+        "_sourceOffset": 3092,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-22": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-36"
+        ],
+        "actions": [
+          "bracket-37"
+        ],
+        "commands": [],
+        "_sourceOffset": 3092,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-23": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-38"
+        ],
+        "actions": [
+          "bracket-39"
+        ],
+        "commands": [],
+        "_sourceOffset": 3092,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-24": {
+      "Group": {
+        "rules": [
+          "rule-20",
+          "rule-21",
+          "rule-22",
+          "rule-23"
+        ],
+        "_sourceOffset": 3092,
+        "random": false
+      }
+    },
+    "rule-25": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-40"
+        ],
+        "actions": [
+          "bracket-41"
+        ],
+        "commands": [],
+        "_sourceOffset": 3154,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-26": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-42"
+        ],
+        "actions": [
+          "bracket-43"
+        ],
+        "commands": [],
+        "_sourceOffset": 3154,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-27": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-44"
+        ],
+        "actions": [
+          "bracket-45"
+        ],
+        "commands": [],
+        "_sourceOffset": 3154,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-28": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-46"
+        ],
+        "actions": [
+          "bracket-47"
+        ],
+        "commands": [],
+        "_sourceOffset": 3154,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-29": {
+      "Group": {
+        "rules": [
+          "rule-25",
+          "rule-26",
+          "rule-27",
+          "rule-28"
+        ],
+        "_sourceOffset": 3154,
+        "random": false
+      }
+    },
+    "rule-30": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-48"
+        ],
+        "actions": [
+          "bracket-49"
+        ],
+        "commands": [
+          "command-8"
+        ],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-31": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-50"
+        ],
+        "actions": [
+          "bracket-51"
+        ],
+        "commands": [
+          "command-9"
+        ],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-32": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-52"
+        ],
+        "actions": [
+          "bracket-53"
+        ],
+        "commands": [
+          "command-10"
+        ],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-33": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-54"
+        ],
+        "actions": [
+          "bracket-55"
+        ],
+        "commands": [
+          "command-11"
+        ],
+        "_sourceOffset": 3215,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-34": {
+      "Group": {
+        "rules": [
+          "rule-30",
+          "rule-31",
+          "rule-32",
+          "rule-33"
+        ],
+        "_sourceOffset": 3215,
+        "random": false
+      }
+    },
+    "rule-35": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-56"
+        ],
+        "actions": [
+          "bracket-57"
+        ],
+        "commands": [
+          "command-12"
+        ],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-36": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-58"
+        ],
+        "actions": [
+          "bracket-59"
+        ],
+        "commands": [
+          "command-13"
+        ],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-37": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-60"
+        ],
+        "actions": [
+          "bracket-61"
+        ],
+        "commands": [
+          "command-14"
+        ],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-38": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-62"
+        ],
+        "actions": [
+          "bracket-63"
+        ],
+        "commands": [
+          "command-15"
+        ],
+        "_sourceOffset": 3300,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-39": {
+      "Group": {
+        "rules": [
+          "rule-35",
+          "rule-36",
+          "rule-37",
+          "rule-38"
+        ],
+        "_sourceOffset": 3300,
+        "random": false
+      }
+    },
+    "rule-40": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-64"
+        ],
+        "actions": [],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 3397,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-41": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-65"
+        ],
+        "actions": [],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 3397,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-42": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-66"
+        ],
+        "actions": [],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 3397,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-43": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-67"
+        ],
+        "actions": [],
+        "commands": [
+          "command-16"
+        ],
+        "_sourceOffset": 3397,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-44": {
+      "Group": {
+        "rules": [
+          "rule-40",
+          "rule-41",
+          "rule-42",
+          "rule-43"
+        ],
+        "_sourceOffset": 3397,
+        "random": false
+      }
+    },
+    "rule-45": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-68"
+        ],
+        "actions": [],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 3441,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-46": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-69"
+        ],
+        "actions": [],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 3441,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-47": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-70"
+        ],
+        "actions": [],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 3441,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-48": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-71"
+        ],
+        "actions": [],
+        "commands": [
+          "command-17"
+        ],
+        "_sourceOffset": 3441,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-49": {
+      "Group": {
+        "rules": [
+          "rule-45",
+          "rule-46",
+          "rule-47",
+          "rule-48"
+        ],
+        "_sourceOffset": 3441,
+        "random": false
+      }
+    },
+    "rule-50": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-72"
+        ],
+        "actions": [],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 3496,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-51": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-73"
+        ],
+        "actions": [],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 3496,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-52": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-74"
+        ],
+        "actions": [],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 3496,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-53": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-75"
+        ],
+        "actions": [],
+        "commands": [
+          "command-18"
+        ],
+        "_sourceOffset": 3496,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-54": {
+      "Group": {
+        "rules": [
+          "rule-50",
+          "rule-51",
+          "rule-52",
+          "rule-53"
+        ],
+        "_sourceOffset": 3496,
+        "random": false
+      }
+    },
+    "rule-55": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76"
+        ],
+        "actions": [
+          "bracket-77"
+        ],
+        "commands": [
+          "command-19"
+        ],
+        "_sourceOffset": 3553,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-56": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-78"
+        ],
+        "actions": [
+          "bracket-79"
+        ],
+        "commands": [
+          "command-20"
+        ],
+        "_sourceOffset": 3553,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-57": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-80"
+        ],
+        "actions": [
+          "bracket-81"
+        ],
+        "commands": [
+          "command-21"
+        ],
+        "_sourceOffset": 3553,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-58": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-82"
+        ],
+        "actions": [
+          "bracket-83"
+        ],
+        "commands": [
+          "command-22"
+        ],
+        "_sourceOffset": 3553,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-59": {
+      "Group": {
+        "rules": [
+          "rule-55",
+          "rule-56",
+          "rule-57",
+          "rule-58"
+        ],
+        "_sourceOffset": 3553,
+        "random": false
+      }
+    },
+    "rule-60": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-76"
+        ],
+        "actions": [],
+        "commands": [
+          "command-23"
+        ],
+        "_sourceOffset": 3627,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-61": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-78"
+        ],
+        "actions": [],
+        "commands": [
+          "command-23"
+        ],
+        "_sourceOffset": 3627,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-62": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-80"
+        ],
+        "actions": [],
+        "commands": [
+          "command-23"
+        ],
+        "_sourceOffset": 3627,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-63": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-82"
+        ],
+        "actions": [],
+        "commands": [
+          "command-23"
+        ],
+        "_sourceOffset": 3627,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-64": {
+      "Group": {
+        "rules": [
+          "rule-60",
+          "rule-61",
+          "rule-62",
+          "rule-63"
+        ],
+        "_sourceOffset": 3627,
+        "random": false
+      }
+    },
+    "rule-65": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-84"
+        ],
+        "actions": [],
+        "commands": [
+          "command-24"
+        ],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-66": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-85"
+        ],
+        "actions": [],
+        "commands": [
+          "command-24"
+        ],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-67": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-86"
+        ],
+        "actions": [],
+        "commands": [
+          "command-24"
+        ],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-68": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-87"
+        ],
+        "actions": [],
+        "commands": [
+          "command-24"
+        ],
+        "_sourceOffset": 3675,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-69": {
+      "Group": {
+        "rules": [
+          "rule-65",
+          "rule-66",
+          "rule-67",
+          "rule-68"
+        ],
+        "_sourceOffset": 3675,
+        "random": false
+      }
+    },
+    "rule-70": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-84",
+          "bracket-88"
+        ],
+        "actions": [
+          "bracket-89",
+          "bracket-90"
+        ],
+        "commands": [
+          "command-25"
+        ],
+        "_sourceOffset": 3720,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-71": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-85",
+          "bracket-91"
+        ],
+        "actions": [
+          "bracket-92",
+          "bracket-93"
+        ],
+        "commands": [
+          "command-25"
+        ],
+        "_sourceOffset": 3720,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-72": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-86",
+          "bracket-94"
+        ],
+        "actions": [
+          "bracket-95",
+          "bracket-96"
+        ],
+        "commands": [
+          "command-25"
+        ],
+        "_sourceOffset": 3720,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-73": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-87",
+          "bracket-97"
+        ],
+        "actions": [
+          "bracket-98",
+          "bracket-99"
+        ],
+        "commands": [
+          "command-25"
+        ],
+        "_sourceOffset": 3720,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-74": {
+      "Group": {
+        "rules": [
+          "rule-70",
+          "rule-71",
+          "rule-72",
+          "rule-73"
+        ],
+        "_sourceOffset": 3720,
+        "random": true
+      }
+    },
+    "rule-75": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-88",
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-102"
+        ],
+        "commands": [
+          "command-26"
+        ],
+        "_sourceOffset": 3835,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-76": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-91",
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-102"
+        ],
+        "commands": [
+          "command-26"
+        ],
+        "_sourceOffset": 3835,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-77": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-94",
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-102"
+        ],
+        "commands": [
+          "command-26"
+        ],
+        "_sourceOffset": 3835,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-78": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-97",
+          "bracket-100"
+        ],
+        "actions": [
+          "bracket-101",
+          "bracket-102"
+        ],
+        "commands": [
+          "command-26"
+        ],
+        "_sourceOffset": 3835,
+        "random": null,
+        "late": false,
+        "rigid": false
+      }
+    },
+    "rule-79": {
+      "Group": {
+        "rules": [
+          "rule-75",
+          "rule-76",
+          "rule-77",
+          "rule-78"
+        ],
+        "_sourceOffset": 3835,
+        "random": true
+      }
+    },
+    "rule-80": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-103"
+        ],
+        "actions": [
+          "bracket-102"
+        ],
+        "commands": [],
+        "_sourceOffset": 3917,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-81": {
+      "Group": {
+        "rules": [
+          "rule-80"
+        ],
+        "_sourceOffset": 3917,
+        "random": false
+      }
+    },
+    "rule-82": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-104"
+        ],
+        "actions": [
+          "bracket-105"
+        ],
+        "commands": [],
+        "_sourceOffset": 3942,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-83": {
+      "Group": {
+        "rules": [
+          "rule-82"
+        ],
+        "_sourceOffset": 3942,
+        "random": false
+      }
+    },
+    "rule-84": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-106"
+        ],
+        "actions": [
+          "bracket-107"
+        ],
+        "commands": [],
+        "_sourceOffset": 4010,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-85": {
+      "Group": {
+        "rules": [
+          "rule-84"
+        ],
+        "_sourceOffset": 4010,
+        "random": false
+      }
+    },
+    "rule-86": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-108"
+        ],
+        "actions": [
+          "bracket-109"
+        ],
+        "commands": [],
+        "_sourceOffset": 4076,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-87": {
+      "Group": {
+        "rules": [
+          "rule-86"
+        ],
+        "_sourceOffset": 4076,
+        "random": false
+      }
+    },
+    "rule-88": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-110"
+        ],
+        "actions": [
+          "bracket-111"
+        ],
+        "commands": [],
+        "_sourceOffset": 4137,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-89": {
+      "Group": {
+        "rules": [
+          "rule-88"
+        ],
+        "_sourceOffset": 4137,
+        "random": false
+      }
+    },
+    "rule-90": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-112"
+        ],
+        "actions": [
+          "bracket-113"
+        ],
+        "commands": [],
+        "_sourceOffset": 4217,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-91": {
+      "Group": {
+        "rules": [
+          "rule-90"
+        ],
+        "_sourceOffset": 4217,
+        "random": false
+      }
+    },
+    "rule-92": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-114"
+        ],
+        "actions": [
+          "bracket-115"
+        ],
+        "commands": [],
+        "_sourceOffset": 4309,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-93": {
+      "Group": {
+        "rules": [
+          "rule-92"
+        ],
+        "_sourceOffset": 4309,
+        "random": false
+      }
+    },
+    "rule-94": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-116"
+        ],
+        "actions": [
+          "bracket-117"
+        ],
+        "commands": [],
+        "_sourceOffset": 4377,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-95": {
+      "Group": {
+        "rules": [
+          "rule-94"
+        ],
+        "_sourceOffset": 4377,
+        "random": false
+      }
+    },
+    "rule-96": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-118"
+        ],
+        "actions": [
+          "bracket-119"
+        ],
+        "commands": [],
+        "_sourceOffset": 4459,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-97": {
+      "Group": {
+        "rules": [
+          "rule-96"
+        ],
+        "_sourceOffset": 4459,
+        "random": false
+      }
+    },
+    "rule-98": {
+      "Simple": {
+        "directions": [],
+        "conditions": [
+          "bracket-120"
+        ],
+        "actions": [
+          "bracket-121"
+        ],
+        "commands": [],
+        "_sourceOffset": 4552,
+        "random": null,
+        "late": true,
+        "rigid": false
+      }
+    },
+    "rule-99": {
+      "Group": {
+        "rules": [
+          "rule-98"
+        ],
+        "_sourceOffset": 4552,
+        "random": false
+      }
+    }
+  },
+  "win_conditions": [
+    {
+      "Simple": {
+        "_sourceOffset": 4668,
+        "qualifier": "No",
+        "tile": "tile-4"
+      }
+    },
+    {
+      "Simple": {
+        "_sourceOffset": 4684,
+        "qualifier": "No",
+        "tile": "tile-8"
+      }
+    }
+  ],
+  "rules": [
+    "rule-4",
+    "rule-9",
+    "rule-14",
+    "rule-19",
+    "rule-24",
+    "rule-29",
+    "rule-34",
+    "rule-39",
+    "rule-44",
+    "rule-49",
+    "rule-54",
+    "rule-59",
+    "rule-64",
+    "rule-69",
+    "rule-74",
+    "rule-79",
+    "rule-81",
+    "rule-83",
+    "rule-85",
+    "rule-87",
+    "rule-89",
+    "rule-91",
+    "rule-93",
+    "rule-95",
+    "rule-97",
+    "rule-99"
+  ],
+  "levels": [
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 4734
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-24",
+            "tile-22",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 4805
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-24",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-24",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 4935
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 4992
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5042
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-26",
+            "tile-25",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-26",
+            "tile-25",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5138
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-26",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5209
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5270
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-27",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5327
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5388
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-26",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-26",
+            "tile-21",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5461
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-25",
+            "tile-27",
+            "tile-25",
+            "tile-27",
+            "tile-25",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-26",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5534
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-24",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5591
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-27",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-25",
+            "tile-25",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-27",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-23",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5648
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-26",
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-27",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5726
+      }
+    },
+    {
+      "Map": {
+        "cells": [
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ],
+          [
+            "tile-23",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-26",
+            "tile-21",
+            "tile-27",
+            "tile-21",
+            "tile-26",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-25",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-21",
+            "tile-21",
+            "tile-26",
+            "tile-21",
+            "tile-21",
+            "tile-22"
+          ],
+          [
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22",
+            "tile-22"
+          ]
+        ],
+        "_sourceOffset": 5799
+      }
+    },
+    {
+      "Message": {
+        "message": "Thanks for playing :)",
+        "_sourceOffset": 5856
+      }
+    }
+  ]
+}
