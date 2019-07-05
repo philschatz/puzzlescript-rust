@@ -259,9 +259,9 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
                     },
                     Key::Char('n') => engine.debug_rules,
                     Key::Char('-')
-                    | Key::Char('_') => { if sleep_time > 10 { sleep_time -= 10; play_bell() }; false },
+                    | Key::Char('_') => { if sleep_time >= 50 { sleep_time -= 50; play_bell() }; false },
                     Key::Char('=')
-                    | Key::Char('+') => { if sleep_time < 1000 { sleep_time += 10; play_bell() }; false },
+                    | Key::Char('+') => { if sleep_time < 1000 { sleep_time += 50; play_bell() }; false },
                     _ => true,
                 };
 
@@ -361,6 +361,7 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
         if tr.completed_level.is_some() {
             scripted_did_win = true;
             if !engine.next_level() {
+                save_game(engine.current_level_num, inputs.clone(), None)?;
                 println!("You beat all the levels in the game!");
                 break
             }
