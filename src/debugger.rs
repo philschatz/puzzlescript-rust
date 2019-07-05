@@ -1,21 +1,21 @@
-use std::io::stdout;
 use std::cmp;
+use std::io::stdout;
 
 use std::cell::RefCell;
 
 use log::trace;
-use termion::raw::RawTerminal;
 use termion::raw::IntoRawMode;
+use termion::raw::RawTerminal;
 
 use tui::layout::Rect;
 
 use crate::color::ColorSpace;
 use crate::color::Rgb;
 use crate::model::board::Board;
-use crate::model::util::TriggeredCommands;
 use crate::model::game::Sprite;
 use crate::model::util::Position;
 use crate::model::util::SpriteState;
+use crate::model::util::TriggeredCommands;
 use crate::model::util::WantsToMove;
 use fnv::FnvHashMap;
 
@@ -55,7 +55,10 @@ impl ScreenDumper {
             let mut obj = obj_cell.borrow_mut();
             if obj.term.is_none() {
                 match stdout().into_raw_mode() {
-                    Ok(x) => { obj.term = Some(x); true },
+                    Ok(x) => {
+                        obj.term = Some(x);
+                        true
+                    }
                     Err(_) => false,
                 }
             } else {
@@ -93,18 +96,16 @@ impl ScreenDumper {
     fn _enable_raw(&self, enable: bool) {
         match &self.term {
             None => {}
-            Some(term) => {
-                match enable {
-                    false => term.suspend_raw_mode().unwrap(),
-                    true => term.activate_raw_mode().unwrap(),
-                }
+            Some(term) => match enable {
+                false => term.suspend_raw_mode().unwrap(),
+                true => term.activate_raw_mode().unwrap(),
             },
         }
     }
 
     fn _dump(&mut self, board: &Board, triggered: &TriggeredCommands, message: &String) {
         if self.sprites.is_none() {
-            return
+            return;
         }
         let (_, sprite_height) = self.sprite_size;
         // disable raw mode for printing
@@ -112,7 +113,7 @@ impl ScreenDumper {
 
         let mesh = self.debug_build_mesh(&board, triggered);
         match mesh {
-            None => {},
+            None => {}
             Some(mesh) => {
                 println!("\n{}\n", message);
                 let board_size = board.size();
@@ -129,7 +130,9 @@ impl ScreenDumper {
                         };
                         for x in cols {
                             let pos = Position::new(x, y);
-                            let uicell = mesh.get(&pos).expect("Expected to find position in the mesh but did not");
+                            let uicell = mesh
+                                .get(&pos)
+                                .expect("Expected to find position in the mesh but did not");
                             uicell.print_row(row as usize);
                         }
                         println!(
@@ -148,12 +151,16 @@ impl ScreenDumper {
         self.prev_triggered = Some(triggered.clone());
     }
 
-    fn debug_build_mesh(&mut self, board: &Board, triggered: &TriggeredCommands) -> Option<FnvHashMap<Position, UICell>> {
+    fn debug_build_mesh(
+        &mut self,
+        board: &Board,
+        triggered: &TriggeredCommands,
+    ) -> Option<FnvHashMap<Position, UICell>> {
         let (sprite_width, sprite_height) = self.sprite_size;
         let mut mesh = FnvHashMap::default(); // Position -> UICell
         let did_trigger_change = match &self.prev_triggered {
             None => false,
-            Some(t) => t == triggered
+            Some(t) => t == triggered,
         };
         let mut nothing_changed = did_trigger_change; // if triggered commands changed then the game definitely changed (even though the board didn't)
         match &self.sprites {
@@ -200,7 +207,8 @@ impl ScreenDumper {
                                         };
 
                                         temp_pixels
-                                            [(sprite_y * sprite_height + sprite_x) as usize] = color;
+                                            [(sprite_y * sprite_height + sprite_x) as usize] =
+                                            color;
                                     }
                                 }
                             }

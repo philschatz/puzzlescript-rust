@@ -1,5 +1,5 @@
-use std::fmt;
 use fnv::FnvHashMap;
+use std::fmt;
 
 use hex;
 
@@ -12,7 +12,11 @@ pub struct Rgb {
 }
 
 fn abs(a: u8, b: u8) -> u8 {
-    if a > b { a - b } else { b - a }
+    if a > b {
+        a - b
+    } else {
+        b - a
+    }
 }
 
 impl Rgb {
@@ -24,12 +28,22 @@ impl Rgb {
     }
 
     pub fn to_gray(&self) -> Rgb {
-      let gray = ((self.r as u16 + self.g as u16 + self.b as u16) / 3) as u8;
-      Rgb { r: gray, g: gray, b: gray, a: self.a }
+        let gray = ((self.r as u16 + self.g as u16 + self.b as u16) / 3) as u8;
+        Rgb {
+            r: gray,
+            g: gray,
+            b: gray,
+            a: self.a,
+        }
     }
 
     pub fn darken(&self) -> Rgb {
-      Rgb { r: self.r / 2, g: self.g / 2, b: self.b / 2, a: self.a }
+        Rgb {
+            r: self.r / 2,
+            g: self.g / 2,
+            b: self.b / 2,
+            a: self.a,
+        }
     }
 
     pub fn parse(hex: &String) -> Rgb {
@@ -55,7 +69,7 @@ impl Rgb {
             None => {
                 map.insert(flattened.clone(), self.clone());
                 flattened.from_256()
-            },
+            }
             Some(entry) => {
                 if entry == self {
                     flattened.from_256()
@@ -79,16 +93,19 @@ impl Rgb {
             match map.get(&variant) {
                 None => {
                     map.insert(variant, self.clone());
-                    return variant.from_256()
-                },
+                    return variant.from_256();
+                }
                 Some(orig) => {
                     if orig == self {
-                        return variant.from_256()
+                        return variant.from_256();
                     }
                 }
             }
         }
-        eprintln!("Could not find a variant for {}. Using original color & hoping for the best", self);
+        eprintln!(
+            "Could not find a variant for {}. Using original color & hoping for the best",
+            self
+        );
         self.clone()
     }
 
@@ -107,17 +124,18 @@ impl Rgb {
     }
 }
 
-impl Eq for Rgb { }
+impl Eq for Rgb {}
 
 impl fmt::Display for Rgb {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let mut v = vec![self.r, self.g, self.b];
-        if self.a > 0 { v.push(self.a); }
+        if self.a > 0 {
+            v.push(self.a);
+        }
         let hex_str = hex::encode(v);
         write!(f, "#{}", hex_str)
     }
 }
-
 
 #[derive(Copy, Clone, PartialEq, Hash, Debug)]
 pub struct Rgb256 {
@@ -132,11 +150,16 @@ impl Rgb256 {
         assert!(r <= 5);
         assert!(g <= 5);
         assert!(b <= 5);
-        Self {r, g, b, a}
+        Self { r, g, b, a }
     }
 
     fn from_256(&self) -> Rgb {
-        Rgb { r: self.r * 51, g: self.g * 51, b: self.b * 51, a: self.a }
+        Rgb {
+            r: self.r * 51,
+            g: self.g * 51,
+            b: self.b * 51,
+            a: self.a,
+        }
     }
 
     // Tweak the r, g, b slightly until an unused color is found
@@ -176,19 +199,22 @@ impl Rgb256 {
 
 impl Eq for Rgb256 {}
 
-
 #[derive(Debug)]
 pub enum ColorSpace {
     Unknown,
     TwoFiftySix,
-    TrueColor
+    TrueColor,
 }
 
 impl ColorSpace {
     pub fn get_colorspace() -> Self {
-        if env_contains("COLORTERM", "truecolor") { ColorSpace::TrueColor }
-        else if env_contains("TERM", "256color") { ColorSpace::TwoFiftySix }
-        else { ColorSpace::Unknown }
+        if env_contains("COLORTERM", "truecolor") {
+            ColorSpace::TrueColor
+        } else if env_contains("TERM", "256color") {
+            ColorSpace::TwoFiftySix
+        } else {
+            ColorSpace::Unknown
+        }
     }
 
     pub fn is_true_color(&self) -> bool {
@@ -201,28 +227,38 @@ impl ColorSpace {
     pub fn print_bg_color(&self, r: u8, g: u8, b: u8) {
         match self {
             ColorSpace::TrueColor => print!("{}", termion::color::Bg(termion::color::Rgb(r, g, b))),
-            ColorSpace::TwoFiftySix => print!("{}", termion::color::Bg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))),
-            ColorSpace::Unknown => print!("{}", termion::color::Bg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))),
+            ColorSpace::TwoFiftySix => print!(
+                "{}",
+                termion::color::Bg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))
+            ),
+            ColorSpace::Unknown => print!(
+                "{}",
+                termion::color::Bg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))
+            ),
         };
     }
 
     pub fn print_fg_color(&self, r: u8, g: u8, b: u8) {
         match self {
             ColorSpace::TrueColor => print!("{}", termion::color::Fg(termion::color::Rgb(r, g, b))),
-            ColorSpace::TwoFiftySix => print!("{}", termion::color::Fg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))),
-            ColorSpace::Unknown => print!("{}", termion::color::Fg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))),
+            ColorSpace::TwoFiftySix => print!(
+                "{}",
+                termion::color::Fg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))
+            ),
+            ColorSpace::Unknown => print!(
+                "{}",
+                termion::color::Fg(termion::color::AnsiValue::rgb(r / 51, g / 51, b / 51))
+            ),
         };
     }
-
 }
 
 fn env_contains(key: &str, contains: &str) -> bool {
     match std::env::var_os(key) {
         None => false,
-        Some(val) => val.to_str().unwrap_or("").contains(contains)
+        Some(val) => val.to_str().unwrap_or("").contains(contains),
     }
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -250,9 +286,24 @@ mod tests {
     #[test]
     fn alpha() {
         let mut map = FnvHashMap::default();
-        let zero = Rgb { r: 0, g: 0, b: 0, a: 128 };
-        let one = Rgb { r: 1, g: 1, b: 1, a: 128 };
-        let two = Rgb { r: 2, g: 2, b: 2, a: 128 };
+        let zero = Rgb {
+            r: 0,
+            g: 0,
+            b: 0,
+            a: 128,
+        };
+        let one = Rgb {
+            r: 1,
+            g: 1,
+            b: 1,
+            a: 128,
+        };
+        let two = Rgb {
+            r: 2,
+            g: 2,
+            b: 2,
+            a: 128,
+        };
         assert_eq!(zero.to_closest_256().a, 128);
         assert_eq!(zero.to_closest_256().to_variant(&mut map).a, 128);
 
@@ -265,9 +316,14 @@ mod tests {
 
     #[test]
     fn on_top_of() {
-        let white = Rgb { r: 255, g: 255, b: 255, a: 127 };
+        let white = Rgb {
+            r: 255,
+            g: 255,
+            b: 255,
+            a: 127,
+        };
         let gray = Rgb::new(127, 127, 127);
-        
+
         assert_eq!(white.on_top_of(&Rgb::black()), gray);
     }
 

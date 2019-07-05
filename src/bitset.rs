@@ -11,9 +11,9 @@ pub struct BitSet {
 
 impl BitSet {
     pub fn new() -> Self {
-        Self { 
-            _is_empty: true, 
-            bits: [0; BUCKET_COUNT] 
+        Self {
+            _is_empty: true,
+            bits: [0; BUCKET_COUNT],
         }
     }
 
@@ -38,7 +38,7 @@ impl BitSet {
     pub fn contains_all(&self, other: &BitSet) -> bool {
         for bucket in 0..BUCKET_COUNT {
             if self.bits[bucket] & other.bits[bucket] != other.bits[bucket] {
-                return false
+                return false;
             }
         }
         true
@@ -47,17 +47,19 @@ impl BitSet {
         // if other.is_empty() { return true }
         for bucket in 0..BUCKET_COUNT {
             if self.bits[bucket] & other.bits[bucket] != 0 {
-                return false
+                return false;
             }
         }
         true
     }
     pub fn contains_any(&self, other: &BitSet) -> bool {
-        if other.is_empty() { return true }
+        if other.is_empty() {
+            return true;
+        }
 
         for bucket in 0..BUCKET_COUNT {
             if self.bits[bucket] & other.bits[bucket] != 0 {
-                return true
+                return true;
             }
         }
         false
@@ -75,9 +77,9 @@ impl BitSet {
     fn update_emptiness(&mut self) {
         self._is_empty = true;
         for bucket in 0..BUCKET_COUNT {
-            if self.bits[bucket] != 0 { 
+            if self.bits[bucket] != 0 {
                 self._is_empty = false;
-                break
+                break;
             }
         }
     }
@@ -88,7 +90,10 @@ impl BitSet {
 
         for bucket in 0..BUCKET_COUNT {
             let mut i = self.bits[bucket];
-            if i == 0 { index += BUCKET_SIZE; continue }
+            if i == 0 {
+                index += BUCKET_SIZE;
+                continue;
+            }
             while i > 0 {
                 if i % 2 == 1 {
                     ret.push(index);
@@ -106,8 +111,6 @@ impl fmt::Display for BitSet {
         write!(f, "BitSet({:?})", self.into_vec())
     }
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -132,7 +135,7 @@ mod tests {
     fn check_cardinality() {
         let mut bitset = BitSet::new();
         assert_eq!(cardinality(&bitset), 0);
-        
+
         bitset.insert(1);
         assert_eq!(cardinality(&bitset), 1);
 
@@ -150,14 +153,14 @@ mod tests {
 
         assert!(!bitset.contains(0));
         assert!(bitset.contains(1));
-        
+
         bitset.insert(0);
         assert!(bitset.contains(0));
-        
+
         bitset.remove(1);
         assert!(!bitset.contains(1));
         assert!(bitset.bits[0] == 1); // look inside the guts and verify
-        
+
         bitset.insert(127);
         assert!(bitset.contains(127));
         bitset.remove(127);
@@ -196,8 +199,14 @@ mod tests {
 
         let mut bs2 = BitSet::new();
 
-        assert!(bitset.contains_any(&bs2), "When the argument is empty then bitset contains any of those items (none)");
-        assert!(bitset.contains_none(&bs2), "When the argument is empty then bitset definitely contains none of the items");
+        assert!(
+            bitset.contains_any(&bs2),
+            "When the argument is empty then bitset contains any of those items (none)"
+        );
+        assert!(
+            bitset.contains_none(&bs2),
+            "When the argument is empty then bitset definitely contains none of the items"
+        );
 
         bs2.insert(0);
         assert!(bitset.contains_any(&bs2));

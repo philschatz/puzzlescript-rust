@@ -1,8 +1,8 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 use std::error::Error;
-use std::io::BufReader;
 use std::fs::File;
+use std::io::BufReader;
 
 use log::debug;
 

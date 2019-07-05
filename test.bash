@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # Check how long a command takes to run. Fail if it is too slow.
 bench() {
@@ -16,10 +15,12 @@ bench() {
     fi
 }
 
-cargo build --release
+cargo build --release || exit 110
 
-echo "..........q" | bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary --level 0 --scripted
+echo "..........q" | bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary --level 0 --scripted || exit 110
 
-cargo test
+cargo test || exit 110
 
-bench 300 ./test_solutions.bash
+cargo fmt # might not be installed
+
+bench 300 ./test_solutions.bash || exit 110

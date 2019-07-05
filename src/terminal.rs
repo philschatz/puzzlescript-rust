@@ -5,21 +5,21 @@ use std::time;
 use log::trace;
 use tui::buffer::Buffer;
 use tui::layout::Rect;
-use tui::style::Style;
 use tui::style::Color;
 use tui::style::Modifier;
-use tui::widgets::Widget;
+use tui::style::Style;
 use tui::widgets::Block;
 use tui::widgets::Borders;
+use tui::widgets::Widget;
 
-use crate::model::util::Position;
-use crate::engine::Engine;
-use crate::engine::BoardOrMessage;
 use crate::color::ColorSpace;
 use crate::color::Rgb;
 use crate::debugger::ScreenDumper;
+use crate::engine::BoardOrMessage;
+use crate::engine::Engine;
+use crate::model::util::Position;
 
-// Temporary grid of pixels. This is used to render the 
+// Temporary grid of pixels. This is used to render the
 // level using '  ' or '▄' depending on the size of the terminal
 struct Grid {
     is_true_color: bool,
@@ -36,7 +36,7 @@ impl Grid {
             width,
             height,
             colors: vec![background; width as usize * height as usize],
-            background
+            background,
         }
     }
 
@@ -80,10 +80,13 @@ impl Grid {
                 let y_top = row * 2;
                 let y_bottom = row * 2 + 1;
                 let top_color = self.colors[(x + y_top * self.width) as usize];
-                let bottom_color = self.colors.get((x + y_bottom * self.width) as usize).unwrap_or(&self.background);
+                let bottom_color = self
+                    .colors
+                    .get((x + y_bottom * self.width) as usize)
+                    .unwrap_or(&self.background);
 
                 if x >= area.width || row >= area.height {
-                    continue
+                    continue;
                 }
 
                 let x = x + area.left();
@@ -103,7 +106,7 @@ impl Grid {
                 let color = self.colors[(x + y * self.width) as usize];
 
                 if x * 2 >= area.width || y >= area.height {
-                    continue
+                    continue;
                 }
 
                 let x = x * 2 + area.left();
@@ -122,7 +125,7 @@ impl Grid {
     fn to_color(&self, rgb: &Rgb) -> Color {
         if self.is_true_color {
             Color::Rgb(rgb.r, rgb.g, rgb.b)
-        } else { 
+        } else {
             // See termion::AnsiValue::rgb(r,g,b)
             let r = rgb.r / 51;
             let g = rgb.g / 51;
@@ -134,10 +137,9 @@ impl Grid {
 
 impl Widget for Engine {
     fn draw(&mut self, area: Rect, buf: &mut Buffer) {
-
         if let Some(msg) = &self.pending_message {
             MessageWindow::new(msg.clone()).draw(area, buf);
-            return
+            return;
         }
 
         match &self.current_level {
@@ -159,14 +161,22 @@ impl Widget for Engine {
                         )
                     }
                 };
-                
-                trace!("Board: {:?}, Is flickscreen? {:?}", board_size, self.game_data.metadata.flickscreen);
+
+                trace!(
+                    "Board: {:?}, Is flickscreen? {:?}",
+                    board_size,
+                    self.game_data.metadata.flickscreen
+                );
                 ScreenDumper::set_window(game_window);
 
                 let mut grid = Grid::new(
-                    game_window.width * sprite_width, 
+                    game_window.width * sprite_width,
                     game_window.height * sprite_height,
-                    self.game_data.metadata.background_color.unwrap_or(Rgb::black()));
+                    self.game_data
+                        .metadata
+                        .background_color
+                        .unwrap_or(Rgb::black()),
+                );
 
                 let is_visible = |pos: &Position| {
                     pos.x >= game_window.left()
@@ -177,25 +187,27 @@ impl Widget for Engine {
 
                 for cell_pos in board.positions_iter() {
                     if !is_visible(&cell_pos) {
-                        continue
+                        continue;
                     }
 
                     let mut sprites = board.get_sprite_states(&cell_pos);
                     sprites.sort();
-                    
+
                     for sprite in sprites {
                         let sprite = self.game_data.lookup_sprite(sprite);
-                        
+
                         for sprite_y in 0..sprite_height {
                             for sprite_x in 0..sprite_width {
-                                if let Some(rgb) = sprite.pixels[sprite_y as usize][sprite_x as usize] {
+                                if let Some(rgb) =
+                                    sprite.pixels[sprite_y as usize][sprite_x as usize]
+                                {
                                     let x = sprite_x as u16 + cell_pos.x * sprite_width;
                                     let y = sprite_y as u16 + cell_pos.y * sprite_height;
 
                                     // shift for flickscreen games
                                     let x = x - game_window.left() * sprite_width;
                                     let y = y - game_window.top() * sprite_height;
-                                    
+
                                     grid.set(x, y, rgb);
                                 }
                             }
@@ -228,14 +240,14 @@ impl Widget for Engine {
                     }
                     // add the "resize" text
                     let resize = "(resize terminal)";
-                    let x = grid_rect.left() + (right - grid_rect.left()) / 2 - resize.len() as u16 / 2;
+                    let x =
+                        grid_rect.left() + (right - grid_rect.left()) / 2 - resize.len() as u16 / 2;
                     buf.set_string(x, y, resize, Style::default().fg(Color::LightYellow))
                 }
             }
         }
     }
 }
-
 
 pub struct MessageWindow {
     message: String,
@@ -249,7 +261,6 @@ impl MessageWindow {
 
 impl Widget for MessageWindow {
     fn draw(&mut self, area: Rect, buf: &mut Buffer) {
-
         let mut lines = vec![String::from("")];
         let mut index = 0;
         for word in self.message.split_whitespace() {
@@ -267,15 +278,22 @@ impl Widget for MessageWindow {
         let mut y = (height - lines.len() as u16) / 2;
         for line in lines {
             let x = (width - line.len() as u16) / 2;
-            
-            buf.set_string(x as u16 + area.left(), y as u16 + area.top(), line, Style::default().fg(Color::White));
+
+            buf.set_string(
+                x as u16 + area.left(),
+                y as u16 + area.top(),
+                line,
+                Style::default().fg(Color::White),
+            );
 
             y += 1;
         }
     }
 }
 
-pub const DOTS: [char; 12] = [' ', '⠁', '⠉', '⠙', '⠹', '⠽', '⠿', '⠽', '⠹', '⠙', '⠉', '⠁'];
+pub const DOTS: [char; 12] = [
+    ' ', '⠁', '⠉', '⠙', '⠹', '⠽', '⠿', '⠽', '⠹', '⠙', '⠉', '⠁',
+];
 
 // show this so that the cursor _always_ ends up at the bottom of the screen
 pub struct Spinner {
@@ -285,7 +303,10 @@ pub struct Spinner {
 
 impl Spinner {
     pub fn new() -> Self {
-        Self { state: 0, last_tick: time::Instant::now() }
+        Self {
+            state: 0,
+            last_tick: time::Instant::now(),
+        }
     }
 }
 
@@ -293,8 +314,16 @@ impl Widget for Spinner {
     fn draw(&mut self, area: Rect, buf: &mut Buffer) {
         debug_assert!(area.height > 0, "Needs at least 1 line to show the spinner");
 
-        let s = format!("{:.1}FPS", 1000 as f32 / self.last_tick.elapsed().as_millis() as f32);
-        buf.set_string(area.right() - s.len() as u16 - 2, area.bottom() - 1, s, Style::default());
+        let s = format!(
+            "{:.1}FPS",
+            1000 as f32 / self.last_tick.elapsed().as_millis() as f32
+        );
+        buf.set_string(
+            area.right() - s.len() as u16 - 2,
+            area.bottom() - 1,
+            s,
+            Style::default(),
+        );
         self.last_tick = time::Instant::now();
 
         self.state = (self.state + 1) % DOTS.len();
@@ -303,13 +332,14 @@ impl Widget for Spinner {
     }
 }
 
-
 pub struct Help {
     pub expanded: bool,
 }
 
 impl Help {
-    pub fn new() -> Self { Self {expanded: false } }
+    pub fn new() -> Self {
+        Self { expanded: false }
+    }
     pub fn toggle(&mut self) {
         self.expanded = !self.expanded;
     }
@@ -320,7 +350,12 @@ impl Widget for Help {
         if self.expanded {
             buf.set_string(area.x, area.y, "Move: Arrows/WSAD | Action: X/Space | Undo: Z/U | Restart: R | Quit: Q/Esc | Pause: P | Debugger: ` or ~ or \\ | Fast/Slow: - or +", Style::default())
         } else {
-            buf.set_string(area.x, area.y, "[?] for help", Style::default().fg(Color::DarkGray));
+            buf.set_string(
+                area.x,
+                area.y,
+                "[?] for help",
+                Style::default().fg(Color::DarkGray),
+            );
         }
     }
 }
@@ -333,7 +368,11 @@ pub struct Attribution {
 
 impl Attribution {
     pub fn new(title: String, author: Option<String>, homepage: Option<String>) -> Self {
-        Self { title, author, homepage }
+        Self {
+            title,
+            author,
+            homepage,
+        }
     }
 }
 
@@ -355,7 +394,7 @@ impl Widget for Attribution {
 
 // show this so that the cursor _always_ ends up at the bottom of the screen
 pub struct PlayPause {
-    pub paused: bool
+    pub paused: bool,
 }
 
 impl PlayPause {
@@ -374,7 +413,10 @@ impl PlayPause {
 
 impl Widget for PlayPause {
     fn draw(&mut self, area: Rect, buf: &mut Buffer) {
-        debug_assert!(area.height > 3, "Needs at least 3 lines to show the pause dialog");
+        debug_assert!(
+            area.height > 3,
+            "Needs at least 3 lines to show the pause dialog"
+        );
 
         if self.paused {
             for y in area.top()..area.bottom() {
@@ -394,14 +436,12 @@ impl Widget for PlayPause {
             let dialog_bg = Color::Black;
 
             // Fill the block with black (and 1char around the block)
-            for y in dialog_area.top()-1..dialog_area.bottom()+1 {
-                for x in dialog_area.left()-1..dialog_area.right()+1 {
-                    buf.get_mut(x, y)
-                        .set_bg(dialog_bg)
-                        .set_char(' ');
+            for y in dialog_area.top() - 1..dialog_area.bottom() + 1 {
+                for x in dialog_area.left() - 1..dialog_area.right() + 1 {
+                    buf.get_mut(x, y).set_bg(dialog_bg).set_char(' ');
                 }
             }
-            
+
             Block::default()
                 .title_style(Style::default().fg(Color::Red))
                 .borders(Borders::ALL)
@@ -409,7 +449,15 @@ impl Widget for PlayPause {
                 .style(Style::default().bg(dialog_bg))
                 .draw(dialog_area, buf);
 
-            buf.set_string(x + 3, y + 2, s, Style::default().fg(Color::LightRed).modifier(Modifier::BOLD).modifier(Modifier::SLOW_BLINK));
+            buf.set_string(
+                x + 3,
+                y + 2,
+                s,
+                Style::default()
+                    .fg(Color::LightRed)
+                    .modifier(Modifier::BOLD)
+                    .modifier(Modifier::SLOW_BLINK),
+            );
         }
     }
 }
@@ -419,7 +467,7 @@ fn to_grayscale(color: &Color) -> Color {
         Color::Rgb(r, g, b) => {
             let gray = ((*r as u16 + *g as u16 + *b as u16) / 3) as u8;
             Color::Rgb(gray, gray, gray)
-        },
+        }
         Color::Indexed(i) => {
             let i = i - 16;
             let r = i / 36;
@@ -429,7 +477,7 @@ fn to_grayscale(color: &Color) -> Color {
 
             // Color::Indexed(16 + 36 * r + 6 * g + b)
             Color::Indexed(16 + 36 * gray + 6 * gray + gray)
-        },
-        _ => color.clone()
+        }
+        _ => color.clone(),
     }
 }

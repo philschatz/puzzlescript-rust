@@ -1,15 +1,14 @@
-
 use std::fmt;
 
 use log::debug;
 use rand::SeedableRng;
 use rand_xorshift::XorShiftRng;
 
+use crate::model::board::Board;
 use crate::model::game::GameData;
 use crate::model::game::Input;
 use crate::model::game::Level;
 use crate::model::util::Position;
-use crate::model::board::Board;
 
 #[derive(Debug)]
 pub struct Engine {
@@ -21,7 +20,6 @@ pub struct Engine {
     pub debug_rules: bool,
     pub pending_message: Option<String>,
 }
-
 
 // The main enchilada. Pass in a game and a level and then just call engine.tick(Some(EngineInput::Right))
 impl Engine {
@@ -68,9 +66,9 @@ impl Engine {
             match input {
                 Some(EngineInput::Action) => {
                     self.pending_message = None;
-                    return TickResult::empty().affected()
-                },
-                _ => return TickResult::empty()
+                    return TickResult::empty().affected();
+                }
+                _ => return TickResult::empty(),
             }
         }
 
@@ -79,30 +77,47 @@ impl Engine {
                 let mut pressed = false;
                 let mut new = board.clone();
                 match input {
-                    None => {},
-                    Some(EngineInput::Up) => { pressed = true; self.game_data.evaluate_player_input(&mut self.rng, &mut new, Input::Up) },
-                    Some(EngineInput::Down) => { pressed = true; self.game_data.evaluate_player_input(&mut self.rng, &mut new, Input::Down) },
-                    Some(EngineInput::Left) => { pressed = true; self.game_data.evaluate_player_input(&mut self.rng, &mut new, Input::Left) },
-                    Some(EngineInput::Right) => { pressed = true; self.game_data.evaluate_player_input(&mut self.rng, &mut new, Input::Right) },
-                    Some(EngineInput::Action) => { pressed = true; self.game_data.evaluate_player_input(&mut self.rng, &mut new, Input::Action) },
-                    Some(EngineInput::Restart) => {
-                        match self.undo_stack.first() {
-                            None => {},
-                            Some(b) => new = b.clone(),
-                        }
+                    None => {}
+                    Some(EngineInput::Up) => {
+                        pressed = true;
+                        self.game_data
+                            .evaluate_player_input(&mut self.rng, &mut new, Input::Up)
+                    }
+                    Some(EngineInput::Down) => {
+                        pressed = true;
+                        self.game_data
+                            .evaluate_player_input(&mut self.rng, &mut new, Input::Down)
+                    }
+                    Some(EngineInput::Left) => {
+                        pressed = true;
+                        self.game_data
+                            .evaluate_player_input(&mut self.rng, &mut new, Input::Left)
+                    }
+                    Some(EngineInput::Right) => {
+                        pressed = true;
+                        self.game_data
+                            .evaluate_player_input(&mut self.rng, &mut new, Input::Right)
+                    }
+                    Some(EngineInput::Action) => {
+                        pressed = true;
+                        self.game_data
+                            .evaluate_player_input(&mut self.rng, &mut new, Input::Action)
+                    }
+                    Some(EngineInput::Restart) => match self.undo_stack.first() {
+                        None => {}
+                        Some(b) => new = b.clone(),
                     },
-                    Some(EngineInput::Undo) => { 
-                        match self.undo_stack.pop() {
-                            None => {},
-                            Some(b) => new = b,
-                        }
+                    Some(EngineInput::Undo) => match self.undo_stack.pop() {
+                        None => {}
+                        Some(b) => new = b,
                     },
                 }
-                let t = self.game_data.evaluate(&mut self.rng, &mut new, self.debug_rules);
+                let t = self
+                    .game_data
+                    .evaluate(&mut self.rng, &mut new, self.debug_rules);
 
                 let mut new_board = None;
                 if !t.cancel {
-
                     if t.message.is_some() {
                         self.pending_message = Some(t.message.unwrap().clone());
                     }
@@ -126,23 +141,31 @@ impl Engine {
                     new_board = Some(BoardOrMessage::Board(new));
                 }
                 match new_board {
-                    None => {},
+                    None => {}
                     Some(n) => self.current_level = n,
                 }
                 TickResult {
                     changed: changed && !t.cancel,
-                    completed_level: if t.win { Some(self.current_level_num) } else { None },
-                    checkpoint: if t.checkpoint { Some(self.current_level.unwrap_board().clone()) } else { None },
+                    completed_level: if t.win {
+                        Some(self.current_level_num)
+                    } else {
+                        None
+                    },
+                    checkpoint: if t.checkpoint {
+                        Some(self.current_level.unwrap_board().clone())
+                    } else {
+                        None
+                    },
                     accepting_input: !t.again,
                     sfx: t.sfx,
                 }
-            },
-            BoardOrMessage::Message(_) => {
-                match input {
-                    Some(EngineInput::Action) => TickResult::empty().affected().win(self.current_level_num),
-                    _ => TickResult::empty()
-                }
             }
+            BoardOrMessage::Message(_) => match input {
+                Some(EngineInput::Action) => {
+                    TickResult::empty().affected().win(self.current_level_num)
+                }
+                _ => TickResult::empty(),
+            },
         }
     }
 
@@ -150,7 +173,8 @@ impl Engine {
         match &self.current_level {
             BoardOrMessage::Message(_) => None,
             BoardOrMessage::Board(board) => {
-                let matches: Vec<Position> = board.positions_iter()
+                let matches: Vec<Position> = board
+                    .positions_iter()
                     .iter()
                     .filter(|&p| board.matches(p, &self.game_data.player_tile, &None))
                     .map(|&p| p)
@@ -173,7 +197,7 @@ impl Engine {
         self.pending_message = None;
 
         if self.current_level_num as usize >= self.game_data.levels.len() {
-            return false
+            return false;
         }
         let current = &self.game_data.levels[self.current_level_num as usize];
         self.current_level = match current {
@@ -226,7 +250,7 @@ impl fmt::Display for EngineInput {
 }
 
 fn new_rng() -> XorShiftRng {
-    XorShiftRng::from_seed([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
+    XorShiftRng::from_seed([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 }
 
 #[derive(Debug)]
@@ -241,7 +265,6 @@ impl BoardOrMessage {
             BoardOrMessage::Message(_) => panic!("called `unwrap_board()` on a `Message` value"),
             BoardOrMessage::Board(b) => b,
         }
-
     }
 }
 

@@ -1,5 +1,5 @@
-use std::hash;
 use std::cmp;
+use std::hash;
 
 use fnv::FnvHashSet;
 
@@ -11,11 +11,10 @@ use crate::model::util::WantsToMove;
 
 // static mut COUNTER: usize = 0;
 
-
 #[derive(Clone, PartialEq, Debug)]
 pub enum TileKind {
     And,
-    Or
+    Or,
 }
 
 #[derive(Clone, Debug)]
@@ -25,12 +24,11 @@ pub struct Tile {
     pub name: String,
     pub bits: BitSet,
     pub collision_layers: FnvHashSet<u16>,
-    pub sprites: Vec<SpriteState>, 
+    pub sprites: Vec<SpriteState>,
 }
 
 impl Tile {
     pub fn new(kind: TileKind, name: &String, sprites: Vec<SpriteState>) -> Self {
-
         // let id;
         // unsafe {
         //     COUNTER+=1;
@@ -77,15 +75,14 @@ impl cmp::PartialEq for Tile {
     }
 }
 
-impl cmp::Eq for Tile { }
-
+impl cmp::Eq for Tile {}
 
 #[derive(Clone, PartialEq, Debug)]
 pub struct TileWithModifier {
     pub random: bool,
     pub negated: bool,
     pub tile: Tile,
-    pub direction: Option<WantsToMove>
+    pub direction: Option<WantsToMove>,
 }
 
 impl TileWithModifier {

@@ -6,12 +6,12 @@ use crate::model::cell::Cell;
 use crate::model::tile::Tile;
 use crate::model::tile::TileKind;
 
-use crate::model::util::Position;
-use crate::model::util::WantsToMove;
-use crate::model::util::SpriteState;
-use crate::model::util::SpriteAndWantsToMove;
 use crate::model::util::CardinalDirection;
 use crate::model::util::Dimension;
+use crate::model::util::Position;
+use crate::model::util::SpriteAndWantsToMove;
+use crate::model::util::SpriteState;
+use crate::model::util::WantsToMove;
 
 pub struct PositionIter {
     size: Dimension,
@@ -24,13 +24,37 @@ impl Iterator for PositionIter {
     fn next(&mut self) -> Option<Position> {
         let ret = self.cur;
         match self.cur {
-            None => {},
+            None => {}
             Some(cur) => {
                 self.cur = match self.dir {
-                    CardinalDirection::Up => if cur.y == 0 { None } else { Some(Position::new(cur.x, cur.y - 1)) },
-                    CardinalDirection::Down => if cur.y == self.size.height - 1 { None } else { Some(Position::new(cur.x, cur.y + 1)) },
-                    CardinalDirection::Left => if cur.x == 0 { None } else { Some(Position::new(cur.x - 1, cur.y)) },
-                    CardinalDirection::Right => if cur.x == self.size.width - 1 { None } else { Some(Position::new(cur.x + 1, cur.y)) },
+                    CardinalDirection::Up => {
+                        if cur.y == 0 {
+                            None
+                        } else {
+                            Some(Position::new(cur.x, cur.y - 1))
+                        }
+                    }
+                    CardinalDirection::Down => {
+                        if cur.y == self.size.height - 1 {
+                            None
+                        } else {
+                            Some(Position::new(cur.x, cur.y + 1))
+                        }
+                    }
+                    CardinalDirection::Left => {
+                        if cur.x == 0 {
+                            None
+                        } else {
+                            Some(Position::new(cur.x - 1, cur.y))
+                        }
+                    }
+                    CardinalDirection::Right => {
+                        if cur.x == self.size.width - 1 {
+                            None
+                        } else {
+                            Some(Position::new(cur.x + 1, cur.y))
+                        }
+                    }
                 }
             }
         }
@@ -67,7 +91,6 @@ impl Neighbors {
     }
 }
 
-
 #[derive(Clone, Debug)]
 pub struct StripeCache {
     pub sprites: BitSet,
@@ -77,8 +100,8 @@ pub struct StripeCache {
 
 impl StripeCache {
     pub fn new() -> Self {
-        Self { 
-            sprites: BitSet::new(), 
+        Self {
+            sprites: BitSet::new(),
             dirs: FnvHashSet::default(),
             // staleness: 0,
         }
@@ -99,7 +122,9 @@ impl StripeCache {
 
     pub fn contains_all_dirs(&self, dirs: &FnvHashSet<(u16, WantsToMove)>) -> bool {
         for dir in dirs {
-            if !self.dirs.contains(&dir) { return false }
+            if !self.dirs.contains(&dir) {
+                return false;
+            }
         }
         true
     }
@@ -113,7 +138,6 @@ pub struct Board {
     row_cache: Vec<StripeCache>,
     col_cache: Vec<StripeCache>,
 }
-
 
 impl Board {
     pub fn new(width: u16, height: u16) -> Self {
@@ -130,7 +154,10 @@ impl Board {
     }
 
     pub fn size(&self) -> Dimension {
-        Dimension { width: self.width, height: self.height }
+        Dimension {
+            width: self.width,
+            height: self.height,
+        }
     }
 
     pub fn from_tiles(grid: &Vec<Vec<Tile>>, background_tile: &Tile) -> Self {
@@ -152,7 +179,7 @@ impl Board {
                         for sprite in tile.get_sprites() {
                             board.add_sprite(&pos, &sprite, WantsToMove::Stationary);
                         }
-                    },
+                    }
                 }
                 x += 1;
             }
@@ -165,7 +192,8 @@ impl Board {
         let mut row_cache = vec![StripeCache::new(); height as usize];
         let mut col_cache = vec![StripeCache::new(); width as usize];
 
-        let grid = grid.iter()
+        let grid = grid
+            .iter()
             .enumerate()
             .map(|(index, sprites)| {
                 let x = index % width as usize;
@@ -174,8 +202,16 @@ impl Board {
 
                 for sprite in sprites {
                     cell.add_sprite(sprite, WantsToMove::Stationary);
-                    row_cache[y].add_sprite_index(sprite.collision_layer, sprite.index, WantsToMove::Stationary);
-                    col_cache[x].add_sprite_index(sprite.collision_layer, sprite.index, WantsToMove::Stationary);
+                    row_cache[y].add_sprite_index(
+                        sprite.collision_layer,
+                        sprite.index,
+                        WantsToMove::Stationary,
+                    );
+                    col_cache[x].add_sprite_index(
+                        sprite.collision_layer,
+                        sprite.index,
+                        WantsToMove::Stationary,
+                    );
                 }
                 cell
             })
@@ -207,14 +243,17 @@ impl Board {
     /// Get a mutable reference to the cell at (x, y).
     fn get_mut(&mut self, pos: &Position) -> &mut Cell {
         let pos = self.pos(pos);
-        self.grid.get_mut(pos).expect("Position not found on the board")
+        self.grid
+            .get_mut(pos)
+            .expect("Position not found on the board")
     }
 
     pub fn get_sprite_states(&self, pos: &Position) -> Vec<SpriteState> {
         let name = String::from("made_by_cell");
         let cell = self.get(pos);
 
-        cell.as_map().iter()
+        cell.as_map()
+            .iter()
             .map(|(c, w)| SpriteState::new(&name, w.sprite_index, *c))
             .collect()
     }
@@ -223,10 +262,12 @@ impl Board {
         let name = String::from("made_by_cell");
         let cell = self.get(pos);
 
-        let mut ret: Vec<_> = cell.as_map().iter()
+        let mut ret: Vec<_> = cell
+            .as_map()
+            .iter()
             .map(|(c, w)| (SpriteState::new(&name, w.sprite_index, *c), w.wants_to_move))
             .collect();
-        ret.sort_by(|a, b| a.0.collision_layer.cmp(&b.0.collision_layer) );
+        ret.sort_by(|a, b| a.0.collision_layer.cmp(&b.0.collision_layer));
         ret
     }
 
@@ -238,15 +279,26 @@ impl Board {
         cell.add_sprite(sprite, dir)
     }
 
-    pub fn add_sprite_index(&mut self, pos: &Position, collision_layer: u16, sprite_index: u16, dir: WantsToMove) -> bool {
+    pub fn add_sprite_index(
+        &mut self,
+        pos: &Position,
+        collision_layer: u16,
+        sprite_index: u16,
+        dir: WantsToMove,
+    ) -> bool {
         self.row_cache[pos.y as usize].add_sprite_index(collision_layer, sprite_index, dir);
         self.col_cache[pos.x as usize].add_sprite_index(collision_layer, sprite_index, dir);
         let cell = self.get_mut(pos);
         cell.add_sprite_index(collision_layer, sprite_index, dir)
     }
 
-    pub fn neighbor_positions(&self, pos: &Position, dir: CardinalDirection) -> Neighbors { // PERF: 15.8%
-        Neighbors { size: self.size(), dir, start: pos.clone() }
+    pub fn neighbor_positions(&self, pos: &Position, dir: CardinalDirection) -> Neighbors {
+        // PERF: 15.8%
+        Neighbors {
+            size: self.size(),
+            dir,
+            start: pos.clone(),
+        }
     }
 
     pub fn neighbor_position(&self, pos: &Position, dir: CardinalDirection) -> Option<Position> {
@@ -291,7 +343,11 @@ impl Board {
         cell.has_collision_layer(collision_layer)
     }
 
-    pub fn get_collision_layer(&self, pos: &Position, collision_layer: u16) -> Option<&SpriteAndWantsToMove> {
+    pub fn get_collision_layer(
+        &self,
+        pos: &Position,
+        collision_layer: u16,
+    ) -> Option<&SpriteAndWantsToMove> {
         let cell = self.get(pos);
         cell.get_collision_layer(collision_layer)
     }
@@ -304,7 +360,12 @@ impl Board {
         cell.remove_collision_layer(collision_layer)
     }
 
-    pub fn set_wants_to_move(&mut self, pos: &Position, collision_layer: u16, dir: WantsToMove) -> bool {
+    pub fn set_wants_to_move(
+        &mut self,
+        pos: &Position,
+        collision_layer: u16,
+        dir: WantsToMove,
+    ) -> bool {
         self.row_cache[pos.y as usize].set_wants_to_move(collision_layer, dir);
         self.col_cache[pos.x as usize].set_wants_to_move(collision_layer, dir);
 
@@ -326,7 +387,6 @@ impl PartialEq for Board {
         self.width == other.width && self.height == other.height && self.grid == other.grid
     }
 }
-
 
 #[cfg(test)]
 mod tests {

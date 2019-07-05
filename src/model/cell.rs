@@ -1,15 +1,15 @@
-use std::hash;
-use std::fmt;
 use std::cmp;
+use std::fmt;
+use std::hash;
 
 use fnv::FnvHashMap;
 
 use crate::bitset::BitSet;
+use crate::model::tile::Tile;
+use crate::model::tile::TileKind;
 use crate::model::util::SpriteAndWantsToMove;
 use crate::model::util::SpriteState;
 use crate::model::util::WantsToMove;
-use crate::model::tile::Tile;
-use crate::model::tile::TileKind;
 
 #[derive(Clone, PartialEq, Debug)]
 pub struct Cell {
@@ -17,7 +17,6 @@ pub struct Cell {
     collision_layers: FnvHashMap<u16, SpriteAndWantsToMove>,
 
     pub sprite_bits: BitSet,
-
     // key: usize,
 }
 
@@ -46,12 +45,16 @@ impl Cell {
 
     }
 
-
     /// Returns true if the cell was changed
     pub fn add_sprite(&mut self, sprite: &SpriteState, wants_to_move: WantsToMove) -> bool {
         self.add_sprite_index(sprite.collision_layer, sprite.index, wants_to_move)
     }
-    pub fn add_sprite_index(&mut self, collision_layer: u16, sprite_index: u16, wants_to_move: WantsToMove) -> bool {
+    pub fn add_sprite_index(
+        &mut self,
+        collision_layer: u16,
+        sprite_index: u16,
+        wants_to_move: WantsToMove,
+    ) -> bool {
         if wants_to_move == WantsToMove::RandomDir {
             panic!("BUG: Should never try to set direction to RANDOMDIR at this point");
         }
@@ -62,14 +65,14 @@ impl Cell {
                 self.collision_layers.insert(collision_layer, w);
                 self.invariant();
                 true
-            },
+            }
             Some(w_curr) => {
                 if *w_curr == w {
                     false
                 } else {
                     self.sprite_bits.remove(w_curr.sprite_index);
                     self.sprite_bits.insert(w.sprite_index);
-                    
+
                     self.collision_layers.insert(collision_layer, w);
                     self.invariant();
                     true
@@ -84,7 +87,7 @@ impl Cell {
                 self.sprite_bits.remove(w.sprite_index);
                 self.invariant();
                 true
-            },
+            }
             None => false,
         }
     }
@@ -100,7 +103,7 @@ impl Cell {
         let w = self.collision_layers.get(&collision_layer);
         match w {
             None => None,
-            Some(w2) => Some(w2.wants_to_move)
+            Some(w2) => Some(w2.wants_to_move),
         }
     }
     pub fn set_wants_to_move(&mut self, collision_layer: u16, dir: WantsToMove) -> bool {
@@ -141,7 +144,7 @@ impl Cell {
         match &tile.kind {
             TileKind::And => {
                 self.matches_all(&tile, &dir) // PERF: 5.6%
-            },
+            }
             TileKind::Or => {
                 self.matches_any(&tile, &dir) // PERF: 4.7%
             }
@@ -156,8 +159,10 @@ impl Cell {
                     if tile.bits.contains(s.sprite_index) {
                         match dir {
                             None => return true,
-                            Some(d) => if s.wants_to_move == *d {
-                                return true
+                            Some(d) => {
+                                if s.wants_to_move == *d {
+                                    return true;
+                                }
                             }
                         }
                     }
@@ -178,18 +183,17 @@ impl Cell {
                     if tile.bits.contains(cell_sprite.sprite_index) {
                         if let Some(d) = dir {
                             if cell_sprite.wants_to_move != *d {
-                                return false
+                                return false;
                             }
                         }
                     } else {
-                        return false
+                        return false;
                     }
                 } else {
-                    return false
+                    return false;
                 }
             }
             true
-
         } else {
             false
         }
@@ -243,7 +247,6 @@ impl fmt::Display for Cell {
         write!(f, "Cell({:?})", sprites)
     }
 }
-
 
 // Memoize the cell & tile matching to reduce computation
 // thread_local!(static CACHE: cell::RefCell<Cache> = cell::RefCell::new(FnvHashMap::default()));

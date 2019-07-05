@@ -1,11 +1,11 @@
 #[cfg(feature = "serde")]
 extern crate serde;
 
+use std::cmp::{Eq, Ordering};
 use std::fmt;
 use std::hash;
-use std::cmp::{Eq, Ordering};
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Copy, Clone, PartialEq, Debug)]
 pub struct Dimension {
@@ -13,17 +13,16 @@ pub struct Dimension {
     pub height: u16,
 }
 
-
 #[derive(Copy, Clone, Debug)] // Hash is implemented below
 pub struct SpriteState {
     name: [char; 20],
     pub index: u16,
-    pub collision_layer: u16
+    pub collision_layer: u16,
 }
 
 impl SpriteState {
     pub fn new(name: &String, index: u16, collision_layer: u16) -> Self {
-        let mut name_chars = [' ';20];
+        let mut name_chars = [' '; 20];
         for i in 0..name_chars.len() {
             match name.chars().nth(i) {
                 None => name_chars[i] = ' ',
@@ -71,7 +70,7 @@ impl PartialEq for SpriteState {
     }
 }
 
-impl Eq for SpriteState { }
+impl Eq for SpriteState {}
 
 impl fmt::Display for SpriteState {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -79,7 +78,6 @@ impl fmt::Display for SpriteState {
         write!(f, "{}[{}]", chars.trim(), self.index)
     }
 }
-
 
 #[derive(Serialize, Deserialize, Clone, Copy, PartialEq, Eq, Hash, Debug)]
 pub enum WantsToMove {
@@ -119,13 +117,12 @@ impl fmt::Display for WantsToMove {
     }
 }
 
-
 #[derive(Serialize, Deserialize, Copy, Clone, PartialEq, Debug)]
 pub enum CardinalDirection {
     Up,
     Down,
     Left,
-    Right
+    Right,
 }
 
 impl fmt::Display for CardinalDirection {
@@ -140,28 +137,25 @@ impl fmt::Display for CardinalDirection {
     }
 }
 
-
-
 #[derive(Clone, Copy, PartialEq, Debug)]
 pub struct SpriteAndWantsToMove {
     pub sprite_index: u16,
-    pub wants_to_move: WantsToMove
+    pub wants_to_move: WantsToMove,
 }
 
 impl SpriteAndWantsToMove {
     pub fn new(sprite_index: u16, wants_to_move: WantsToMove) -> Self {
         SpriteAndWantsToMove {
             sprite_index,
-            wants_to_move
+            wants_to_move,
         }
     }
 }
 
-
 #[derive(Copy, Clone, PartialEq, Eq, Debug, Hash)]
 pub struct Position {
     pub x: u16,
-    pub y: u16
+    pub y: u16,
 }
 
 impl Position {
@@ -176,8 +170,6 @@ impl fmt::Display for Position {
     }
 }
 
-
-
 #[derive(Clone, PartialEq, Default, Debug)]
 pub struct TriggeredCommands {
     pub message: Option<String>,
@@ -191,7 +183,9 @@ pub struct TriggeredCommands {
 
 impl TriggeredCommands {
     pub fn merge(&mut self, other: &TriggeredCommands) {
-        if self.message.is_none() { self.message = other.message.clone(); }
+        if self.message.is_none() {
+            self.message = other.message.clone();
+        }
         self.again |= other.again;
         self.cancel |= other.cancel;
         self.checkpoint |= other.checkpoint;
@@ -203,12 +197,24 @@ impl TriggeredCommands {
 
 impl fmt::Display for TriggeredCommands {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        if self.again { write!(f, " AGAIN")?; }
-        if self.cancel { write!(f, " CANCEL")?; }
-        if self.checkpoint { write!(f, " CHECKPOINT")?; }
-        if self.restart { write!(f, " RESTART")?; }
-        if self.win { write!(f, " WIN")?; }
-        if self.sfx { write!(f, " SFX")?; }
+        if self.again {
+            write!(f, " AGAIN")?;
+        }
+        if self.cancel {
+            write!(f, " CANCEL")?;
+        }
+        if self.checkpoint {
+            write!(f, " CHECKPOINT")?;
+        }
+        if self.restart {
+            write!(f, " RESTART")?;
+        }
+        if self.win {
+            write!(f, " WIN")?;
+        }
+        if self.sfx {
+            write!(f, " SFX")?;
+        }
         if let Some(message) = &self.message {
             write!(f, " MESSAGE {}", message)?;
         }

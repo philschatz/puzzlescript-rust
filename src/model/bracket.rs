@@ -1,18 +1,18 @@
-use std::fmt;
 use fnv::FnvHashMap;
 use fnv::FnvHashSet;
 use rand::Rng;
+use std::fmt;
 
 use crate::bitset::BitSet;
-use crate::model::tile::Tile;
-use crate::model::util::Position;
-use crate::model::board::Neighbors;
-use crate::model::util::WantsToMove;
-use crate::model::util::SpriteState;
-use crate::model::util::CardinalDirection;
-use crate::model::neighbor::Neighbor;
 use crate::model::board::Board;
+use crate::model::board::Neighbors;
 use crate::model::board::StripeCache;
+use crate::model::neighbor::Neighbor;
+use crate::model::tile::Tile;
+use crate::model::util::CardinalDirection;
+use crate::model::util::Position;
+use crate::model::util::SpriteState;
+use crate::model::util::WantsToMove;
 
 #[derive(Clone, PartialEq, Debug)]
 pub struct BracketMatch {
@@ -36,7 +36,11 @@ impl Bracket {
         let mut any_sprites = BitSet::new();
         let mut sprite_movements_present = FnvHashSet::default();
         for n in &before_neighbors {
-            n.populate_cache(&mut all_sprites, &mut any_sprites, &mut sprite_movements_present);
+            n.populate_cache(
+                &mut all_sprites,
+                &mut any_sprites,
+                &mut sprite_movements_present,
+            );
         }
         Self {
             dir,
@@ -47,15 +51,27 @@ impl Bracket {
             sprite_movements_present,
         }
     }
-    pub fn new_ellipsis(dir: CardinalDirection, before_neighbors: Vec<Neighbor>, after_neighbors: Vec<Neighbor>) -> Self {
+    pub fn new_ellipsis(
+        dir: CardinalDirection,
+        before_neighbors: Vec<Neighbor>,
+        after_neighbors: Vec<Neighbor>,
+    ) -> Self {
         let mut all_sprites = BitSet::new();
         let mut any_sprites = BitSet::new();
         let mut sprite_movements_present = FnvHashSet::default();
         for n in &before_neighbors {
-            n.populate_cache(&mut all_sprites, &mut any_sprites, &mut sprite_movements_present);
+            n.populate_cache(
+                &mut all_sprites,
+                &mut any_sprites,
+                &mut sprite_movements_present,
+            );
         }
         for n in &after_neighbors {
-            n.populate_cache(&mut all_sprites, &mut any_sprites, &mut sprite_movements_present);
+            n.populate_cache(
+                &mut all_sprites,
+                &mut any_sprites,
+                &mut sprite_movements_present,
+            );
         }
         Self {
             dir,
@@ -71,10 +87,12 @@ impl Bracket {
         assert_eq!(self.after_neighbors.len(), action.after_neighbors.len());
 
         let mut has_actions = false;
-        self.before_neighbors.iter_mut()
+        self.before_neighbors
+            .iter_mut()
             .zip(&action.before_neighbors)
             .for_each(|(c, a)| has_actions |= c.prepare_actions(&a));
-        self.after_neighbors.iter_mut()
+        self.after_neighbors
+            .iter_mut()
             .zip(&action.after_neighbors)
             .for_each(|(c, a)| has_actions |= c.prepare_actions(&a));
         has_actions
@@ -86,24 +104,22 @@ impl Bracket {
         //     assert!(self.after_neighbors.len() <= m.after_positions.unwrap().len() as usize);
         // }
 
-        let matches = self.before_neighbors.iter()
+        let matches = self
+            .before_neighbors
+            .iter()
             .zip(m.before_positions.iter())
-            .map(|(n, pos)| {
-                n.matches(board, &pos)
-            })
+            .map(|(n, pos)| n.matches(board, &pos))
             .all(|x| x);
-        
+
         match m.after_positions {
             None => matches,
             Some(after_neighbors) => {
                 if matches {
-                    self.after_neighbors.iter()
+                    self.after_neighbors
+                        .iter()
                         .zip(after_neighbors.iter())
-                        .map(|(n, pos)| {
-                            n.matches(board, &pos)
-                        })
+                        .map(|(n, pos)| n.matches(board, &pos))
                         .all(|x| x)
-
                 } else {
                     false
                 }
@@ -111,19 +127,25 @@ impl Bracket {
         }
     }
 
-    fn inner_find_match(&self, board: &Board, start_pos: &Position, self_neighbors: &Vec<Neighbor>) -> Option<Neighbors> {
+    fn inner_find_match(
+        &self,
+        board: &Board,
+        start_pos: &Position,
+        self_neighbors: &Vec<Neighbor>,
+    ) -> Option<Neighbors> {
         let neighbors = board.neighbor_positions(start_pos, self.dir);
         if self_neighbors.len() > neighbors.len() {
             None
         } else {
             // Check the row/col before iterating over every cell
             let cache = match self.dir {
-                CardinalDirection::Up
-                | CardinalDirection::Down => board.col_cache(start_pos.x),
-                CardinalDirection::Left
-                | CardinalDirection::Right => board.row_cache(start_pos.y),
+                CardinalDirection::Up | CardinalDirection::Down => board.col_cache(start_pos.x),
+                CardinalDirection::Left | CardinalDirection::Right => board.row_cache(start_pos.y),
             };
-            if cache.sprites.contains_any(&self.any_sprites) && cache.sprites.contains_all(&self.all_sprites) && cache.contains_all_dirs(&self.sprite_movements_present) {
+            if cache.sprites.contains_any(&self.any_sprites)
+                && cache.sprites.contains_all(&self.all_sprites)
+                && cache.contains_all_dirs(&self.sprite_movements_present)
+            {
                 if self.find_still_matched(board, self_neighbors, &neighbors) {
                     Some(neighbors)
                 } else {
@@ -141,7 +163,10 @@ impl Bracket {
         if self.after_neighbors.is_empty() {
             match before {
                 None => vec![],
-                Some(before) => vec![BracketMatch { before_positions: before, after_positions: None }]
+                Some(before) => vec![BracketMatch {
+                    before_positions: before,
+                    after_positions: None,
+                }],
             }
         } else {
             // Ellipsis bracket case
@@ -152,33 +177,40 @@ impl Bracket {
 
                     match start_neighbor {
                         None => vec![],
-                        Some(start_neighbor) => {
-                            board.neighbor_positions(&start_neighbor, self.dir).iter()
-                                .map(|start| {
-                                    let after = self.inner_find_match(board, &start, &self.after_neighbors);
-                                    match after {
-                                        None => None,
-                                        Some(after) => {
-                                            Some(BracketMatch { before_positions: before.clone(), after_positions: Some(after)})
-                                        }
-                                    }
-                                })
-                                .filter(|m| m.is_some())
-                                .map(|m| m.unwrap())
-                                .collect()
-                        }
+                        Some(start_neighbor) => board
+                            .neighbor_positions(&start_neighbor, self.dir)
+                            .iter()
+                            .map(|start| {
+                                let after =
+                                    self.inner_find_match(board, &start, &self.after_neighbors);
+                                match after {
+                                    None => None,
+                                    Some(after) => Some(BracketMatch {
+                                        before_positions: before.clone(),
+                                        after_positions: Some(after),
+                                    }),
+                                }
+                            })
+                            .filter(|m| m.is_some())
+                            .map(|m| m.unwrap())
+                            .collect(),
                     }
                 }
             }
         }
     }
 
-   fn find_still_matched(&self, board: &Board, self_neighbors: &Vec<Neighbor>, neighbors: &Neighbors) -> bool { // PERF_INSIDE: 26.5%
-        self_neighbors.iter()
+    fn find_still_matched(
+        &self,
+        board: &Board,
+        self_neighbors: &Vec<Neighbor>,
+        neighbors: &Neighbors,
+    ) -> bool {
+        // PERF_INSIDE: 26.5%
+        self_neighbors
+            .iter()
             .zip(neighbors.iter())
-            .map(|(n, p)| {
-                n.matches(board, &p)
-            })
+            .map(|(n, p)| n.matches(board, &p))
             .all(|x| x)
     }
 
@@ -186,50 +218,72 @@ impl Bracket {
     //     vec_of_optionals_to_vec(all_neighbors_and_states.iter().map(|neighbors_and_states| self.find_still_matched(board, neighbors_and_states.clone())).collect())
     // }
 
-    pub fn evaluate<R: Rng + ?Sized>(&self, rng: &mut R, board: &mut Board, m: BracketMatch, magic_or_tiles: &FnvHashMap<Tile, Vec<SpriteState>>) -> bool {
+    pub fn evaluate<R: Rng + ?Sized>(
+        &self,
+        rng: &mut R,
+        board: &mut Board,
+        m: BracketMatch,
+        magic_or_tiles: &FnvHashMap<Tile, Vec<SpriteState>>,
+    ) -> bool {
         assert!(self.before_neighbors.len() <= m.before_positions.len());
         let mut something_changed = false;
-        self.before_neighbors.iter()
+        self.before_neighbors
+            .iter()
             .zip(m.before_positions.iter())
-            .for_each(|(n, pos)| if n.evaluate(rng, board, &pos, magic_or_tiles) { something_changed = true });
-        
+            .for_each(|(n, pos)| {
+                if n.evaluate(rng, board, &pos, magic_or_tiles) {
+                    something_changed = true
+                }
+            });
+
         if !self.after_neighbors.is_empty() {
-            self.after_neighbors.iter()
+            self.after_neighbors
+                .iter()
                 .zip(m.after_positions.unwrap().iter())
-                .for_each(|(n, pos)| if n.evaluate(rng, board, &pos, magic_or_tiles) { something_changed = true });
+                .for_each(|(n, pos)| {
+                    if n.evaluate(rng, board, &pos, magic_or_tiles) {
+                        something_changed = true
+                    }
+                });
         }
         something_changed
     }
 
-    pub fn populate_magic_or_tiles(&self, board: &Board, magic_or_tiles: &mut FnvHashMap<Tile, Vec<SpriteState>>, m: BracketMatch) {
+    pub fn populate_magic_or_tiles(
+        &self,
+        board: &Board,
+        magic_or_tiles: &mut FnvHashMap<Tile, Vec<SpriteState>>,
+        m: BracketMatch,
+    ) {
         assert!(self.before_neighbors.len() <= m.before_positions.len());
         // if !self.after_neighbors.is_empty() {
         //     assert!(self.after_neighbors.len() <= m.after_positions.unwrap().len());
         // }
-        self.before_neighbors.iter()
+        self.before_neighbors
+            .iter()
             .zip(m.before_positions.iter())
             .for_each(|(n, pos)| n.populate_magic_or_tiles(magic_or_tiles, board, &pos));
 
         if !self.after_neighbors.is_empty() {
-            self.after_neighbors.iter()
+            self.after_neighbors
+                .iter()
                 .zip(m.after_positions.unwrap().iter())
                 .for_each(|(n, pos)| n.populate_magic_or_tiles(magic_or_tiles, board, &pos));
         }
-
     }
 
     pub fn is_horizontal(&self) -> bool {
         match self.dir {
-            CardinalDirection::Left
-            | CardinalDirection::Right => true,
-            CardinalDirection::Up
-            | CardinalDirection::Down => false,
+            CardinalDirection::Left | CardinalDirection::Right => true,
+            CardinalDirection::Up | CardinalDirection::Down => false,
         }
     }
 
     pub fn matches_cache(&self, cache: &StripeCache) -> bool {
         // TODO: check sprite_movements_present in the row/col cache
-        cache.sprites.contains_any(&self.any_sprites) && cache.sprites.contains_all(&self.all_sprites) && cache.contains_all_dirs(&self.sprite_movements_present)
+        cache.sprites.contains_any(&self.any_sprites)
+            && cache.sprites.contains_all(&self.all_sprites)
+            && cache.contains_all_dirs(&self.sprite_movements_present)
     }
 }
 
@@ -238,14 +292,18 @@ impl fmt::Display for Bracket {
         write!(f, "{} [", self.dir)?;
         let mut is_first = true;
         for n in &self.before_neighbors {
-            if !is_first { write!(f, "|")? }
+            if !is_first {
+                write!(f, "|")?
+            }
             write!(f, "{}", n)?;
             is_first = false;
         }
         if !self.after_neighbors.is_empty() {
             write!(f, "| ...")?;
             for n in &self.after_neighbors {
-                if !is_first { write!(f, "|")? }
+                if !is_first {
+                    write!(f, "|")?
+                }
                 write!(f, "{}", n)?;
                 is_first = false;
             }
@@ -257,13 +315,13 @@ impl fmt::Display for Bracket {
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
+    use crate::model::neighbor::build_t;
+    use crate::model::neighbor::tests::check_counts;
+    use crate::model::neighbor::tests::new_rng;
+    use crate::model::rule::Rule;
     use crate::model::util::TriggeredCommands;
     use crate::model::util::WantsToMove;
-    use crate::model::neighbor::build_t;
-    use crate::model::neighbor::tests::new_rng;
-    use crate::model::neighbor::tests::check_counts;
-    use crate::model::rule::Rule;
 
     fn init() {
         let _ = env_logger::builder().is_test(true).try_init();
@@ -273,44 +331,88 @@ mod tests {
     fn bracket() {
         let player_sprite = SpriteState::new(&String::from("player"), 0, 0);
         let crate_sprite = SpriteState::new(&String::from("crate"), 1, 0); // same collision but different sprite index
-        
+
         let origin = Position::new(0, 0);
         let center = Position::new(1, 1);
         let corner = Position::new(2, 2);
 
         let mut board = Board::new(3, 3);
-        
+
         board.add_sprite(&origin, &player_sprite, WantsToMove::Stationary);
         board.add_sprite(&center, &player_sprite, WantsToMove::Stationary);
         board.add_sprite(&corner, &player_sprite, WantsToMove::Stationary);
 
-        let bracket = Bracket::new(CardinalDirection::Down,
+        let bracket = Bracket::new(
+            CardinalDirection::Down,
             vec![
-                Neighbor::new(vec![build_t(false/*random*/, &player_sprite, false, None)]),
-                Neighbor::new(vec![build_t(false/*random*/, &crate_sprite, true, None)]),
-            ]
+                Neighbor::new(vec![build_t(
+                    false, /*random*/
+                    &player_sprite,
+                    false,
+                    None,
+                )]),
+                Neighbor::new(vec![build_t(
+                    false, /*random*/
+                    &crate_sprite,
+                    true,
+                    None,
+                )]),
+            ],
         );
 
         println!("Board: '{:?}'", board);
-        assert!(bracket.matches(&board, BracketMatch { before_positions: Neighbors { size: board.size(), dir: CardinalDirection::Down, start: origin }, after_positions: None} ));
-        assert!(bracket.matches(&board, BracketMatch { before_positions: Neighbors { size: board.size(), dir: CardinalDirection::Down, start: center }, after_positions: None} ));
+        assert!(bracket.matches(
+            &board,
+            BracketMatch {
+                before_positions: Neighbors {
+                    size: board.size(),
+                    dir: CardinalDirection::Down,
+                    start: origin
+                },
+                after_positions: None
+            }
+        ));
+        assert!(bracket.matches(
+            &board,
+            BracketMatch {
+                before_positions: Neighbors {
+                    size: board.size(),
+                    dir: CardinalDirection::Down,
+                    start: center
+                },
+                after_positions: None
+            }
+        ));
     }
 
     #[test]
     fn find_still_matches() {
         let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 0, 0);
-        let player_any = build_t(false/*random*/, &player, false, None);
-        let no_player = build_t(false/*random*/, &player, true, None);
+        let player_any = build_t(false /*random*/, &player, false, None);
+        let no_player = build_t(false /*random*/, &player, true, None);
 
         // RIGHT [ Player | NO Player] -> [ | Player ]
-        let condition = Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()]), Neighbor::new(vec![no_player.clone()]) ]);
-        let action = Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![]), Neighbor::new(vec![player_any.clone()]) ]);
+        let condition = Bracket::new(
+            CardinalDirection::Right,
+            vec![
+                Neighbor::new(vec![player_any.clone()]),
+                Neighbor::new(vec![no_player.clone()]),
+            ],
+        );
+        let action = Bracket::new(
+            CardinalDirection::Right,
+            vec![
+                Neighbor::new(vec![]),
+                Neighbor::new(vec![player_any.clone()]),
+            ],
+        );
 
-        let mut rule = Rule { causes_board_changes: None,
+        let mut rule = Rule {
+            causes_board_changes: None,
             conditions: vec![condition],
-            actions:    vec![action],
-            commands:   TriggeredCommands::default(),
+            actions: vec![action],
+            commands: TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -319,7 +421,7 @@ mod tests {
 
         check_counts(&rule.conditions[0].before_neighbors[0], 0, 0, 1);
         check_counts(&rule.conditions[0].before_neighbors[1], 0, 1, 0);
-        
+
         let mut board = Board::new(3, 1);
         let origin = Position::new(0, 0);
         let middle = Position::new(1, 0);
@@ -331,11 +433,19 @@ mod tests {
         let m = c.find_match(&board, &origin);
         assert_eq!(c.find_match(&board, &middle).len(), 0);
 
-        assert!(c.find_still_matched(&board, &rule.conditions[0].before_neighbors, &m[0].before_positions));
-        
+        assert!(c.find_still_matched(
+            &board,
+            &rule.conditions[0].before_neighbors,
+            &m[0].before_positions
+        ));
+
         c.evaluate(&mut rng, &mut board, m[0].clone(), &FnvHashMap::default());
 
-        assert!(!c.find_still_matched(&board, &rule.conditions[0].before_neighbors, &m[0].before_positions));
+        assert!(!c.find_still_matched(
+            &board,
+            &rule.conditions[0].before_neighbors,
+            &m[0].before_positions
+        ));
 
         assert!(!board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&middle, &player));
@@ -355,27 +465,38 @@ mod tests {
         assert!(!board.has_sprite(&origin, &player));
         assert!(!board.has_sprite(&middle, &player));
         assert!(board.has_sprite(&end, &player));
-
     }
 
     #[test]
     fn empty_neighbor() {
         let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 0, 0);
-        let player_any = build_t(false/*random*/, &player, false, None);
+        let player_any = build_t(false /*random*/, &player, false, None);
 
         let whale = SpriteState::new(&String::from("whale"), 1, 0);
-        let whale_any = build_t(false/*random*/, &whale, false, None);
+        let whale_any = build_t(false /*random*/, &whale, false, None);
 
         // RIGHT [ whale | ] -> [ whale | player ]
-        let mut condition = Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()]), Neighbor::new(vec![]) ]);
-        let action = Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()]), Neighbor::new(vec![player_any.clone()]) ]);
+        let mut condition = Bracket::new(
+            CardinalDirection::Right,
+            vec![
+                Neighbor::new(vec![whale_any.clone()]),
+                Neighbor::new(vec![]),
+            ],
+        );
+        let action = Bracket::new(
+            CardinalDirection::Right,
+            vec![
+                Neighbor::new(vec![whale_any.clone()]),
+                Neighbor::new(vec![player_any.clone()]),
+            ],
+        );
 
         condition.prepare_actions(&action);
 
         check_counts(&condition.before_neighbors[0], 0, 0, 0);
         check_counts(&condition.before_neighbors[1], 0, 1, 0);
-        
+
         let mut board = Board::new(2, 1);
         let origin = Position::new(0, 0);
         let end = Position::new(1, 0);
@@ -396,20 +517,28 @@ mod tests {
         init();
         let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 0, 0);
-        let player_any = build_t(false/*random*/, &player, false, None);
+        let player_any = build_t(false /*random*/, &player, false, None);
 
         let whale = SpriteState::new(&String::from("whale"), 2, 2);
-        let whale_any = build_t(false/*random*/, &whale, false, None);
+        let whale_any = build_t(false /*random*/, &whale, false, None);
 
         // RIGHT [ whale | ... | ] -> [ whale | ... | player ]
-        let mut condition = Bracket::new_ellipsis(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()])], vec![Neighbor::new(vec![]) ]);
-        let action = Bracket::new_ellipsis(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()])], vec![Neighbor::new(vec![player_any.clone()]) ]);
+        let mut condition = Bracket::new_ellipsis(
+            CardinalDirection::Right,
+            vec![Neighbor::new(vec![whale_any.clone()])],
+            vec![Neighbor::new(vec![])],
+        );
+        let action = Bracket::new_ellipsis(
+            CardinalDirection::Right,
+            vec![Neighbor::new(vec![whale_any.clone()])],
+            vec![Neighbor::new(vec![player_any.clone()])],
+        );
 
         condition.prepare_actions(&action);
 
         check_counts(&condition.before_neighbors[0], 0, 0, 0);
         check_counts(&condition.after_neighbors[0], 0, 1, 0);
-        
+
         let mut board = Board::new(3, 1);
         let origin = Position::new(0, 0);
         let middle = Position::new(1, 0);
@@ -431,23 +560,32 @@ mod tests {
         assert!(board.has_sprite(&middle, &player));
         assert!(board.has_sprite(&end, &player));
     }
-    
+
     #[test]
     fn empty_ellipsis_neighbor_rule() {
         init();
         let mut rng = new_rng();
 
         let player = SpriteState::new(&String::from("player"), 0, 0);
-        let player_any = build_t(false/*random*/, &player, false, None);
+        let player_any = build_t(false /*random*/, &player, false, None);
 
         let whale = SpriteState::new(&String::from("whale"), 1, 0);
-        let whale_any = build_t(false/*random*/, &whale, false, None);
+        let whale_any = build_t(false /*random*/, &whale, false, None);
 
         // RIGHT [ whale | ... | ] -> [ whale | ... | player ]
-        let condition = Bracket::new_ellipsis(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()])], vec![Neighbor::new(vec![]) ]);
-        let action = Bracket::new_ellipsis(CardinalDirection::Right, vec![Neighbor::new(vec![whale_any.clone()])], vec![Neighbor::new(vec![player_any.clone()]) ]);
+        let condition = Bracket::new_ellipsis(
+            CardinalDirection::Right,
+            vec![Neighbor::new(vec![whale_any.clone()])],
+            vec![Neighbor::new(vec![])],
+        );
+        let action = Bracket::new_ellipsis(
+            CardinalDirection::Right,
+            vec![Neighbor::new(vec![whale_any.clone()])],
+            vec![Neighbor::new(vec![player_any.clone()])],
+        );
 
-        let mut rule = Rule { causes_board_changes: None,
+        let mut rule = Rule {
+            causes_board_changes: None,
             conditions: vec![condition],
             actions: vec![action],
             commands: TriggeredCommands::default(),
@@ -464,7 +602,12 @@ mod tests {
 
         board.add_sprite(&origin, &whale, WantsToMove::Stationary);
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
+        rule.evaluate(
+            &mut rng,
+            &mut board,
+            &mut TriggeredCommands::default(),
+            false,
+        );
 
         assert!(!board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&middle, &player));
