@@ -35,7 +35,7 @@ impl Grid {
             is_true_color: ColorSpace::get_colorspace().is_true_color(),
             width,
             height,
-            colors: vec![background; (width * height) as usize],
+            colors: vec![background; width as usize * height as usize],
             background
         }
     }
@@ -44,7 +44,7 @@ impl Grid {
         debug_assert!(x < self.width);
         debug_assert!(y < self.height);
 
-        let i = (x + y * self.width) as usize;
+        let i = (x as usize + y as usize * self.width as usize);
         // Alpha Transparency Support only for truecolor screens
         if color.a != 0 {
             if self.is_true_color {
@@ -180,6 +180,7 @@ impl Widget for Engine {
                     }
                 };
                 
+                trace!("Board: {:?}, Is flickscreen? {:?}", board_size, self.game_data.metadata.flickscreen);
                 ScreenDumper::set_window(game_window);
 
                 let mut grid = Grid::new(

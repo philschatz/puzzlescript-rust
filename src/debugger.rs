@@ -2,6 +2,8 @@ use std::io::stdout;
 use std::cmp;
 
 use std::cell::RefCell;
+
+use log::trace;
 use termion::raw::RawTerminal;
 use termion::raw::IntoRawMode;
 
@@ -75,6 +77,7 @@ impl ScreenDumper {
     }
 
     pub fn set_window(rect: Rect) {
+        trace!("Setting window size to be {:?}", rect);
         SCREENDUMPER.with(|obj_cell| {
             let mut obj = obj_cell.borrow_mut();
             obj.rect = Some(rect);

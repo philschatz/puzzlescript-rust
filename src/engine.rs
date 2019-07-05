@@ -119,7 +119,7 @@ impl Engine {
                         debug!("Pushing to the Undo Stack");
                         // Keep the undo stack at a manageable size
                         if self.undo_stack.len() > 100 {
-                            self.undo_stack = self.undo_stack.split_off(50);
+                            self.undo_stack.drain(1..50);
                         }
                         self.undo_stack.push(board.clone());
                     }

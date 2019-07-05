@@ -67,39 +67,44 @@ fn main() -> Result<(), Box<Error>> {
         (@arg IS_SCRIPTED: --scripted "Play 1 level using stdin. Used for running tests")
         (@arg SOUND: --sound "Play sound effects (via the BEL character)")
         (@arg FORCE_PRIMARY_SCREEN: --primary "Do not use the alternate screen (useful for debugging)")
+        (@arg NO_FLICK_SCREEN: --noflick "Show the WHOLE level not just the current screen (for finding easter-eggs)")
+        (@arg TICK_SPEED: --speed +takes_value "How long the game waits between each tick")
     ).get_matches();
 
     let game_path = matches.value_of("INPUT").unwrap();
-    let start_level = match matches.value_of("START_LEVEL") {
-        None => None,
-        Some(s) => Some(s.parse()?),
-    };
+    let start_level = matches.value_of("START_LEVEL").map(|s| s.parse().expect("Enter a valid number"));
     let scripted = matches.is_present("IS_SCRIPTED");
     let enable_sound = matches.is_present("SOUND");
     let force_primary_screen = matches.is_present("FORCE_PRIMARY_SCREEN");
+    let no_flick_screen = matches.is_present("NO_FLICK_SCREEN");
+    let tick_speed = matches.value_of("TICK_SPEED").map(|s| s.parse().expect("Enter a valid number"));
 
     if scripted || force_primary_screen {
         // Terminal initialization
         let out = stdout();
         let backend = TermionBackend::new(out);
         let mut t = Terminal::new(backend)?;
-        play_game(&mut t, &game_path, start_level, scripted, enable_sound)
+        play_game(&mut t, &game_path, start_level, scripted, enable_sound, no_flick_screen, tick_speed)
     } else {
         // Terminal initialization
         let out = stdout();
         let out = AlternateScreen::from(out);
         let backend = TermionBackend::new(out);
         let mut t = Terminal::new(backend)?;
-        play_game(&mut t, game_path, start_level, scripted, enable_sound)
+        play_game(&mut t, &game_path, start_level, scripted, enable_sound, no_flick_screen, tick_speed)
     }
 }
 
-fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Option<u8>, scripted: bool, enable_sound: bool) -> Result<(), Box<Error>> {
+fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Option<u8>, scripted: bool, enable_sound: bool, no_flick_screen: bool, tick_speed: Option<u64>) -> Result<(), Box<Error>> {
    
     // terminal.hide_cursor()?;
 
     let save_path = format!("{}.save.json", path);
-    let game = read_game_from_file(path)?;
+    let mut game = read_game_from_file(path)?;
+
+    if no_flick_screen {
+        game.metadata.flickscreen = None;
+    }
 
     warn_if_alpha_transparency(&game);
 
@@ -155,13 +160,16 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
 
     clear_screen();
 
-    let mut sleep_time = if scripted { 
-        0
-    } else {
-        match &engine.game_data.metadata.realtime_interval {
-            None => 100,
-            Some(sec) => (sec * 1000.0) as u64
-        }
+    let mut sleep_time = match tick_speed {
+        None => if scripted { 
+                0
+            } else {
+                match &engine.game_data.metadata.realtime_interval {
+                    None => 100,
+                    Some(sec) => (sec * 1000.0) as u64
+                }
+            },
+        Some(s) => s,
     };
 
 
