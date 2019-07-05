@@ -67,11 +67,6 @@ impl BitSet {
             self.bits[bucket] |= other.bits[bucket]
         }
     }
-    fn remove_all(&mut self, other: &BitSet) {
-        for bucket in 0..BUCKET_COUNT {
-            self.bits[bucket] &= other.bits[bucket]
-        }
-    }
 
     fn is_empty(&self) -> bool {
         self._is_empty
@@ -85,25 +80,6 @@ impl BitSet {
                 break
             }
         }
-    }
-
-    // The number of true bits in the set
-    fn cardinality(&self) -> u16 {
-        let mut count = 0;
-        for bucket in 0..BUCKET_COUNT {
-            let mut i = self.bits[bucket];
-            while i > 0 {
-                if i % 2 == 1 {
-                    count += 1;
-                }
-                i >>= 1;
-            }
-        }
-        count
-    }
-
-    pub fn len(&self) -> u16 {
-        self.cardinality()
     }
 
     pub fn into_vec(&self) -> Vec<u16> {
@@ -137,19 +113,34 @@ impl fmt::Display for BitSet {
 mod tests {
     use super::*;
 
+    // The number of true bits in the set
+    fn cardinality(b: &BitSet) -> u16 {
+        let mut count = 0;
+        for bucket in 0..BUCKET_COUNT {
+            let mut i = b.bits[bucket];
+            while i > 0 {
+                if i % 2 == 1 {
+                    count += 1;
+                }
+                i >>= 1;
+            }
+        }
+        count
+    }
+
     #[test]
-    fn cardinality() {
+    fn check_cardinality() {
         let mut bitset = BitSet::new();
-        assert_eq!(bitset.cardinality(), 0);
+        assert_eq!(cardinality(&bitset), 0);
         
         bitset.insert(1);
-        assert_eq!(bitset.cardinality(), 1);
+        assert_eq!(cardinality(&bitset), 1);
 
         bitset.insert(3);
-        assert_eq!(bitset.cardinality(), 2);
+        assert_eq!(cardinality(&bitset), 2);
 
         bitset.insert(127);
-        assert_eq!(bitset.cardinality(), 3);
+        assert_eq!(cardinality(&bitset), 3);
     }
 
     #[test]
@@ -181,13 +172,13 @@ mod tests {
         let mut bitset = BitSet::new();
         bitset.insert(0);
         bitset.insert(127);
-        assert_eq!(bitset.cardinality(), 2);
+        assert_eq!(cardinality(&bitset), 2);
         bitset.insert(BUCKET_SIZE);
-        assert_eq!(bitset.cardinality(), 3);
+        assert_eq!(cardinality(&bitset), 3);
         bitset.insert(129);
-        assert_eq!(bitset.cardinality(), 4);
+        assert_eq!(cardinality(&bitset), 4);
         bitset.insert(303);
-        assert_eq!(bitset.cardinality(), 5);
+        assert_eq!(cardinality(&bitset), 5);
         assert!(bitset.contains(303));
 
         let mut bs = BitSet::new();

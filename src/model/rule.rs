@@ -1,15 +1,11 @@
-use log::{trace, debug, warn};
+use log::trace;
 
 use std::fmt;
-use std::time;
 use fnv::FnvHashMap;
 use rand::Rng;
 
-use crate::model::tile::Tile;
-use crate::model::tile::TileKind;
 use crate::model::bracket::Bracket;
 use crate::model::bracket::BracketMatch;
-use crate::model::bracket::vec_of_optionals_to_vec;
 use crate::model::board::Board;
 use crate::model::util::TriggeredCommands;
 use crate::model::util::Position;
@@ -60,7 +56,7 @@ fn build_permutations<T: Clone>(cells: &Vec<Vec<T>>) -> Vec<Vec<T>> {
 }
 
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Default, Debug)]
 pub struct Rule {
     pub conditions: Vec<Bracket>,
     pub actions: Vec<Bracket>,
@@ -72,24 +68,6 @@ pub struct Rule {
 }
 
 impl Rule {
-    pub fn new(conditions: Vec<Bracket>, actions: Vec<Bracket>, commands: TriggeredCommands, random: bool, late: bool) -> Self {
-        Self {
-            conditions, actions, commands, random, late, rigid: false, causes_board_changes: None
-        }
-    }
-
-    pub fn simple(conditions: Vec<Bracket>, actions: Vec<Bracket>) -> Self {
-        Self {
-            conditions,
-            actions,
-            commands: TriggeredCommands::new(),
-            random: false,
-            late: false,
-            rigid: false,
-            causes_board_changes: None
-        }
-    }
-
 
     pub fn prepare_actions(&mut self) {
         if !self.actions.is_empty() {
@@ -321,7 +299,7 @@ impl RuleLoop {
     }
     pub fn evaluate<R: Rng + ?Sized>(&self, rng: &mut R, board: &mut Board, late: bool) -> TriggeredCommands {
         trace!("Start RuleLoop/Group:loop?{} '{}'... ", self.is_loop, self);
-        let mut ret = TriggeredCommands::new();
+        let mut ret = TriggeredCommands::default();
         
         let mut iterations = 0;
         loop {
@@ -397,7 +375,7 @@ mod tests {
         let rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()]), Neighbor::new(vec![no_player.clone()])])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![]), Neighbor::new(vec![player_any.clone()])])],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -416,7 +394,7 @@ mod tests {
         let end = Position::new(9, 0); 
         board.add_sprite(&Position::new(0,0), &player, WantsToMove::Stationary);
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), false);
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
 
         // make sure we did crawl
         
@@ -463,17 +441,11 @@ mod tests {
         let player_right = build_t(false/*random*/, &player, false, Some(WantsToMove::Right));
         let player_stationary = build_t(false/*random*/, &player, false, Some(WantsToMove::Stationary));
 
-        let crate_sprite = SpriteState::new(&String::from("crate_sprite"), 0, 0);
-        let crate_right = build_t(false/*random*/, &crate_sprite, false, Some(WantsToMove::Right));
-        let crate_stationary = build_t(false/*random*/, &crate_sprite, false, Some(WantsToMove::Stationary));
-
-        // let obj = Tile::new(TileKind::Or, String::from("Obj"), vec![player, crate_sprite]);
-
         // RIGHT [ > player | STATIONARY player ] -> [ > player | > player ]
         let rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()]), Neighbor::new(vec![player_stationary.clone()])])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()]), Neighbor::new(vec![player_right.clone()])])],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -497,7 +469,7 @@ mod tests {
         assert_eq!(board.get_wants_to_move(&middle, player.collision_layer), Some(WantsToMove::Stationary));
         assert_eq!(board.get_wants_to_move(&end, player.collision_layer), Some(WantsToMove::Stationary));
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), false);
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
 
         assert_eq!(board.get_wants_to_move(&middle, player.collision_layer), Some(WantsToMove::Right));
         // This is the actual test:
@@ -512,17 +484,11 @@ mod tests {
         let player_right = build_t(false/*random*/, &player, false, Some(WantsToMove::Right));
         let player_stationary = build_t(false/*random*/, &player, false, Some(WantsToMove::Stationary));
 
-        let crate_sprite = SpriteState::new(&String::from("crate_sprite"), 0, 0);
-        let crate_right = build_t(false/*random*/, &crate_sprite, false, Some(WantsToMove::Right));
-        let crate_stationary = build_t(false/*random*/, &crate_sprite, false, Some(WantsToMove::Stationary));
-
-        // let obj = Tile::new(TileKind::Or, String::from("Obj"), vec![player, crate_sprite]);
-
         // RIGHT [ > player | STATIONARY player ] -> [ > player | > player ]
-        let mut rule = Rule { causes_board_changes: None,
+        let rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()]), Neighbor::new(vec![player_stationary.clone()])])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()]), Neighbor::new(vec![player_right.clone()])])],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -546,7 +512,7 @@ mod tests {
         assert_eq!(board.get_wants_to_move(&middle, player.collision_layer), Some(WantsToMove::Stationary));
         assert_eq!(board.get_wants_to_move(&end, player.collision_layer), Some(WantsToMove::Stationary));
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), false);
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
 
         assert_eq!(board.get_wants_to_move(&middle, player.collision_layer), Some(WantsToMove::Right));
         // This is the actual test:
@@ -559,15 +525,12 @@ mod tests {
         let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 0, 0);
         let player_any = build_t(false/*random*/, &player, false, None);
-        let player_none = build_t(false/*random*/, &player, true, None);
-
-        // let obj = Tile::new(TileKind::Or, String::from("Obj"), vec![player, crate_sprite]);
 
         // RANDOM RIGHT [ ] -> [ player ]
         let mut rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![]) ])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()]) ])],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false, // unused
             rigid: false,
@@ -579,7 +542,7 @@ mod tests {
         let origin = Position::new(0, 0);
         let end = Position::new(1, 0);
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), true); // RANDOM so run once
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), true); // RANDOM so run once
 
         assert!(board.has_sprite(&origin, &player) ^ board.has_sprite(&end, &player));
     }
@@ -593,7 +556,7 @@ mod tests {
         let mut rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions:    vec![],
-            commands:   TriggeredCommands::win(),
+            commands:   TriggeredCommands {win: true, ..Default::default()},
             late: false,
             random: false,
             rigid: false,
@@ -602,10 +565,9 @@ mod tests {
 
         let mut board = Board::new(1, 1);
 
-        let mut commands = TriggeredCommands::new();
+        let mut commands = TriggeredCommands::default();
         assert!(!rule.evaluate(&mut rng, &mut board, &mut commands, false), "Board should not have changed, only the triggered commands");
-        assert!(!commands.is_empty());
-        assert_eq!(commands.len(), 1);
+        assert!(commands.win);
     }
 
     #[test]
@@ -617,7 +579,7 @@ mod tests {
         let mut rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![])],
-            commands:   TriggeredCommands::win(),
+            commands:   TriggeredCommands { win: true, ..Default::default()},
             late: false,
             random: false,
             rigid: false,
@@ -626,10 +588,9 @@ mod tests {
 
         let mut board = Board::new(1, 1);
 
-        let mut commands = TriggeredCommands::new();
+        let mut commands = TriggeredCommands::default();
         assert!(!rule.evaluate(&mut rng, &mut board, &mut commands, false), "Board should not have changed");
-        assert!(!commands.is_empty());
-        assert_eq!(commands.len(), 1);
+        assert!(commands.win);
     }
 
     #[test]
@@ -641,7 +602,7 @@ mod tests {
         let rule = Rule { causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions:    vec![Bracket::new(CardinalDirection::Right, vec![])],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -658,8 +619,7 @@ mod tests {
         let mut board = Board::new(1, 1);
 
         // test that we do not loop indefinitely
-        let commands = rule_loop.evaluate(&mut rng, &mut board, false);
-        assert!(commands.is_empty());
+        rule_loop.evaluate(&mut rng, &mut board, false);
     }
 
     #[test]
@@ -677,14 +637,16 @@ mod tests {
 
         // RIGHT [ Crate ] -> [ Player ]
         // + RIGHT [ Crate ] -> [ Wall ]
-        let rule1 = Rule::simple(
-            vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![crate_any.clone()]) ])],
-            vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()]) ])],
-        );
-        let rule2 = Rule::simple(
-            vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![crate_any.clone()]) ])],
-            vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![wall_any.clone()]) ])],
-        );
+        let rule1 = Rule {
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![crate_any.clone()]) ])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()]) ])],
+            ..Default::default()
+        };
+        let rule2 = Rule {
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![crate_any.clone()]) ])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![wall_any.clone()]) ])],
+            ..Default::default()
+        };
         let mut rule = RuleGroup { 
             random: false,
             rules: vec![rule1, rule2]
@@ -698,7 +660,7 @@ mod tests {
         board.add_sprite(&origin, &crate_sprite, WantsToMove::Stationary);
         board.add_sprite(&end, &crate_sprite, WantsToMove::Stationary);
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), false);
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
 
         assert!(board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&end, &player));

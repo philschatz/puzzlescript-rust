@@ -62,18 +62,17 @@ pub struct Metadata {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CollisionLayer {
   id: u16,
-  _sourceOffset: u32
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub enum Command<Sound> {
-  Win { _sourceOffset: u32 },
-  Again { _sourceOffset: u32 },
-  Cancel { _sourceOffset: u32 },
-  Checkpoint { _sourceOffset: u32 },
-  Restart { _sourceOffset: u32 },
-  Message { message: String, _sourceOffset: u32 },
-  Sfx { sound: Sound, _sourceOffset: u32 },
+  Win {},
+  Again {},
+  Cancel {},
+  Checkpoint {},
+  Restart {},
+  Message { message: String },
+  Sfx { sound: Sound },
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -81,7 +80,6 @@ pub struct Sprite<CollisionLayer> {
   pub name: String,
   pub collision_layer: CollisionLayer,
   pub pixels: Vec<Vec<Option<String>>>,
-  _sourceOffset: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -90,23 +88,19 @@ pub enum Tile<Sprite> {
     name: String,
     sprites: Vec<Sprite>,
     // collision_layers: Vec<C>,
-    _sourceOffset: u32,
   },
   And {
     name: String,
     sprites: Vec<Sprite>,
     // collision_layers: Vec<C>,
-    _sourceOffset: u32,
   },
   Sprite { // Like an "And" tile but with only 1 item
     name: String,
     sprite: Sprite,
-    _sourceOffset: u32,
   },
   Simple {
     name: String,
     sprite: Sprite,
-    _sourceOffset: u32,
   }
 }
 
@@ -116,13 +110,11 @@ pub struct TileWithModifier<Tile> {
   pub negated: bool,
   pub random: bool,
   pub tile: Tile,
-  _sourceOffset: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Neighbor<TileWithModifier> {
   pub tile_with_modifiers: Vec<TileWithModifier>,
-  _sourceOffset: u32,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -130,13 +122,11 @@ pub enum Bracket<Neighbor> {
   Simple {
     direction: CardinalDirection,
     neighbors: Vec<Neighbor>,
-    _sourceOffset: u32,
   },
   Ellipsis {
     direction: CardinalDirection,
     before_neighbors: Vec<Neighbor>,
     after_neighbors: Vec<Neighbor>,
-    _sourceOffset: u32,
   }
 }
 
@@ -150,13 +140,11 @@ pub enum RuleDefinition<SubRuleDefinition, Bracket, Command> {
     random: Option<bool>,
     late: bool,
     rigid: bool,
-    _sourceOffset: u32,
   },
 
   Group {
     random: bool,
     rules: Vec<SubRuleDefinition>,
-    _sourceOffset: Option<u32>,
   },
 
   Loop {
@@ -166,8 +154,8 @@ pub enum RuleDefinition<SubRuleDefinition, Bracket, Command> {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub enum Level<Tile> {
-  Message { message: String, _sourceOffset: u32 },
-  Map { cells: Vec<Vec<Tile>>, _sourceOffset: u32 },
+  Message { message: String },
+  Map { cells: Vec<Vec<Tile>> },
 }
 
 #[derive(Serialize, Deserialize, Debug)]

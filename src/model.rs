@@ -11,23 +11,8 @@ pub mod game;
 use tile::Tile;
 use tile::TileKind;
 use tile::TileWithModifier;
-use util::Position;
-use util::WantsToMove;
-use util::CardinalDirection;
 use neighbor::Neighbor;
 use rule::Command;
-
-
-// https://stackoverflow.com/a/40768104
-// Seems like Vec<PartialEq> works already.
-// fn vec_eq<T: PartialEq>(va: &Vec<T>, vb: &Vec<T>) -> bool {
-//     (va.len() == vb.len()) &&  // zip stops at the shortest
-//      va.iter()
-//        .zip(vb)
-//        .all(|(a,b)| *a == *b)
-// }
-
-
 
 impl fmt::Display for Tile {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {

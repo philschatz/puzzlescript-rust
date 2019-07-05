@@ -178,7 +178,7 @@ impl fmt::Display for Position {
 
 
 
-#[derive(Clone, PartialEq, Debug)]
+#[derive(Clone, PartialEq, Default, Debug)]
 pub struct TriggeredCommands {
     pub message: Option<String>,
     pub again: bool,
@@ -190,20 +190,6 @@ pub struct TriggeredCommands {
 }
 
 impl TriggeredCommands {
-    pub fn new() -> Self {
-        Self {
-            message: None,
-            again: false,
-            cancel: false,
-            checkpoint: false,
-            restart: false,
-            win: false,
-            sfx: false,
-        }
-    }
-    pub fn did_trigger(&self) -> bool {
-        self.again || self.cancel || self.checkpoint || self.restart || self.win || self.message.is_some() || self.sfx
-    }
     pub fn merge(&mut self, other: &TriggeredCommands) {
         if self.message.is_none() { self.message = other.message.clone(); }
         self.again |= other.again;
@@ -212,58 +198,6 @@ impl TriggeredCommands {
         self.restart |= other.restart;
         self.win |= other.win;
         self.sfx |= other.sfx;
-    }
-
-    pub fn len(&self) -> u16 {
-        let mut len = 0;
-        if self.again { len += 1; }
-        if self.cancel { len += 1; }
-        if self.checkpoint { len += 1; }
-        if self.restart { len += 1; }
-        if self.win { len += 1; }
-        if self.sfx { len += 1; }
-        if self.message.is_some() { len += 1; }
-        len
-    }
-
-    pub fn is_empty(&self) -> bool {
-        self.len() == 0
-    }
-
-    pub fn again() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.again = true;
-        t
-    }
-    pub fn cancel() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.cancel = true;
-        t
-    }
-    pub fn checkpoint() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.checkpoint = true;
-        t
-    }
-    pub fn restart() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.restart = true;
-        t
-    }
-    pub fn win() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.win = true;
-        t
-    }
-    pub fn sfx() -> Self {
-        let mut t = TriggeredCommands::new();
-        t.sfx = true;
-        t
-    }
-    pub fn message(message: String) -> Self {
-        let mut t = TriggeredCommands::new();
-        t.message = Some(message);
-        t
     }
 }
 

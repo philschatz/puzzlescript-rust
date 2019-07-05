@@ -12,13 +12,13 @@ bench() {
         echo "Took too long. Expected ${expected}sec but actually took ${runtime}sec"
         exit 111
     else
-        echo "Took ${runtime} to run '${@:2}'"
+        echo "OK. Took ${runtime}sec to run '${@:2}'. Limit: ${expected}"
     fi
 }
 
 cargo build --release
 
-echo "..........q" | bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary
+echo "..........q" | bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary --level 0 --scripted
 
 cargo test
 

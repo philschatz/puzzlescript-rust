@@ -7,19 +7,15 @@ use fnv::FnvHashMap;
 use std::time;
 
 use rand::Rng;
-use log::log_enabled;
-use log::Level::Trace;
 
 use crate::color::Rgb;
 use crate::model::tile::Tile;
 use crate::model::util::Position;
 use crate::model::util::WantsToMove;
 use crate::model::board::Board;
-use crate::model::cell::Cell;
 use crate::model::rule::RuleGroup;
 use crate::model::rule::RuleLoop;
 use crate::model::rule::Rule;
-use crate::model::rule::Command;
 use crate::model::bracket::Bracket;
 use crate::model::neighbor::Neighbor;
 use crate::model::tile::TileWithModifier;
@@ -37,20 +33,6 @@ pub enum Level {
 }
 
 impl Level {
-    pub fn is_map(&self) -> bool {
-        match self {
-            Level::Map(_) => true,
-            Level::Message(_) => false,
-        }
-    }
-
-    pub fn get_dimension(&self) -> Dimension {
-        match self {
-            Level::Map(m) => Dimension { width: m[0].len() as u16, height: m.len() as u16 },
-            Level::Message(_) => Dimension { width: 0, height: 0 },
-        }
-    }
-
     pub fn size(&self) -> (u16, u16) {
         match self {
             Level::Message(_) => panic!("Trying to get a Grid out of a Message level"),
@@ -127,12 +109,6 @@ pub struct Sprite {
 }
 
 impl Sprite {
-    fn is_transparent(&self) -> bool {
-        self.pixels.iter().flat_map(|x| x).all(|color| color.is_none())
-    }
-    fn is_semi_transparent(&self) -> bool {
-        self.pixels.iter().flat_map(|x| x).any(|color| color.is_none())
-    }
     pub fn contains_alpha_pixel(&self) -> bool {
         self.pixels.iter().flat_map(|x| x).any(|color| match color { None => false, Some(c) => c.a != 0 })
     }
@@ -157,7 +133,7 @@ fn build_input_rule(player_tile: &Tile, wants_to_move: WantsToMove) -> RuleLoop 
                     late: false,
                     random: false,
                     rigid: false,
-                    commands: TriggeredCommands::new(),
+                    commands: TriggeredCommands::default(),
                     conditions: vec![ Bracket::new(
                         CardinalDirection::Right, // does not matter since just one neighbor
                         vec![ Neighbor::new(vec![TileWithModifier {
@@ -184,7 +160,7 @@ fn build_input_rule(player_tile: &Tile, wants_to_move: WantsToMove) -> RuleLoop 
     ret
 }
 
-#[derive(Debug)]
+#[derive(Default, Debug)]
 pub struct Metadata {
     pub author: Option<String>,
     pub homepage: Option<String>,
@@ -206,32 +182,6 @@ pub struct Metadata {
     pub no_restart: bool,
     pub require_player_movement: bool,
     pub verbose_logging: bool,
-}
-
-impl Metadata {
-    pub fn new() -> Self {
-        Self {
-            author: None,
-            homepage: None,
-            youtube: None,
-            zoomscreen: None,
-            flickscreen: None,
-            color_palette: None,
-            background_color: None,
-            text_color: None,
-            realtime_interval: None,
-            key_repeat_interval: None,
-            again_interval: None,
-            no_action: false,
-            no_undo: false,
-            run_rules_on_level_start: None,
-            no_repeat_action: false,
-            throttle_movement: false,
-            no_restart: false,
-            require_player_movement: false,
-            verbose_logging: false,
-        }
-    }
 }
 
 #[derive(Debug)]
@@ -284,7 +234,7 @@ impl GameData {
 
     fn evaluate_rules<R: Rng + ?Sized>(&self, rng: &mut R, board: &mut Board, late: bool) -> TriggeredCommands {
         let start_time = time::Instant::now();
-        let mut t = TriggeredCommands::new();
+        let mut t = TriggeredCommands::default();
         self.rules.iter().map(|r| r.evaluate(rng, board, late)).for_each(|c| t.merge(&c));
         trace!("Rule Evaluation took {}sec", start_time.elapsed().as_secs());
         t
@@ -439,6 +389,10 @@ mod tests {
         let _ = env_logger::builder().is_test(true).try_init();
     }
 
+    fn did_trigger(t: &TriggeredCommands) -> bool {
+        t.again || t.cancel || t.checkpoint || t.restart || t.win || t.message.is_some() || t.sfx
+    }
+
     #[test]
     fn game_player_didnt_move_because_of_level_boundary() {
         let player = SpriteState::new(&String::from("player"), 0, 0);
@@ -451,7 +405,7 @@ mod tests {
                 rules: vec![Rule { causes_board_changes: None,
                     conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
                     actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()])])],
-                    commands:   TriggeredCommands::new(),
+                    commands:   TriggeredCommands::default(),
                     late: false,
                     random: false,
                     rigid: false,
@@ -464,7 +418,7 @@ mod tests {
         let origin = Position::new(0, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), player_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), player_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         game.evaluate(&mut rng, &mut board, false);
@@ -487,7 +441,7 @@ mod tests {
                     rules: vec![Rule { causes_board_changes: None,
                         conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
                         actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()])])],
-                        commands:   TriggeredCommands::new(),
+                        commands:   TriggeredCommands::default(),
                         late: false,
                         random: false,
                         rigid: false,
@@ -500,7 +454,7 @@ mod tests {
         let origin = Position::new(0, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player]), Tile::new(TileKind::And, &String::from("t2"), vec![crate_sprite])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), player_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), player_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         game.evaluate(&mut rng, &mut board, false);
@@ -540,7 +494,7 @@ mod tests {
         let dest = Position::new(1, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player]), Tile::new(TileKind::And, &String::from("t2"), vec![background])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         assert!(board.has_sprite(&origin, &player));
@@ -552,7 +506,7 @@ mod tests {
         assert!(board.has_sprite(&dest, &player));
         assert_eq!(board.get_wants_to_move(&dest, player.collision_layer), Some(WantsToMove::Stationary));
 
-        assert_eq!(t.did_trigger(), true);
+        assert_eq!(did_trigger(&t), true);
         assert_eq!(t.again, true);
         assert_eq!(t.cancel, false);
         assert_eq!(t.checkpoint, true);
@@ -568,7 +522,6 @@ mod tests {
         let background = SpriteState::new(&String::from("background"), 1, 1); // needs to be diff collision layer so player moves
         let cat = SpriteState::new(&String::from("cat"), 2, 0);
         let player_any = build_t(false, &player, false, None);
-        let player_right = build_t(false, &player, false, Some(WantsToMove::Right));
         let background_any = build_t(false, &background, false, None);
         let cat_any = build_t(false, &cat, false, None);
         
@@ -591,16 +544,14 @@ mod tests {
         rule.prepare_actions();
 
         // 2x1 board
-        let origin = Position::new(0, 0);
-        let dest = Position::new(1, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player]), Tile::new(TileKind::And, &String::from("t2"), vec![background])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         let t = game.evaluate(&mut rng, &mut board, false);
 
-        assert_eq!(t.did_trigger(), true);
+        assert_eq!(did_trigger(&t), true);
         assert_eq!(t.cancel, true);
     }
 
@@ -619,7 +570,7 @@ mod tests {
                     rules: vec![Rule { causes_board_changes: None,
                         conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
                         actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()])])],
-                        commands:   TriggeredCommands::new(),
+                        commands:   TriggeredCommands::default(),
                         late: false,
                         random: false,
                         rigid: false,
@@ -634,7 +585,7 @@ mod tests {
         let right = Position::new(2, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player]), Tile::new(TileKind::And, &String::from("t2"), vec![player]), Tile::new(TileKind::And, &String::from("t1"), vec![background])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         game.evaluate_rules(&mut rng, &mut board, false);
@@ -644,7 +595,7 @@ mod tests {
         assert_eq!(board.get_wants_to_move(&middle, player.collision_layer), Some(WantsToMove::Right));
         assert_eq!(board.get_wants_to_move(&right, player.collision_layer), None);
 
-        game.evaluate_post(&mut board, &TriggeredCommands::new());
+        game.evaluate_post(&mut board, &TriggeredCommands::default());
 
         assert!(!board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&middle, &player));
@@ -665,13 +616,13 @@ mod tests {
         let left = Position::new(0, 1);
         let end = Position::new(1, 1);
 
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![], vec![]);
         let mut board = Board::new(2, 2);
 
         assert!(board.add_sprite(&top, &rock, WantsToMove::Down));
         assert!(board.add_sprite(&left, &player, WantsToMove::Right));
 
-        game.evaluate_post(&mut board, &TriggeredCommands::new());
+        game.evaluate_post(&mut board, &TriggeredCommands::default());
 
         assert!(board.has_sprite(&end, &rock));
         assert!(!board.has_sprite(&end, &player));
@@ -701,7 +652,7 @@ mod tests {
                         Rule { causes_board_changes: None,
                             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
                             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_right.clone()])])],
-                            commands:   TriggeredCommands::new(),
+                            commands:   TriggeredCommands::default(),
                             late: false,
                             random: false,
                             rigid: false,
@@ -709,7 +660,7 @@ mod tests {
                         Rule { causes_board_changes: None,
                             conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
                             actions:    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![star_any.clone()])])],
-                            commands:   TriggeredCommands::new(),
+                            commands:   TriggeredCommands::default(),
                             late: true,
                             random: false,
                             rigid: false,
@@ -724,7 +675,7 @@ mod tests {
         let right = Position::new(1, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player]), Tile::new(TileKind::And, &String::from("t1"), vec![background])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![]);
         let mut board = game.to_board(&level);
 
         game.evaluate(&mut rng, &mut board, false);
@@ -743,7 +694,6 @@ mod tests {
         let background = SpriteState::new(&String::from("background"), 1, 1); // needs to be diff collision layer so player moves
         let star = SpriteState::new(&String::from("Star"), 2, 2);
         let player_any = build_t(false, &player, false, None);
-        let player_right = build_t(false, &player, false, Some(WantsToMove::Right));
         let background_any = build_t(false, &background, false, None);
         let star_any = build_t(false, &star, false, None);
 
@@ -754,7 +704,7 @@ mod tests {
         let origin = Position::new(0, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![level.clone()], vec![win1, win2]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![level.clone()], vec![win1, win2]);
         let mut board = game.to_board(&level);
 
         // verify that _both_ win conditions must be satisfied
@@ -777,17 +727,15 @@ mod tests {
         let background = SpriteState::new(&String::from("background"), 1, 1); // needs to be diff collision layer so player moves
         let star = SpriteState::new(&String::from("Star"), 2, 2);
         let player_any = build_t(false, &player, false, None);
-        let player_right = build_t(false, &player, false, Some(WantsToMove::Right));
         let background_any = build_t(false, &background, false, None);
         let star_any = build_t(false, &star, false, None);
 
         let win1 = WinCondition::On(WinConditionOnQualifier::Some, player_any.tile.clone(), star_any.tile.clone());
         
         // 1x1 board
-        let origin = Position::new(0, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player, star])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![level.clone()], vec![win1]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![], vec![level.clone()], vec![win1]);
         let mut board = game.to_board(&level);
 
         // verify that the ON condition is be satisfied
@@ -804,7 +752,6 @@ mod tests {
         let background = SpriteState::new(&String::from("background"), 1, 1); // needs to be diff collision layer so player moves
         let star = SpriteState::new(&String::from("Star"), 2, 2);
         let player_any = build_t(false, &player, false, None);
-        let player_right = build_t(false, &player, false, Some(WantsToMove::Right));
         let background_any = build_t(false, &background, false, None);
         let star_any = build_t(false, &star, false, None);
 
@@ -812,13 +759,12 @@ mod tests {
             is_loop: false,
             rules: vec![ RuleGroup {
                 random: false,
-                rules: vec![ Rule::new(
-                    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
-                    vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone(), star_any.clone()])])],
-                    TriggeredCommands::new(),
-                    false,
-                    true, // late
-                )],
+                rules: vec![ Rule {
+                    conditions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone()])])],
+                    actions: vec![Bracket::new(CardinalDirection::Right, vec![Neighbor::new(vec![player_any.clone(), star_any.clone()])])],
+                    late: true, // late
+                    ..Default::default()
+                }],
             }]
         };
         rule.prepare_actions();
@@ -826,10 +772,9 @@ mod tests {
         let win1 = WinCondition::On(WinConditionOnQualifier::Some, player_any.tile.clone(), star_any.tile.clone());
         
         // 1x1 board
-        let origin = Position::new(0, 0);
         let mut rng = new_rng();
         let level = Level::Map(vec![vec![Tile::new(TileKind::And, &String::from("t1"), vec![player, star])]]);
-        let game = GameData::new(String::from("test"), Metadata::new(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![win1]);
+        let game = GameData::new(String::from("test"), Metadata::default(), FnvHashMap::default(), player_any.tile.clone(), background_any.tile.clone(), vec![rule], vec![level.clone()], vec![win1]);
         let mut board = game.to_board(&level);
 
         // verify that the ON condition is be satisfied

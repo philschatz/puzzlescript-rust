@@ -1,9 +1,8 @@
-use log::{debug, trace, warn};
+use log::{debug, trace};
 use std::cmp;
 use std::error::Error;
 use std::io::Read;
 use fnv::FnvHashMap;
-use fnv::FnvHashSet;
 
 use crate::json;
 use crate::model::util::SpriteState;
@@ -37,7 +36,7 @@ fn build_sprites(sprite_lookup: &FnvHashMap<String, SpriteState>, sprite_ids: Ve
 }
 
 pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
-    let mut ast = json::from_file(file)?;
+    let ast = json::from_file(file)?;
 
     let mut sprite_map = FnvHashMap::default(); // Map of UI sprites to SpriteState
     let mut sprite_ui_map = FnvHashMap::default(); 
@@ -122,10 +121,10 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
     let mut tile_lookup = FnvHashMap::default();
     for (id, tile_def) in ast.tiles {
         let tile = match tile_def {
-            json::Tile::Or {name, sprites, _sourceOffset} => Tile::new(TileKind::Or, &name, build_sprites(&sprite_lookup, sprites)),
-            json::Tile::And {name, sprites, _sourceOffset} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, sprites)),
-            json::Tile::Sprite {name, sprite, _sourceOffset} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, vec![sprite])),
-            json::Tile::Simple {name, sprite, _sourceOffset} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, vec![sprite])),
+            json::Tile::Or {name, sprites} => Tile::new(TileKind::Or, &name, build_sprites(&sprite_lookup, sprites)),
+            json::Tile::And {name, sprites} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, sprites)),
+            json::Tile::Sprite {name, sprite} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, vec![sprite])),
+            json::Tile::Simple {name, sprite} => Tile::new(TileKind::And, &name, build_sprites(&sprite_lookup, vec![sprite])),
         };
 
         // Check if they were a Player or Background Tile
@@ -161,8 +160,8 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
     let mut bracket_lookup = FnvHashMap::default();
     for (id, bracket_def) in ast.brackets {
         let bracket = match bracket_def {
-            json::Bracket::Simple { direction, neighbors, _sourceOffset } => Bracket::new(direction, neighbors.iter().map(|n| neighbor_lookup.get(n).unwrap().clone()).collect()),
-            json::Bracket::Ellipsis { direction, before_neighbors, after_neighbors, _sourceOffset } => {
+            json::Bracket::Simple { direction, neighbors } => Bracket::new(direction, neighbors.iter().map(|n| neighbor_lookup.get(n).unwrap().clone()).collect()),
+            json::Bracket::Ellipsis { direction, before_neighbors, after_neighbors } => {
                 let before = before_neighbors.iter().map(|n| neighbor_lookup.get(n).unwrap().clone()).collect();
                 let after = after_neighbors.iter().map(|n| neighbor_lookup.get(n).unwrap().clone()).collect();
                 Bracket::new_ellipsis(direction, before, after)
@@ -174,13 +173,13 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
     let mut command_lookup = FnvHashMap::default();
     for (id, command_def) in ast.commands {
         let command = match command_def {
-            json::Command::Again {_sourceOffset} => Command::Again,
-            json::Command::Cancel {_sourceOffset} => Command::Cancel,
-            json::Command::Checkpoint {_sourceOffset} => Command::Checkpoint,
-            json::Command::Restart {_sourceOffset} => Command::Restart,
-            json::Command::Win {_sourceOffset} => Command::Win,
-            json::Command::Message {message, _sourceOffset} => Command::Message(message),
-            json::Command::Sfx {sound, _sourceOffset} => Command::Sfx,
+            json::Command::Again {} => Command::Again,
+            json::Command::Cancel {} => Command::Cancel,
+            json::Command::Checkpoint {} => Command::Checkpoint,
+            json::Command::Restart {} => Command::Restart,
+            json::Command::Win {} => Command::Win,
+            json::Command::Message { message } => Command::Message(message),
+            json::Command::Sfx { sound: _ } => Command::Sfx,
         };
         command_lookup.insert(id, command);
     }
@@ -190,13 +189,13 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
 
     for (id, rule_def) in ast.rule_definitions {
         let mut rule = match rule_def {
-            json::RuleDefinition::Simple { directions, conditions, actions, commands, random, late, rigid, _sourceOffset } => {
+            json::RuleDefinition::Simple { directions: _, conditions, actions, commands, random, late, rigid } => {
                 let r = match random {
                     Some(v) => v,
                     None => false
                 };
                 trace!("RuleCaching {}", id);
-                let mut triggered = TriggeredCommands::new();
+                let mut triggered = TriggeredCommands::default();
                 for command in  commands.iter().map(|c| command_lookup.get(c).unwrap().clone()) {
                     command.merge(&mut triggered);
                 }
@@ -209,7 +208,7 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
                     commands: triggered,
                 }
             },
-            json::RuleDefinition::Group {random, rules, _sourceOffset } => {
+            json::RuleDefinition::Group {random, rules } => {
                 // Skip Groups because they need to be inserted later
                 trace!("RuleSkipping {}", id);
                 tbd.push((id, Some(random), rules));
@@ -281,7 +280,7 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
         if random.is_some() {
             continue // Skip RuleGroups
         }
-        let mut skip = false;
+        let skip = false;
         let mut subrules = vec![];
         rules.iter().for_each(|r| {
             match rule_group_lookup.get(r) {
@@ -332,8 +331,8 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
     }).collect();
     let levels = ast.levels.iter().map(|l| {
         match l {
-            json::Level::Message { message, _sourceOffset } => Level::Message(message.clone()),
-            json::Level::Map { cells, _sourceOffset } => {
+            json::Level::Message { message } => Level::Message(message.clone()),
+            json::Level::Map { cells } => {
                 let tiles = cells.iter().map(|row| row.iter().map(|t| tile_lookup.get(t).unwrap().clone()).collect()).collect();
                 Level::Map(tiles)
             }

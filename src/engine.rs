@@ -44,7 +44,6 @@ impl Engine {
     }
 
     pub fn from_checkpoint(game_data: GameData, current_level_num: u8, checkpoint: Board) -> Self {
-        let current = &game_data.levels[current_level_num as usize];
         let current_level = BoardOrMessage::Board(checkpoint);
 
         Self {
@@ -237,15 +236,6 @@ pub enum BoardOrMessage {
 }
 
 impl BoardOrMessage {
-    pub fn is_message(&self) -> bool {
-        match self {
-            BoardOrMessage::Message(_) => true,
-            BoardOrMessage::Board(_) => false,
-        }
-    }
-    fn is_board(&self) -> bool {
-        !self.is_message()
-    }
     fn unwrap_board(&self) -> &Board {
         match self {
             BoardOrMessage::Message(_) => panic!("called `unwrap_board()` on a `Message` value"),

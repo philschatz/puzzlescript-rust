@@ -8,7 +8,6 @@ use crate::bitset::BitSet;
 use crate::model::util::SpriteAndWantsToMove;
 use crate::model::util::SpriteState;
 use crate::model::util::WantsToMove;
-use crate::model::util::Position;
 use crate::model::tile::Tile;
 use crate::model::tile::TileKind;
 
@@ -47,19 +46,6 @@ impl Cell {
 
     }
 
-    fn to_fingerprint(&self) -> String {
-        // Update the key
-        let mut fingerprint = String::from("");
-        for (c, w) in &self.collision_layers {
-            fingerprint.push_str(&c.to_string());
-            fingerprint.push_str(":[");
-            fingerprint.push_str(&w.sprite_index.to_string());
-            fingerprint.push_str("=");
-            fingerprint.push_str(&w.wants_to_move.to_string());
-            fingerprint.push_str("] ");
-        }
-        fingerprint
-    }
 
     /// Returns true if the cell was changed
     pub fn add_sprite(&mut self, sprite: &SpriteState, wants_to_move: WantsToMove) -> bool {
@@ -123,7 +109,8 @@ impl Cell {
             false
         } else {
             self.sprite_bits.insert(x.sprite_index);
-            self.collision_layers.insert(collision_layer, SpriteAndWantsToMove::new(x.sprite_index, dir));
+            let w = SpriteAndWantsToMove::new(x.sprite_index, dir);
+            self.collision_layers.insert(collision_layer, w);
             self.invariant();
             true
         }

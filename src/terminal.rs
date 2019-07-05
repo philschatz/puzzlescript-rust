@@ -44,7 +44,7 @@ impl Grid {
         debug_assert!(x < self.width);
         debug_assert!(y < self.height);
 
-        let i = (x as usize + y as usize * self.width as usize);
+        let i = x as usize + y as usize * self.width as usize;
         // Alpha Transparency Support only for truecolor screens
         if color.a != 0 {
             if self.is_true_color {
@@ -74,24 +74,6 @@ impl Grid {
         }
     }
 
-    fn render_naive(&self, area: &Rect, buf: &mut Buffer) {
-        for (index, color) in self.colors.iter().enumerate() {
-            let index = index as u16;
-            let x = index % self.width;
-            let y = index / self.width;
-            if x >= area.width || y >= area.height {
-                continue
-            }
-
-            let x = x + area.left();
-            let y = y + area.top();
-
-            buf.get_mut(x, y)
-                .set_bg(self.to_color(color))
-                .set_char(' ');
-        }
-    }
-
     fn render_small(&self, area: &Rect, buf: &mut Buffer) {
         for row in 0..self.height / 2 {
             for x in 0..self.width {
@@ -107,7 +89,7 @@ impl Grid {
                 let x = x + area.left();
                 let y = row + area.top();
 
-                buf.get_mut(x + area.left(), row + area.top())
+                buf.get_mut(x, y)
                     .set_bg(self.to_color(&top_color))
                     .set_fg(self.to_color(bottom_color))
                     .set_char('▄');
@@ -152,8 +134,6 @@ impl Grid {
 
 impl Widget for Engine {
     fn draw(&mut self, area: Rect, buf: &mut Buffer) {
-        let color_space = ColorSpace::get_colorspace();
-        let is_true_color = color_space.is_true_color();
 
         if let Some(msg) = &self.pending_message {
             MessageWindow::new(msg.clone()).draw(area, buf);
@@ -381,10 +361,6 @@ pub struct PlayPause {
 impl PlayPause {
     pub fn new() -> Self {
         Self { paused: false }
-    }
-
-    pub fn toggle(&mut self) {
-        self.paused = !self.paused
     }
 
     pub fn resume(&mut self) {

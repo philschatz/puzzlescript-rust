@@ -14,7 +14,6 @@ use crate::color::Rgb;
 use crate::model::board::Board;
 use crate::model::util::TriggeredCommands;
 use crate::model::game::Sprite;
-use crate::model::util::Dimension;
 use crate::model::util::Position;
 use crate::model::util::SpriteState;
 use crate::model::util::WantsToMove;
@@ -91,13 +90,6 @@ impl ScreenDumper {
         })
     }
 
-    pub fn enable_raw(enable: bool) {
-        SCREENDUMPER.with(|obj_cell| {
-            let obj = obj_cell.borrow();
-            obj._enable_raw(enable)
-        })
-    }
-
     fn _enable_raw(&self, enable: bool) {
         match &self.term {
             None => {}
@@ -114,7 +106,7 @@ impl ScreenDumper {
         if self.sprites.is_none() {
             return
         }
-        let (sprite_width, sprite_height) = self.sprite_size;
+        let (_, sprite_height) = self.sprite_size;
         // disable raw mode for printing
         self._enable_raw(false);
 
@@ -240,7 +232,7 @@ struct UICell {
 
 impl UICell {
     fn to_pretty(&self, s: Option<&(String, WantsToMove)>) -> String {
-        let (sprite_width, sprite_height) = self.sprite_size;
+        let (sprite_width, _) = self.sprite_size;
         match s {
             None => String::from(""),
             Some((name, WantsToMove::Stationary)) => {

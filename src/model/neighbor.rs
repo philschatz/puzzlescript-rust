@@ -14,9 +14,7 @@ use crate::model::util::Position;
 use crate::model::util::SpriteState;
 use crate::model::util::WantsToMove;
 use crate::model::util::SpriteAndWantsToMove;
-use crate::model::cell::Cell;
 use crate::model::board::Board;
-use crate::model::board::StripeCache;
 
 
 pub fn build_tile_with_modifier(random: bool, is_or: bool, negated: bool, direction: Option<WantsToMove>, sprites: &Vec<SpriteState>) -> TileWithModifier {
@@ -577,8 +575,8 @@ impl Neighbor {
                         } else {
                             if p.is_some() {
                                 let p2 = p.expect("Its here I know it");
-                                // p2.action = Some(t.clone());
-                                pairs.insert(*c, ExtraPair::new(p2.condition.clone(), Some(t.clone()), p2.extra));
+                                let new = ExtraPair::new(p2.condition.clone(), Some(t.clone()), p2.extra);
+                                pairs.insert(*c, new);
                             } else {
                                 pairs.insert(*c, ExtraPair::new(None, Some(t.clone()), false));
                             }
@@ -709,9 +707,7 @@ pub mod tests {
         let bat = SpriteState::new(&String::from("bat"), 3, 1);
         let hat = SpriteState::new(&String::from("bat"), 4, 2);
 
-        let player_any = build_t(false/*random*/, &player, false, None);
         let no_player = build_t(false/*random*/, &player, true, None);
-        let hat_any = build_t(false/*random*/, &hat, false, None);
         let no_hat = build_t(false/*random*/, &hat, true, None);
 
         // thing = player OR bat

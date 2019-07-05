@@ -1,4 +1,3 @@
-use std::cmp;
 use fnv::FnvHashMap;
 use fnv::FnvHashSet;
 
@@ -66,38 +65,8 @@ impl Neighbors {
     pub fn nth(&self, n: usize) -> Option<Position> {
         self.iter().nth(n)
     }
-    pub fn last(&self) -> Option<Position> {
-        self.iter().last()
-    }
 }
 
-fn direction_iter(width: usize, height: usize, index: usize, dir: CardinalDirection, len: usize) -> Vec<usize> {
-    let row = index / width;
-    let col = index % width;
-    
-    match dir {
-        CardinalDirection::Right => {
-            let end = index - col + width;
-            let range = index..cmp::min(index + len, end);
-            range.into_iter().collect()
-        },
-        CardinalDirection::Left => {
-            let start = index - col;
-            let start = if index < len { start } else { cmp::max(index - len, start) }; // prevent overflow
-            let range = start..=index;
-            range.into_iter().rev().collect()
-        }
-        CardinalDirection::Up => {
-            let start = if row < len { 0 } else { cmp::max(row - len, 0) }; // prevent overflow
-            let range = start..=row;
-            range.into_iter().map(|x| (x * width + col)).rev().collect()
-        }
-        CardinalDirection::Down => {
-            let range = row..cmp::min(row + len, height);
-            range.into_iter().map(|x| (x * width + col)).collect()
-        }
-    }
-}
 
 #[derive(Clone, Debug)]
 pub struct StripeCache {
@@ -120,16 +89,12 @@ impl StripeCache {
         self.dirs.insert((collision_layer, dir));
     }
 
-    fn remove_collision_layer(&mut self, collision_layer: u16) {
+    fn remove_collision_layer(&mut self, _: u16) {
         // self.staleness += 1;
     }
     fn set_wants_to_move(&mut self, collision_layer: u16, dir: WantsToMove) {
         self.dirs.insert((collision_layer, dir));
         // self.staleness += 1;
-    }
-
-    pub fn contains_all(&self, other: &Self) -> bool {
-        self.sprites.contains_all(&other.sprites)
     }
 
     pub fn contains_all_dirs(&self, dirs: &FnvHashSet<(u16, WantsToMove)>) -> bool {
@@ -280,11 +245,6 @@ impl Board {
         cell.add_sprite_index(collision_layer, sprite_index, dir)
     }
 
-    // provide iterator of all the indices to check in a given direction starting with `start`
-    fn neighbors(&self, index: usize, dir: CardinalDirection, len: usize) -> Vec<usize> {
-        direction_iter(self.width as usize, self.height as usize, index, dir, len)
-    }
-
     pub fn neighbor_positions(&self, pos: &Position, dir: CardinalDirection) -> Neighbors { // PERF: 15.8%
         Neighbors { size: self.size(), dir, start: pos.clone() }
     }
@@ -341,16 +301,7 @@ impl Board {
         self.col_cache[pos.x as usize].remove_collision_layer(collision_layer);
 
         let cell = self.get_mut(pos);
-        let ret = cell.remove_collision_layer(collision_layer);
-
-        // if self.row_cache[pos.y as usize].staleness > 0 {
-        //     self.recache_row(pos.y);
-        // }
-        // if self.col_cache[pos.x as usize].staleness > 0 {
-        //     self.recache_col(pos.x);
-        // }
-
-        ret
+        cell.remove_collision_layer(collision_layer)
     }
 
     pub fn set_wants_to_move(&mut self, pos: &Position, collision_layer: u16, dir: WantsToMove) -> bool {
@@ -358,16 +309,7 @@ impl Board {
         self.col_cache[pos.x as usize].set_wants_to_move(collision_layer, dir);
 
         let cell = self.get_mut(pos);
-        let ret = cell.set_wants_to_move(collision_layer, dir);
-
-        // if self.row_cache[pos.y as usize].staleness > 0 {
-        //     self.recache_row(pos.y);
-        // }
-        // if self.col_cache[pos.x as usize].staleness > 0 {
-        //     self.recache_col(pos.x);
-        // }
-
-        ret
+        cell.set_wants_to_move(collision_layer, dir)
     }
 
     pub fn row_cache(&self, y: u16) -> &StripeCache {
@@ -376,26 +318,6 @@ impl Board {
 
     pub fn col_cache(&self, x: u16) -> &StripeCache {
         &self.col_cache[x as usize]
-    }
-
-    fn recache_row(&mut self, y: u16) {
-        let mut row_cache = StripeCache::new();
-        for x in 0..self.width {
-            for (c, sw) in self.as_map(&Position::new(x, y)) {
-                row_cache.add_sprite_index(*c, sw.sprite_index, sw.wants_to_move);
-            }
-        }
-        self.row_cache[y as usize] = row_cache;
-    }
-
-    fn recache_col(&mut self, x: u16) {
-        let mut col_cache = StripeCache::new();
-        for y in 0..self.height {
-            for (c, sw) in self.as_map(&Position::new(x, y)) {
-                col_cache.add_sprite_index(*c, sw.sprite_index, sw.wants_to_move);
-            }
-        }
-        self.col_cache[x as usize] = col_cache;
     }
 }
 
@@ -409,30 +331,6 @@ impl PartialEq for Board {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn neighbors() {
-        let width = 3;
-        let height = 3;
-
-        // check origin
-        assert_eq!(direction_iter(width, height, 0, CardinalDirection::Up, 3), vec![0]);
-        assert_eq!(direction_iter(width, height, 0, CardinalDirection::Down, 3), vec![0, 3, 6]);
-        assert_eq!(direction_iter(width, height, 0, CardinalDirection::Left, 3), vec![0, ]);
-        assert_eq!(direction_iter(width, height, 0, CardinalDirection::Right, 3), vec![0, 1, 2]);
-
-        // check center
-        assert_eq!(direction_iter(width, height, 4, CardinalDirection::Up, 3), vec![4, 1]);
-        assert_eq!(direction_iter(width, height, 4, CardinalDirection::Down, 3), vec![4, 7]);
-        assert_eq!(direction_iter(width, height, 4, CardinalDirection::Left, 3), vec![4, 3]);
-        assert_eq!(direction_iter(width, height, 4, CardinalDirection::Right, 3), vec![4, 5]);
-
-        // check bottom-right
-        assert_eq!(direction_iter(width, height, 8, CardinalDirection::Up, 3), vec![8, 5, 2]);
-        assert_eq!(direction_iter(width, height, 8, CardinalDirection::Down, 3), vec![8]);
-        assert_eq!(direction_iter(width, height, 8, CardinalDirection::Left, 3), vec![8, 7, 6]);
-        assert_eq!(direction_iter(width, height, 8, CardinalDirection::Right, 3), vec![8]);
-    }
 
     #[test]
     fn neighbor_positions() {
@@ -460,10 +358,10 @@ mod tests {
         let mut bracket = StripeCache::new();
         bracket.add_sprite_index(0, 0, WantsToMove::Stationary);
 
-        assert!(!row.contains_all(&bracket));
+        assert!(!row.sprites.contains_all(&bracket.sprites));
 
         row.add_sprite_index(0, 0, WantsToMove::Stationary);
-        assert!(row.contains_all(&bracket));
+        assert!(row.sprites.contains_all(&bracket.sprites));
     }
 
 }

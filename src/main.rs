@@ -18,7 +18,7 @@ mod engine;
 mod terminal;
 mod save;
 
-use log::{debug, warn, info};
+use log::{debug, info};
 use std::process;
 use std::error::Error;
 use std::fs::File;
@@ -120,6 +120,10 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
         None => {
             match SaveState::read_from_file(&save_path) {
                 Ok(save) => {
+                    if game.levels.len() <= save.level as usize {
+                        println!("You already won the game!");
+                        process::exit(100)
+                    }
                     let level = &game.levels[save.level as usize];
                     let checkpoint = save.checkpoint.map(|checkpoint| {
                         
@@ -194,7 +198,7 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
     let mut keys = 0;
     let mut scripted_did_win = false;
     let mut last_input = time::Instant::now();
-    let (stdin_channel, handle) = spawn_stdin_channel();
+    let (stdin_channel, _handle) = spawn_stdin_channel();
     sleep(100); // wait for thread to look into stdin
     loop {
         let start_tick = time::Instant::now();
@@ -304,7 +308,6 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
                     let top = Rect::new(size.x, size.y, size.width, 1);
                     let main = Rect::new(size.x, size.y + 1, size.width, size.height - 2);
                     let bottom = Rect::new(size.x, main.bottom(), size.width, 1);
-                    let bottom_corner = Rect::new(size.right() - 1, main.bottom(), 1, 1);
 
                     engine.render(&mut f, main);
                     play_pause.render(&mut f, main);
@@ -340,7 +343,6 @@ fn play_game<B: Backend>(terminal: &mut Terminal<B>, path: &str, start_level: Op
                 let top = Rect::new(size.x, size.y, size.width, 1);
                 let main = Rect::new(size.x, size.y + 1, size.width, size.height - 2);
                 let bottom = Rect::new(size.x, main.bottom(), size.width, 1);
-                let bottom_corner = Rect::new(size.right() - 1, main.bottom(), 1, 1);
 
                 engine.render(&mut f, main);
                 play_pause.render(&mut f, main);

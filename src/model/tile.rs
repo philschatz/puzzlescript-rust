@@ -1,8 +1,6 @@
 use std::hash;
 use std::cmp;
-use std::iter::FromIterator;
 
-use fnv::FnvHashMap;
 use fnv::FnvHashSet;
 
 use crate::bitset::BitSet;
@@ -64,10 +62,6 @@ impl Tile {
     pub fn get_collision_layers(&self) -> &FnvHashSet<u16> {
         &self.collision_layers
     }
-
-    pub fn matches(&self, board: &Board, pos: &Position, direction: &Option<WantsToMove>) -> bool { // PERF_INSIDE: 10.7%
-        board.matches(pos, &self, &direction)
-    }
 }
 
 impl hash::Hash for Tile {
@@ -99,13 +93,4 @@ impl TileWithModifier {
         let t = board.matches(&pos, &self.tile, &self.direction);
         self.negated ^ t
     }
-}
-
-fn build_hash_map(sprites: &Vec<SpriteState>) -> FnvHashMap<u16, BitSet> {
-    let mut h = FnvHashMap::default();
-    for sprite in sprites {
-        let b = h.entry(sprite.collision_layer).or_insert(BitSet::new());
-        b.insert(sprite.index);
-    }
-    h
 }

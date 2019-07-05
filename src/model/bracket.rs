@@ -1,5 +1,3 @@
-use log::{debug, trace, warn};
-
 use std::fmt;
 use fnv::FnvHashMap;
 use fnv::FnvHashSet;
@@ -12,7 +10,6 @@ use crate::model::board::Neighbors;
 use crate::model::util::WantsToMove;
 use crate::model::util::SpriteState;
 use crate::model::util::CardinalDirection;
-use crate::model::util::TriggeredCommands;
 use crate::model::neighbor::Neighbor;
 use crate::model::board::Board;
 use crate::model::board::StripeCache;
@@ -21,10 +18,6 @@ use crate::model::board::StripeCache;
 pub struct BracketMatch {
     pub before_positions: Neighbors,
     pub after_positions: Option<Neighbors>,
-}
-
-pub fn vec_of_optionals_to_vec<T>(v: Vec<Option<T>>) -> Vec<T> {
-    v.into_iter().filter(|x| x.is_some()).map(|x| x.unwrap()).collect()
 }
 
 #[derive(Clone, Debug)]
@@ -265,6 +258,7 @@ impl fmt::Display for Bracket {
 mod tests {
     use super::*;
     
+    use crate::model::util::TriggeredCommands;
     use crate::model::util::WantsToMove;
     use crate::model::neighbor::build_t;
     use crate::model::neighbor::tests::new_rng;
@@ -316,7 +310,7 @@ mod tests {
         let mut rule = Rule { causes_board_changes: None,
             conditions: vec![condition],
             actions:    vec![action],
-            commands:   TriggeredCommands::new(),
+            commands:   TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -456,7 +450,7 @@ mod tests {
         let mut rule = Rule { causes_board_changes: None,
             conditions: vec![condition],
             actions: vec![action],
-            commands: TriggeredCommands::new(),
+            commands: TriggeredCommands::default(),
             late: false,
             random: false,
             rigid: false,
@@ -470,7 +464,7 @@ mod tests {
 
         board.add_sprite(&origin, &whale, WantsToMove::Stationary);
 
-        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::new(), false);
+        rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false);
 
         assert!(!board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&middle, &player));
