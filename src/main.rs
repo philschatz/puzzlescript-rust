@@ -101,6 +101,8 @@ fn main() -> Result<(), Box<Error>> {
         let out = AlternateScreen::from(out);
         let backend = TermionBackend::new(out);
         let mut t = Terminal::new(backend)?;
+        t.hide_cursor()?;
+
         play_game(
             &mut t,
             &game_path,
@@ -122,7 +124,6 @@ fn play_game<B: Backend>(
     no_flick_screen: bool,
     tick_speed: Option<u64>,
 ) -> Result<(), Box<Error>> {
-    // terminal.hide_cursor()?;
 
     let save_path = format!("{}.save.json", path);
     let mut game = read_game_from_file(path)?;
