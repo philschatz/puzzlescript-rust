@@ -145,7 +145,7 @@ impl Engine {
                     Some(n) => self.current_level = n,
                 }
                 TickResult {
-                    changed: changed && !t.cancel,
+                    changed: changed,
                     completed_level: if t.win {
                         Some(self.current_level_num)
                     } else {

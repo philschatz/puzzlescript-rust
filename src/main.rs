@@ -66,6 +66,7 @@ fn main() -> Result<(), Box<Error>> {
         (@arg SOUND: --sound "Play sound effects (via the BEL character)")
         (@arg FORCE_PRIMARY_SCREEN: --primary "Do not use the alternate screen (useful for debugging)")
         (@arg NO_FLICK_SCREEN: --noflick "Show the WHOLE level not just the current screen (for finding easter-eggs)")
+        (@arg NO_SAVE: --nosave "Do not save")
         (@arg TICK_SPEED: --speed +takes_value "How long the game waits between each tick")
     ).get_matches();
 
@@ -77,9 +78,12 @@ fn main() -> Result<(), Box<Error>> {
     let enable_sound = matches.is_present("SOUND");
     let force_primary_screen = matches.is_present("FORCE_PRIMARY_SCREEN");
     let no_flick_screen = matches.is_present("NO_FLICK_SCREEN");
+    let no_save = matches.is_present("NO_SAVE");
     let tick_speed = matches
         .value_of("TICK_SPEED")
         .map(|s| s.parse().expect("Enter a valid number"));
+
+    let is_stdin_tty = is_tty("/dev/stdin");
 
     if scripted || force_primary_screen {
         // Terminal initialization
@@ -94,6 +98,8 @@ fn main() -> Result<(), Box<Error>> {
             enable_sound,
             no_flick_screen,
             tick_speed,
+            no_save,
+            is_stdin_tty,
         )
     } else {
         // Terminal initialization
@@ -111,6 +117,8 @@ fn main() -> Result<(), Box<Error>> {
             enable_sound,
             no_flick_screen,
             tick_speed,
+            no_save,
+            is_stdin_tty,
         )
     }
 }
@@ -123,8 +131,9 @@ fn play_game<B: Backend>(
     enable_sound: bool,
     no_flick_screen: bool,
     tick_speed: Option<u64>,
+    no_save: bool,
+    is_stdin_tty: bool,
 ) -> Result<(), Box<Error>> {
-
     let save_path = format!("{}.save.json", path);
     let mut game = read_game_from_file(path)?;
 
@@ -190,7 +199,7 @@ fn play_game<B: Backend>(
     };
 
     // Enable raw mode so we get keys
-    if !scripted {
+    if !scripted && is_stdin_tty {
         ScreenDumper::set_term();
     }
 
@@ -214,6 +223,9 @@ fn play_game<B: Backend>(
                      inputs: Vec<String>,
                      board: Option<Board>|
      -> Result<(), Box<Error>> {
+        if no_save {
+            return Ok(());
+        }
         let checkpoint = board.map(|board| {
             board
                 .positions_iter()
@@ -317,7 +329,10 @@ fn play_game<B: Backend>(
                     }
                     // Debugging
                     Key::Char('~') | Key::Char('`') | Key::Char('\\') => {
-                        ScreenDumper::set_term(); // ensure the dumper can enable/disable raw mode
+                        if is_stdin_tty {
+                            // ensure the dumper can enable/disable raw mode
+                            ScreenDumper::set_term();
+                        }
                         engine.debug_rules = !engine.debug_rules;
                         if engine.debug_rules {
                             terminal.draw(|_|{})?/*repaint*/;
@@ -358,6 +373,10 @@ fn play_game<B: Backend>(
                             "BUG: Level ended but no keys were pressed. Maybe more input is needed"
                         );
                     }
+                }
+
+                if !is_stdin_tty {
+                    return Ok(());
                 }
                 should_tick = !engine.debug_rules; // Do not tick when debugger is on.
 
@@ -522,4 +541,10 @@ fn warn_if_alpha_transparency(game: &GameData) {
             }
         }
     }
+}
+
+fn is_tty(file: &str) -> bool {
+    File::create(file)
+        .map(|f| termion::is_tty(&f))
+        .unwrap_or(false)
 }
