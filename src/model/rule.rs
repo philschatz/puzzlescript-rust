@@ -302,8 +302,15 @@ impl RuleGroup {
                 let before = triggered.clone();
                 self.rules.iter().filter(|r| r.late == late).for_each(|r| {
                     // Rules with only commands would keep running infinitely. So if something was evaluated
-                    let ret = r.evaluate(rng, board, triggered, false);
-                    board_changed_this_iter |= ret;
+                    let mut ret;
+                    loop {
+                        // keep evaluating the rule until it is false (entanglement-two putting an arrow in a vactube)
+                        ret = r.evaluate(rng, board, triggered, false);
+                        board_changed_this_iter |= ret;
+                        if !ret {
+                            break;
+                        }
+                    }
                 });
                 board_changed |= board_changed_this_iter;
                 if !board_changed_this_iter && before == *triggered {
@@ -393,6 +400,7 @@ mod tests {
     use rand_xorshift::XorShiftRng;
 
     use crate::model::neighbor::build_t;
+    use crate::model::neighbor::build_tile_with_modifier;
     use crate::model::neighbor::tests::check_counts;
     use crate::model::neighbor::Neighbor;
     use crate::model::util::CardinalDirection;
@@ -849,6 +857,81 @@ mod tests {
 
         assert!(board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&end, &player));
+    }
+
+    #[test]
+    fn keeps_evaluating_rule_in_group_before_moving_to_next() {
+        // entanglement-two (pushing an arrow into a vactube)
+        init();
+        let mut rng = new_rng();
+        let player = SpriteState::new(&String::from("player"), 0, 0);
+        let hat = SpriteState::new(&String::from("hat"), 1, 1);
+        let movestack = SpriteState::new(&String::from("movestack"), 2, 2);
+
+        let thing_any =
+            build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
+
+        let no_movestack = build_t(false /*random*/, &movestack, true, None);
+        let movestack_any = build_t(false /*random*/, &movestack, false, None);
+
+        // RIGHT [ thing movestack | ] -> [ movestack | thing ]
+        // + RIGHT [ movestack ] -> [ ]
+        let rule1 = Rule {
+            conditions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![
+                    Neighbor::new(vec![thing_any.clone(), movestack_any.clone()]),
+                    Neighbor::new(vec![]),
+                ],
+            )],
+            actions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![
+                    Neighbor::new(vec![movestack_any.clone()]),
+                    Neighbor::new(vec![thing_any.clone()]),
+                ],
+            )],
+            ..Default::default()
+        };
+
+        let rule2 = Rule {
+            conditions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![Neighbor::new(vec![movestack_any.clone()])],
+            )],
+            actions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![Neighbor::new(vec![no_movestack.clone()])],
+            )],
+            ..Default::default()
+        };
+
+        let mut rule = RuleGroup {
+            random: false,
+            rules: vec![rule1, rule2],
+        };
+        rule.prepare_actions();
+
+        let mut board = Board::new(2, 1);
+        let origin = Position::new(0, 0);
+        let end = Position::new(1, 0);
+
+        board.add_sprite(&origin, &player, WantsToMove::Stationary);
+        board.add_sprite(&origin, &hat, WantsToMove::Stationary);
+        board.add_sprite(&origin, &movestack, WantsToMove::Stationary);
+
+        rule.evaluate(
+            &mut rng,
+            &mut board,
+            &mut TriggeredCommands::default(),
+            false,
+        );
+
+        assert!(!board.has_sprite(&origin, &player));
+        assert!(!board.has_sprite(&origin, &hat));
+
+        assert!(board.has_sprite(&end, &player));
+        assert!(board.has_sprite(&end, &hat));
     }
 
 }

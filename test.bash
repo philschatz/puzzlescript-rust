@@ -1,5 +1,14 @@
 #!/bin/bash
 
+try() {
+    "${@}"
+    status=$?
+    if [[ ${status} != 0 ]]; then
+        echo "ERROR: Failed to run '${@}'" > /dev/stderr
+        exit ${status}
+    fi
+}
+
 # Check how long a command takes to run. Fail if it is too slow.
 bench() {
     expected=$1
@@ -15,12 +24,11 @@ bench() {
     fi
 }
 
-cargo build --release || exit 110
-
-echo "..........q" | bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary --level 0 --scripted || exit 110
-
-cargo test || exit 110
-
 cargo fmt # might not be installed
+try cargo build --release
 
-bench 300 ./test_solutions.bash || exit 110
+echo "..........q" | try bench 4 cargo run --release ./games/skipping-stones.parsed.json --primary --level 0 --scripted
+
+try cargo test
+
+try bench 300 ./test_solutions.bash

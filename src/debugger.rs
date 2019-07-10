@@ -215,6 +215,12 @@ impl ScreenDumper {
                         }
                     }
 
+                    // in order to show all the names (if there are more than 5)
+                    // flip between sorted ascending & descending
+                    if sprite_names.len() > 5 && (pos.x % 2 + pos.y % 2) % 2 == 0 {
+                        sprite_names.reverse();
+                    }
+
                     let uicell = UICell {
                         sprite_size: self.sprite_size,
                         pixels: temp_pixels,
