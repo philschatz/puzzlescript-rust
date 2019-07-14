@@ -481,3 +481,21 @@ fn to_grayscale(color: &Color) -> Color {
         _ => color.clone(),
     }
 }
+
+#[derive(Default)]
+pub struct RecordingInfo {
+    checkpoints: u16
+}
+
+impl RecordingInfo {
+    pub fn increment(&mut self) {
+        self.checkpoints += 1;
+    }
+}
+
+impl Widget for RecordingInfo {
+    fn draw(&mut self, area: Rect, buf: &mut Buffer) {
+        let s = format!("Checkpoints Reached: {}", self.checkpoints);
+        buf.set_string(area.x, area.y, s, Style::default());
+    }
+}

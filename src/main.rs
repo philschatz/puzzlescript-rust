@@ -45,6 +45,7 @@ use terminal::Attribution;
 use terminal::Help;
 use terminal::PlayPause;
 use terminal::Spinner;
+use terminal::RecordingInfo;
 
 use termion::screen::AlternateScreen;
 use tui::backend::Backend;
@@ -153,6 +154,7 @@ fn play_game<B: Backend>(
     let mut spinner = Spinner::new();
     let mut help = Help::new();
     let mut play_pause = PlayPause::new();
+    let mut recording_info = RecordingInfo::default();
 
     let (start_level, checkpoint, mut inputs) = match start_level {
         Some(i) => (i, None, vec![]),
@@ -292,13 +294,21 @@ fn play_game<B: Backend>(
                         true
                     }
                     Key::Char(' ')
-                    | Key::Char('\n')
                     | Key::Char('x')
                     | Key::Char('X')
                     | Key::Char('!') => {
                         input = input.or(Some(EngineInput::Action));
                         keys += 1;
                         true
+                    }
+                    Key::Char('\n') => {
+                        if !is_stdin_tty {
+                            false // newlines via stdin are just ignored
+                        } else {
+                            input = input.or(Some(EngineInput::Action));
+                            keys += 1;
+                            true
+                        }
                     }
                     Key::Char('z') | Key::Char('Z') | Key::Char('u') => {
                         input = input.or(Some(EngineInput::Undo));
@@ -412,6 +422,9 @@ fn play_game<B: Backend>(
                     attribution.render(&mut f, top);
                     help.render(&mut f, bottom);
                     spinner.render(&mut f, bottom);
+                    if !is_stdin_tty {
+                        recording_info.render(&mut f, bottom);
+                    }
                 })?;
             }
 
@@ -447,6 +460,9 @@ fn play_game<B: Backend>(
                 attribution.render(&mut f, top);
                 help.render(&mut f, bottom);
                 spinner.render(&mut f, bottom);
+                if !is_stdin_tty {
+                    recording_info.render(&mut f, bottom);
+                }
             })?;
         }
 
@@ -471,6 +487,10 @@ fn play_game<B: Backend>(
             }
         }
 
+        if tr.checkpoint.is_some() {
+            recording_info.increment();
+        }
+        
         if !scripted && tr.checkpoint.is_some() {
             add_input(&mut inputs, engine.current_level_num, '#');
             save_game(engine.current_level_num, inputs.clone(), tr.checkpoint)?;
