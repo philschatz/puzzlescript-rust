@@ -59,7 +59,7 @@ impl Grid {
     }
 
     fn rendered_rect(&self, area: &Rect) -> Rect {
-        if self.width * 2 > area.width || self.height > area.height {
+        if self.width * 2 >= area.width || self.height >= area.height {
             Rect::new(area.x, area.y, self.width, self.height / 2)
         } else {
             Rect::new(area.x, area.y, self.width * 2, self.height)
@@ -67,7 +67,7 @@ impl Grid {
     }
 
     fn render(&self, area: &Rect, buf: &mut Buffer) {
-        if self.width * 2 > area.width || self.height > area.height {
+        if self.width * 2 >= area.width || self.height >= area.height {
             self.render_small(area, buf);
         } else {
             self.render_large(area, buf);
@@ -105,7 +105,7 @@ impl Grid {
             for x in 0..self.width {
                 let color = self.colors[(x + y * self.width) as usize];
 
-                if x * 2 >= area.width || y >= area.height {
+                if x * 2 > area.width || y > area.height {
                     continue;
                 }
 
