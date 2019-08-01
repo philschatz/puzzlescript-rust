@@ -155,6 +155,7 @@ fn play_game<B: Backend>(
     let mut help = Help::new();
     let mut play_pause = PlayPause::new();
     let mut recording_info = RecordingInfo::default();
+    let mut debug_keypresses = String::from("");
 
     let (start_level, checkpoint, mut inputs) = match start_level {
         Some(i) => (i, None, vec![]),
@@ -188,11 +189,12 @@ fn play_game<B: Backend>(
         },
     };
 
-    fn add_input(inputs: &mut Vec<String>, current_level_num: u8, input: char) {
+    fn add_input(inputs: &mut Vec<String>, debug_keypresses: &mut String, current_level_num: u8, input: char) {
         while inputs.len() <= current_level_num as usize {
             inputs.push(String::from(""))
         }
         inputs[current_level_num as usize].push(input);
+        debug_keypresses.push(input);
     };
 
     let mut engine = match checkpoint {
@@ -338,6 +340,10 @@ fn play_game<B: Backend>(
                         process::exit(111)
                     }
                     // Debugging
+                    Key::Char('$') => {
+                        println!("Key dump: {:?}", debug_keypresses);
+                        process::exit(0)
+                    }
                     Key::Char('~') | Key::Char('`') | Key::Char('\\') => {
                         if is_stdin_tty {
                             // ensure the dumper can enable/disable raw mode
@@ -468,7 +474,7 @@ fn play_game<B: Backend>(
 
         if tr.changed {
             add_input(
-                &mut inputs,
+                &mut inputs, &mut debug_keypresses,
                 engine.current_level_num,
                 input.map(|i| i.to_key()).unwrap_or('.'),
             );
@@ -492,7 +498,7 @@ fn play_game<B: Backend>(
         }
         
         if !scripted && tr.checkpoint.is_some() {
-            add_input(&mut inputs, engine.current_level_num, '#');
+            add_input(&mut inputs, &mut debug_keypresses, engine.current_level_num, '#');
             save_game(engine.current_level_num, inputs.clone(), tr.checkpoint)?;
         }
 
