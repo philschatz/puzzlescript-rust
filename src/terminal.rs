@@ -79,10 +79,10 @@ impl Grid {
             for x in 0..self.width {
                 let y_top = row * 2;
                 let y_bottom = row * 2 + 1;
-                let top_color = self.colors[(x + y_top * self.width) as usize];
+                let top_color = self.colors[x as usize + y_top as usize * self.width as usize];
                 let bottom_color = self
                     .colors
-                    .get((x + y_bottom * self.width) as usize)
+                    .get(x as usize + y_bottom as usize * self.width as usize)
                     .unwrap_or(&self.background);
 
                 if x >= area.width || row >= area.height {
@@ -103,7 +103,7 @@ impl Grid {
     fn render_large(&self, area: &Rect, buf: &mut Buffer) {
         for y in 0..self.height {
             for x in 0..self.width {
-                let color = self.colors[(x + y * self.width) as usize];
+                let color = self.colors[x as usize + y as usize * self.width as usize];
 
                 if x * 2 > area.width || y > area.height {
                     continue;

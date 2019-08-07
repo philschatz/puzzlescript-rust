@@ -140,6 +140,7 @@ fn play_game<B: Backend>(
 
     if no_flick_screen {
         game.metadata.flickscreen = None;
+        game.metadata.zoomscreen = None;
     }
 
     warn_if_alpha_transparency(&game);
