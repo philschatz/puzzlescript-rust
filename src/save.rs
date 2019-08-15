@@ -15,7 +15,7 @@ pub struct SaveState {
 }
 
 impl SaveState {
-    pub fn read_from_file(path: &str) -> Result<Self, Box<Error>> {
+    pub fn read_from_file(path: &str) -> Result<Self, Box<dyn Error>> {
         debug!("Reading {:?}", path);
 
         // Open the file in read-only mode with buffer.
@@ -24,7 +24,7 @@ impl SaveState {
         Ok(serde_json::from_reader(r).unwrap())
     }
 
-    pub fn write_to_file(&self, path: &str) -> Result<(), Box<Error>> {
+    pub fn write_to_file(&self, path: &str) -> Result<(), Box<dyn Error>> {
         debug!("Writing {:?}", path);
         let f = File::create(path)?;
         Ok(serde_json::to_writer(f, &self).unwrap())

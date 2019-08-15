@@ -38,7 +38,7 @@ fn build_sprites(
     ret
 }
 
-pub fn parse<R: Read>(file: R) -> Result<GameData, Box<Error>> {
+pub fn parse<R: Read>(file: R) -> Result<GameData, Box<dyn Error>> {
     let ast = json::from_file(file)?;
 
     let mut sprite_map = FnvHashMap::default(); // Map of UI sprites to SpriteState

@@ -56,7 +56,7 @@ use tui::Terminal;
 
 const IDLE_SECS: u64 = 60;
 
-fn main() -> Result<(), Box<Error>> {
+fn main() -> Result<(), Box<dyn Error>> {
     env_logger::init();
 
     let matches = clap_app!(myapp =>
@@ -134,7 +134,7 @@ fn play_game<B: Backend>(
     tick_speed: Option<u64>,
     no_save: bool,
     is_stdin_tty: bool,
-) -> Result<(), Box<Error>> {
+) -> Result<(), Box<dyn Error>> {
     let save_path = format!("{}.save.json", path);
     let mut game = read_game_from_file(path)?;
 
@@ -227,7 +227,7 @@ fn play_game<B: Backend>(
     let save_game = |current_level_num: u8,
                      inputs: Vec<String>,
                      board: Option<Board>|
-     -> Result<(), Box<Error>> {
+     -> Result<(), Box<dyn Error>> {
         if no_save {
             return Ok(());
         }
@@ -516,7 +516,7 @@ fn play_game<B: Backend>(
     Ok(())
 }
 
-fn read_game_from_file(path: &str) -> Result<GameData, Box<Error>> {
+fn read_game_from_file(path: &str) -> Result<GameData, Box<dyn Error>> {
     info!("Reading {:?}", path);
 
     // Open the file in read-only mode with buffer.

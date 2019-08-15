@@ -179,7 +179,7 @@ pub enum WinCondition<Tile> {
     },
 }
 
-pub fn from_file<R: Read>(file: R) -> Result<GameMap, Box<Error>> {
+pub fn from_file<R: Read>(file: R) -> Result<GameMap, Box<dyn Error>> {
     let reader = BufReader::new(file);
     let u = serde_json::from_reader(reader)?;
     Ok(u)
