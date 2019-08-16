@@ -6,6 +6,12 @@ It is a [PuzzleScript][puzzlescript-url] interpreter written in Rust to play gam
 
 Here are some screencaps of games being played.
 
+### Gravirinth ([original](https://pedropsi.github.io/gravirinth.html))
+
+(click to see the ascii screencast)
+
+<a href="https://asciinema.org/a/262824"><img width="300" alt="video of the beginning of Gravirinth" src="https://asciinema.org/a/262824.png"/></a>
+
 ### Mirror Isles ([original](http://www.draknek.org/games/puzzlescript/mirrors.php))
 
 This screencast shows playing the game in a terminal using ASCII and ANSI colors.
