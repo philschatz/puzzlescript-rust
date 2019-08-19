@@ -249,6 +249,7 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<dyn Error>> {
     for (id, rule_def) in ast.rule_definitions {
         let mut rule = match rule_def {
             json::RuleDefinition::Simple {
+                source_line_num,
                 directions: _,
                 conditions,
                 actions,
@@ -270,6 +271,7 @@ pub fn parse<R: Read>(file: R) -> Result<GameData, Box<dyn Error>> {
                     command.merge(&mut triggered);
                 }
                 Rule {
+                    source_line_num,
                     causes_board_changes: None,
                     random: r,
                     late,

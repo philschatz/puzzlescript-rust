@@ -138,6 +138,7 @@ fn build_input_rule(player_tile: &Tile, wants_to_move: WantsToMove) -> RuleLoop 
         rules: vec![RuleGroup {
             random: false,
             rules: vec![Rule {
+                source_line_num: None,
                 causes_board_changes: None,
                 late: false,
                 random: false,
@@ -463,6 +464,7 @@ mod tests {
             rules: vec![RuleGroup {
                 random: false,
                 rules: vec![Rule {
+                    source_line_num: None,
                     causes_board_changes: None,
                     conditions: vec![Bracket::new(
                         CardinalDirection::Right,
@@ -521,6 +523,7 @@ mod tests {
             rules: vec![RuleGroup {
                 random: false,
                 rules: vec![Rule {
+                    source_line_num: None,
                     causes_board_changes: None,
                     conditions: vec![Bracket::new(
                         CardinalDirection::Right,
@@ -581,6 +584,7 @@ mod tests {
             rules: vec![RuleGroup {
                 random: false,
                 rules: vec![Rule {
+                    source_line_num: None,
                     causes_board_changes: None,
                     conditions: vec![Bracket::new(
                         CardinalDirection::Right,
@@ -664,6 +668,7 @@ mod tests {
             rules: vec![RuleGroup {
                 random: false,
                 rules: vec![Rule {
+                    source_line_num: None,
                     causes_board_changes: None,
                     conditions: vec![Bracket::new(
                         CardinalDirection::Right,
@@ -726,6 +731,7 @@ mod tests {
             rules: vec![RuleGroup {
                 random: false,
                 rules: vec![Rule {
+                    source_line_num: None,
                     causes_board_changes: None,
                     conditions: vec![Bracket::new(
                         CardinalDirection::Right,
@@ -845,6 +851,7 @@ mod tests {
                 random: false,
                 rules: vec![
                     Rule {
+                        source_line_num: None,
                         causes_board_changes: None,
                         conditions: vec![Bracket::new(
                             CardinalDirection::Right,
@@ -860,6 +867,7 @@ mod tests {
                         rigid: false,
                     },
                     Rule {
+                        source_line_num: None,
                         causes_board_changes: None,
                         conditions: vec![Bracket::new(
                             CardinalDirection::Right,

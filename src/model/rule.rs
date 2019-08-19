@@ -1,3 +1,4 @@
+use log::debug;
 use log::trace;
 
 use fnv::FnvHashMap;
@@ -56,6 +57,7 @@ fn build_permutations<T: Clone>(cells: &Vec<Vec<T>>) -> Vec<Vec<T>> {
 
 #[derive(Clone, Default, Debug)]
 pub struct Rule {
+    pub source_line_num: Option<usize>,
     pub conditions: Vec<Bracket>,
     pub actions: Vec<Bracket>,
     pub commands: TriggeredCommands,
@@ -226,6 +228,10 @@ impl Rule {
 
 impl fmt::Display for Rule {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self.source_line_num {
+            None => write!(f, "#??? ")?,
+            Some(line) => write!(f, "#{} ", line)?
+        }
         if self.has_only_commands() {
             write!(f, "(commands-only)")?
         }
@@ -282,6 +288,9 @@ impl RuleGroup {
                     let before = triggered.clone();
                     ret = rule.evaluate(rng, board, triggered, true);
                     ret |= before != *triggered;
+                    if ret {
+                        debug!("Evaluated Rule {}", rule);
+                    }
                 }
                 offset += 1;
             }
@@ -307,7 +316,9 @@ impl RuleGroup {
                         // keep evaluating the rule until it is false (entanglement-two putting an arrow in a vactube)
                         ret = r.evaluate(rng, board, triggered, false);
                         board_changed_this_iter |= ret;
-                        if !ret {
+                        if ret {
+                            debug!("Evaluated Rule {}", r);
+                        } else {
                             break;
                         }
                     }
@@ -425,6 +436,7 @@ mod tests {
 
         // RIGHT [ player | NO player ] -> [ | player ]
         let rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(
                 CardinalDirection::Right,
@@ -520,6 +532,7 @@ mod tests {
 
         // RIGHT [ > player | STATIONARY player ] -> [ > player | > player ]
         let rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(
                 CardinalDirection::Right,
@@ -604,6 +617,7 @@ mod tests {
 
         // RIGHT [ > player | STATIONARY player ] -> [ > player | > player ]
         let rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(
                 CardinalDirection::Right,
@@ -677,6 +691,7 @@ mod tests {
 
         // RANDOM RIGHT [ ] -> [ player ]
         let mut rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(
                 CardinalDirection::Right,
@@ -715,6 +730,7 @@ mod tests {
 
         // RIGHT [ ] -> WIN
         let mut rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions: vec![],
@@ -745,6 +761,7 @@ mod tests {
 
         // RIGHT [ ] -> [ ] WIN
         let mut rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions: vec![Bracket::new(CardinalDirection::Right, vec![])],
@@ -775,6 +792,7 @@ mod tests {
 
         // RIGHT [ ] -> [ ]
         let rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![Bracket::new(CardinalDirection::Right, vec![])],
             actions: vec![Bracket::new(CardinalDirection::Right, vec![])],

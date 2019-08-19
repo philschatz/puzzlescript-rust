@@ -133,6 +133,7 @@ pub enum Bracket<Neighbor> {
 #[derive(Serialize, Deserialize, Debug)]
 pub enum RuleDefinition<SubRuleDefinition, Bracket, Command> {
     Simple {
+        source_line_num: Option<usize>,
         directions: Vec<CardinalDirection>,
         conditions: Vec<Bracket>,
         actions: Vec<Bracket>,
@@ -143,11 +144,13 @@ pub enum RuleDefinition<SubRuleDefinition, Bracket, Command> {
     },
 
     Group {
+        // source_line_num: Option<usize>,
         random: bool,
         rules: Vec<SubRuleDefinition>,
     },
 
     Loop {
+        // source_line_num: Option<usize>,
         rules: Vec<SubRuleDefinition>,
     },
 }

@@ -192,7 +192,9 @@ impl ScreenDumper {
                     for (sprite, w) in sprites {
                         let s = sprite_lookup.get(&sprite);
                         let sprite = s.unwrap();
-                        sprite_names.push((sprite.name.clone(), w));
+                        if sprite.name.to_ascii_lowercase() != "background" {
+                            sprite_names.push((sprite.name.clone(), w));
+                        }
 
                         for sprite_y in 0..sprite_height {
                             for sprite_x in 0..sprite_width {
@@ -252,7 +254,7 @@ impl UICell {
             Some((name, WantsToMove::Stationary)) => {
                 if name.len() > (sprite_width * 2) as usize {
                     let left_end = (sprite_width - 1) as usize;
-                    let right_start = sprite_width as usize;
+                    let right_start = name.len() - sprite_width as usize;
                     let left = &name[..left_end];
                     let right = &name[right_start..];
                     let mut s = String::from(left);

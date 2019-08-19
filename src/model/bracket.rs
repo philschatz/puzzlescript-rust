@@ -409,6 +409,7 @@ mod tests {
         );
 
         let mut rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![condition],
             actions: vec![action],
@@ -585,6 +586,7 @@ mod tests {
         );
 
         let mut rule = Rule {
+            source_line_num: None,
             causes_board_changes: None,
             conditions: vec![condition],
             actions: vec![action],
