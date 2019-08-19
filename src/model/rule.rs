@@ -952,4 +952,132 @@ mod tests {
         assert!(board.has_sprite(&end, &hat));
     }
 
+    #[test]
+    fn remove_all_or_sprites_when_there_is_no_condition() {
+        let mut rng = new_rng();
+
+        let player = SpriteState::new(&String::from("player"), 0, 44);
+        let hat = SpriteState::new(&String::from("hat"), 1, 55);
+
+        let marker = SpriteState::new(&String::from("marker"), 2, 66);
+        let marker_any = build_t(false /*random*/, &marker, false, None);
+        let no_marker = build_t(false /*random*/, &marker, true, None);
+
+        let thing_any =
+            build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
+
+        // thing = player OR hat ...
+        // [ thing ] -> [ marker ]
+        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let a1 = Neighbor::new(vec![marker_any.clone()]);
+
+        // RIGHT [ thing ] -> [ marker ]
+        let rule = Rule {
+            source_line_num: None,
+            causes_board_changes: None,
+            conditions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![n1],
+            )],
+            actions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![a1],
+            )],
+            commands: TriggeredCommands::default(),
+            late: false,
+            random: false,
+            rigid: false,
+        };
+        let mut rule = RuleGroup {
+            random: false,
+            rules: vec![rule],
+        };
+
+        rule.prepare_actions();
+
+        // Check that the Neighbors change the Cell properly
+        let mut board = Board::new(1, 1);
+        let origin = Position::new(0, 0);
+
+        board.add_sprite(&origin, &player, WantsToMove::Stationary);
+        board.add_sprite(&origin, &hat, WantsToMove::Stationary);
+
+        assert!(board.has_sprite(&origin, &player));
+        assert!(board.has_sprite(&origin, &hat));
+
+        let mut triggered = TriggeredCommands::default();
+        assert!(rule.evaluate(&mut rng, &mut board, &mut triggered, false));
+
+        assert!(board.has_sprite(&origin, &marker));
+
+        // Verify that we removed both sprites
+        assert!(!board.has_sprite(&origin, &player));
+        assert!(!board.has_sprite(&origin, &hat));
+    }
+
+    #[test]
+    fn remove_all_or_sprites_when_there_is_no_condition_and_action_is_negated() {
+        let mut rng = new_rng();
+
+        let player = SpriteState::new(&String::from("player"), 0, 44);
+        let hat = SpriteState::new(&String::from("hat"), 1, 55);
+
+        let marker = SpriteState::new(&String::from("marker"), 2, 66);
+        let marker_any = build_t(false /*random*/, &marker, false, None);
+        let no_marker = build_t(false /*random*/, &marker, true, None);
+
+        let thing_any =
+            build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
+        let no_thing =
+            build_tile_with_modifier(false, true, true, None, &vec![player.clone(), hat.clone()]);
+
+        // thing = player OR hat ...
+        // [ thing ] -> [ NO thing ]
+        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let a1 = Neighbor::new(vec![no_thing.clone()]);
+
+        // RIGHT [ thing ] -> [ NO thing ]
+        let rule = Rule {
+            source_line_num: None,
+            causes_board_changes: None,
+            conditions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![n1],
+            )],
+            actions: vec![Bracket::new(
+                CardinalDirection::Right,
+                vec![a1],
+            )],
+            commands: TriggeredCommands::default(),
+            late: false,
+            random: false,
+            rigid: false,
+        };
+        let mut rule = RuleGroup {
+            random: false,
+            rules: vec![rule],
+        };
+
+        rule.prepare_actions();
+
+        // Check that the Neighbors change the Cell properly
+        let mut board = Board::new(1, 1);
+        let origin = Position::new(0, 0);
+
+        board.add_sprite(&origin, &player, WantsToMove::Stationary);
+        board.add_sprite(&origin, &hat, WantsToMove::Stationary);
+
+        assert!(board.has_sprite(&origin, &player));
+        assert!(board.has_sprite(&origin, &hat));
+
+        let mut triggered = TriggeredCommands::default();
+        assert!(rule.evaluate(&mut rng, &mut board, &mut triggered, false));
+
+        assert!(board.has_sprite(&origin, &marker));
+
+        // Verify that we removed both sprites
+        assert!(!board.has_sprite(&origin, &player));
+        assert!(!board.has_sprite(&origin, &hat));
+    }
+
 }

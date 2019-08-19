@@ -491,10 +491,12 @@ impl Neighbor {
     // Returns true if this neighbor causes changes to the board
     pub fn prepare_actions(&mut self, action: &Neighbor) -> bool {
         let pairs = self.pair_up_tiles(action);
+
         for (c, pair) in pairs {
             let condition = pair.condition;
             let action = pair.action;
             let extra = pair.extra;
+
             if condition.is_some() && action.is_some() {
                 let condition = condition.unwrap();
                 let action = action.unwrap();
@@ -513,6 +515,12 @@ impl Neighbor {
                             collision_layer: c,
                             new_direction,
                             action_tile_with_modifier: action,
+                        });
+                    } else if action.negated {
+                        self.remove_tiles.push(RemoveTile {
+                            collision_layer: c,
+                            might_not_find_condition_but_that_is_ok: extra,
+                            condition_sprites_to_remove: condition,
                         });
                     } else if condition.random {
                         self.replace_directions.push(ReplaceDirection {
@@ -618,7 +626,27 @@ impl Neighbor {
                     Some(condition_tile) => {
                         unmatched_or_tiles.remove(&t.tile);
                         // simple case. at most we just change direction
-                        if condition_tile.direction != t.direction {
+                        if condition_tile.negated == t.negated && condition_tile.direction != t.direction {
+                            for sprite in t.tile.get_sprites() {
+                                let c = sprite.collision_layer;
+
+                                if !pairs.contains_key(&c) {
+                                    pairs.insert(
+                                        c,
+                                        ExtraPair::new(
+                                            Some(build_t(
+                                                condition_tile.random,
+                                                sprite,
+                                                condition_tile.negated,
+                                                condition_tile.direction,
+                                            )),
+                                            Some(build_t(t.random, sprite, t.negated, t.direction)),
+                                            true, /*okToIgnoreNonMatches*/
+                                        ),
+                                    );
+                                }
+                            }
+                        } else if t.negated {
                             for sprite in t.tile.get_sprites() {
                                 let c = sprite.collision_layer;
 
@@ -1003,6 +1031,38 @@ pub mod tests {
     }
 
     #[test]
+    fn prepare_negation() {
+        let mut rng = new_rng();
+        let player = SpriteState::new(&String::from("player"), 33, 44);
+
+        let player_any = build_t(false /*random*/, &player, false, None);
+        let mut no_player = player_any.clone();
+        no_player.negated = true;
+
+        // [ Player ] -> [ RANDOMDIR Player ]     : 1 direction (Right)
+        let mut c1 = Neighbor::new(vec![player_any.clone()]);
+        let action = Neighbor::new(vec![no_player.clone()]);
+        assert!(c1.prepare_actions(&action));
+    }
+
+    #[test]
+    fn prepare_or_negation() {
+        let mut rng = new_rng();
+        let player = SpriteState::new(&String::from("player"), 33, 44);
+        let hat = SpriteState::new(&String::from("hat"), 11, 22);
+
+        let thing_any = build_tile_with_modifier(false, true, false, None, &vec![player, hat]);
+        let no_thing = build_tile_with_modifier(false, true, true, None, &vec![player, hat]);
+
+        // [ Thing ] -> [ NO Thing ]     : 1 direction (Right)
+        let mut c1 = Neighbor::new(vec![thing_any.clone()]);
+        let action = Neighbor::new(vec![no_thing.clone()]);
+        assert!(c1.prepare_actions(&action));
+
+        check_counts(&c1, 0, 0, 2);
+    }
+
+    #[test]
     fn prepare_neighbor_single_sprite() {
         let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 33, 44);
@@ -1202,11 +1262,10 @@ pub mod tests {
     }
 
     #[test]
-    fn remove_one_or_sprite() {
+    fn remove_one_or_sprite_when_condition_has_no() { // See related remove_all_or_sprites_when_there_is_no_condition test
         let mut rng = new_rng();
 
         let player = SpriteState::new(&String::from("player"), 0, 44);
-
         let hat = SpriteState::new(&String::from("hat"), 1, 55);
 
         let marker = SpriteState::new(&String::from("marker"), 2, 66);
