@@ -158,16 +158,11 @@ fn play_game<B: Backend>(
     let mut recording_info = RecordingInfo::default();
     let mut debug_keypresses = String::from("");
 
-    let (start_level, checkpoint, mut inputs) = match start_level {
-        Some(i) => (i, None, vec![]),
-        None => match SaveState::read_from_file(&save_path) {
-            Ok(save) => {
-                if game.levels.len() <= save.level as usize {
-                    println!("You already won the game!");
-                    process::exit(100)
-                }
-                let level = &game.levels[save.level as usize];
-                let checkpoint = save.checkpoint.map(|checkpoint| {
+    let (start_level, checkpoint, mut inputs) = SaveState::read_from_file(&save_path).map(|save_data| {
+        match start_level {
+            None => {
+                let level = &game.levels[save_data.level as usize];
+                let checkpoint = save_data.checkpoint.map(|checkpoint| {
                     let (width, height) = level.size();
                     Board::from_checkpoint(
                         width,
@@ -183,12 +178,21 @@ fn play_game<B: Backend>(
                             .collect(),
                     )
                 });
-
-                (save.level, checkpoint, save.inputs)
+                (save_data.level, checkpoint, save_data.inputs)
+            },
+            Some(level_num) => {
+                // clear the current level since we will be playing it
+                let mut inputs = save_data.inputs.clone();
+                if inputs.len() >= level_num as usize {
+                    inputs[level_num as usize] = String::from("");
+                }
+                (level_num, None, inputs)
             }
-            _ => (0, None, vec![]),
-        },
-    };
+        }
+    }).unwrap_or_else(|_| {
+        (start_level.unwrap_or(0), None, vec![])
+    });
+
 
     fn add_input(inputs: &mut Vec<String>, debug_keypresses: &mut String, current_level_num: u8, input: char) {
         while inputs.len() <= current_level_num as usize {
@@ -474,10 +478,11 @@ fn play_game<B: Backend>(
         }
 
         if tr.changed {
+            let tick_char = if tr.accepting_input { '.' } else { ',' };
             add_input(
                 &mut inputs, &mut debug_keypresses,
                 engine.current_level_num,
-                input.map(|i| i.to_key()).unwrap_or('.'),
+                input.map(|i| i.to_key()).unwrap_or(tick_char),
             );
         }
 
@@ -498,12 +503,12 @@ fn play_game<B: Backend>(
             recording_info.increment();
         }
         
-        if !scripted && tr.checkpoint.is_some() {
+        if tr.checkpoint.is_some() {
             add_input(&mut inputs, &mut debug_keypresses, engine.current_level_num, '#');
             save_game(engine.current_level_num, inputs.clone(), tr.checkpoint)?;
         }
 
-        if !scripted && tr.completed_level.is_some() {
+        if tr.completed_level.is_some() {
             save_game(engine.current_level_num, inputs.clone(), None)?;
         }
 
