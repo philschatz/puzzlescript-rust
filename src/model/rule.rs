@@ -230,7 +230,7 @@ impl fmt::Display for Rule {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self.source_line_num {
             None => write!(f, "#??? ")?,
-            Some(line) => write!(f, "#{} ", line)?
+            Some(line) => write!(f, "#{} ", line + 1)?
         }
         if self.has_only_commands() {
             write!(f, "(commands-only)")?
