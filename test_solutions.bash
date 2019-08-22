@@ -13,12 +13,13 @@ replay_game() {
     exit_status=$?
     end=`date +%s`
     runtime=$((end-start))
-    if [[ ${extra_arg} != "" && ${exit_status} == 0 ]]; then
-        echo "Solved ${game} index=${index}" >> stats.txt
-    else
-        echo "FAILED ${game} index=${index} status=${exit_status}" >> stats.txt
+    if [[ ${extra_arg} != "" ]]; then
+        if [[ ${exit_status} == 0 ]]; then
+            echo "Solved ${game} index=${index}" >> stats.txt
+        else
+            echo "FAILED ${game} index=${index} status=${exit_status}" >> stats.txt
+        fi
     fi
-
     return ${exit_status}
 }
 
@@ -33,11 +34,10 @@ for game_parsed_json in $(ls "${root_dir}"/games/*.parsed.json); do
         continue
     fi
 
-    if [[ -f "${root_dir}/games/${game}.solutions.json" ]]; then
-
-        solutions=$(jq --raw-output ".solutions[].solution" "./games/${game}.solutions.json")
-
-    elif [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
+    # if [[ -f "${root_dir}/games/${game}.solutions.json" ]]; then
+    #     solutions=$(jq --raw-output ".solutions[].solution" "./games/${game}.solutions.json")
+    # elif [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
+    if [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
 
         echo "Using ${game}.parsed.json.save.json format" >> stats.txt
         solutions=$(jq --raw-output ".inputs[]" "./games/${game}.parsed.json.save.json")
@@ -56,14 +56,15 @@ for game_parsed_json in $(ls "${root_dir}"/games/*.parsed.json); do
         fi
         if [[ ${solution} == *"#"* ]]; then
             echo "Skipping ${game} level=${index} because it contains checkpoints" >> stats.txt
+            ((index++))
             continue
         fi
-        if [[ ${solution} != "!" && ${solution} != ",!" && ${solution} != "." && ${solution} != ".,,,,," && ${solution} != ".!" && ${solution} != "null" ]]; then
+        if [[ ${solution} != "!" && ${solution} != ",!" && ${solution} != "." && ${solution} != ".,,,,," && ${solution} != ".!" && ${solution} != "null" && ${solution} != "" ]]; then
             replay_game "${solution}" "${game}" "${index}" --nosave
             # If we replayed successfully then play it again and save the .save.json file
-            if [[ $? == 0 ]]; then
-                replay_game "${solution}" "${game}" "${index}"
-            fi
+            # if [[ $? == 0 ]]; then
+            #     replay_game "${solution}" "${game}" "${index}" ""
+            # fi
             ((attempted_solutions++))
         fi
         ((index++))
