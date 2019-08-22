@@ -175,9 +175,9 @@ GAMES_WITH_SOLUTIONS.forEach((game) => {
   const orig = JSON.parse(fs.readFileSync(`./games/${game}.solutions.json`))
   const save = {
     version: 1,
-    inputs: orig.solutions.map((s) => s.solution),
+    inputs: orig.solutions.map((s) => s ? s.solution : '?'),
+    level: orig.solutions.length,
     checkpoint: null,
-    level: orig.solution.length,
   }
   fs.writeFileSync(`./games/${game}.parsed.json.save.json`, JSON.stringify(save))
 })
