@@ -1017,8 +1017,6 @@ mod tests {
         let hat = SpriteState::new(&String::from("hat"), 1, 55);
 
         let marker = SpriteState::new(&String::from("marker"), 2, 66);
-        let marker_any = build_t(false /*random*/, &marker, false, None);
-        let no_marker = build_t(false /*random*/, &marker, true, None);
 
         let thing_any =
             build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
@@ -1027,7 +1025,7 @@ mod tests {
 
         // thing = player OR hat ...
         // [ thing ] -> [ NO thing ]
-        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let n1 = Neighbor::new(vec![thing_any.clone()]);
         let a1 = Neighbor::new(vec![no_thing.clone()]);
 
         // RIGHT [ thing ] -> [ NO thing ]
@@ -1058,10 +1056,7 @@ mod tests {
         assert!(board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&origin, &hat));
 
-        let mut triggered = TriggeredCommands::default();
-        assert!(rule.evaluate(&mut rng, &mut board, &mut triggered, false));
-
-        assert!(board.has_sprite(&origin, &marker));
+        assert!(rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false));
 
         // Verify that we removed both sprites
         assert!(!board.has_sprite(&origin, &player));
