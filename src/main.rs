@@ -263,6 +263,7 @@ fn play_game<B: Backend>(
 
     let mut keys = 0;
     let mut scripted_did_win = false;
+    let mut tick_without_input = engine.game_data.metadata.run_rules_on_level_start.unwrap_or(false);
     let mut last_input = time::Instant::now();
     let (stdin_channel, _handle) = spawn_stdin_channel();
     sleep(100); // wait for thread to look into stdin
@@ -417,6 +418,10 @@ fn play_game<B: Backend>(
             Err(TryRecvError::Disconnected) => panic!("Channel disconnected"),
         }
 
+        if tick_without_input {
+            should_tick = true;
+        }
+
         if !should_tick {
             if !engine.debug_rules {
                 // *******************************************
@@ -455,6 +460,8 @@ fn play_game<B: Backend>(
 
         // Tick!
         let tr = engine.tick(input);
+
+        tick_without_input = !tr.accepting_input;
 
         if !engine.debug_rules {
             // *******************************************
