@@ -44,8 +44,8 @@ use save::SaveState;
 use terminal::Attribution;
 use terminal::Help;
 use terminal::PlayPause;
-use terminal::Spinner;
 use terminal::RecordingInfo;
+use terminal::Spinner;
 
 use termion::screen::AlternateScreen;
 use tui::backend::Backend;
@@ -158,43 +158,47 @@ fn play_game<B: Backend>(
     let mut recording_info = RecordingInfo::default();
     let mut debug_keypresses = String::from("");
 
-    let (start_level, checkpoint, mut inputs) = SaveState::read_from_file(&save_path).map(|save_data| {
-        match start_level {
-            None => {
-                let level = &game.levels[save_data.level as usize];
-                let checkpoint = save_data.checkpoint.map(|checkpoint| {
-                    let (width, height) = level.size();
-                    Board::from_checkpoint(
-                        width,
-                        height,
-                        checkpoint
-                            .iter()
-                            .map(|names| {
-                                names
-                                    .iter()
-                                    .map(|name| sprite_lookup.to_id(name).unwrap().clone())
-                                    .collect()
-                            })
-                            .collect(),
-                    )
-                });
-                (save_data.level, checkpoint, save_data.inputs)
-            },
-            Some(level_num) => {
-                // clear the current level since we will be playing it
-                let mut inputs = save_data.inputs.clone();
-                if inputs.len() >= level_num as usize {
-                    inputs[level_num as usize] = String::from("");
+    let (start_level, checkpoint, mut inputs) = SaveState::read_from_file(&save_path)
+        .map(|save_data| {
+            match start_level {
+                None => {
+                    let level = &game.levels[save_data.level as usize];
+                    let checkpoint = save_data.checkpoint.map(|checkpoint| {
+                        let (width, height) = level.size();
+                        Board::from_checkpoint(
+                            width,
+                            height,
+                            checkpoint
+                                .iter()
+                                .map(|names| {
+                                    names
+                                        .iter()
+                                        .map(|name| sprite_lookup.to_id(name).unwrap().clone())
+                                        .collect()
+                                })
+                                .collect(),
+                        )
+                    });
+                    (save_data.level, checkpoint, save_data.inputs)
                 }
-                (level_num, None, inputs)
+                Some(level_num) => {
+                    // clear the current level since we will be playing it
+                    let mut inputs = save_data.inputs.clone();
+                    if inputs.len() >= level_num as usize {
+                        inputs[level_num as usize] = String::from("");
+                    }
+                    (level_num, None, inputs)
+                }
             }
-        }
-    }).unwrap_or_else(|_| {
-        (start_level.unwrap_or(0), None, vec![])
-    });
+        })
+        .unwrap_or_else(|_| (start_level.unwrap_or(0), None, vec![]));
 
-
-    fn add_input(inputs: &mut Vec<String>, debug_keypresses: &mut String, current_level_num: u8, input: char) {
+    fn add_input(
+        inputs: &mut Vec<String>,
+        debug_keypresses: &mut String,
+        current_level_num: u8,
+        input: char,
+    ) {
         while inputs.len() <= current_level_num as usize {
             inputs.push(String::from(""))
         }
@@ -300,10 +304,7 @@ fn play_game<B: Backend>(
                         keys += 1;
                         true
                     }
-                    Key::Char(' ')
-                    | Key::Char('x')
-                    | Key::Char('X')
-                    | Key::Char('!') => {
+                    Key::Char(' ') | Key::Char('x') | Key::Char('X') | Key::Char('!') => {
                         input = input.or(Some(EngineInput::Action));
                         keys += 1;
                         true
@@ -384,7 +385,7 @@ fn play_game<B: Backend>(
             Err(TryRecvError::Empty) => {
                 if scripted {
                     if scripted_did_win {
-                        break
+                        break;
                     }
                     if keys > 0 {
                         panic!("Level did not complete. Maybe more input is needed or more likely, the logic is flawed");
@@ -479,7 +480,8 @@ fn play_game<B: Backend>(
         if tr.changed {
             let tick_char = if tr.accepting_input { '.' } else { ',' };
             add_input(
-                &mut inputs, &mut debug_keypresses,
+                &mut inputs,
+                &mut debug_keypresses,
                 engine.current_level_num,
                 input.map(|i| i.to_key()).unwrap_or(tick_char),
             );
@@ -501,9 +503,14 @@ fn play_game<B: Backend>(
         if tr.checkpoint.is_some() {
             recording_info.increment();
         }
-        
+
         if tr.checkpoint.is_some() {
-            add_input(&mut inputs, &mut debug_keypresses, engine.current_level_num, '#');
+            add_input(
+                &mut inputs,
+                &mut debug_keypresses,
+                engine.current_level_num,
+                '#',
+            );
             save_game(engine.current_level_num, inputs.clone(), tr.checkpoint)?;
         }
 

@@ -230,7 +230,7 @@ impl fmt::Display for Rule {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self.source_line_num {
             None => write!(f, "#??? ")?,
-            Some(line) => write!(f, "#{} ", line + 1)?
+            Some(line) => write!(f, "#{} ", line + 1)?,
         }
         if self.has_only_commands() {
             write!(f, "(commands-only)")?
@@ -975,14 +975,8 @@ mod tests {
         let rule = Rule {
             source_line_num: None,
             causes_board_changes: None,
-            conditions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![n1],
-            )],
-            actions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![a1],
-            )],
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![n1])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![a1])],
             commands: TriggeredCommands::default(),
             late: false,
             random: false,
@@ -1040,14 +1034,8 @@ mod tests {
         let rule = Rule {
             source_line_num: None,
             causes_board_changes: None,
-            conditions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![n1],
-            )],
-            actions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![a1],
-            )],
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![n1])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![a1])],
             commands: TriggeredCommands::default(),
             late: false,
             random: false,

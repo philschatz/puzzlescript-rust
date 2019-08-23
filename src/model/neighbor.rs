@@ -626,7 +626,9 @@ impl Neighbor {
                     Some(condition_tile) => {
                         unmatched_or_tiles.remove(&t.tile);
                         // simple case. at most we just change direction
-                        if condition_tile.negated == t.negated && condition_tile.direction != t.direction {
+                        if condition_tile.negated == t.negated
+                            && condition_tile.direction != t.direction
+                        {
                             for sprite in t.tile.get_sprites() {
                                 let c = sprite.collision_layer;
 
@@ -1262,7 +1264,8 @@ pub mod tests {
     }
 
     #[test]
-    fn remove_one_or_sprite_when_condition_has_no() { // See related remove_all_or_sprites_when_there_is_no_condition test
+    fn remove_one_or_sprite_when_condition_has_no() {
+        // See related remove_all_or_sprites_when_there_is_no_condition test
         let mut rng = new_rng();
 
         let player = SpriteState::new(&String::from("player"), 0, 44);
