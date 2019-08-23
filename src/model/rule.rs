@@ -961,14 +961,13 @@ mod tests {
 
         let marker = SpriteState::new(&String::from("marker"), 2, 66);
         let marker_any = build_t(false /*random*/, &marker, false, None);
-        let no_marker = build_t(false /*random*/, &marker, true, None);
 
         let thing_any =
             build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
 
         // thing = player OR hat ...
         // [ thing ] -> [ marker ]
-        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let n1 = Neighbor::new(vec![thing_any.clone()]);
         let a1 = Neighbor::new(vec![marker_any.clone()]);
 
         // RIGHT [ thing ] -> [ marker ]
@@ -1015,8 +1014,6 @@ mod tests {
 
         let player = SpriteState::new(&String::from("player"), 0, 44);
         let hat = SpriteState::new(&String::from("hat"), 1, 55);
-
-        let marker = SpriteState::new(&String::from("marker"), 2, 66);
 
         let thing_any =
             build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);

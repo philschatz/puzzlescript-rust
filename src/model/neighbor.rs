@@ -1034,7 +1034,6 @@ pub mod tests {
 
     #[test]
     fn prepare_negation() {
-        let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 33, 44);
 
         let player_any = build_t(false /*random*/, &player, false, None);
@@ -1049,7 +1048,6 @@ pub mod tests {
 
     #[test]
     fn prepare_or_negation() {
-        let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 33, 44);
         let hat = SpriteState::new(&String::from("hat"), 11, 22);
 
