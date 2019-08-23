@@ -59,7 +59,7 @@ for game_parsed_json in $(ls "${root_dir}"/games/*.parsed.json); do
             ((index++))
             continue
         fi
-        if [[ ${solution} != "!" && ${solution} != "?" && ${solution} != ",!" && ${solution} != "." && ${solution} != ".,,,,," && ${solution} != ".!" && ${solution} != "null" && ${solution} != "" ]]; then
+        if [[ ${solution} != "X" && ${solution} != "!" && ${solution} != "?" && ${solution} != ",!" && ${solution} != "." && ${solution} != ".,,,,," && ${solution} != ".!" && ${solution} != "null" && ${solution} != "" ]]; then
             replay_game "${solution}" "${game}" "${index}" --nosave
             # If we replayed successfully then play it again and save the .save.json file
             # if [[ $? == 0 ]]; then

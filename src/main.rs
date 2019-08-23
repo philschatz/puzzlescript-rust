@@ -383,15 +383,14 @@ fn play_game<B: Backend>(
             }
             Err(TryRecvError::Empty) => {
                 if scripted {
+                    if scripted_did_win {
+                        break
+                    }
                     if keys > 0 {
-                        if scripted_did_win {
-                            break;
-                        } else {
-                            panic!("Level did not complete. Maybe more input is needed or more likely, the logic is flawed");
-                        }
+                        panic!("Level did not complete. Maybe more input is needed or more likely, the logic is flawed");
                     } else {
                         panic!(
-                            "BUG: Level ended but no keys were pressed. Maybe more input is needed"
+                            "BUG: Level did not complete but no keys were pressed. Maybe more input is needed"
                         );
                     }
                 }

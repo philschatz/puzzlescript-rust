@@ -173,10 +173,24 @@ const GAMES_WITH_SOLUTIONS = [
 
 GAMES_WITH_SOLUTIONS.forEach((game) => {
   const orig = JSON.parse(fs.readFileSync(`./games/${game}.solutions.json`))
+  let len = orig.solutions.length
+
   const save = {
     version: 1,
-    inputs: orig.solutions.map((s) => s ? s.solution : '?'),
-    level: orig.solutions.length,
+    inputs: orig.solutions.map((s) => {
+      if (s) {
+        if (s.solution) {
+          return s.solution
+        }
+        if (s.partial) {
+          // decrease since the last level is likely only partially solved
+          len--
+          return s.partial
+        }
+      }
+      return '?'
+    }),
+    level: len,
     checkpoint: null,
   }
   fs.writeFileSync(`./games/${game}.parsed.json.save.json`, JSON.stringify(save))
