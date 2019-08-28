@@ -56,9 +56,10 @@ struct AddTile {
 
 fn get_dir<R: Rng + ?Sized>(rng: &mut R, new_direction: Option<WantsToMove>) -> WantsToMove {
     if let Some(WantsToMove::RandomDir) = new_direction {
-        trace!("PICKING RANDOMDIR");
+        let n = rng.gen_range(0, 4);
+        trace!("PICKING RANDOMDIR. chose {}", n);
         // Find a random direction
-        match rng.gen_range(0, 4) {
+        match n {
             0 => WantsToMove::Up,
             1 => WantsToMove::Down,
             2 => WantsToMove::Left,
