@@ -263,7 +263,11 @@ fn play_game<B: Backend>(
 
     let mut keys = 0;
     let mut scripted_did_win = false;
-    let mut tick_without_input = engine.game_data.metadata.run_rules_on_level_start.unwrap_or(false);
+    let mut tick_without_input = engine
+        .game_data
+        .metadata
+        .run_rules_on_level_start
+        .unwrap_or(false);
     let mut last_input = time::Instant::now();
     let (stdin_channel, _handle) = spawn_stdin_channel();
     sleep(100); // wait for thread to look into stdin

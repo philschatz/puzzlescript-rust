@@ -1053,7 +1053,12 @@ mod tests {
         assert!(board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&origin, &hat));
 
-        assert!(rule.evaluate(&mut rng, &mut board, &mut TriggeredCommands::default(), false));
+        assert!(rule.evaluate(
+            &mut rng,
+            &mut board,
+            &mut TriggeredCommands::default(),
+            false
+        ));
 
         // Verify that we removed both sprites
         assert!(!board.has_sprite(&origin, &player));

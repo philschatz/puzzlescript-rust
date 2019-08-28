@@ -159,7 +159,7 @@ impl Widget for Engine {
                     Some(flick) => {
                         let width = cmp::min(flick.width, board_size.width); // see atlas-shrank
                         let height = cmp::min(flick.height, board_size.height);
-                        let player = self.player_position().unwrap();
+                        let player = self.player_position().unwrap_or(Position::default());
                         if is_flickscreen {
                             Rect::new(
                                 player.x / width * width,

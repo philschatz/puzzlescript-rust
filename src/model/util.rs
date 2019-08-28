@@ -152,7 +152,7 @@ impl SpriteAndWantsToMove {
     }
 }
 
-#[derive(Copy, Clone, PartialEq, Eq, Debug, Hash)]
+#[derive(Copy, Clone, PartialEq, Eq, Debug, Hash, Default)]
 pub struct Position {
     pub x: u16,
     pub y: u16,
