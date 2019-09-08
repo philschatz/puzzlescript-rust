@@ -28,7 +28,7 @@ pub struct GameMap {
     pub win_conditions: Vec<WinCondition<String>>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, PartialEq, Debug)]
 pub struct Dimension {
     pub width: u16,
     pub height: u16,
