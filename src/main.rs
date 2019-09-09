@@ -20,6 +20,8 @@ mod parser;
 mod save;
 mod terminal;
 
+use std::fs;
+use std::fs::File;
 use std::error::Error;
 use std::str::from_utf8;
 use std::str::FromStr;
@@ -76,8 +78,283 @@ fn is_not_space(chr: char) -> bool {
 
 fn main() /*-> Result<(), Box<dyn Error>>*/
 {
-    println!("{:?}", hex_color("#2F14DF"));
-    // cli::main()
+    let games = [
+        "1-2-3-ban",
+        "2d-whale-world",
+        "9x9-go",
+        "a-sneeze-a-day",
+        "aaaah-i-m-being-attacked",
+        "airport-aggression",
+        "alien-disco",
+        "alternatey",
+        "always-magnets",
+        "atlas-shrank",
+        "aunt-flora-s-mansion",
+        "baba-is-you",
+        "baguettes",
+        "bal-ru-s-curse",
+        "barrier-trail",
+        "beam-islands",
+        "becoming-one",
+        "block-touching",
+        "blocker-snake",
+        "bomb-n-grouping",
+        "bomb-n-ice",
+        "botsket-ball",
+        "bouncers",
+        "boxes-and-balloons",
+        "boxes-love-bloxing-gloves",
+        "bruised",
+        "bubble-butler",
+        "car-crash",
+        "castlemouse",
+        "chasm",
+        "climbing-cubes",
+        "closure-demake",
+        "coin-counter",
+        "collapsable-sokoban",
+        "collapse",
+        "collapsing-tiles",
+        "colorban",
+        "colour-chained",
+        "colour-move",
+        "compressed",
+        "consumed-to-1",
+        "copy-pellets",
+        "count-mover",
+        "covering-holes",
+        "crate-cables",
+        "cratopia",
+        "crusher",
+        "cubes-barrier",
+        "cubes-medusa",
+        "cute-train",
+        "cyber-lasso",
+        "dang-i-m-huge",
+        "dangerous-dungeon",
+        "dark-pellets",
+        "dharma-dojo-demake",
+        "directional",
+        "drop-swap",
+        "duality",
+        "dungeon-janitor",
+        "dup-block",
+        "easy-enigma",
+        "ebony-and-ivory",
+        "electric-wire",
+        "element-walkers",
+        "enclosed",
+        "enqueue",
+        "entanglement-one",
+        "entanglement-two",
+        "esl-puzzle-game",
+        "esl-puzzle-game-challenge-mode",
+        "explod",
+        "extra-lives",
+        "extra-push",
+        "extra-step",
+        "fatigued-square-maze",
+        "feeling-like-filling",
+        "finding-my-body",
+        "fire-in-winter",
+        "fish-friend",
+        "flower-dance",
+        "flying-kick",
+        "freeform-bal-ru-s-curse",
+        "fuse-to-green",
+        "fused-copy",
+        "fused-pieces",
+        "garten-der-medusen",
+        // "gist-1688e839e0a8b86fe356d5fb4667f15c",
+        // "gist-1fbcda0f6018ec399c72cf7fc28af22d",
+        // "gist-2b27eb9b034b30391207f326a7d5877f",
+        // "gist-5e0cf1235c030f0c1402196d631d49c4",
+        // "gist-73e55c3c4582b68cf95c31b8c7b21773",
+        // "gist-7511684",
+        // "gist-804407622d037b080ec741a60b3fbc4c",
+        // "gist-b24aaa4eae7b640077ed11f4242b94ae",
+        // "gist-c7c693699d4bbb4e58155ee09a8dcf58",
+        // "gist-cb2724ca5d54fe61ae2eb75c1587fd57",
+        // "gist-d8b3b3d743945552915a6b9cb1bbd1c5",
+        // "gist-z_on-board_itch",
+        "gobble-rush",
+        "god-hunter",
+        "going-somewhere",
+        "grouping",
+        "guiding-blocks",
+        "hack-the-net",
+        "hazard-golf",
+        "herding-hero",
+        "heroes-of-sokoban-iii",
+        "hue-change",
+        "i-herd-u-liek-water-templs",
+        "ice-cream-stick",
+        "ice-path",
+        "icecrates",
+        "inbetween",
+        "infected",
+        "inswaption",
+        "interconnection",
+        "islands",
+        "it-dies-in-the-light",
+        "jam3-game",
+        "kettle",
+        "knightoban",
+        "life-is-hard",
+        "lights-down",
+        "lil-purple",
+        "lime-rick",
+        "line-of-sight",
+        "linked",
+        "liquid-war-alpha",
+        "love-and-pieces",
+        "maera-public-works",
+        "magik",
+        "magnetic",
+        "magnetized",
+        "manic-ammo",
+        "marble-shoot",
+        "matchpub",
+        "mazezam",
+        "mc-escher-s-equestrian-armageddon",
+        "microban",
+        "midas",
+        "mirror-isles",
+        "mirror-mines",
+        "miss-direction",
+        "modality",
+        "monkey-ruins",
+        "monster-mess",
+        "movement-garden",
+        "moving-target",
+        "mowing",
+        "multi-word-dictionary-game",
+        "n-little-indians",
+        "net",
+        "newton-s-crates",
+        "okosban",
+        "on-and-off",
+        "oskars-maze",
+        "out-of-bounds",
+        "out-of-bounds-2",
+        "out-there",
+        "outward-force",
+        "overstep",
+        "pants-shirt-cap",
+        "paralands",
+        "path-lines",
+        "pathmaker",
+        "pit-trails",
+        "platformer-template",
+        "ponies-jumping",
+        "pornography-for-beginners",
+        "portal-ban",
+        "positional",
+        "pot-wash-panic",
+        "pretender-to-the-crown",
+        // "princess-of-isometria",
+        "programaze",
+        "pull-and-push",
+        "punt-mazes",
+        "purple",
+        "push",
+        "pushcat-jr",
+        "rainbow-keys-plus",
+        "robot-repairs-1-2",
+        "rock-paper-scissors",
+        "roll-those-sixes",
+        "rose",
+        "rotaters-cause",
+        "rows-and-columns",
+        "scaling-walls",
+        "season-finale",
+        "self-alteration",
+        "separation",
+        "shifting",
+        "side-painting",
+        "singleton-traffic",
+        "skippa",
+        "skipping-stones",
+        "skyscraper",
+        "sleepy-players",
+        "sliding-ground",
+        "slidings",
+        "slime-saga",
+        "slime-swap",
+        "smother",
+        "snakehole",
+        "snowman-decorator",
+        "sok7",
+        "sokobond",
+        "sokoboros",
+        "sokofun-clone",
+        "some-lines-crossed",
+        "some-pits",
+        "spacekoban",
+        "spider-s-hollow",
+        "spikes-n-stuff",
+        "spooky-pumpkin-game",
+        "square-colours",
+        "stairs",
+        "stairways",
+        "stalemate-yourself",
+        "stand-off",
+        "statues",
+        "sticky",
+        "sumoban",
+        "swap",
+        "swapbot",
+        "symbols",
+        "take-heart-lass",
+        "telefrag",
+        "teleporters",
+        "test-gist-script",
+        "the-art-of-cloning",
+        "the-art-of-storage",
+        "the-big-dig",
+        "the-copying",
+        "the-fire-calls",
+        "the-flames",
+        "the-laser",
+        "the-packing-crate",
+        "the-saga-of-the-candy-scroll",
+        "the-switch",
+        "the-walls-you-leave-behind",
+        "the-workshop",
+        "then-another",
+        "tiaradventur",
+        "tidy-the-cafe",
+        "tile-step",
+        "tiny-treasure-hunt",
+        "to-nothing-and-back",
+        "train",
+        "train-braining",
+        "triple-match",
+        "tunnel-rat",
+        "two-and-a-half",
+        "unclean-residues",
+        "unconventional-guns",
+        "using-pushers",
+        "vacuum",
+        "vines",
+        "wall-bonding",
+        "wall-movement",
+        "wall-shuffle",
+        "wall-virus",
+        "white-pillars",
+        "world-generation",
+        "yin-yang",
+        "zzz-swapbot-scratchwork",
+    ];
+    for game in games.iter() {
+        let path = format!("../puzzlescript/games/{}/script.txt", game);
+        let source = fs::read_to_string(path).expect("Unable to read file");
+
+        match parse_metadata(&source) {
+            Ok((rest, m)) => { println!("Found {} metadata items in the game '{}'", m.len(), game)},
+            err => println!("Err '{:?}' when parsing '{}'", err, game)
+        };
+    };
 }
 
 #[derive(Debug, PartialEq)]
@@ -116,6 +393,7 @@ fn parser(input: &str) -> IResult<&str, &str> {
 
 named!(integer_bytes, take_while1!(is_digit));
 named!(integer_str, take_while1!(is_digit));
+
 
 named!(to_u64(&[u8]) -> u64, parse_to!(u64));
 
@@ -156,7 +434,8 @@ named!(parse_metadata_key<&str, MetadataKey>,
     // map_res!(recognize!(take_till1!(is_space)), |s: &str| s.parse())
     // map_res!(recognize!(many1!(alt!(alpha1 | tag_no_case!("_")))), |s: &str| s.parse())
     map_res!(alt!(
-          tag_no_case!("author")
+          tag_no_case!("title")
+        | tag_no_case!("author")
         | tag_no_case!("homepage")
         | tag_no_case!("youtube")
         | tag_no_case!("zoomscreen")
@@ -209,6 +488,7 @@ named!(parse_dimension<&str, Dimension>, // nom::InputLength
 
 #[derive(PartialEq, Debug)]
 enum MetadataKey {
+    title,
     author,
     homepage,
     youtube,
@@ -238,7 +518,9 @@ impl FromStr for MetadataKey {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let key = s.to_lowercase();
-        return if key == "author" {
+        return if key == "title" {
+            Ok(Self::title)
+        } else if key == "author" {
             Ok(Self::author)
         } else if key == "homepage" {
             Ok(Self::homepage)
@@ -337,29 +619,27 @@ named!(parse_metadata_value<&str, MetadataValue>,
 );
 
 named!(parse_metadata_item_value<&str, (MetadataKey, Option<MetadataValue>)>,
-  do_parse!(
-       key: parse_metadata_key 
-    >>      space1 
-    >> val: parse_metadata_value
-    >>      (key, Some(val))
+    do_parse!(
+            key: parse_metadata_key 
+        >>      space1 
+        >> val: parse_metadata_value
+        >>  space0
+        >>  many1!(newline)
+        >>      (key, Some(val))
   )
 );
 
 named!(parse_metadata_item_novalue<&str, (MetadataKey, Option<MetadataValue>)>,
-  do_parse!(
-        key: parse_metadata_key
+    do_parse!(
+            key: parse_metadata_key
+        >>  space0
+        >>  many1!(newline)
         >>  (key, None)
   )
 );
 
 named!(parse_metadata_item<&str, (MetadataKey, Option<MetadataValue>)>,
-    do_parse!(
-        pair: alt!(parse_metadata_item_value | parse_metadata_item_novalue)
-        >>  space0
-        >>  newline
-        >> (pair)
-    )
-  
+    alt!(parse_metadata_item_value | parse_metadata_item_novalue)
 );
 
 named!(parse_metadata<&str, Vec<(MetadataKey, Option<MetadataValue>)>>,
@@ -455,7 +735,7 @@ mod parser_tests {
     fn test_parse_metadata_item_value() {
         let src = "author jim\n";
         let (rest, m) = parse_metadata_item_value(src).unwrap();
-        assert_eq!(rest, "\n");
+        assert_eq!(rest, "");
         println!("{:?}", m);
         assert_eq!(m, (MetadataKey::author, Some(MetadataValue::Words(String::from("jim")))));
     }
@@ -471,7 +751,8 @@ mod parser_tests {
 
     #[test]
     fn test_parse_metadata() {
-        let src = "author jim\n\n"; // This second newline is so that the parser knows to stop.
+        let src = "author jim
+==="; // This ""==="" is so that the parser knows to stop.
         let p = parse_metadata(src);
         match p {
             Err(err) => {
@@ -481,7 +762,7 @@ mod parser_tests {
             _ => {}
         };
         let (rest, m) = p.unwrap();
-        assert_eq!(rest, "\n");
+        assert_eq!(rest, "===");
         println!("{:?}", m);
         assert_eq!(m.len(), 1);
         assert_eq!(m[0], (MetadataKey::author, Some(MetadataValue::Words(String::from("jim")))));
@@ -494,14 +775,30 @@ mod parser_tests {
 flickscreen 12x23
 run_rules_on_level_start       true   
 
-";
+===";
         let (rest, m) = parse_metadata(src).unwrap();
-        assert_eq!(rest, "\n");
+        assert_eq!(rest, "===");
         println!("{:?}", m);
         assert_eq!(m.len(), 3);
         assert_eq!(m[0], (MetadataKey::author, Some(MetadataValue::Words(String::from("jim smith")))));
         assert_eq!(m[1], (MetadataKey::flickscreen, Some(MetadataValue::Dim(Dimension { width: 12, height: 23}))));
         assert_eq!(m[2], (MetadataKey::run_rules_on_level_start, Some(MetadataValue::True)));
+    }
+
+    #[test]
+    fn test_multiple_metadata_with_multi_newlines() {
+        let src = "author jim smith
+
+
+flickscreen 12x23
+
+===";
+        let (rest, m) = parse_metadata(src).unwrap();
+        assert_eq!(rest, "===");
+        println!("{:?}", m);
+        assert_eq!(m.len(), 2);
+        assert_eq!(m[0], (MetadataKey::author, Some(MetadataValue::Words(String::from("jim smith")))));
+        assert_eq!(m[1], (MetadataKey::flickscreen, Some(MetadataValue::Dim(Dimension { width: 12, height: 23}))));
     }
 
     #[test]
