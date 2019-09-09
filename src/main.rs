@@ -44,6 +44,8 @@ use nom::{
     character::complete::space1,
     take_while,
     take_till1,
+    take_until,
+    char,
     do_parse,
     map_res,
     many0,
@@ -457,6 +459,52 @@ named!(parse_metadata_key<&str, MetadataKey>,
 
     ), |s: &str| s.parse())
 );
+
+named!(multiline_comment, 
+    do_parse!(
+            hack: tag_no_case!("(")
+        >>  stuff: many0!(alt!(multiline_comment | take_until!(")") )) // char!(')')
+        >>  tag_no_case!(")")
+        >>  (hack) // stuff.join("")
+    )
+);
+
+named!(whitespace_or_comment, alt!(tag_no_case!(" ") | tag_no_case!("\t") | multiline_comment));
+
+named!(whitespace0,
+    do_parse!(
+            many0!(whitespace_or_comment)
+        >> (b"(WHITESPACE)")
+    )
+);
+
+named!(whitespace1,
+    do_parse!(
+            many1!(whitespace_or_comment)
+        >> (b"(WHITESPACE)")
+    )
+);
+
+// named!(multiline_comment<()>, 
+//     do_parse!(
+//             tag_no_case!("(")
+//         >>  stuff: many0!(alt!(multiline_comment | not!(tag_no_case!(")")))) // char!(')')
+//         >>  tag_no_case!(")")
+//         >>  (()) // stuff.join("")
+//     )
+// );
+
+
+// named!(multiline_comment2,
+//     recognize!(
+//         tuple!(
+//             tag_no_case!("("),
+//             many0!(alt!(multiline_comment2 | not!(tag_no_case!(")")))),
+//             tag_no_case!(")")
+//         )
+//     )
+// );
+
 
 // named!(parse_metadata_key<&str, MetadataKey>,
 //   parse_to!(MetadataKey)
