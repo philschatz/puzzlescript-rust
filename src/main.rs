@@ -35,15 +35,18 @@ use nom::{
     character::complete::alpha1,
     character::complete::digit1,
     character::complete::newline,
+    character::complete::line_ending,
     character::complete::not_line_ending,
     // character::complete::space,
     character::complete::space0,
     character::complete::space1,
     take_while,
+    take_till1,
     do_parse,
     map_res,
     many0,
     map,
+    not,
     many1,
     opt,
     named,
@@ -57,6 +60,19 @@ use nom::{
     ws,
     IResult,
 };
+
+fn is_newline(chr: char) -> bool {
+    chr == '\n'
+}
+
+fn is_space(chr: char) -> bool {
+    chr == ' '
+}
+
+fn is_not_space(chr: char) -> bool {
+    !is_space(chr)
+}
+
 
 fn main() /*-> Result<(), Box<dyn Error>>*/
 {
@@ -119,26 +135,63 @@ fn parse_u16(digits: &str) -> u16 {
 
 
 named!(parse_to_u16(&str) -> u16,
-    // map!(digit1, |s| s.parse().unwrap())
     map_res!(digit1, |s: &str| s.parse())
+);
+
+named!(parse_to_f32(&str) -> f32,
+    map_res!(
+        recognize!(
+            tuple!(
+                digit1,
+                opt!(tag_no_case!(".")),
+                digit1)
+        ), |s: &str| s.parse())
 );
 
 named!(x<&str, MetadataKey>, parse_to!(MetadataKey));
 
 named!(parse_metadata_key<&str, MetadataKey>,
-    map_res!(alpha1, |s: &str| s.parse())
+    // map_res!(alpha1, |s: &str| s.parse())
+    // map_res!(recognize!(take_while1!(is_not_space)), |s: &str| s.parse())
+    // map_res!(recognize!(take_till1!(is_space)), |s: &str| s.parse())
+    // map_res!(recognize!(many1!(alt!(alpha1 | tag_no_case!("_")))), |s: &str| s.parse())
+    map_res!(alt!(
+          tag_no_case!("author")
+        | tag_no_case!("homepage")
+        | tag_no_case!("youtube")
+        | tag_no_case!("zoomscreen")
+        | tag_no_case!("flickscreen")
+        | tag_no_case!("color_palette")
+        | tag_no_case!("background_color")
+        | tag_no_case!("text_color")
+        | tag_no_case!("realtime_interval")
+        | tag_no_case!("key_repeat_interval")
+        | tag_no_case!("again_interval")
+        | tag_no_case!("no_action")
+        | tag_no_case!("no_undo")
+        | tag_no_case!("run_rules_on_level_start")
+        | tag_no_case!("no_repeat_action")
+        | tag_no_case!("throttle_movement")
+        | tag_no_case!("no_restart")
+        | tag_no_case!("require_player_movement")
+        | tag_no_case!("verbose_logging")
+
+    ), |s: &str| s.parse())
 );
 
 // named!(parse_metadata_key<&str, MetadataKey>,
 //   parse_to!(MetadataKey)
 // );
 
-named!(parse_words,
+named!(parse_words<&str, &str>,
 //   do_parse!(
 //     words: take_while1!(not_line_ending) >>
 //     ("words")
 //   )
-  recognize!(many1!(not_line_ending))
+    // recognize!(many1!(not_line_ending))
+    // recognize!(many1!(not!(line_ending)))
+    // take_while1!(not_line_ending)
+    take_till1!(|c| c == '\n')
 );
 
 // named!(parse_decimal<&str, f32>, // nom::InputLength
@@ -263,45 +316,60 @@ named!(parse_metadata_off<&str, MetadataValue>,
 );
 
 named!(parse_metadata_words<&str, MetadataValue>,
-    map!(alpha1, |s: &str| MetadataValue::Words(String::from(s)))
+    map!(parse_words, |s: &str| MetadataValue::Words(String::from(s)))
 );
 
-// named!(parse_metadata_decimal<&str, MetadataValue>,
-//   do_parse!(
-//     decimal: parse_to!(f32) >>
-//     (MetadataValue::Decimal(decimal))
-//   )
-// );
+named!(parse_metadata_decimal<&str, MetadataValue>,
+  do_parse!(
+    decimal: parse_to_f32 >>
+    (MetadataValue::Decimal(decimal))
+  )
+);
 
 named!(parse_metadata_value<&str, MetadataValue>,
-  alt!(parse_metadata_off | parse_metadata_true /* | parse_metadata_decimal */ | parse_metadata_words)
+    alt!(
+          parse_metadata_off 
+        | parse_metadata_true
+        | parse_metadata_dimension
+        | parse_metadata_decimal
+        | parse_metadata_words
+    )
 );
 
 named!(parse_metadata_item_value<&str, (MetadataKey, Option<MetadataValue>)>,
   do_parse!(
        key: parse_metadata_key 
     >>      space1 
-    >> val: opt!(parse_metadata_value)
-    >>      newline
-    >>      (key, val)
+    >> val: parse_metadata_value
+    >>      (key, Some(val))
   )
 );
 
 named!(parse_metadata_item_novalue<&str, (MetadataKey, Option<MetadataValue>)>,
   do_parse!(
-       key: parse_metadata_key
-    >>      space0
-    >>      newline 
-    >>      (key, None)
+        key: parse_metadata_key
+        >>  (key, None)
   )
 );
 
 named!(parse_metadata_item<&str, (MetadataKey, Option<MetadataValue>)>,
-  alt!(parse_metadata_item_value | parse_metadata_item_novalue)
+    do_parse!(
+        pair: alt!(parse_metadata_item_value | parse_metadata_item_novalue)
+        >>  space0
+        >>  newline
+        >> (pair)
+    )
+  
 );
 
 named!(parse_metadata<&str, Vec<(MetadataKey, Option<MetadataValue>)>>,
-    ws!(many0!(parse_metadata_item))
+    do_parse!(
+                space0
+        >> its: many0!(parse_metadata_item)
+        >>      space0
+        >>      (its)
+    )
+    // ws!(many0!(parse_metadata_item))
 );
 
 
@@ -338,12 +406,12 @@ mod parser_tests {
         );
     }
 
-    #[test]
-    fn test_empty_metadata() {
-        let (rest, m) = parse_metadata("").unwrap();
-        assert_eq!(rest, "");
-        assert_eq!(m.len(), 0);
-    }
+    // #[test]
+    // fn test_empty_metadata() {
+    //     let (rest, m) = parse_metadata("").unwrap();
+    //     assert_eq!(rest, "");
+    //     assert_eq!(m.len(), 0);
+    // }
 
     #[test]
     fn test_author_key() {
@@ -362,7 +430,7 @@ mod parser_tests {
     }
 
     #[test]
-    fn test_author_item() {
+    fn test_author_item_novalue() {
         let src = "author\n";
         let i = parse_metadata_item(src);
         println!("{:?}", i);
@@ -373,7 +441,7 @@ mod parser_tests {
     }
 
     #[test]
-    fn test_author_item_trailing_whitespace() {
+    fn test_author_item_novalue_trailing_whitespace() {
         let src = "author \n";
         let i = parse_metadata_item(src);
         println!("{:?}", i);
@@ -384,13 +452,64 @@ mod parser_tests {
     }
 
     #[test]
-    fn test_author_one_word() {
+    fn test_parse_metadata_item_value() {
         let src = "author jim\n";
-        let (rest, m) = parse_metadata(src).unwrap();
+        let (rest, m) = parse_metadata_item_value(src).unwrap();
+        assert_eq!(rest, "\n");
+        println!("{:?}", m);
+        assert_eq!(m, (MetadataKey::author, Some(MetadataValue::Words(String::from("jim")))));
+    }
+
+    #[test]
+    fn test_parse_metadata_item() {
+        let src = "author jim\n";
+        let (rest, m) = parse_metadata_item(src).unwrap();
         assert_eq!(rest, "");
+        println!("{:?}", m);
+        assert_eq!(m, (MetadataKey::author, Some(MetadataValue::Words(String::from("jim")))));
+    }
+
+    #[test]
+    fn test_parse_metadata() {
+        let src = "author jim\n\n"; // This second newline is so that the parser knows to stop.
+        let p = parse_metadata(src);
+        match p {
+            Err(err) => {
+                
+                panic!("{:?}", err);
+            },
+            _ => {}
+        };
+        let (rest, m) = p.unwrap();
+        assert_eq!(rest, "\n");
         println!("{:?}", m);
         assert_eq!(m.len(), 1);
         assert_eq!(m[0], (MetadataKey::author, Some(MetadataValue::Words(String::from("jim")))));
     }
 
+
+    #[test]
+    fn test_multiple_metadata() {
+        let src = "author jim smith
+flickscreen 12x23
+run_rules_on_level_start       true   
+
+";
+        let (rest, m) = parse_metadata(src).unwrap();
+        assert_eq!(rest, "\n");
+        println!("{:?}", m);
+        assert_eq!(m.len(), 3);
+        assert_eq!(m[0], (MetadataKey::author, Some(MetadataValue::Words(String::from("jim smith")))));
+        assert_eq!(m[1], (MetadataKey::flickscreen, Some(MetadataValue::Dim(Dimension { width: 12, height: 23}))));
+        assert_eq!(m[2], (MetadataKey::run_rules_on_level_start, Some(MetadataValue::True)));
+    }
+
+    #[test]
+    fn test_multiple_words() {
+        let src = "hello jim smith\n";
+        let (rest, m) = parse_words(src).unwrap();
+        assert_eq!(rest, "\n");
+        println!("{:?}", m);
+        assert_eq!(m, "hello jim smith");
+    }
 }
