@@ -43,6 +43,7 @@ use nom::{
     character::complete::space0,
     character::complete::space1,
     take_while,
+    take_till,
     take_till1,
     take_until,
     char,
@@ -59,6 +60,7 @@ use nom::{
     //   combinator::map_res,
     sequence::tuple,
     tag_no_case,
+    tag,
     take_while1,
     tuple,
     ws,
@@ -75,6 +77,14 @@ fn is_space(chr: char) -> bool {
 
 fn is_not_space(chr: char) -> bool {
     !is_space(chr)
+}
+
+fn is_comment(chr: char) -> bool {
+    chr == '(' || chr == ')'
+}
+
+fn is_not_comment(chr: char) -> bool {
+    !is_comment(chr)
 }
 
 
@@ -460,28 +470,38 @@ named!(parse_metadata_key<&str, MetadataKey>,
     ), |s: &str| s.parse())
 );
 
-named!(multiline_comment, 
+named!(multiline_comment<&str, &str>, 
     do_parse!(
-            hack: tag_no_case!("(")
-        >>  stuff: many0!(alt!(multiline_comment | take_until!(")") )) // char!(')')
-        >>  tag_no_case!(")")
-        >>  (hack) // stuff.join("")
+            hack1: tag!("(")
+        // >>  stuff: many0!(alt!(multiline_comment | take_while!(is_not_comment) )) // char!(')')
+        >>  stuff: inner_multiline_comment
+        // >>  hack: tag!(")")
+        >>  (hack1)
     )
 );
 
-named!(whitespace_or_comment, alt!(tag_no_case!(" ") | tag_no_case!("\t") | multiline_comment));
+named!(inner_multiline_comment<&str, Vec<&str>>,
+    many1!( alt!( take_till!(is_comment) | multiline_comment ) )
+);
 
-named!(whitespace0,
+named!(whitespace_or_comment<&str, ()>, 
+    do_parse!(
+        alt!(tag_no_case!(" ") | tag_no_case!("\t") | multiline_comment)
+        >> (())
+    )
+);
+
+named!(whitespace0<&str, &str>,
     do_parse!(
             many0!(whitespace_or_comment)
-        >> (b"(WHITESPACE)")
+        >> ("(WHITESPACE)")
     )
 );
 
-named!(whitespace1,
+named!(whitespace1<&str, &str>,
     do_parse!(
             many1!(whitespace_or_comment)
-        >> (b"(WHITESPACE)")
+        >> ("(WHITESPACE)")
     )
 );
 
@@ -857,4 +877,36 @@ flickscreen 12x23
         println!("{:?}", m);
         assert_eq!(m, "hello jim smith");
     }
+
+    fn unwrap_multiline_comment(src: &str) -> (&str, &str) {
+        match multiline_comment(src) {
+            Ok(t) => t,
+            Err(v) => panic!("{:?}", v)
+        }
+    }
+
+    #[test]
+    fn test_comment_simple() {
+        let src = "()";
+        let (rest, m) = unwrap_multiline_comment(src);
+        println!("match {:?}", m);
+        assert_eq!(rest, "");
+    }
+
+    #[test]
+    fn test_comment_2() {
+        let src = "( )";
+        let (rest, m) = unwrap_multiline_comment(src);
+        println!("match {:?}", m);
+        assert_eq!(rest, "");
+    }
+
+    #[test]
+    fn test_comment_nested() {
+        let src = "(())";
+        let (rest, m) = unwrap_multiline_comment(src);
+        println!("match {:?}", m);
+        assert_eq!(rest, "");
+    }
+
 }
