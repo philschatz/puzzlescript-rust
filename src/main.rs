@@ -9,6 +9,7 @@ extern crate termion;
 extern crate clap;
 
 mod bitset;
+mod cli;
 mod color;
 mod debugger;
 mod engine;
@@ -17,7 +18,6 @@ mod model;
 mod parser;
 mod save;
 mod terminal;
-mod cli;
 
 use std::error::Error;
 
