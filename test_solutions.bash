@@ -23,6 +23,12 @@ replay_game() {
     return ${exit_status}
 }
 
+
+if [[ "$(command -v jq)" == "" ]]; then
+    echo "Install jq before running tests: https://stedolan.github.io/jq/download/"
+    exit 111
+fi
+
 echo "" > stats.txt # clear the file
 
 for game_parsed_json in $(ls "${root_dir}"/games/*.parsed.json); do
@@ -34,13 +40,14 @@ for game_parsed_json in $(ls "${root_dir}"/games/*.parsed.json); do
         continue
     fi
 
-    # if [[ -f "${root_dir}/games/${game}.solutions.json" ]]; then
-    #     solutions=$(jq --raw-output ".solutions[].solution" "./games/${game}.solutions.json")
-    # elif [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
-    if [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
+    if [[ -f "${root_dir}/games/${game}.parsed.json.test-replay.json" ]]; then
 
-        echo "Using ${game}.parsed.json.save.json format" >> stats.txt
-        solutions=$(jq --raw-output ".inputs[]" "./games/${game}.parsed.json.save.json")
+        if [[ -f "${root_dir}/games/${game}.parsed.json.save.json" ]]; then
+            echo "It seems like you solved a new part of this game. Consider running 'mv ${root_dir}/games/${game}.parsed.json.save.json ${root_dir}/games/${game}.parsed.json.test-replay.json' to update the test file"
+            exit 110
+        fi
+
+        solutions=$(jq --raw-output ".inputs[]" "./games/${game}.parsed.json.test-replay.json")
 
     else
         echo "Skipping ${game} because no solutions were found" >> stats.txt

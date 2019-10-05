@@ -57,6 +57,7 @@ pub fn main() -> Result<(), Box<dyn Error>> {
         (@arg FORCE_PRIMARY_SCREEN: --primary "Do not use the alternate screen (useful for debugging)")
         (@arg NO_FLICK_SCREEN: --noflick "Show the WHOLE level not just the current screen (for finding easter-eggs)")
         (@arg NO_SAVE: --nosave "Do not save")
+        (@arg USE_TEST_REPLAY_FILE: --test "Use the {game}.test-replay.json file to replay the games and to save to instead of the default {game}.save.json file")
         (@arg TICK_SPEED: --speed +takes_value "How long the game waits between each tick")
     ).get_matches();
 
@@ -69,6 +70,7 @@ pub fn main() -> Result<(), Box<dyn Error>> {
     let force_primary_screen = matches.is_present("FORCE_PRIMARY_SCREEN");
     let no_flick_screen = matches.is_present("NO_FLICK_SCREEN");
     let no_save = matches.is_present("NO_SAVE");
+    let is_use_test_replay_file = matches.is_present("USE_TEST_REPLAY_FILE");
     let tick_speed = matches
         .value_of("TICK_SPEED")
         .map(|s| s.parse().expect("Enter a valid number"));
@@ -90,6 +92,7 @@ pub fn main() -> Result<(), Box<dyn Error>> {
             tick_speed,
             no_save,
             is_stdin_tty,
+            is_use_test_replay_file,
         )
     } else {
         // Terminal initialization
@@ -109,6 +112,7 @@ pub fn main() -> Result<(), Box<dyn Error>> {
             tick_speed,
             no_save,
             is_stdin_tty,
+            is_use_test_replay_file,
         )
     }
 }
@@ -123,8 +127,13 @@ fn play_game<B: Backend>(
     tick_speed: Option<u64>,
     no_save: bool,
     is_stdin_tty: bool,
+    is_use_test_replay_file: bool,
 ) -> Result<(), Box<dyn Error>> {
-    let save_path = format!("{}.save.json", path);
+    let save_path = if is_use_test_replay_file {
+        format!("{}.test-replay.json", path)
+    } else {
+        format!("{}.save.json", path)
+    };
     let mut game = read_game_from_file(path)?;
 
     if no_flick_screen {
