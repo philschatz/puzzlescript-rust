@@ -56,9 +56,10 @@ struct AddTile {
 
 fn get_dir<R: Rng + ?Sized>(rng: &mut R, new_direction: Option<WantsToMove>) -> WantsToMove {
     if let Some(WantsToMove::RandomDir) = new_direction {
-        trace!("PICKING RANDOMDIR");
+        let n = rng.gen_range(0, 4);
+        trace!("PICKING RANDOMDIR. chose {}", n);
         // Find a random direction
-        match rng.gen_range(0, 4) {
+        match n {
             0 => WantsToMove::Up,
             1 => WantsToMove::Down,
             2 => WantsToMove::Left,
@@ -626,7 +627,9 @@ impl Neighbor {
                     Some(condition_tile) => {
                         unmatched_or_tiles.remove(&t.tile);
                         // simple case. at most we just change direction
-                        if condition_tile.negated == t.negated && condition_tile.direction != t.direction {
+                        if condition_tile.negated == t.negated
+                            && condition_tile.direction != t.direction
+                        {
                             for sprite in t.tile.get_sprites() {
                                 let c = sprite.collision_layer;
 
@@ -1032,7 +1035,6 @@ pub mod tests {
 
     #[test]
     fn prepare_negation() {
-        let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 33, 44);
 
         let player_any = build_t(false /*random*/, &player, false, None);
@@ -1047,7 +1049,6 @@ pub mod tests {
 
     #[test]
     fn prepare_or_negation() {
-        let mut rng = new_rng();
         let player = SpriteState::new(&String::from("player"), 33, 44);
         let hat = SpriteState::new(&String::from("hat"), 11, 22);
 
@@ -1262,7 +1263,8 @@ pub mod tests {
     }
 
     #[test]
-    fn remove_one_or_sprite_when_condition_has_no() { // See related remove_all_or_sprites_when_there_is_no_condition test
+    fn remove_one_or_sprite_when_condition_has_no() {
+        // See related remove_all_or_sprites_when_there_is_no_condition test
         let mut rng = new_rng();
 
         let player = SpriteState::new(&String::from("player"), 0, 44);

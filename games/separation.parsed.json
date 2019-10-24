@@ -78,19 +78,19 @@
   },
   "collision_layers": [
     {
-      "id": 2567,
+      "id": 2701,
       "_sourceOffset": 838
     },
     {
-      "id": 2568,
+      "id": 2702,
       "_sourceOffset": 849
     },
     {
-      "id": 2569,
+      "id": 2703,
       "_sourceOffset": 882
     },
     {
-      "id": 2570,
+      "id": 2704,
       "_sourceOffset": 0
     }
   ],
@@ -136,7 +136,7 @@
         ]
       ],
       "_sourceOffset": 454,
-      "collision_layer": 2568
+      "collision_layer": 2702
     },
     "sprite-1": {
       "name": "dice3",
@@ -178,7 +178,7 @@
         ]
       ],
       "_sourceOffset": 379,
-      "collision_layer": 2568
+      "collision_layer": 2702
     },
     "sprite-2": {
       "name": "dice2",
@@ -220,7 +220,7 @@
         ]
       ],
       "_sourceOffset": 304,
-      "collision_layer": 2568
+      "collision_layer": 2702
     },
     "sprite-3": {
       "name": "dice1",
@@ -262,7 +262,7 @@
         ]
       ],
       "_sourceOffset": 229,
-      "collision_layer": 2568
+      "collision_layer": 2702
     },
     "sprite-4": {
       "name": "background",
@@ -304,7 +304,7 @@
         ]
       ],
       "_sourceOffset": 139,
-      "collision_layer": 2567
+      "collision_layer": 2701
     },
     "sprite-5": {
       "name": "wall",
@@ -346,7 +346,7 @@
         ]
       ],
       "_sourceOffset": 161,
-      "collision_layer": 2568
+      "collision_layer": 2702
     },
     "sprite-6": {
       "name": "happy",
@@ -388,7 +388,7 @@
         ]
       ],
       "_sourceOffset": 529,
-      "collision_layer": 2569
+      "collision_layer": 2703
     }
   },
   "tiles": {
@@ -402,7 +402,7 @@
           "sprite-3"
         ],
         "collisionLayers": [
-          2568
+          2702
         ],
         "_sourceOffset": 636
       }
@@ -412,7 +412,7 @@
         "name": "happy",
         "sprite": "sprite-6",
         "_sourceOffset": 529,
-        "collision_layer": 2569
+        "collision_layer": 2703
       }
     },
     "tile-2": {
@@ -420,7 +420,7 @@
         "name": "dice1",
         "sprite": "sprite-3",
         "_sourceOffset": 229,
-        "collision_layer": 2568
+        "collision_layer": 2702
       }
     },
     "tile-3": {
@@ -428,7 +428,7 @@
         "name": "dice2",
         "sprite": "sprite-2",
         "_sourceOffset": 304,
-        "collision_layer": 2568
+        "collision_layer": 2702
       }
     },
     "tile-4": {
@@ -436,7 +436,7 @@
         "name": "dice3",
         "sprite": "sprite-1",
         "_sourceOffset": 379,
-        "collision_layer": 2568
+        "collision_layer": 2702
       }
     },
     "tile-5": {
@@ -444,7 +444,7 @@
         "name": "dice4",
         "sprite": "sprite-0",
         "_sourceOffset": 454,
-        "collision_layer": 2568
+        "collision_layer": 2702
       }
     },
     "tile-6": {
@@ -452,9 +452,9 @@
         "name": ".",
         "sprite": "sprite-4",
         "collisionLayers": [
-          2567
+          2701
         ],
-        "_sourceOffset": 572
+        "source_line": 62
       }
     },
     "tile-7": {
@@ -462,9 +462,9 @@
         "name": "#",
         "sprite": "sprite-5",
         "collisionLayers": [
-          2568
+          2702
         ],
-        "_sourceOffset": 587
+        "source_line": 63
       }
     },
     "tile-8": {
@@ -472,9 +472,9 @@
         "name": "1",
         "sprite": "sprite-3",
         "collisionLayers": [
-          2568
+          2702
         ],
-        "_sourceOffset": 596
+        "source_line": 64
       }
     },
     "tile-9": {
@@ -482,9 +482,9 @@
         "name": "2",
         "sprite": "sprite-2",
         "collisionLayers": [
-          2568
+          2702
         ],
-        "_sourceOffset": 606
+        "source_line": 65
       }
     },
     "tile-10": {
@@ -492,9 +492,9 @@
         "name": "3",
         "sprite": "sprite-1",
         "collisionLayers": [
-          2568
+          2702
         ],
-        "_sourceOffset": 616
+        "source_line": 66
       }
     },
     "tile-11": {
@@ -502,9 +502,9 @@
         "name": "4",
         "sprite": "sprite-0",
         "collisionLayers": [
-          2568
+          2702
         ],
-        "_sourceOffset": 626
+        "source_line": 67
       }
     }
   },
@@ -961,6 +961,8 @@
         ],
         "commands": [],
         "_sourceOffset": 910,
+        "source_line": "[ happy ] -> [ ]",
+        "source_line_num": 91,
         "random": null,
         "late": false,
         "rigid": false
@@ -972,6 +974,8 @@
           "rule-0"
         ],
         "_sourceOffset": 910,
+        "source_line": "[ happy ] -> [ ]",
+        "source_line_num": 91,
         "random": false
       }
     },
@@ -986,6 +990,8 @@
         ],
         "commands": [],
         "_sourceOffset": 928,
+        "source_line": "late [ dice1 | dice1 ] -> [ dice1 happy | dice1 happy ]",
+        "source_line_num": 93,
         "random": null,
         "late": true,
         "rigid": false
@@ -1002,6 +1008,8 @@
         ],
         "commands": [],
         "_sourceOffset": 928,
+        "source_line": "late [ dice1 | dice1 ] -> [ dice1 happy | dice1 happy ]",
+        "source_line_num": 93,
         "random": null,
         "late": true,
         "rigid": false
@@ -1018,6 +1026,8 @@
         ],
         "commands": [],
         "_sourceOffset": 928,
+        "source_line": "late [ dice1 | dice1 ] -> [ dice1 happy | dice1 happy ]",
+        "source_line_num": 93,
         "random": null,
         "late": true,
         "rigid": false
@@ -1034,6 +1044,8 @@
         ],
         "commands": [],
         "_sourceOffset": 928,
+        "source_line": "late [ dice1 | dice1 ] -> [ dice1 happy | dice1 happy ]",
+        "source_line_num": 93,
         "random": null,
         "late": true,
         "rigid": false
@@ -1048,6 +1060,8 @@
           "rule-5"
         ],
         "_sourceOffset": 928,
+        "source_line": "late [ dice1 | dice1 ] -> [ dice1 happy | dice1 happy ]",
+        "source_line_num": 93,
         "random": false
       }
     },
@@ -1062,6 +1076,8 @@
         ],
         "commands": [],
         "_sourceOffset": 984,
+        "source_line": "late [ dice2 | dice2 ] -> [ dice2 happy | dice2 happy ]",
+        "source_line_num": 94,
         "random": null,
         "late": true,
         "rigid": false
@@ -1078,6 +1094,8 @@
         ],
         "commands": [],
         "_sourceOffset": 984,
+        "source_line": "late [ dice2 | dice2 ] -> [ dice2 happy | dice2 happy ]",
+        "source_line_num": 94,
         "random": null,
         "late": true,
         "rigid": false
@@ -1094,6 +1112,8 @@
         ],
         "commands": [],
         "_sourceOffset": 984,
+        "source_line": "late [ dice2 | dice2 ] -> [ dice2 happy | dice2 happy ]",
+        "source_line_num": 94,
         "random": null,
         "late": true,
         "rigid": false
@@ -1110,6 +1130,8 @@
         ],
         "commands": [],
         "_sourceOffset": 984,
+        "source_line": "late [ dice2 | dice2 ] -> [ dice2 happy | dice2 happy ]",
+        "source_line_num": 94,
         "random": null,
         "late": true,
         "rigid": false
@@ -1124,6 +1146,8 @@
           "rule-10"
         ],
         "_sourceOffset": 984,
+        "source_line": "late [ dice2 | dice2 ] -> [ dice2 happy | dice2 happy ]",
+        "source_line_num": 94,
         "random": false
       }
     },
@@ -1138,6 +1162,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1040,
+        "source_line": "late [ dice3 | dice3 ] -> [ dice3 happy | dice3 happy ]",
+        "source_line_num": 95,
         "random": null,
         "late": true,
         "rigid": false
@@ -1154,6 +1180,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1040,
+        "source_line": "late [ dice3 | dice3 ] -> [ dice3 happy | dice3 happy ]",
+        "source_line_num": 95,
         "random": null,
         "late": true,
         "rigid": false
@@ -1170,6 +1198,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1040,
+        "source_line": "late [ dice3 | dice3 ] -> [ dice3 happy | dice3 happy ]",
+        "source_line_num": 95,
         "random": null,
         "late": true,
         "rigid": false
@@ -1186,6 +1216,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1040,
+        "source_line": "late [ dice3 | dice3 ] -> [ dice3 happy | dice3 happy ]",
+        "source_line_num": 95,
         "random": null,
         "late": true,
         "rigid": false
@@ -1200,6 +1232,8 @@
           "rule-15"
         ],
         "_sourceOffset": 1040,
+        "source_line": "late [ dice3 | dice3 ] -> [ dice3 happy | dice3 happy ]",
+        "source_line_num": 95,
         "random": false
       }
     },
@@ -1214,6 +1248,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1096,
+        "source_line": "late [ dice4 | dice4 ] -> [ dice4 happy | dice4 happy ]",
+        "source_line_num": 96,
         "random": null,
         "late": true,
         "rigid": false
@@ -1230,6 +1266,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1096,
+        "source_line": "late [ dice4 | dice4 ] -> [ dice4 happy | dice4 happy ]",
+        "source_line_num": 96,
         "random": null,
         "late": true,
         "rigid": false
@@ -1246,6 +1284,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1096,
+        "source_line": "late [ dice4 | dice4 ] -> [ dice4 happy | dice4 happy ]",
+        "source_line_num": 96,
         "random": null,
         "late": true,
         "rigid": false
@@ -1262,6 +1302,8 @@
         ],
         "commands": [],
         "_sourceOffset": 1096,
+        "source_line": "late [ dice4 | dice4 ] -> [ dice4 happy | dice4 happy ]",
+        "source_line_num": 96,
         "random": null,
         "late": true,
         "rigid": false
@@ -1276,6 +1318,8 @@
           "rule-20"
         ],
         "_sourceOffset": 1096,
+        "source_line": "late [ dice4 | dice4 ] -> [ dice4 happy | dice4 happy ]",
+        "source_line_num": 96,
         "random": false
       }
     }

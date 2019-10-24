@@ -230,7 +230,7 @@ impl fmt::Display for Rule {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self.source_line_num {
             None => write!(f, "#??? ")?,
-            Some(line) => write!(f, "#{} ", line + 1)?
+            Some(line) => write!(f, "#{} ", line + 1)?,
         }
         if self.has_only_commands() {
             write!(f, "(commands-only)")?
@@ -961,28 +961,21 @@ mod tests {
 
         let marker = SpriteState::new(&String::from("marker"), 2, 66);
         let marker_any = build_t(false /*random*/, &marker, false, None);
-        let no_marker = build_t(false /*random*/, &marker, true, None);
 
         let thing_any =
             build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
 
         // thing = player OR hat ...
         // [ thing ] -> [ marker ]
-        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let n1 = Neighbor::new(vec![thing_any.clone()]);
         let a1 = Neighbor::new(vec![marker_any.clone()]);
 
         // RIGHT [ thing ] -> [ marker ]
         let rule = Rule {
             source_line_num: None,
             causes_board_changes: None,
-            conditions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![n1],
-            )],
-            actions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![a1],
-            )],
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![n1])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![a1])],
             commands: TriggeredCommands::default(),
             late: false,
             random: false,
@@ -1022,10 +1015,6 @@ mod tests {
         let player = SpriteState::new(&String::from("player"), 0, 44);
         let hat = SpriteState::new(&String::from("hat"), 1, 55);
 
-        let marker = SpriteState::new(&String::from("marker"), 2, 66);
-        let marker_any = build_t(false /*random*/, &marker, false, None);
-        let no_marker = build_t(false /*random*/, &marker, true, None);
-
         let thing_any =
             build_tile_with_modifier(false, true, false, None, &vec![player.clone(), hat.clone()]);
         let no_thing =
@@ -1033,21 +1022,15 @@ mod tests {
 
         // thing = player OR hat ...
         // [ thing ] -> [ NO thing ]
-        let mut n1 = Neighbor::new(vec![thing_any.clone()]);
+        let n1 = Neighbor::new(vec![thing_any.clone()]);
         let a1 = Neighbor::new(vec![no_thing.clone()]);
 
         // RIGHT [ thing ] -> [ NO thing ]
         let rule = Rule {
             source_line_num: None,
             causes_board_changes: None,
-            conditions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![n1],
-            )],
-            actions: vec![Bracket::new(
-                CardinalDirection::Right,
-                vec![a1],
-            )],
+            conditions: vec![Bracket::new(CardinalDirection::Right, vec![n1])],
+            actions: vec![Bracket::new(CardinalDirection::Right, vec![a1])],
             commands: TriggeredCommands::default(),
             late: false,
             random: false,
@@ -1070,10 +1053,12 @@ mod tests {
         assert!(board.has_sprite(&origin, &player));
         assert!(board.has_sprite(&origin, &hat));
 
-        let mut triggered = TriggeredCommands::default();
-        assert!(rule.evaluate(&mut rng, &mut board, &mut triggered, false));
-
-        assert!(board.has_sprite(&origin, &marker));
+        assert!(rule.evaluate(
+            &mut rng,
+            &mut board,
+            &mut TriggeredCommands::default(),
+            false
+        ));
 
         // Verify that we removed both sprites
         assert!(!board.has_sprite(&origin, &player));

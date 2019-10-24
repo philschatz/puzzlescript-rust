@@ -75,7 +75,8 @@ impl Grid {
     }
 
     fn render_small(&self, area: &Rect, buf: &mut Buffer) {
-        for row in 0..(self.height + 1) / 2 { // add one in case of odd--numbered rows
+        for row in 0..(self.height + 1) / 2 {
+            // add one in case of odd--numbered rows
             for x in 0..self.width {
                 let y_top = row * 2;
                 let y_bottom = row * 2 + 1;
@@ -148,13 +149,17 @@ impl Widget for Engine {
                 let (sprite_width, sprite_height) = self.game_data.sprite_size();
                 let board_size = board.size();
                 let is_flickscreen = self.game_data.metadata.flickscreen.is_some();
-                let screen_size = self.game_data.metadata.flickscreen.or(self.game_data.metadata.zoomscreen);
+                let screen_size = self
+                    .game_data
+                    .metadata
+                    .flickscreen
+                    .or(self.game_data.metadata.zoomscreen);
                 let game_window = match screen_size {
                     None => Rect::new(0, 0, board_size.width, board_size.height),
                     Some(flick) => {
                         let width = cmp::min(flick.width, board_size.width); // see atlas-shrank
                         let height = cmp::min(flick.height, board_size.height);
-                        let player = self.player_position().unwrap();
+                        let player = self.player_position().unwrap_or(Position::default());
                         if is_flickscreen {
                             Rect::new(
                                 player.x / width * width,
@@ -165,8 +170,16 @@ impl Widget for Engine {
                         } else {
                             // zoomscreen
                             Rect::new(
-                                if player.x >= width / 2 { player.x - width / 2 } else { 0 },
-                                if player.y >= height / 2 { player.y - height / 2 } else { 0 },
+                                if player.x >= width / 2 {
+                                    player.x - width / 2
+                                } else {
+                                    0
+                                },
+                                if player.y >= height / 2 {
+                                    player.y - height / 2
+                                } else {
+                                    0
+                                },
                                 width,
                                 height,
                             )
@@ -496,7 +509,7 @@ fn to_grayscale(color: &Color) -> Color {
 
 #[derive(Default)]
 pub struct RecordingInfo {
-    checkpoints: u16
+    checkpoints: u16,
 }
 
 impl RecordingInfo {
