@@ -11,7 +11,7 @@ if [[ $game == '--gitpod' ]]; then
     echo 'in your browser with sound and a gamepad by going to https://philschatz.com/puzzlescript/'
     echo ''
     read -p "Do you want to start with the game SwapBot [Enter] or choose from some popular ones [c]? " prompt
-    if [[ $prompt =~ [cC]* ]]; then
+    if [[ $prompt =~ [cC] ]]; then
         game=''
     else
         game='swapbot'
