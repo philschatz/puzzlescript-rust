@@ -3,16 +3,18 @@
 game=$1
 
 if [[ $game == '--gitpod' ]]; then
-    echo "🎉🎉 Let's play some games! 🎉🎉"
+    echo ''
+    echo ''
+    echo "🎉🎉🎮 Let's play some games! 🎉🎉"
     echo ''
     echo 'There are many to choose from and you can even play them'
     echo 'in your browser with sound and a gamepad by going to https://philschatz.com/puzzlescript/'
     echo ''
-    read -p "Do you want to start with one [Enter] or see some popular ones to choose from? [n] " prompt
-    if [[ $prompt =~ [nN](o)* ]]; then
+    read -p "Do you want to start with the game SwapBot [Enter] or choose from some popular ones [c]? " prompt
+    if [[ $prompt =~ [cC]* ]]; then
         game=''
     else
-        game='entanglement-one'
+        game='swapbot'
     fi
 fi
 if [[ $game == '--all' ]]; then
