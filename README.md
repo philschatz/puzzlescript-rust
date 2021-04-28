@@ -44,7 +44,7 @@ This screencast shows playing the game in a terminal using ASCII and ANSI colors
 1. Install Rust
 1. Clone this repository
 1. Run `cargo run --release` to get the help message
-1. Run `cargo run --release ./games/{game}.parsed.json` to play a game
+1. Run `cargo run --release -- ./games/{game}.parsed.json` to play a game
     - As you complete levels, it will create a save file in the same directory as the game
 
 # Test

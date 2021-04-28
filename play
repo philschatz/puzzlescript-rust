@@ -1,0 +1,49 @@
+#!/bin/bash
+
+game=$1
+
+if [[ $game == '--gitpod' ]]; then
+    echo "🎉🎉 Let's play some games! 🎉🎉"
+    echo ''
+    echo 'There are many to choose from and you can even play them'
+    echo 'in your browser with sound and a gamepad by going to https://philschatz.com/puzzlescript/'
+    echo ''
+    read -p "Do you want to start with one [Enter] or see some popular ones to choose from? [n] " prompt
+    if [[ $prompt =~ [nN](o)* ]]; then
+        game=''
+    else
+        game='entanglement-one'
+    fi
+fi
+if [[ $game == '--all' ]]; then
+    echo 'Here are all the games sorted by size (not quality):'
+    for game_file in $(find ./games/ -name '*.parsed.json' -type f -printf $'%s\t%f\n' | sort -k1,1n | sed 's/.*\t//'); do
+        game_name=${game_file::-12}
+        echo "    ${game_name}"
+    done
+    exit 0
+fi
+
+if [[ $game ]]; then
+    game_file="./games/${game}.parsed.json"
+    [[ -f $game_file ]] || (echo "Game '${game}' not found."; exit 1)
+    cargo run --release -- ${game_file}
+else
+    echo 'Usage: ./play [--all] [game]'
+    echo 'Here are some fun games to start with:'
+    echo ''
+    echo '    entanglement-one'
+    echo '    swapbot'
+    echo '    mirror-isles'
+    echo '    skipping-stones'
+    echo '    sokobond'
+    echo '    pushcat-jr'
+    echo '    pot-wash-panic'
+    echo '    gravirinth'
+    echo '    push'
+    echo ''
+    echo '    (add your favorite here with a Pull Request!)'
+    echo ''
+    echo 'Or pass --all to see a list of all games sorted by size'
+    exit 0
+fi

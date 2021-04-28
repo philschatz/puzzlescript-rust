@@ -202,7 +202,7 @@ fn play_game<B: Backend>(
         }
         inputs[current_level_num as usize].push(input);
         debug_keypresses.push(input);
-    };
+    }
 
     let mut engine = match checkpoint {
         None => Engine::new(game, start_level),
