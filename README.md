@@ -2,6 +2,10 @@
 
 It is a [PuzzleScript][puzzlescript-url] interpreter written in Rust to play games in your terminal!
 
+## Try it out!
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
+
 # Screencaps
 
 Here are some screencaps of games being played.
